@@ -214,7 +214,10 @@ fun DonationScreen(
                                         },
                                         shape    = RoundedCornerShape(12.dp),
                                         modifier = Modifier.weight(1f).height(keyHeight),
-                                        colors   = ButtonDefaults.outlinedButtonColors(contentColor = TextDark)
+                                        colors = ButtonDefaults.outlinedButtonColors(
+                                            containerColor = SurfaceWhite,
+                                            contentColor   = TextDark
+                                        )
                                     ) {
                                         Text(key, fontSize = keyFontSize, fontWeight = FontWeight.Bold)
                                     }

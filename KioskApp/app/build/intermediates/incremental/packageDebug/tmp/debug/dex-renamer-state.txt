@@ -1,17 +1,17 @@
-#Tue Jun 02 18:51:22 BST 2026
-base.0=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.10=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
-base.11=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes5.dex
-base.12=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes6.dex
-base.2=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.3=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.4=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.5=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
-base.6=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.7=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\desugar_lib_dex\\debug\\l8DexDesugarLibDebug\\classes1000.dex
-base.8=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.9=C\:\\Users\\jh\\Downloads\\KioskDonationApp15\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+#Tue Jun 02 21:26:49 BST 2026
+base.0=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.10=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
+base.11=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes5.dex
+base.12=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes6.dex
+base.2=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.3=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.4=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.5=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.6=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.7=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\desugar_lib_dex\\debug\\l8DexDesugarLibDebug\\classes1000.dex
+base.8=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.9=C\:\\github\\DonationKiosk\\KioskApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=classes4.dex

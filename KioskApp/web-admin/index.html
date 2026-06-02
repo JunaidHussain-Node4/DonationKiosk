@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiosk Product Admin</title>
+<style>
+  :root {
+    --karima-dark: #00635A; --karima-green: #00897B; --karima-light: #4DB6AC;
+    --amber: #FFC107; --red: #D32F2F; --green: #388E3C;
+    --bg: #f5f5f5; --white: #fff; --text: #1a1a2e;
+    --mid: #424242; --border: #ddd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+
+  /* Auth screen */
+  #auth-screen {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  }
+  .auth-card {
+    background: var(--white); border-radius: 16px; padding: 40px;
+    width: 380px; box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    text-align: center;
+  }
+  .auth-card h1 { color: var(--karima-dark); margin-bottom: 8px; }
+  .auth-card p  { color: var(--mid); margin-bottom: 24px; }
+
+  /* Main app */
+  #app-screen { display: none; min-height: 100vh; }
+  header {
+    background: var(--karima-dark); color: white; padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  header h1 { font-size: 20px; }
+  .header-right { display: flex; align-items: center; gap: 12px; }
+
+  main { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+  /* Toolbar */
+    .toolbar {
+      display: flex; gap: 12px; margin-bottom: 24px;
+      flex-wrap: wrap; align-items: center;
+    }
+
+    .search-container {
+      flex: 1;
+      min-width: 250px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 12px 10px 40px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--mid);
+    }
+
+  /* Product grid */
+  .product-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .product-card {
+    background: var(--white); border-radius: 12px; padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: relative;
+  }
+  .product-card img {
+    width: 100%; height: 160px; object-fit: contain;
+    background: #f9f9f9; border-radius: 8px; margin-bottom: 12px;
+  }
+  .product-card .emoji-placeholder {
+    width: 100%; height: 160px; display: flex; align-items: center;
+    justify-content: center; font-size: 64px; background: #f9f9f9;
+    border-radius: 8px; margin-bottom: 12px;
+  }
+  .product-name  { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .product-desc  { color: var(--mid); font-size: 13px; margin-bottom: 4px; }
+  .product-price { color: var(--karima-dark); font-weight: 700; font-size: 18px; margin-bottom: 4px; }
+  .product-barcode { color: #999; font-size: 12px; font-family: monospace; }
+  .card-actions  { display: flex; gap: 8px; margin-top: 12px; }
+
+  /* Modal */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5); z-index: 100;
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--white); border-radius: 16px; padding: 32px;
+    width: 520px; max-width: 95vw; max-height: 90vh; overflow-y: auto;
+  }
+  .modal h2 { margin-bottom: 20px; color: var(--karima-dark); }
+
+  /* Form */
+  .form-group { margin-bottom: 16px; }
+  label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 14px; }
+  input, textarea {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--border);
+    border-radius: 8px; font-size: 15px; outline: none;
+    transition: border-color 0.2s;
+  }
+  input:focus, textarea:focus { border-color: var(--karima-dark); }
+  textarea { resize: vertical; min-height: 80px; }
+
+  /* Image upload */
+  .image-upload-area {
+    border: 2px dashed var(--border); border-radius: 8px;
+    padding: 20px; text-align: center; cursor: pointer;
+    transition: border-color 0.2s; position: relative;
+  }
+  .image-upload-area:hover { border-color: var(--karima-dark); }
+  .image-upload-area input { display: none; }
+  .image-preview {
+    max-width: 100%; max-height: 200px; object-fit: contain;
+    border-radius: 8px; margin-top: 12px;
+  }
+  .image-size-warning { color: var(--red); font-size: 13px; margin-top: 6px; }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 20px; border: none; border-radius: 8px;
+    font-size: 15px; font-weight: 600; cursor: pointer; transition: opacity 0.2s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-primary  { background: var(--karima-dark); color: white; }
+  .btn-amber    { background: var(--amber); color: #1a1a2e; }
+  .btn-outline  { background: transparent; border: 2px solid var(--karima-dark); color: var(--karima-dark); }
+  .btn-danger   { background: var(--red); color: white; }
+  .btn-sm       { padding: 6px 14px; font-size: 13px; }
+
+  /* Toast */
+  #toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: #333; color: white; padding: 12px 24px; border-radius: 24px;
+    font-size: 14px; opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 200;
+  }
+  #toast.show { opacity: 1; }
+
+  .empty-state {
+    text-align: center; padding: 60px 20px; color: var(--mid);
+  }
+  .empty-state p { font-size: 18px; margin-bottom: 8px; }
+
+  .loading { text-align: center; padding: 40px; color: var(--mid); }
+
+  .delete-confirm {
+    background: #fff3f3; border: 1px solid #ffcdd2;
+    border-radius: 8px; padding: 16px; margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Auth Screen -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <h1>🛍️ Product Admin</h1>
+    <p>Sign in to manage your kiosk products</p>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="login-email" placeholder="staff@example.com" />
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="login-password" placeholder="Password" />
+    </div>
+    <div id="login-error" style="color:var(--red);font-size:14px;margin-bottom:12px;display:none;"></div>
+    <button class="btn btn-primary" style="width:100%" onclick="signIn()">Sign In</button>
+  </div>
+</div>
+
+<!-- Main App -->
+<div id="app-screen">
+  <header>
+    <h1>🛍️ Kiosk Product Admin</h1>
+    <div class="header-right">
+      <span id="user-email" style="font-size:14px;opacity:0.8;"></span>
+      <button class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);padding:6px 14px;font-size:14px" onclick="signOut()">Sign Out</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <button class="btn btn-amber" onclick="openAddModal()">+ Add Product</button>
+      <button class="btn btn-outline" style="margin-left:8px" onclick="openImportModal()">📤 Mass Import</button>
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="product-search" class="search-input" placeholder="Search products by name or description..." oninput="handleSearch()">
+      </div>
+      <span id="product-count" style="color:var(--mid);font-size:14px;margin-left:8px;"></span>
+    </div>
+
+    <div id="products-loading" class="loading">Loading products…</div>
+    <div id="products-empty" class="empty-state" style="display:none">
+      <p>No products yet</p>
+      <small>Click "Add Product" to get started</small>
+    </div>
+    <div id="product-grid" class="product-grid"></div>
+  </main>
+</div>
+
+<!-- Add / Edit Modal -->
+<div id="product-modal" class="modal-overlay">
+  <div class="modal">
+    <h2 id="modal-title">Add Product</h2>
+    <input type="hidden" id="edit-doc-id" />
+
+    <div class="form-group">
+      <label>Product Name *</label>
+      <input type="text" id="field-name" placeholder="e.g. Grey Hoodie" />
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" id="field-desc" placeholder="Short description" />
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div class="form-group">
+        <label>Price (£) *</label>
+        <input type="number" id="field-price" placeholder="25.00" step="0.01" min="0" />
+      </div>
+      <div class="form-group">
+        <label>Emoji (fallback)</label>
+        <input type="text" id="field-emoji" placeholder="👕" maxlength="4" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Barcode (EAN/UPC — optional)</label>
+      <input type="text" id="field-barcode" placeholder="e.g. 5012345678901" />
+    </div>
+
+    <div class="form-group">
+      <label>Product Image (optional)</label>
+      <div class="image-upload-area" onclick="document.getElementById('field-image-input').click()">
+        <input type="file" id="field-image-input" accept="image/*" onchange="handleImageSelect(event)" />
+        <div id="image-upload-prompt">
+          📷 Click to upload image<br>
+          <small style="color:#999">JPG, PNG or WebP — will be compressed automatically</small>
+        </div>
+        <img id="image-preview" class="image-preview" style="display:none" />
+        <div id="image-size-warning" class="image-size-warning" style="display:none"></div>
+      </div>
+      <div id="existing-image-note" style="display:none;font-size:13px;color:var(--mid);margin-top:6px;">
+        ✅ Image already saved. Upload a new one to replace it.
+      </div>
+    </div>
+
+    <div id="modal-error" style="color:var(--red);font-size:14px;margin-bottom:12px;display:none;"></div>
+
+    <div style="display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap">
+      <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" id="save-btn" onclick="saveProduct()">Save Product</button>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Confirm Modal -->
+<div id="delete-modal" class="modal-overlay">
+  <div class="modal" style="max-width:400px">
+    <h2>Delete Product?</h2>
+    <p style="margin:16px 0;color:var(--mid)">This will permanently remove <strong id="delete-product-name"></strong> from the kiosk. This cannot be undone.</p>
+    <div style="display:flex;gap:12px;justify-content:flex-end">
+      <button class="btn btn-outline" onclick="closeDeleteModal()">Cancel</button>
+      <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mass Import Modal -->
+<div id="import-modal" class="modal-overlay">
+  <div class="modal">
+    <h2>Mass Import Products</h2>
+    <p style="margin-bottom:20px; color:var(--mid); font-size:14px;">
+      1. Select an Excel (.xlsx/.xls) or CSV file with columns: <b>name, description, price, emoji, barcode, image_filename</b><br>
+      2. Select all matching image files at once.
+    </p>
+
+    <div class="form-group">
+      <label>1. Select Spreadsheet (Excel or CSV)</label>
+      <input type="file" id="import-csv-input" accept=".xlsx, .xls, .csv" />
+    </div>
+
+    <div class="form-group">
+      <label>2. Select Product Images (Multiple)</label>
+      <input type="file" id="import-images-input" accept="image/*" multiple />
+    </div>
+
+    <div id="import-status" style="margin-top:20px; font-size:14px; max-height:150px; overflow-y:auto; border:1px solid var(--border); padding:10px; display:none; background:#f9f9f9; border-radius:8px;">
+    </div>
+
+    <div id="import-error" style="color:var(--red);font-size:14px;margin-top:12px;display:none;"></div>
+
+    <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:24px">
+      <button class="btn btn-outline" onclick="closeImportModal()">Cancel</button>
+      <button class="btn btn-primary" id="import-btn" onclick="startMassImport()">Start Import</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<!-- Firebase SDKs -->
+<script type="module">
+import { initializeApp }                          from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js';
+import { getAuth, signInWithEmailAndPassword, signOut as fbSignOut, onAuthStateChanged }
+                                                  from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js';
+import { getFirestore, collection, getDocs, doc, setDoc, deleteDoc, serverTimestamp }
+                                                  from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js';
+
+const firebaseConfig = {
+  apiKey:            "AIzaSyDuYpS4wz2Ob1tf6f2syeUXKr-anKaxrTI",
+  authDomain:        "karimakioskdonation.firebaseapp.com",
+  projectId:         "karimakioskdonation",
+  storageBucket:     "karimakioskdonation.firebasestorage.app",
+  messagingSenderId: "970798231568",
+  appId:             "1:970798231568:web:b7fbd1a7779bf910c09a95"
+};
+
+const app  = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db   = getFirestore(app);
+
+let products     = [];
+let filteredProducts = [];
+let pendingImageBase64 = null;
+let deleteDocId  = null;
+
+// ── Auth ──────────────────────────────────────────────────────────────────────
+onAuthStateChanged(auth, user => {
+  if (user) {
+    document.getElementById('auth-screen').style.display = 'none';
+    document.getElementById('app-screen').style.display  = 'block';
+    document.getElementById('user-email').textContent    = user.email;
+    loadProducts();
+  } else {
+    document.getElementById('auth-screen').style.display = 'flex';
+    document.getElementById('app-screen').style.display  = 'none';
+  }
+});
+
+window.signIn = async () => {
+  const email    = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+  const errEl    = document.getElementById('login-error');
+  errEl.style.display = 'none';
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+  } catch (e) {
+    errEl.textContent    = 'Invalid email or password';
+    errEl.style.display  = 'block';
+  }
+};
+
+window.signOut = () => fbSignOut(auth);
+
+// ── Load products ─────────────────────────────────────────────────────────────
+async function loadProducts() {
+  document.getElementById('products-loading').style.display = 'block';
+  document.getElementById('product-grid').innerHTML = '';
+  document.getElementById('products-empty').style.display = 'none';
+
+  try {
+    const snap = await getDocs(collection(db, 'products'));
+    products = snap.docs.map(d => ({ docId: d.id, ...d.data() }));
+    products.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    handleSearch(); // Initial render and set filteredProducts
+  } catch (e) {
+    showToast('Failed to load: ' + e.message);
+  }
+  document.getElementById('products-loading').style.display = 'none';
+}
+
+window.handleSearch = () => {
+  const query = document.getElementById('product-search').value.toLowerCase().trim();
+  if (!query) {
+    filteredProducts = [...products];
+  } else {
+    filteredProducts = products.filter(p =>
+      (p.name || '').toLowerCase().includes(query) ||
+      (p.description || '').toLowerCase().includes(query)
+    );
+  }
+  renderProducts();
+};
+
+function renderProducts() {
+  const grid  = document.getElementById('product-grid');
+  const empty = document.getElementById('products-empty');
+  const count = document.getElementById('product-count');
+
+  count.textContent = `${filteredProducts.length} product${filteredProducts.length !== 1 ? 's' : ''}`;
+
+  if (filteredProducts.length === 0) {
+    if (products.length > 0) {
+      grid.innerHTML = '<div class="empty-state" style="grid-column: 1/-1"><p>No products match your search</p></div>';
+    } else {
+      empty.style.display = 'block';
+      grid.innerHTML = '';
+    }
+    return;
+  }
+  empty.style.display = 'none';
+
+  grid.innerHTML = filteredProducts.map(p => `
+    <div class="product-card">
+      ${p.imageBase64
+        ? `<img src="${p.imageBase64}" alt="${esc(p.name)}" />`
+        : `<div class="emoji-placeholder">${p.emoji || '🛍️'}</div>`}
+      <div class="product-name">${esc(p.name)}</div>
+      <div class="product-desc">${esc(p.description || '')}</div>
+      <div class="product-price">£${parseFloat(p.price || 0).toFixed(2)}</div>
+      ${p.barcode ? `<div class="product-barcode">📦 ${esc(p.barcode)}</div>` : ''}
+      <div class="card-actions">
+        <button class="btn btn-outline btn-sm" onclick="openEditModal('${esc(p.docId)}')">Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="openDeleteModal('${esc(p.docId)}')">Delete</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── Add / Edit modal ──────────────────────────────────────────────────────────
+window.openAddModal = () => {
+  document.getElementById('modal-title').textContent    = 'Add Product';
+  document.getElementById('edit-doc-id').value          = '';
+  document.getElementById('field-name').value           = '';
+  document.getElementById('field-desc').value           = '';
+  document.getElementById('field-price').value          = '';
+  document.getElementById('field-emoji').value          = '🛍️';
+  document.getElementById('field-barcode').value        = '';
+  document.getElementById('image-preview').style.display = 'none';
+  document.getElementById('image-upload-prompt').style.display = 'block';
+  document.getElementById('existing-image-note').style.display = 'none';
+  document.getElementById('modal-error').style.display  = 'none';
+  pendingImageBase64 = null;
+  document.getElementById('product-modal').classList.add('open');
+};
+
+window.openEditModal = (docId) => {
+  const p = products.find(x => x.docId === docId);
+  if (!p) return;
+  document.getElementById('modal-title').textContent    = 'Edit Product';
+  document.getElementById('edit-doc-id').value          = docId;
+  document.getElementById('field-name').value           = p.name || '';
+  document.getElementById('field-desc').value           = p.description || '';
+  document.getElementById('field-price').value          = p.price || '';
+  document.getElementById('field-emoji').value          = p.emoji || '🛍️';
+  document.getElementById('field-barcode').value        = p.barcode || '';
+  document.getElementById('modal-error').style.display  = 'none';
+  pendingImageBase64 = null;
+
+  if (p.imageBase64) {
+    document.getElementById('image-preview').src          = p.imageBase64;
+    document.getElementById('image-preview').style.display = 'block';
+    document.getElementById('image-upload-prompt').style.display = 'none';
+    document.getElementById('existing-image-note').style.display = 'block';
+  } else {
+    document.getElementById('image-preview').style.display = 'none';
+    document.getElementById('image-upload-prompt').style.display = 'block';
+    document.getElementById('existing-image-note').style.display = 'none';
+  }
+  document.getElementById('product-modal').classList.add('open');
+};
+
+// ── Mass Import ───────────────────────────────────────────────────────────────
+window.openImportModal = () => {
+  document.getElementById('import-status').style.display = 'none';
+  document.getElementById('import-status').innerHTML     = '';
+  document.getElementById('import-error').style.display  = 'none';
+  document.getElementById('import-csv-input').value      = '';
+  document.getElementById('import-images-input').value   = '';
+  document.getElementById('import-modal').classList.add('open');
+};
+
+window.closeImportModal = () => {
+  document.getElementById('import-modal').classList.remove('open');
+};
+
+window.startMassImport = async () => {
+  const file       = document.getElementById('import-csv-input').files[0];
+  const imageFiles = document.getElementById('import-images-input').files;
+  const statusEl   = document.getElementById('import-status');
+  const errEl      = document.getElementById('import-error');
+  const btn        = document.getElementById('import-btn');
+
+  if (!file) { alert('Please select a file'); return; }
+
+  btn.disabled        = true;
+  btn.textContent     = 'Importing…';
+  statusEl.style.display = 'block';
+  statusEl.innerHTML  = 'Reading file…<br>';
+  errEl.style.display = 'none';
+
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    try {
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, { type: 'array' });
+      const firstSheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[firstSheetName];
+      const rows = XLSX.utils.sheet_to_json(worksheet);
+
+      if (rows.length === 0) {
+        statusEl.innerHTML += `<span style="color:red">Error: No data rows found in the spreadsheet.</span><br>`;
+        throw new Error("Spreadsheet appears to be empty.");
+      }
+
+      // Detect headers for debugging
+      const headers = Object.keys(rows[0]);
+      statusEl.innerHTML += `Found ${rows.length} rows. Headers: ${headers.join(', ')}<br><br>`;
+
+      let count = 0;
+      for (const rawRow of rows) {
+        // Normalize keys to lowercase to be flexible with "Name" vs "name"
+        const row = {};
+        Object.keys(rawRow).forEach(k => row[k.toLowerCase().trim()] = rawRow[k]);
+
+        const name = (row.name || '').toString().trim();
+        if (!name) {
+          statusEl.innerHTML += `<span style="color:gray">Skipping row ${count + 1} (no name found)</span><br>`;
+          continue;
+        }
+
+        statusEl.innerHTML += `Processing <b>${esc(name)}</b>… `;
+
+        let imageBase64 = null;
+        const imgFilename = (row.image_filename || '').toString().trim();
+
+        if (imgFilename) {
+          const imgFile = Array.from(imageFiles).find(f => f.name === imgFilename);
+          if (imgFile) {
+            statusEl.innerHTML += `(compressing image) `;
+            imageBase64 = await compressImageFile(imgFile);
+          } else {
+            statusEl.innerHTML += `<span style="color:orange">(image not found)</span> `;
+          }
+        }
+
+        const id = crypto.randomUUID();
+        const productData = {
+          id, name,
+          description: (row.description || '').toString(),
+          price: parseFloat(row.price || 0).toFixed(2),
+          emoji: (row.emoji || '🛍️').toString(),
+          barcode: row.barcode ? row.barcode.toString() : null,
+          imageBase64: imageBase64,
+          updatedAt: serverTimestamp()
+        };
+
+        await setDoc(doc(db, 'products', id), productData);
+        statusEl.innerHTML += `✅<br>`;
+        statusEl.scrollTop = statusEl.scrollHeight;
+        count++;
+      }
+
+      statusEl.innerHTML += `<br><strong style="color:var(--green)">Done! Imported ${count} products.</strong>`;
+      showToast(`Imported ${count} products`);
+      loadProducts();
+    } catch (e) {
+      errEl.textContent   = 'Import error: ' + e.message;
+      errEl.style.display = 'block';
+    } finally {
+      btn.disabled    = false;
+      btn.textContent = 'Start Import';
+    }
+  };
+
+  reader.onerror = () => {
+    errEl.textContent   = 'File read error';
+    errEl.style.display = 'block';
+    btn.disabled        = false;
+  };
+
+  reader.readAsArrayBuffer(file);
+};
+
+async function compressImageFile(file) {
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const maxW   = 600;
+        const ratio  = Math.min(1, maxW / img.width);
+        const canvas = document.createElement('canvas');
+        canvas.width  = Math.round(img.width  * ratio);
+        canvas.height = Math.round(img.height * ratio);
+        canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL('image/jpeg', 0.85));
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+window.closeModal = () => {
+  document.getElementById('product-modal').classList.remove('open');
+};
+
+// ── Image selection + compression ─────────────────────────────────────────────
+window.handleImageSelect = (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      // Compress: max 600px wide, 85% JPEG quality
+      const maxW   = 600;
+      const ratio  = Math.min(1, maxW / img.width);
+      const canvas = document.createElement('canvas');
+      canvas.width  = Math.round(img.width  * ratio);
+      canvas.height = Math.round(img.height * ratio);
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+      pendingImageBase64 = canvas.toDataURL('image/jpeg', 0.85);
+
+      const preview = document.getElementById('image-preview');
+      preview.src           = pendingImageBase64;
+      preview.style.display = 'block';
+      document.getElementById('image-upload-prompt').style.display = 'none';
+
+      const kb = Math.round(pendingImageBase64.length * 0.75 / 1024);
+      const warn = document.getElementById('image-size-warning');
+      if (kb > 700) {
+        warn.textContent    = `⚠️ Image is ${kb}KB — consider using a smaller image (Firestore limit is ~700KB per product)`;
+        warn.style.display  = 'block';
+      } else {
+        warn.style.display  = 'none';
+      }
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+};
+
+// ── Save product ──────────────────────────────────────────────────────────────
+window.saveProduct = async () => {
+  const errEl = document.getElementById('modal-error');
+  errEl.style.display = 'none';
+
+  const name    = document.getElementById('field-name').value.trim();
+  const price   = document.getElementById('field-price').value.trim();
+  const desc    = document.getElementById('field-desc').value.trim();
+  const emoji   = document.getElementById('field-emoji').value.trim() || '🛍️';
+  const barcode = document.getElementById('field-barcode').value.trim();
+  const docId   = document.getElementById('edit-doc-id').value;
+
+  if (!name)  { showError('Product name is required'); return; }
+  if (!price || isNaN(parseFloat(price))) { showError('Valid price is required'); return; }
+
+  const btn = document.getElementById('save-btn');
+  btn.disabled     = true;
+  btn.textContent  = 'Saving…';
+
+  try {
+    const id   = docId || crypto.randomUUID();
+    const data = {
+      id, name, description: desc,
+      price: parseFloat(price).toFixed(2),
+      emoji, barcode: barcode || null,
+      updatedAt: serverTimestamp()
+    };
+
+    // Keep existing image if no new one selected
+    if (pendingImageBase64) {
+      data.imageBase64 = pendingImageBase64;
+    } else if (docId) {
+      const existing = products.find(p => p.docId === docId);
+      if (existing?.imageBase64) data.imageBase64 = existing.imageBase64;
+    }
+
+    await setDoc(doc(db, 'products', id), data);
+    showToast(docId ? 'Product updated ✅' : 'Product added ✅');
+    closeModal();
+    loadProducts();
+  } catch (e) {
+    showError('Save failed: ' + e.message);
+  }
+
+  btn.disabled    = false;
+  btn.textContent = 'Save Product';
+};
+
+// ── Delete ────────────────────────────────────────────────────────────────────
+window.openDeleteModal = (docId) => {
+  const p = products.find(x => x.docId === docId);
+  if (!p) return;
+  deleteDocId = docId;
+  document.getElementById('delete-product-name').textContent = p.name || 'this product';
+  document.getElementById('delete-modal').classList.add('open');
+};
+
+window.closeDeleteModal = () => {
+  document.getElementById('delete-modal').classList.remove('open');
+  deleteDocId = null;
+};
+
+window.confirmDelete = async () => {
+  if (!deleteDocId) return;
+  try {
+    await deleteDoc(doc(db, 'products', deleteDocId));
+    showToast('Product deleted');
+    closeDeleteModal();
+    loadProducts();
+  } catch (e) {
+    showToast('Delete failed: ' + e.message);
+  }
+};
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function esc(str) {
+  return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function showError(msg) {
+  const el = document.getElementById('modal-error');
+  el.textContent  = msg;
+  el.style.display = 'block';
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// Close modals on overlay click
+document.getElementById('product-modal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.getElementById('delete-modal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeDeleteModal();
+});
+document.getElementById('import-modal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeImportModal();
+});
+</script>
+</body>
+</html>

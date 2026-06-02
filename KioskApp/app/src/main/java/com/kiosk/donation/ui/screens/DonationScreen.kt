@@ -1,0 +1,283 @@
+package com.kiosk.donation.ui.screens
+
+import android.annotation.SuppressLint
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.kiosk.donation.data.DONATION_PRESETS
+import com.kiosk.donation.ui.theme.*
+import java.math.BigDecimal
+
+@SuppressLint("UnusedBoxWithConstraintsScope")
+@Composable
+fun DonationScreen(
+    onBack: () -> Unit,
+    onProceedToPayment: (BigDecimal) -> Unit
+) {
+    var selectedAmount by remember { mutableStateOf<BigDecimal?>(null) }
+    var customInput    by remember { mutableStateOf("") }
+    var showCustom     by remember { mutableStateOf(false) }
+
+    val effectiveAmount: BigDecimal? = when {
+        showCustom -> {
+            val pence = customInput.filter { it.isDigit() }.toLongOrNull() ?: 0L
+            if (pence > 0) (pence.toBigDecimal()).divide(BigDecimal("100")) else null
+        }
+        else -> selectedAmount
+    }
+
+    BoxWithConstraints(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(OffWhite)
+    ) {
+        val screenHeight = maxHeight
+        val screenWidth  = maxWidth
+        val keypadVisible = showCustom
+
+        // Proportional sizing based on screen dimensions
+        val headerHeight:   Dp       = screenHeight * if (keypadVisible) 0.10f else 0.13f
+        val chipHeight:     Dp       = screenHeight * if (keypadVisible) 0.09f else 0.12f
+        val toggleHeight:   Dp       = screenHeight * if (keypadVisible) 0.08f else 0.10f
+        val keyHeight:      Dp       = screenHeight * 0.09f
+        val donateHeight:   Dp       = screenHeight * if (keypadVisible) 0.09f else 0.11f
+        val sectionGap:     Dp       = screenHeight * if (keypadVisible) 0.01f else 0.025f
+        val chipFontSize:   TextUnit = (screenWidth.value * if (keypadVisible) 0.025f else 0.045f).sp
+        val keyFontSize:    TextUnit = (screenWidth.value * 0.045f).sp
+        val amountFontSize: TextUnit = (screenWidth.value * 0.06f).sp
+        val hPad:           Dp       = screenWidth  * 0.04f
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = hPad),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            // ── Header Section ────────────────────────────────────────────────
+            Column(verticalArrangement = Arrangement.spacedBy(sectionGap)) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(headerHeight),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    IconButton(onClick = onBack, modifier = Modifier.size(headerHeight * 0.7f)) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Back",
+                            tint = KarimaDark,
+                            modifier = Modifier.fillMaxSize(0.7f)
+                        )
+                    }
+                    Spacer(Modifier.width(8.dp))
+                    Column(verticalArrangement = Arrangement.Center) {
+                        Text(
+                            "Choose Your Donation",
+                            fontSize   = (screenWidth.value * 0.038f).sp,
+                            fontWeight = FontWeight.Bold,
+                            color      = TextDark
+                        )
+                        if (!keypadVisible) {
+                            Text(
+                                "Every donation makes a difference — Jazakum Allahu Khayran",
+                                fontSize = (screenWidth.value * 0.022f).sp,
+                                color    = TextMedium
+                            )
+                        }
+                    }
+                }
+
+                // "Back to preset amounts" button — only shows when keypad is visible
+                if (showCustom) {
+                    OutlinedButton(
+                        onClick = {
+                            showCustom     = false
+                            selectedAmount = null
+                            customInput    = ""
+                        },
+                        shape  = MaterialTheme.shapes.medium,
+                        colors = ButtonDefaults.outlinedButtonColors(
+                            containerColor = KarimaDark,
+                            contentColor   = SurfaceWhite
+                        ),
+                        modifier = Modifier.fillMaxWidth().height(toggleHeight)
+                    ) {
+                        Text(
+                            "← Back to preset amounts",
+                            fontSize   = (screenWidth.value * 0.035f).sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
+                }
+            }
+
+            // ── Main Content Section ──────────────────────────────────────────
+            if (!showCustom) {
+                // Preset Amounts Mode
+                Column(verticalArrangement = Arrangement.spacedBy(sectionGap)) {
+                    DONATION_PRESETS.chunked(2).forEach { row ->
+                        Row(
+                            modifier              = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(sectionGap)
+                        ) {
+                            row.forEach { amount ->
+                                DonationChip(
+                                    amount   = amount,
+                                    selected = selectedAmount == amount,
+                                    height   = chipHeight,
+                                    fontSize = chipFontSize,
+                                    modifier = Modifier.weight(1f),
+                                    onClick  = {
+                                        selectedAmount = amount
+                                        showCustom     = false
+                                        customInput    = ""
+                                    }
+                                )
+                            }
+                            repeat(2 - row.size) { Spacer(Modifier.weight(1f)) }
+                        }
+                    }
+
+                    Spacer(Modifier.height(sectionGap))
+
+                    // "Enter a different amount" button — shows at the bottom of the presets
+                    OutlinedButton(
+                        onClick = {
+                            showCustom     = true
+                            selectedAmount = null
+                            customInput    = ""
+                        },
+                        shape  = MaterialTheme.shapes.medium,
+                        colors = ButtonDefaults.outlinedButtonColors(
+                            containerColor = Color.Transparent,
+                            contentColor   = KarimaDark
+                        ),
+                        modifier = Modifier.fillMaxWidth().height(toggleHeight)
+                    ) {
+                        Text(
+                            "Enter a different amount",
+                            fontSize   = (screenWidth.value * 0.035f).sp,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
+                }
+            } else {
+                // Keypad Section
+                Column(verticalArrangement = Arrangement.spacedBy(sectionGap)) {
+                    // Amount display
+                    Text(
+                        text       = "£${"%.2f".format(
+                            (customInput.filter { it.isDigit() }.toLongOrNull() ?: 0L) / 100.0
+                        )}",
+                        fontSize   = amountFontSize,
+                        fontWeight = FontWeight.Bold,
+                        color      = TextDark,
+                        modifier   = Modifier.align(Alignment.CenterHorizontally)
+                    )
+
+                    // Numeric keypad
+                    val keys = listOf("1","2","3","4","5","6","7","8","9","","0","⌫")
+                    keys.chunked(3).forEach { row ->
+                        Row(
+                            modifier              = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(sectionGap)
+                        ) {
+                            row.forEach { key ->
+                                if (key.isEmpty()) {
+                                    Spacer(Modifier.weight(1f))
+                                } else {
+                                    OutlinedButton(
+                                        onClick = {
+                                            if (key == "⌫") {
+                                                if (customInput.isNotEmpty())
+                                                    customInput = customInput.dropLast(1)
+                                            } else {
+                                                val newVal = customInput + key
+                                                if (newVal.length <= 6) customInput = newVal
+                                            }
+                                        },
+                                        shape    = RoundedCornerShape(12.dp),
+                                        modifier = Modifier.weight(1f).height(keyHeight),
+                                        colors   = ButtonDefaults.outlinedButtonColors(contentColor = TextDark)
+                                    ) {
+                                        Text(key, fontSize = keyFontSize, fontWeight = FontWeight.Bold)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // ── Donate button ─────────────────────────────────────────────────
+            Button(
+                onClick        = { effectiveAmount?.let { onProceedToPayment(it) } },
+                enabled        = effectiveAmount != null,
+                colors         = ButtonDefaults.buttonColors(
+                    containerColor = Amber,
+                    contentColor   = TextDark
+                ),
+                shape          = MaterialTheme.shapes.large,
+                contentPadding = PaddingValues(0.dp),
+                modifier       = Modifier
+                    .fillMaxWidth()
+                    .height(donateHeight)
+                    .padding(bottom = sectionGap)
+            ) {
+                Icon(Icons.Filled.Favorite, null, modifier = Modifier.size(donateHeight * 0.4f))
+                Spacer(Modifier.width(8.dp))
+                Text(
+                    text = if (effectiveAmount != null)
+                        "Donate £${"%.2f".format(effectiveAmount)}"
+                    else
+                        "Select an amount",
+                    fontSize   = (screenWidth.value * 0.030f).sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun DonationChip(
+    amount: BigDecimal,
+    selected: Boolean,
+    height: Dp,
+    fontSize: TextUnit,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
+    Box(
+        modifier = modifier
+            .height(height)
+            .clip(RoundedCornerShape(14.dp))
+            .background(if (selected) KarimaGreen else SurfaceWhite)
+            .border(2.dp, if (selected) KarimaDark else BorderColor, RoundedCornerShape(14.dp))
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text       = "£${"%.0f".format(amount)}",
+            fontSize   = fontSize,
+            color      = if (selected) SurfaceWhite else TextDark,
+            fontWeight = FontWeight.Bold
+        )
+    }
+}

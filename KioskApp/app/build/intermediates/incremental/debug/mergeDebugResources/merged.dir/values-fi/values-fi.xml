@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="exo_controls_playback_speeds">
+    <item>0,25x</item>
+    <item>0,5x</item>
+    <item>0,75x</item>
+    <item>Normaali</item>
+    <item>1,25x</item>
+    <item>1,5x</item>
+    <item>2x</item>
+  </string-array>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Siirry eteenpäin %d sekunti</item>
+    <item quantity="other">Siirry eteenpäin %d sekuntia</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Siirry taaksepäin %d sekunti</item>
+    <item quantity="other">Siirry taaksepäin %d sekuntia</item>
+  </plurals>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d uusi ilmoitus</item>
+    <item quantity="other">%d uutta ilmoitusta</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Siirry etusivulle"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Siirry ylös"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Lisäasetukset"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Valmis"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Näytä kaikki"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Valitse sovellus"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"POIS PÄÄLTÄ"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"PÄÄLLÄ"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Fn+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Vaihto+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"välilyönti"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Valikko+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Haku…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Tyhjennä kysely"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Hakukysely"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Haku"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Lähetä kysely"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Puhehaku"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Jaa…"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Jaa: <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Tiivistä"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Salasana"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Avainkoodi"</string>
+    <string name="bottomsheet_action_collapse">Tiivistä alapaneeli</string>
+    <string name="bottomsheet_action_expand">Laajenna alapaneeli</string>
+    <string name="bottomsheet_action_expand_halfway">Laajenna puoliväliin</string>
+    <string name="bottomsheet_drag_handle_clicked">Vetokahvaa kaksoisnapautettu</string>
+    <string name="bottomsheet_drag_handle_content_description">Vetokahva</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Vastaa"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Hylkää"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Lopeta puhelu"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Saapuva puhelu"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Käynnissä oleva puhelu"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Seulotaan saapuvaa puhelua"</string>
+    <string name="character_counter_content_description">%1$d/%2$d merkkiä kirjoitettu</string>
+    <string name="character_counter_overflowed_content_description">Merkkiraja ylitetty: %1$d/%2$d</string>
+    <string name="circuit_navigationHeader_addButton_title">Add</string>
+    <string name="circuit_navigationHeader_backButton_title">Back</string>
+    <string name="circuit_navigationHeader_cancelButton_title">Cancel</string>
+    <string name="circuit_navigationHeader_chatButton_title">Chat</string>
+    <string name="circuit_navigationHeader_closeButton_title">Close</string>
+    <string name="circuit_navigationHeader_deleteButton_title">Delete</string>
+    <string name="circuit_navigationHeader_discountButton_title">Apply discount</string>
+    <string name="circuit_navigationHeader_filterButton_title">Filter</string>
+    <string name="circuit_navigationHeader_helpButton_title">Help</string>
+    <string name="circuit_navigationHeader_hideButton_title">Hide</string>
+    <string name="circuit_navigationHeader_inboxButton_title">Inbox</string>
+    <string name="circuit_navigationHeader_minimizeButton_title">Minimize</string>
+    <string name="circuit_navigationHeader_moreButton_title">More</string>
+    <string name="circuit_navigationHeader_printButton_title">Print</string>
+    <string name="circuit_navigationHeader_refreshButton_title">Refresh</string>
+    <string name="circuit_navigationHeader_reportButton_title">Report</string>
+    <string name="circuit_navigationHeader_saveButton_title">Save</string>
+    <string name="circuit_navigationHeader_searchButton_title">Search</string>
+    <string name="circuit_navigationHeader_settingsButton_title">Settings</string>
+    <string name="circuit_navigationHeader_shareButton_title">Share</string>
+    <string name="circuit_navigationHeader_showButton_title">Show</string>
+    <string name="circuit_tierIndicator_plusTier_accessibilityLabel">Plus Tier</string>
+    <string name="clear_text_end_icon_content_description">Tyhjennä teksti</string>
+    <string msgid="406453423630273620" name="close_drawer">"Sulje navigointivalikko"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Sulje taulukko"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Ota käyttöön</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s ei toimi, ellet ota Google Play Palveluita käyttöön.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Ota Google Play Palvelut käyttöön</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Asenna</string>
+    <string name="common_google_play_services_install_text">%1$s ei toimi ilman Google Play Palveluita, jotka puuttuvat laitteeltasi.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Asenna Google Play Palvelut</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play Palveluiden saatavuus</string>
+    <string name="common_google_play_services_notification_ticker">Virhe Google Play -palveluissa</string>
+    <string name="common_google_play_services_unknown_issue">Sovelluksella %1$s on ongelmia Google Play Palveluiden kanssa. Yritä uudelleen.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s ei toimi ilman Google Play Palveluita, joita laitteesi ei tue.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Päivitä</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s ei toimi, ellet päivitä Google Play Palveluita.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Päivitä Google Play Palvelut</string>
+    <string name="common_google_play_services_updating_text">%1$s ei toimi ilman Google Play Palveluita, joita päivitetään tällä hetkellä.</string>
+    <string name="common_google_play_services_wear_update_text">Uusi Google Play Palveluiden versio tarvitaan. Se päivittyy pian.</string>
+    <string name="common_open_on_phone">Avaa puhelimessa</string>
+    <string name="common_signin_button_text">Kirjaudu sisään</string>
+    <string name="common_signin_button_text_long">Kirjaudu Google-tilille</string>
+    <string msgid="6083905920877235314" name="copy">"Kopioi"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Linkki kopioitu leikepöydälle"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Virheellinen syöte"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Ponnahdusikkuna"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Avattava valikko"</string>
+    <string name="error_a11y_label">Virhe: ei kelpaa</string>
+    <string name="error_icon_content_description">Virhe</string>
+    <string name="exo_controls_cc_disabled_description">Ota tekstitykset käyttöön</string>
+    <string name="exo_controls_cc_enabled_description">Poista tekstitykset käytöstä</string>
+    <string name="exo_controls_fastforward_description">Kelaa eteenpäin</string>
+    <string name="exo_controls_fullscreen_enter_description">Siirry koko näytön tilaan</string>
+    <string name="exo_controls_fullscreen_exit_description">Sulje koko näytön tila</string>
+    <string name="exo_controls_hide">Näytä soittimen säätimet</string>
+    <string name="exo_controls_next_description">Seuraava</string>
+    <string name="exo_controls_overflow_hide_description">Piilota lisäasetukset</string>
+    <string name="exo_controls_overflow_show_description">Näytä lisäasetukset</string>
+    <string name="exo_controls_pause_description">Keskeytä</string>
+    <string name="exo_controls_play_description">Toista</string>
+    <string name="exo_controls_playback_speed">Nopeus</string>
+    <string name="exo_controls_previous_description">Edellinen</string>
+    <string name="exo_controls_repeat_all_description">Tila: Toista kaikki. Vaihda.</string>
+    <string name="exo_controls_repeat_off_description">Tila: Älä toista. Vaihda.</string>
+    <string name="exo_controls_repeat_one_description">Tila: Toista yksi. Vaihda.</string>
+    <string name="exo_controls_rewind_description">Kelaa taaksepäin</string>
+    <string name="exo_controls_seek_bar_description">Toiston edistyminen</string>
+    <string name="exo_controls_settings_description">Asetukset</string>
+    <string name="exo_controls_show">Näytä soittimen säätimet</string>
+    <string name="exo_controls_shuffle_off_description">Ota satunnaistoisto käyttöön</string>
+    <string name="exo_controls_shuffle_on_description">Poista satunnaistoisto käytöstä</string>
+    <string name="exo_controls_stop_description">Lopeta</string>
+    <string name="exo_controls_vr_description">VR-tila</string>
+    <string name="exo_download_completed">Lataus valmis</string>
+    <string name="exo_download_description">Lataa</string>
+    <string name="exo_download_downloading">Ladataan</string>
+    <string name="exo_download_failed">Lataus epäonnistui</string>
+    <string name="exo_download_notification_channel_name">Lataukset</string>
+    <string name="exo_download_paused">Lataukset keskeytetty</string>
+    <string name="exo_download_paused_for_network">Lataukse odottavat verkkoyhteyttä</string>
+    <string name="exo_download_paused_for_wifi">Lataukset odottavat Wi-Fi-yhteyttä</string>
+    <string name="exo_download_removing">Poistetaan latauksia</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mb/s</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Vaihtoehtoinen</string>
+    <string name="exo_track_role_closed_captions">Tekstitykset</string>
+    <string name="exo_track_role_commentary">Kommenttiraita</string>
+    <string name="exo_track_role_supplementary">Lisämateriaali</string>
+    <string name="exo_track_selection_auto">Automaattinen</string>
+    <string name="exo_track_selection_none">–</string>
+    <string name="exo_track_selection_title_audio">Ääni</string>
+    <string name="exo_track_selection_title_text">Teksti</string>
+    <string name="exo_track_selection_title_video">Video</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Surround-ääni</string>
+    <string name="exo_track_surround_5_point_1">5.1-surround-ääni</string>
+    <string name="exo_track_surround_7_point_1">7.1-surround-ääni</string>
+    <string name="exo_track_unknown">Tuntematon</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Lisäasetukset"</string>
+    <string name="exposed_dropdown_menu_content_description">Näytä avattava valikko</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopioi linkki"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Avaa selaimessa"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Jaa linkki"</string>
+    <string name="icon_content_description">Valintaikkunan kuvake</string>
+    <string msgid="6827826412747255547" name="in_progress">"Kesken"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Osittain tarkistettu"</string>
+    <string name="item_view_role_description">Välilehti</string>
+    <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Tiivistä alapaneeli"</string>
+    <string msgid="1555567894577437024" name="m3c_bottom_sheet_dismiss_description">"Hylkää alapaneeli"</string>
+    <string msgid="8403354765404029791" name="m3c_bottom_sheet_drag_handle_description">"Vetokahva"</string>
+    <string msgid="6670819569745899763" name="m3c_bottom_sheet_expand_description">"Laajenna alapaneeli"</string>
+    <string msgid="3010635850035863127" name="m3c_bottom_sheet_pane_title">"Alapaneeli"</string>
+    <string msgid="8166741421776570875" name="m3c_date_input_headline">"Lisätty päivämäärä"</string>
+    <string msgid="229313757840775812" name="m3c_date_input_headline_description">"Lisätty päivämäärä: %1$s"</string>
+    <string msgid="6116910750161463197" name="m3c_date_input_invalid_for_pattern">"Päivämäärä ei vastaa odotettua mallia: %1$s"</string>
+    <string msgid="2521768508935305279" name="m3c_date_input_invalid_not_allowed">"Päivämäärä ei sallittu: %1$s"</string>
+    <string msgid="7052898923934555305" name="m3c_date_input_invalid_year_range">"Päivämäärä ei sisälly odotettuun vuosiaikaväliin: %1$s–%2$s"</string>
+    <string msgid="2895559812010326913" name="m3c_date_input_label">"Päivämäärä"</string>
+    <string msgid="1237013946323089826" name="m3c_date_input_no_input_description">"–"</string>
+    <string msgid="7306227249789210568" name="m3c_date_input_title">"Valitse päivämäärä"</string>
+    <string msgid="7605002211875882969" name="m3c_date_picker_headline">"Valittu päivämäärä"</string>
+    <string msgid="3664277305226978227" name="m3c_date_picker_headline_description">"Nykyinen valinta: %1$s"</string>
+    <string msgid="8436650776581492840" name="m3c_date_picker_navigate_to_year_description">"Siirry vuoteen %1$s"</string>
+    <string msgid="5811000998184572395" name="m3c_date_picker_no_selection_description">"–"</string>
+    <string msgid="7813882352367152251" name="m3c_date_picker_scroll_to_earlier_years">"Vieritä nähdäksesi aiemmat vuodet"</string>
+    <string msgid="5727367015496556177" name="m3c_date_picker_scroll_to_later_years">"Vieritä nähdäksesi myöhemmät vuodet"</string>
+    <string msgid="1804346892470238807" name="m3c_date_picker_switch_to_calendar_mode">"Vaihda syöttötavaksi kalenteri"</string>
+    <string msgid="395627960681594326" name="m3c_date_picker_switch_to_day_selection">"Valitse vuosi pyyhkäisemällä tai palaa päivän valintaan napauttamalla"</string>
+    <string msgid="2219746470065162704" name="m3c_date_picker_switch_to_input_mode">"Vaihda tekstinsyöttötilaan"</string>
+    <string msgid="7142101321095356500" name="m3c_date_picker_switch_to_next_month">"Vaihda seuraavaan kuukauteen"</string>
+    <string msgid="228438865139394590" name="m3c_date_picker_switch_to_previous_month">"Vaihda edelliseen kuukauteen"</string>
+    <string msgid="791651718641787594" name="m3c_date_picker_switch_to_year_selection">"Vaihda vuoden valintaan"</string>
+    <string msgid="7430790972741451689" name="m3c_date_picker_title">"Valitse päivämäärä"</string>
+    <string msgid="3199387177749801575" name="m3c_date_picker_today_description">"Tänään"</string>
+    <string msgid="2068382232816991922" name="m3c_date_picker_year_picker_pane_title">"Vuosivalitsin näkyvillä"</string>
+    <string msgid="3190049423327661366" name="m3c_date_range_input_invalid_range_input">"Virheellinen aikaväli"</string>
+    <string msgid="3148384720560189467" name="m3c_date_range_input_title">"Lisää päivämäärät"</string>
+    <string msgid="2138321128465719402" name="m3c_date_range_picker_day_in_range">"Valitulla välillä"</string>
+    <string msgid="4947636797751277713" name="m3c_date_range_picker_end_headline">"Päättymispäivä"</string>
+    <string msgid="602077859540990149" name="m3c_date_range_picker_scroll_to_next_month">"Vieritä nähdäksesi seuraavan kuukauden"</string>
+    <string msgid="4592174524846109496" name="m3c_date_range_picker_scroll_to_previous_month">"Vieritä nähdäksesi edellisen kuukauden"</string>
+    <string msgid="4665981448952749820" name="m3c_date_range_picker_start_headline">"Alkamispäivä"</string>
+    <string msgid="3134165431120340385" name="m3c_date_range_picker_title">"Valitse päivämäärät"</string>
+    <string msgid="7617233117134790350" name="m3c_dialog">"Valintaikkuna"</string>
+    <string msgid="3177828188723359358" name="m3c_dropdown_menu_collapsed">"Tiivistetty"</string>
+    <string msgid="2360841780724299882" name="m3c_dropdown_menu_expanded">"Laajennettu"</string>
+    <string msgid="8687821690726149911" name="m3c_dropdown_menu_toggle">"Laita avattava valikko päälle"</string>
+    <string msgid="6152806324422087846" name="m3c_search_bar_search">"Hae"</string>
+    <string msgid="6152755701819882931" name="m3c_snackbar_dismiss">"Ohita"</string>
+    <string msgid="7655536806087401899" name="m3c_suggestions_available">"Ehdotuksia alla"</string>
+    <string msgid="2786685010796619560" name="m3c_time_picker_am">"AP"</string>
+    <string msgid="2349193472625211372" name="m3c_time_picker_hour">"Tunti"</string>
+    <string msgid="9179527532316922345" name="m3c_time_picker_hour_24h_suffix">"%1$d h"</string>
+    <string msgid="8876759303332837035" name="m3c_time_picker_hour_selection">"Valitse tunti"</string>
+    <string msgid="3458167507790628988" name="m3c_time_picker_hour_suffix">"Kello %1$d"</string>
+    <string msgid="6973808109666874069" name="m3c_time_picker_hour_text_field">"tuntien osalta"</string>
+    <string msgid="4313071914266462005" name="m3c_time_picker_minute">"Minuutti"</string>
+    <string msgid="4699133535056739733" name="m3c_time_picker_minute_selection">"Valitse minuutit"</string>
+    <string msgid="5064177921781937179" name="m3c_time_picker_minute_suffix">"%1$d minuuttia"</string>
+    <string msgid="7661234488295443182" name="m3c_time_picker_minute_text_field">"minuuttien osalta"</string>
+    <string msgid="5865171949528594571" name="m3c_time_picker_period_toggle_description">"Valitse AP tai IP"</string>
+    <string msgid="6616362054113087709" name="m3c_time_picker_pm">"IP"</string>
+    <string msgid="1805687647081129904" name="m3c_tooltip_long_press_label">"Näytä vihjeteksti"</string>
+    <string msgid="5460405025248574620" name="m3c_tooltip_pane_description">"Vihjeteksti"</string>
+    <string name="material_clock_toggle_content_description">Valitse AP tai IP</string>
+    <string name="material_hour_24h_suffix">%1$s tuntia</string>
+    <string name="material_hour_selection">Valitse tunti</string>
+    <string name="material_hour_suffix">klo %1$s</string>
+    <string name="material_minute_selection">Valitse minuutit</string>
+    <string name="material_minute_suffix">%1$s minuuttia</string>
+    <string name="material_timepicker_am">ap</string>
+    <string name="material_timepicker_clock_mode_description">Vaihda ajan syöttämiseen kellotilassa.</string>
+    <string name="material_timepicker_hour">Tunnit</string>
+    <string name="material_timepicker_minute">Minuutti</string>
+    <string name="material_timepicker_pm">ip</string>
+    <string name="material_timepicker_select_time">Valitse aika</string>
+    <string name="material_timepicker_text_input_mode_description">Vaihda ajan syöttämiseen tekstitilassa.</string>
+    <string name="mtrl_badge_numberless_content_description">Uusi ilmoitus</string>
+    <string name="mtrl_checkbox_state_description_checked">Valittu</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">Osittain valittu</string>
+    <string name="mtrl_checkbox_state_description_unchecked">Ei valittu</string>
+    <string name="mtrl_chip_close_icon_content_description">Poista %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Yli %1$d uutta ilmoitusta</string>
+    <string name="mtrl_picker_a11y_next_month">Vaihda seuraavaan kuukauteen</string>
+    <string name="mtrl_picker_a11y_prev_month">Vaihda edelliseen kuukauteen</string>
+    <string name="mtrl_picker_announce_current_range_selection">Alkamispäivän valinta: %1$s – päättymispäivän valinta: %2$s</string>
+    <string name="mtrl_picker_announce_current_selection">Nykyinen valinta: %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">–</string>
+    <string name="mtrl_picker_cancel">Peru</string>
+    <string name="mtrl_picker_confirm">OK</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Valitse päivämäärä</string>
+    <string name="mtrl_picker_date_header_unselected">Valittu päivämäärä</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_end_date_description">Päättyy %1$s</string>
+    <string name="mtrl_picker_invalid_format">Virheellinen muoto</string>
+    <string name="mtrl_picker_invalid_format_example">Esimerkki: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Käytä muotoa %1$s</string>
+    <string name="mtrl_picker_invalid_range">Virheellinen alue</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">Siirry kuluvaan vuoteen: %1$d</string>
+    <string name="mtrl_picker_navigate_to_year_description">Siirry vuoteen %1$d</string>
+    <string name="mtrl_picker_out_of_range">Aikavälin ulkop.: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Alkamispäivä – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – päättymispäivä</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Valitse jakso</string>
+    <string name="mtrl_picker_range_header_unselected">Alkamispäivä – päättymispäivä</string>
+    <string name="mtrl_picker_save">Tallenna</string>
+    <string name="mtrl_picker_start_date_description">Alkaa %1$s</string>
+    <string name="mtrl_picker_text_input_date_hint">Päivämäärä</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Päättymispäivä</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Alkamispäivä</string>
+    <string name="mtrl_picker_text_input_day_abbr">p</string>
+    <string name="mtrl_picker_text_input_month_abbr">k</string>
+    <string name="mtrl_picker_text_input_year_abbr">v</string>
+    <string name="mtrl_picker_today_description">Tänään: %1$s</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Vaihda syöttötavaksi kalenteri</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Siirry kalenterinäkymään napauttamalla</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Valitse syöttötavaksi teksti</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Siirry vuosinäkymään napauttamalla</string>
+    <string name="mtrl_timepicker_cancel">Peru</string>
+    <string name="mtrl_timepicker_confirm">OK</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigointivalikko"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Ei valittu"</string>
+    <string msgid="6573031135582639649" name="not_set">"Ei asetettu"</string>
+    <string name="password_toggle_content_description">Näytä salasana</string>
+    <string msgid="6685851473431805375" name="preference_copied">"<ns1:g id="SUMMARY">%1$s</ns1:g> kopioitiin leikepöydälle."</string>
+    <string msgid="5941395253238309765" name="range_end">"Alueen loppu"</string>
+    <string msgid="7097486360902471446" name="range_start">"Alueen alku"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Haku"</string>
+    <string name="searchview_clear_text_content_description">Tyhjennä teksti</string>
+    <string name="searchview_navigation_content_description">Takaisin</string>
+    <string msgid="6043586758067023" name="selected">"Valittu"</string>
+    <string name="side_sheet_accessibility_pane_title">Sivupalkki</string>
+    <string msgid="4139871816613051306" name="state_empty">"Tyhjä"</string>
+    <string msgid="5834637030682409883" name="state_off">"Pois päältä"</string>
+    <string msgid="1490883874751719580" name="state_on">"Päällä"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="sumup_app_certificate_error">Verkkovarmenteen vahvistus epäonnistui! Varmista, että laitteesi on yhdistetty suojattuun Internet-yhteyteen.</string>
+    <string name="sumup_app_outdated">Käytät sovelluksen vanhaa versiota, ole hyvä ja päivitä sovellus.</string>
+    <string name="sumup_app_update_required_title">Update Required</string>
+    <string name="sumup_autoreceipt_btn_stop">Lopeta kuittien lähetys</string>
+    <string name="sumup_autoreceipt_customer_credentials_error">Anna vain asiakkaan tiedot</string>
+    <string name="sumup_autoreceipt_keypoint_customers">Anna kassalla ainoastaan asiakkaan sähköpostiosoite tai puhelinnumero.</string>
+    <string name="sumup_autoreceipt_keypoint_email_phone">Älä anna omaa sähköpostiosoitettasi tai puhelinnumeroasi, sillä silloin asiakkaiden kuitit lähetetään sinulle.</string>
+    <string name="sumup_autoreceipt_keypoint_merchants">Asiakkaat saavat kuitin kaikilta SumUp-kauppiailta tehdyistä ostoksista.</string>
+    <string name="sumup_autoreceipt_keypoint_share">Emme koskaan jaa tai myy asiakastietojamme.</string>
+    <string name="sumup_autoreceipt_label_sent">Kuitti lähetettiin automaattisesti osoitteeseen %1$s</string>
+    <string name="sumup_autoreceipt_label_subscribe_toggle">Lähetä kuitit SumUp-kauppiailta automaattisesti</string>
+    <string name="sumup_autoreceipt_off_text">Pois</string>
+    <string name="sumup_autoreceipt_on_text">Päällä</string>
+    <string name="sumup_autoreceipt_privacy_policy_link">tietosuojakäytännöstämme</string>
+    <string name="sumup_autoreceipt_privacy_policy_text">Lue lisää %1$s</string>
+    <string name="sumup_autoreceipt_rules_link">sääntömme</string>
+    <string name="sumup_autoreceipt_rules_text">Huomioithan kuittien automaattisen lähetyksen yhteydessä voimassa olevat %1$s.</string>
+    <string name="sumup_autoreceipt_see_privacy_policy">Katso %1$s saadaksesi lisätietoja</string>
+    <string name="sumup_autoreceipt_send_text">Lähetä kuitti automaattisesti</string>
+    <string name="sumup_autoreceipt_stop_alert_body">Muista varmistaa asiakkaalta, että hän ei enää halua vastaanottaa kuitteja.</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_cancel">Peruuta</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_destructive">Lopeta kuittien lähetys</string>
+    <string name="sumup_autoreceipt_stop_alert_title">Lopetetaanko kuittien automaattinen lähetys?</string>
+    <string name="sumup_autoreceipt_stop_toast_error_subtitle">Yritä poistaa kuittien automaattinen lähetys käytöstä myöhemmin uudelleen.</string>
+    <string name="sumup_autoreceipt_stop_toast_error_title">Pyynnön täyttäminen epäonnistui</string>
+    <string name="sumup_autoreceipt_stop_toast_success_subtitle">Kuittien automaattinen lähetys lopetettu</string>
+    <string name="sumup_autoreceipt_subtitle_label_sent">Kuitti lähetetty vastaanottajalle %1$s</string>
+    <string name="sumup_autoreceipt_text">Automaattiset kuitit</string>
+    <string name="sumup_autoreceipt_title_label_sent">Lähetetty!</string>
+    <string name="sumup_bt_connection_failure_description">Käynnistä %1$s ja kortinlukija ja yritä uudelleen.</string>
+    <string name="sumup_bt_connection_failure_title">%1$s ei löytynyt</string>
+    <string name="sumup_bt_reset_air_message">Pidä virtapainike painettuna niin kauan, että näytöllä lukee %1$s. Tämä voi kestää jonkin aikaa. Kun %2$s tulee näkyviin, vapauta virtapainike heti.</string>
+    <string name="sumup_bt_reset_instruction_air_1_description">Varmista, että se on irrotettu virtalähteestä, ja sammuta se painamalla virtapainiketta.</string>
+    <string name="sumup_bt_reset_instruction_air_1_title">Irrota Air virransyötöstä ja sammuta se</string>
+    <string name="sumup_bt_reset_instruction_air_2_description">Pidä virtapainiketta painettuna muutaman sekunnin ajan, kunnes näytöllä näkyy ”Release…”.</string>
+    <string name="sumup_bt_reset_instruction_air_2_title">Pidä virtapainiketta painettuna</string>
+    <string name="sumup_bt_reset_instruction_air_3_description">Kun olet vapauttanut virtapainikkeen, laitteesta pitäisi kuulua äänimerkki, joka vahvistaa, että Bluetooth on palautettu.</string>
+    <string name="sumup_bt_reset_instruction_air_3_title">Vapauta painike ja odota äänimerkkiä</string>
+    <string name="sumup_bt_reset_instruction_solo_1_description">Napauta Solon yläreunassa olevaa nuolta ja valitse ”Yhteydet”.</string>
+    <string name="sumup_bt_reset_instruction_solo_1_title">Siirry Solon yhteysvalikkoon</string>
+    <string name="sumup_bt_reset_instruction_solo_2_description">Siirry kohtaan ”Bluetooth” ja kytke valitsin pois päältä ja takaisin päälle.</string>
+    <string name="sumup_bt_reset_instruction_solo_2_title">Kytke Solon Bluetooth takaisin päälle</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_description">Napauta ylös- tai alaspäin osoittavaa nuolta kortinlukijassa.</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_title">Avaa ”Laitteen asetukset”</string>
+    <string name="sumup_bt_reset_instruction_three_g_2_title">Valitse ”Yhdistämistapa”</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_description">Valitse ”Pois päältä” ja vahvista napauttamalla vihreää valintamerkkiä.</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_title">Kytke Bluetooth pois päältä</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_description">Valitse ”Päälle” ja vahvista napauttamalla vihreää valintamerkkiä.</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_title">Kytke Bluetooth takaisin päälle</string>
+    <string name="sumup_bt_reset_instructions_message">Ratkaise laitteen ja kortinlukijan välinen yhteysongelma noudattamatta tätä kaksivaiheista ohjetta.</string>
+    <string name="sumup_bt_reset_instructions_title">Bluetoothin palautus</string>
+    <string name="sumup_bt_reset_mobile_description">Palauta laitteen Bluetooth napauttamalla alla kuvattua painiketta.</string>
+    <string name="sumup_bt_reset_on_device_description_done">Valmis</string>
+    <string name="sumup_bt_reset_on_device_description_from_settings">Kytke Bluetooth pois päältä ja takaisin päälle</string>
+    <string name="sumup_bt_reset_on_device_description_not_done">Se kestää vain hetken</string>
+    <string name="sumup_bt_reset_on_device_title">Tässä laitteessa</string>
+    <string name="sumup_bt_reset_on_reader_description">Katso miten se tapahtuu</string>
+    <string name="sumup_bt_reset_on_reader_title">%1$s-laitteessa</string>
+    <string name="sumup_bt_reset_option_phone">Puhelimellasi</string>
+    <string name="sumup_bt_reset_option_reader">Kortinlukijallasi</string>
+    <string name="sumup_bt_reset_option_tablet">Tabletillasi</string>
+    <string name="sumup_bt_setup_instruction_solo_1_description">Kytke Solo päälle painamalla virtapainiketta.</string>
+    <string name="sumup_bt_setup_instruction_solo_1_title">Varmista, että Solo on päällä</string>
+    <string name="sumup_bt_setup_instruction_solo_2_description">Napauta Solon näytön yläreunassa olevaa nuolta ja valitse ”Yhteydet”.</string>
+    <string name="sumup_bt_setup_instruction_solo_2_title">Valitse valikon kohta ”Yhteydet”</string>
+    <string name="sumup_bt_setup_instruction_solo_3_description">Valitse ”Bluetooth” ja kytke valitsin päälle.</string>
+    <string name="sumup_bt_setup_instruction_solo_3_title">Kytke Solon Bluetooth päälle</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_description">Napauta ylös- tai alaspäin osoittavaa nuolta kortinlukijassa.</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_title">Avaa ”Laitteen asetukset”</string>
+    <string name="sumup_bt_setup_instruction_three_g_2_title">Valitse ”Yhdistämistapa”</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_description">Kytke Bluetooth päälle valitsemalla ”Päälle”.</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_title">Valitse ”Bluetooth”</string>
+    <string name="sumup_bt_setup_instruction_three_g_4_title">Vahvista painamalla vihreää valintamerkkiä</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_description">Valitse kortinlukijasi</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_onboarding_title">Määritä kortinlukijasi</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_title">Minkä laitteen haluat määrittää?</string>
+    <string name="sumup_btn_call_support">Soita nyt</string>
+    <string name="sumup_btn_cancel">Peruuta</string>
+    <string name="sumup_btn_connect">Yhdistä</string>
+    <string name="sumup_btn_dismiss">Kumoa</string>
+    <string name="sumup_btn_done">Valmis</string>
+    <string name="sumup_btn_edit">Muokkaa</string>
+    <string name="sumup_btn_go_to_support">Siirry tukeen</string>
+    <string name="sumup_btn_later">Myöhemmin</string>
+    <string name="sumup_btn_new_set_up">Uusi määritys</string>
+    <string name="sumup_btn_next">Seuraava</string>
+    <string name="sumup_btn_no">Ei</string>
+    <string name="sumup_btn_not_my_reader">Ei lukijani</string>
+    <string name="sumup_btn_ok">OK</string>
+    <string name="sumup_btn_previous">Edellinen</string>
+    <string name="sumup_btn_proceed">Jatka</string>
+    <string name="sumup_btn_rescan">Etsi uudestaan</string>
+    <string name="sumup_btn_retry">Yritä uudestaan</string>
+    <string name="sumup_btn_scan">Etsi</string>
+    <string name="sumup_btn_send">Lähetä</string>
+    <string name="sumup_btn_send_to_mobile">Lähetä matkapuhelimeen</string>
+    <string name="sumup_btn_skip">Ohita</string>
+    <string name="sumup_btn_update">Update</string>
+    <string name="sumup_btn_yes">Kyllä</string>
+    <string name="sumup_btn_yes_connect">Kyllä, yhdistä</string>
+    <string name="sumup_btn_yes_scan">Kyllä, etsi</string>
+    <string name="sumup_button_retry">Yritä uudelleen</string>
+    <string name="sumup_camera_permission_request_text">Jotta nimikkeestä voidaan ottaa kuva, SumUp tarvitsee kamerasi käyttöoikeuden.</string>
+    <string name="sumup_cancel_pending_payment_message">Haluatko varmasti peruuttaa tämän maksun?</string>
+    <string name="sumup_cancel_pending_payment_title">Odottaa maksua</string>
+    <string name="sumup_card_checkout_cvv_hint">CVV</string>
+    <string name="sumup_card_checkout_expiry_date_label">Vanhentumispäivä</string>
+    <string name="sumup_card_checkout_expiry_month_hint">kk</string>
+    <string name="sumup_card_checkout_expiry_year_hint">vv</string>
+    <string name="sumup_card_checkout_insert_and_turn_on_card_reader">Yhdistä ja käynnistä maksupääte</string>
+    <string name="sumup_card_checkout_security_code">Turvakoodi</string>
+    <string name="sumup_card_reader_battery_level">%1$d%% virtaa</string>
+    <string name="sumup_card_reader_battery_level_label">Battery level</string>
+    <string name="sumup_card_reader_battery_level_percentage">%1$d%%</string>
+    <string name="sumup_card_reader_battery_text">Akku</string>
+    <string name="sumup_card_reader_bluetooth_software_version_text">Bluetooth-ohjelmisto</string>
+    <string name="sumup_card_reader_connect_button_text">Yhdistä</string>
+    <string name="sumup_card_reader_error_dialog_header">Yhteyttä ei voitu muodostaa</string>
+    <string name="sumup_card_reader_error_dialog_positive">Yritä uudestaan</string>
+    <string name="sumup_card_reader_error_dialog_title">Kortinlukijaan ei voitu muodostaa yhteyttä. Yritä uudelleen.</string>
+    <string name="sumup_card_reader_hardware_version_text">Laitteisto</string>
+    <string name="sumup_card_reader_last_digits_text">Viimeiset numerot</string>
+    <string name="sumup_card_reader_low_battery">Low battery, please charge device</string>
+    <string name="sumup_card_reader_not_saved_body">Yhdistä kortinlukija</string>
+    <string name="sumup_card_reader_not_saved_title">Korttimaksujen käytön aloittaminen</string>
+    <string name="sumup_card_reader_not_saved_title_br">Solo-kortinlukijan käytön aloittaminen</string>
+    <string name="sumup_card_reader_serial_number_text">Sarjanumero</string>
+    <string name="sumup_card_reader_setting_enable_generic">Ota vastaan maksuja kortinlukijalla</string>
+    <string name="sumup_card_reader_setting_enable_generic_br">Ota vastaan maksuja Sololla</string>
+    <string name="sumup_card_reader_setting_enable_subtitle">Näytä maksutapana kassalla.</string>
+    <string name="sumup_card_reader_setting_switch_card_readers">Vaihda toiseen kortinlukijaan</string>
+    <string name="sumup_card_reader_software_version_text">Ohjelmisto</string>
+    <string name="sumup_checking_firmware_info">Tarkistetaan firmwareen saatavia päivityksiä</string>
+    <string name="sumup_checkout_connecting_bt">Yhdistetään…</string>
+    <string name="sumup_checkout_power_on_reader">Käynnistä maksupääte</string>
+    <string name="sumup_confirm_pairing_air">Vahvista yhteysparipyyntö %1$s ja kortinlukijalla.</string>
+    <string name="sumup_confirm_pairing_air_ios">Vahvista yhteysparin muodostaminen myös %1$s JA kortinlukijasta</string>
+    <string name="sumup_connection_lost">Yhteys katkesi</string>
+    <string name="sumup_contacts_permission_request_title">Contacts</string>
+    <string name="sumup_could_not_find_your_reader">Lukijaa ei löytynyt</string>
+    <string name="sumup_downloading_firmware">Ladataan firmwaren päivitystä</string>
+    <string name="sumup_elv_legal_text">Ich ermächtige %1$s, %2$s, %3$s, %4$s, und von diesem hierzu beauftragten Dritte („die Unternehmen“) den heute fälligen, oben genannten Betrag von meinem Bankkonto durch Lastschrift einzuziehen. Ich weise mein Kreditinstitut unwiderruflich an bei Nichteinlösung der Lastschrift den Unternehmen und/oder der HIT GmbH, Eiffestraße 76, 20537 Hamburg auf Anforderung meinen Namen und meine Anschrift zur Geltendmachung der Forderung mitzuteilen. Datenschutzrechtliche Information: Meine Zahlungsdaten (Kontonummer, Bankleitzahl, Kartenverfallsdatum, Kartenfolgenummer, Datum, Uhrzeit, Zahlungsbetrag, Terminalkennung, Ort, Unternehmen und Filiale) werden zur Kartenprüfung und Zahlungsabwicklung an SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland weitergegeben. Sollte im Rahmen der Zahlungsabwicklung die Lastschrift von meiner Bank nicht eingelöst werden (Rücklastschrift) oder sollte ich der Lastschrift widersprechen, stimme ich zu, dass diese Tatsachen in eine Sperrdatei aufgenommen werden außer wenn ich im Zusammenhang mit dem Widerruf erklärtermaßen Rechte aus dem zu Grunde liegenden Geschäft (z.B. Gewährleistungsrechte) geltend gemacht habe. Die Sperrung wird nach vollständigem Forderungsausgleich wieder aufgehoben und die gespeicherten Daten gelöscht. Dritte, die eine vertragliche Vereinbarung mit den Unternehmen zur Nutzung der Sperrdatei haben, können für Zwecke der Missbrauchsbekämpfung und zur Risikominimierung von Zahlungsausfällen ihre elektronischen Zahlungsvorgänge gegen die Sperrdatei abgleichen. Speichernde Stelle für die Zwecke der Kartenprüfung und Zahlungsabwicklung sind die HIT GmbH, Eiffestr. 76, 20537 Hamburg und die SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland, die auch die Sperrdatei für teilnehmende Händler führen. Diese Unternehmen erteilen insoweit auch an anderen Händler, die auf die Sperrdatei zugreifen eine Empfehlung, ob eine Zahlung im Wege des Lastschrifteinzugs akzeptiert werden sollte.</string>
+    <string name="sumup_elv_legal_text_short">Hiermit erteile ich die Ermächtigung zum Lastschrifteinzug.</string>
+    <string name="sumup_err_no_recent_geo_location_received">Sijaintia ei löytynyt. Varmista että GPS tai sijaintitiedot on kytketty päälle ja ovat toiminnassa.  </string>
+    <string name="sumup_error">Virhe</string>
+    <string name="sumup_error_cannot_send_email">Sähköpostia ei voitu lähettää. Asetettua sähköpostisovellusta ei löydy.</string>
+    <string name="sumup_error_cash_payment_cannot_save_message">Muutoksia ei voitu tallentaa. Yritä uudelleen tai ota yhteyttä asiakastukeen.</string>
+    <string name="sumup_error_cash_payment_cannot_save_title">Käteismaksu</string>
+    <string name="sumup_error_io">Ei voitu yhdistää palvelimelle. Tarkista verkkoyhteytesi ja yritä uudestaan.</string>
+    <string name="sumup_error_payment_method_required">Maksutapa vaaditaan</string>
+    <string name="sumup_error_payment_method_required_desc">Jotta voit käyttää SumUpia, vähintään yhden maksutavan tulee olla aktivoitu.</string>
+    <string name="sumup_error_system_webview_exception">Jotain meni vikaan Androidin WebView-sovelluksessa. Päivitä sovellus tai soita tukeen.</string>
+    <string name="sumup_error_unexpected_response">Olemme havainneet epätavallisen vastauksen palvelimelta. Yritä uudestaan.</string>
+    <string name="sumup_external_storage_permission_request_text">Voidakseen ladata tilitysraportteja SumUp tarvitsee pääsyn laitteesi ulkoiseen tallennustilaan</string>
+    <string name="sumup_failed_transaction">Maksutapahtuma epäonnistui</string>
+    <string name="sumup_firmware_update_canceled">Päivitys peruttu</string>
+    <string name="sumup_fragment_send_receipt">Lähetä kuitti</string>
+    <string name="sumup_geolocation_unavailable_title">Maantieteellinen sijainti vaaditaan</string>
+    <string name="sumup_grant_usb_permission">Jatkaaksesi sinun on hyväksyttävä USB-yhteyden käyttö.</string>
+    <string name="sumup_help">Apua</string>
+    <string name="sumup_home_card_acceptance_cta_button_title">Tee se nyt</string>
+    <string name="sumup_home_card_acceptance_subtitle">Ota kortinlukijasi käyttöön ja aloita maksujen vastaanottaminen.</string>
+    <string name="sumup_home_card_acceptance_title">Valmiina, paikoillasi, vastaanota maksuja!</string>
+    <string name="sumup_identity_login_error_generic_message">Jotain meni pieleen!\nYritä kirjautua sisään uudelleen.</string>
+    <string name="sumup_identity_login_error_session_expired_message">Istuntosi on vanhentunut. Kirjaudu sisään uudelleen.</string>
+    <string name="sumup_identity_login_location_permission_denied_message">Sijainti tulee sallia, jotta kirjautuminen onnistuu.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_content">Kirjaudu sisään uudelleen.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_title">Olemme päivittäneet sovelluksen</string>
+    <string name="sumup_installment_cancelled">Peruutettu</string>
+    <string name="sumup_items_many">%1$s kohdetta</string>
+    <string name="sumup_items_none">Ei kohteita</string>
+    <string name="sumup_items_one">Yksi kohde</string>
+    <string name="sumup_l10n_app_processing">Käsitellään…</string>
+    <string name="sumup_l10n_card_checkout_card_number">Korttinumero</string>
+    <string name="sumup_l10n_card_checkout_checking_device">Tarkistetaan kortinlukijaa…</string>
+    <string name="sumup_l10n_err_card_payment_expired">Korttisi on vanhentunut. Käytä toista korttia.</string>
+    <string name="sumup_l10n_order_hint_custom_item">Tuote</string>
+    <string name="sumup_l10n_payment_failure">Maksutapahtuma epäonnistui</string>
+    <string name="sumup_l10n_phone_number_confirmation_invalid_for_country">%1$s ei näytä suomalaiselta puhelinnumerolta %2$s. \nMuuta syöttämääsi numeroa tai syötä suuntanumero oikeassa muodossa jos puhelinnumero on %2$s ulkopuolelta.</string>
+    <string name="sumup_l10n_phone_number_confirmation_outside_of_country">%1$s vaikuttaa %2$s ulkopuoliselta puhelinnumerolta.\nVahvista asiakkaalta, että numero on varmasti oikein ennen jatkamista.</string>
+    <string name="sumup_l10n_print_failed_cover_open">Tulostimen kansi on auki. Sulje kansi ja yritä uudestaan.</string>
+    <string name="sumup_l10n_print_failed_generic">Ei voitu tulostaa. Tarkista tulostin ja yritä uudestaan.</string>
+    <string name="sumup_l10n_print_failed_image_unavailable">Kuitin tietojen lataaminen epäonnistui. Yritä uudestaan.</string>
+    <string name="sumup_l10n_print_failed_paper_empty">Tulostimen paperi on loppu.</string>
+    <string name="sumup_l10n_print_failed_printer_offline">Ei voitu yhdistää kuittitulostimeen.</string>
+    <string name="sumup_l10n_solo_printer_communication_error_description">Yhteyden muodostaminen epäonnistui, yritä uudelleen.</string>
+    <string name="sumup_l10n_solo_printer_escpos_receipt_download_failed_description">Kuitin lataaminen Solo-tulostimelle epäonnistui.</string>
+    <string name="sumup_l10n_solo_printer_not_attached_description">Varmista, että Solo on tulostimessa ja että tulostimen akku on ladattu.</string>
+    <string name="sumup_l10n_solo_printer_not_found_title">Tulostinta ei löytynyt.</string>
+    <string name="sumup_l10n_solo_printer_offline_description">Soloon ei voitu muodostaa yhteyttä.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_action">Päivitä</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_description">Päivitä ohjelmisto voidaksesi tulostaa.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_title">Solo on päivitettävä.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_generic_description">Tarkista tulostimen kansi ja paperirulla ja yritä uudelleen.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_title">Tulostus epäonnistui.</string>
+    <string name="sumup_label_external_storage">Ulkoinen tallennustila</string>
+    <string name="sumup_learn_how">Lue miten.</string>
+    <string name="sumup_location_permission_request_text">Jotta voimme tarjota turvallisia palveluita, SumUpin pitää tietää maksutapahtuman sijainti. Siksi SumUpin tulee käyttää sijaintitietojasi käyttäessäsi sovellusta.</string>
+    <string name="sumup_location_permission_request_title">Sijaintipalvelut</string>
+    <string name="sumup_login_btn_forgot_password">Salasana unohtunut</string>
+    <string name="sumup_login_btn_log_in">Kirjaudu sisään</string>
+    <string name="sumup_login_btn_title">Kirjaudu sisään</string>
+    <string name="sumup_login_error_email_invalid">Varmista, että sähköposti on syötetty oikein</string>
+    <string name="sumup_login_error_email_missing">Syötä SumUp-profiiliisi liitetty sähköpostiosoite.</string>
+    <string name="sumup_login_error_password_missing">Syötä SumUp-profiilisi salasana</string>
+    <string name="sumup_login_error_shelves_not_loaded">Valitettavasti profiilisi tietoja ei voitu hakea.\nYritä kirjautua sisään uudestaan.</string>
+    <string name="sumup_login_failed_message">Profiilisi määrittämisessä tapahtui virhe. Yritä myöhemmin uudelleen tai ota yhteyttä asiakastukitiimiimme.</string>
+    <string name="sumup_login_failed_title">Kirjautuminen epäonnistui</string>
+    <string name="sumup_login_hint_email">Sähköpostiosoite</string>
+    <string name="sumup_login_hint_password">Salasana</string>
+    <string name="sumup_login_session_expired">Sinut on kirjattu ulos. Tämä tapahtui todennäköisesti siksi, että kirjauduit samaan profiiliin toisella laitteella.</string>
+    <string name="sumup_merchant_activation_code">Aktivointikoodi</string>
+    <string name="sumup_merchant_activation_code_title">Aktivoi Total / Super / On</string>
+    <string name="sumup_navigation_payment_methods">Maksutavat</string>
+    <string name="sumup_navigation_payment_methods_multiple_options">Maksutavat</string>
+    <string name="sumup_nearby_devices_permission_request_text">Jatkaminen edellyttää, että annat SumUpille suostumuksesi lähellä olevien laitteiden käyttöön.</string>
+    <string name="sumup_nearby_devices_permission_request_title">Lähellä olevat laitteet</string>
+    <string name="sumup_no_account_question">Eikö sinulla vielä ole profiilia?</string>
+    <string name="sumup_no_air_usb_device">Tunnistamaton laite Yhdistä SumUp Air -kortinlukijaan.</string>
+    <string name="sumup_no_bluetooth_on_solo">Eikö Solossa ole Bluetoothia?</string>
+    <string name="sumup_no_usb_device">Liitä Air-kortinlukija USB-kaapelilla ja salli yhteys laitteen asetuksissa.</string>
+    <string name="sumup_no_web_browser">Jatkaaksesi asenna ja aseta oletusselainsovellus</string>
+    <string name="sumup_offline_failure_reason_batch_not_uploaded">Aiemmat offline-maksutapahtumasi ovat edelleen käsittelyssä. Varmista, että pysyt yhdistettynä internetiin ja yritä pian uudelleen.</string>
+    <string name="sumup_offline_failure_reason_invalid_security_patch">Offline-maksutapahtumien tekeminen ei onnistu. Yhdistä laite uudelleen verkkoon. Jos käytät toisen palveluntarjoajan kassajärjestelmää, ota yhteyttä sen asiakaspalveluun.</string>
+    <string name="sumup_offline_failure_reason_max_amount_per_tx_limit">Valittu summa ylittää offline-maksutapahtumien rajan. Jatka valitsemalla pienempi summa.</string>
+    <string name="sumup_offline_failure_reason_max_tx_limit">Olet saavuttanut vastaanotettujen offline-maksutapahtumien enimmäismäärän. Jatka maksujen vastaanottamista muodostamalla internetyhteys uudelleen.</string>
+    <string name="sumup_offline_failure_reason_time_window_limit">Olet ollut offline-tilassa yli 24 tuntia. Muodosta yhteys nyt, jotta voit käsitellä vastaanottamasi maksutapahtumat ja parantaa maksujen onnistumisen todennäköisyyttä.</string>
+    <string name="sumup_offline_payment_flow_indicator_message">Olet offline-tilassa</string>
+    <string name="sumup_offline_payment_terminal_connection_prompt">Jatka offline-maksutapahtumien käsittelyä yhdistämällä uudelleen viimeksi käytettyyn kortinlukijaan.</string>
+    <string name="sumup_order_charge">Veloita</string>
+    <string name="sumup_pairing_in_notification_bar">Tarkista huomiopalkki yhteysparipyyntöä varten</string>
+    <string name="sumup_pax_setup_add_terminal">Uusi maksupääte</string>
+    <string name="sumup_payment_setting_card_reader">Kortinlukija</string>
+    <string name="sumup_payment_to_title">Maksetaan vastaanottajalle</string>
+    <string name="sumup_permission_explanation_continue">Jatka</string>
+    <string name="sumup_phone">puhelin</string>
+    <string name="sumup_please_wait">Odota …</string>
+    <string name="sumup_please_wait_connecting">Odota. Yhdistetään…</string>
+    <string name="sumup_pos_lite">POS Lite</string>
+    <string name="sumup_pp_btn_fw_abort">Keskeytä päivitys</string>
+    <string name="sumup_pp_setup_air_no_btle">Laitteesi ei tue Bluetooth 4.0. Tarkista onko laitteeseesi ohjelmistopäivitystä.</string>
+    <string name="sumup_pp_setup_charge_batteries">Varmista, että kortinlukijan akku on ladattu</string>
+    <string name="sumup_pp_setup_check_power">Varmista, että maksupääte on päällä</string>
+    <string name="sumup_pp_setup_connected">Yhdistetty!</string>
+    <string name="sumup_pp_setup_connection_failed">Ei voitu yhdistää. Yritä uudestaan tai ota yhteys SumUpin asiakaspalveluun numerossa %1$s</string>
+    <string name="sumup_pp_setup_connection_failed_no_support">Maksupäätteeseen ei voitu muodostaa yhteyttä. Yritä uudelleen.</string>
+    <string name="sumup_pp_setup_do_firmware_update_now_mandatory">Päivitä laite ennen %1$s.</string>
+    <string name="sumup_pp_setup_firmware_cancel_sure">Oletko varma, että haluat peruuttaa päivityksen?</string>
+    <string name="sumup_pp_setup_firmware_update_do_now">Kortinlukijaasi on saatavilla firmware-päivitys. Päivitys vie muutaman minuutin. \n\n Suosittelemme, että asennatte päivityksen, jotta laite toimii mahdollisimman hyvin.</string>
+    <string name="sumup_pp_setup_firmware_update_installing">Asennetaan, odota..</string>
+    <string name="sumup_pp_setup_firmware_update_minutes_remaining">%1$s minuuttia jäljellä</string>
+    <string name="sumup_pp_setup_firmware_update_one_minute_remaining">Yksi minuutti jäljellä</string>
+    <string name="sumup_pp_setup_help_additional_steps">Kortinlukijan yhdistämisen kanssa edelleen vaikeuksia. Kokeile seuraavia keinoja:</string>
+    <string name="sumup_pp_setup_help_air_reset">Käynnistä maksupääte uudelleen painamalla virtanäppäintä pohjassa 20 sekuntia. Varmista, että maksupääte on pois päältä ja että sitä ei ole yhdistetty kortinlukijaan.</string>
+    <string name="sumup_pp_setup_help_bt_toggle_button">Käynnistä Bluetooth uudelleen</string>
+    <string name="sumup_pp_setup_help_bt_toggle_header">Kortinlukijan ydistäminen bluetoothilla epäonnistui.\n Yritä käynnistää bluetooth uudestaan ennen uudelleen yrittämistä.</string>
+    <string name="sumup_pp_setup_help_give_up">Vaihtoehtoisesti tavoitat asiakaspalvelutiimimme numerosta %1$s</string>
+    <string name="sumup_pp_setup_help_optional_support">Jos tarvitset apua, ota yhteys asiakaspalveluumme: %1$s</string>
+    <string name="sumup_pp_setup_help_pin_plus_replace_batteries">Vaihda kortinlukijan patterit</string>
+    <string name="sumup_pp_setup_help_reboot_device">Käynnistä %1$s uudelleen</string>
+    <string name="sumup_pp_setup_multiple_devices">Useita maksupäätteitä havaittu.</string>
+    <string name="sumup_pp_setup_searching">Etsitään kortinlukijoita</string>
+    <string name="sumup_pp_setup_select_bt_device">Vertaa kolmea viimeistä numeroa maksupäätteen takana näkyvässä sarjanumerossa</string>
+    <string name="sumup_pp_setup_text_firmware_update_failed">Päivitys epäonnistui. Käynnistä maksupääte uudelleen ja yritä päivitystä uudestaan.</string>
+    <string name="sumup_pp_setup_text_firmware_update_ongoing">Älä käytä tätä laitetta ennen kuin päivitys on valmis.</string>
+    <string name="sumup_print">Tulosta</string>
+    <string name="sumup_print_autoprint_receipts">Tulosta kuitit aina</string>
+    <string name="sumup_print_failed_bluetooth_disabled">Bluetooth on pois päältä. Laita bluetooth päälle ja yritä uudestaan.</string>
+    <string name="sumup_print_failed_no_cash_drawer">Valitsemasi tulostin ei tue kassalaatikkoa.</string>
+    <string name="sumup_print_no_printers_found">Tulostinta ei löytynyt</string>
+    <string name="sumup_print_open_cash_drawer">Avaa kassalaatikko</string>
+    <string name="sumup_print_open_drawer_automatically">Avaa kassalaatikko automaattisesti</string>
+    <string name="sumup_print_searching_printers">Etsintään tulostimia…</string>
+    <string name="sumup_print_select_printer">Valitse Tulostin</string>
+    <string name="sumup_print_test_page">Tulosta testisivu</string>
+    <string name="sumup_printer_available">Saatavilla</string>
+    <string name="sumup_printer_settings_copies_label">Kopioiden määrä</string>
+    <string name="sumup_printer_settings_disabled">Kytketty pois</string>
+    <string name="sumup_printer_settings_none_paired">Ei pariliitosta</string>
+    <string name="sumup_printer_settings_toggle_label">Kytke kuitin tulostaminen päälle</string>
+    <string name="sumup_printer_unavailable">Ei saatavilla</string>
+    <string name="sumup_processing_payment">Maksua käsitellään…</string>
+    <string name="sumup_reader_attribute_unknown">Tuntematon</string>
+    <string name="sumup_reader_connecting_text">Yhdistetään kortinlukijaan</string>
+    <string name="sumup_reader_connecting_title">Yhdistetään</string>
+    <string name="sumup_reader_home_item_status_update">Päivitä laite</string>
+    <string name="sumup_reader_not_found_message">Numeroon %1$s päättyvää kortinlukijaasi ei löytynyt. Varmista, että lukija on päällä ja kantoalueen sisällä.</string>
+    <string name="sumup_reader_off_and_unplugged_message">Varmista, että laite on kytketty pois päältä ja irrotettu virtalähteestä.</string>
+    <string name="sumup_reader_off_and_unplugged_title">Irrota pistoke ja kytke virta pois päältä</string>
+    <string name="sumup_reader_payment">Maksu</string>
+    <string name="sumup_reader_payment_cancelled">Maksu peruutettiin</string>
+    <string name="sumup_receipt_contacts_permission_request_text">Yhteystiedon valitsemiseksi SumUp tarvitsee pääsyn yhteystietoihisi.</string>
+    <string name="sumup_receipt_email_text">Sähköpostilla</string>
+    <string name="sumup_receipt_field_customer_email">Asiakkaan sähköposti</string>
+    <string name="sumup_receipt_field_customer_phone">Asiakkaan puhelin</string>
+    <string name="sumup_receipt_field_email_address">Sähköpostiosoite</string>
+    <string name="sumup_receipt_field_mobile_number">Matkapuhelinnumero</string>
+    <string name="sumup_receipt_request_failed">Kuitin lähetys epäonnistui. Tarkista verkkoyhteytesi ja yritä uudestaan.\n\nVaihtoehtoisesti voit lähettää kuitin milloin tahansa \"Myyntihistoria\"-näytöltä.</string>
+    <string name="sumup_receipt_sms_text">Tekstiviestillä</string>
+    <string name="sumup_receipt_title_send_receipt">Lähetä kuitti</string>
+    <string name="sumup_receipt_title_send_to_mobile">Lähetä matkapuhelimeen</string>
+    <string name="sumup_reset_bluetooth">Bluetoothin palautus</string>
+    <string name="sumup_reset_bluetooth_on_reader">Bluetoothin palautus %1$s-lukijassa</string>
+    <string name="sumup_reset_reader_confirmation_message">Kun virtapainike on vapautettu, kuulet äänimerkin, joka vahvistaa, että Bluetooth on palautettu.</string>
+    <string name="sumup_reset_reader_confirmation_title">Palautus valmis</string>
+    <string name="sumup_reset_reader_title">Aloita palautus</string>
+    <string name="sumup_saved_reader_home_item_status_is_inactive">Ei aktiivinen</string>
+    <string name="sumup_saved_reader_home_item_status_is_ready">Valmis</string>
+    <string name="sumup_select_an_option">Select an option</string>
+    <string name="sumup_send_receipt_email_field_label">Sähköpostiosoite</string>
+    <string name="sumup_send_receipt_phone_number_label">Matkapuhelinnumero</string>
+    <string name="sumup_service_unavailable_message">Teemme töitä ratkaistaksemme ongelman. Yritä myöhemmin uudelleen.</string>
+    <string name="sumup_service_unavailable_title">Palvelu ei ole saataviilla</string>
+    <string name="sumup_sign_up">Liity</string>
+    <string name="sumup_signature_btn_close_legal_page">Sulje ehdot</string>
+    <string name="sumup_signature_in_parcelados">in %1$d parcelados</string>
+    <string name="sumup_signature_sign_here">Allekirjoitus tähän</string>
+    <string name="sumup_signature_try_again_button_title">Yritä uudelleen</string>
+    <string name="sumup_solo_app_update_message">Please update your SumUp App to continue using Solo</string>
+    <string name="sumup_solo_plug_and_play_connection_disconnected_message">Solon yhteys on katkaistu</string>
+    <string name="sumup_solo_plug_and_play_connection_failure_message">Solon yhteyden muodostaminen ei onnistunut</string>
+    <string name="sumup_solo_plug_and_play_connection_success_message">Solo on yhdistetty ja valmis vastaanottamaan maksuja</string>
+    <string name="sumup_successful_transaction">Maksutapahtuma onnistui</string>
+    <string name="sumup_tablet">tabletti</string>
+    <string name="sumup_tap_or_insert_card">Napauta tai aseta kortti lukijaan</string>
+    <string name="sumup_tipping">Tippaus</string>
+    <string name="sumup_tipping_signature_including_tip_hint">(sis. tippi %1$s)</string>
+    <string name="sumup_transaction_cancelled_card_not_charged">Korttia ei veloitettu.</string>
+    <string name="sumup_transaction_cancelled_generic">Maksutapahtuma peruttu</string>
+    <string name="sumup_transaction_cancelled_reader_error">Laite ei vastannut odotetusti </string>
+    <string name="sumup_transaction_cancelled_reader_error_detail">Varmista, että laite on ladattu ja puhelimesi äänet on laitettu niin kovalle kun mahdollista.</string>
+    <string name="sumup_transaction_connection_lost">Yhteys SumUp-palvelimeen katkesi</string>
+    <string name="sumup_transaction_failed_generic">Maksu epäonnistui</string>
+    <string name="sumup_transaction_message_checking_status">Odota - tarkistamme maksutapahtuman tilaa</string>
+    <string name="sumup_transaction_not_processed_desc">Maksua ei voitu käsitellä verkkoyhteysongelman takia</string>
+    <string name="sumup_transaction_not_processed_details">Korttia ei veloitettu. Voit yrittää maksua turvallisesti uudelleen.</string>
+    <string name="sumup_transaction_unexpected_response">Virhe otettaessa yhteyttä palvelimeen</string>
+    <string name="sumup_troubleshooting_how_to_turn_on_bluetooth">Bluetoothin kytkeminen päälle</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_description">Kytke se sitten päälle ja pidä se lähistöllä yhteyden muodostamista varten.</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_title">Varmista, että kortinlukija on ladattu</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_generic">Varmista, että laitteen %1$s%2$s virta on päällä ja Bluetooth on käytössä, ja että laite on lähistöllä.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_solo">Varmista, että Bluetooth-kuvake näkyy Solon oikeassa yläkulmassa.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_title">Onko Bluetooth päällä laitteessa %1$s?</string>
+    <string name="sumup_troubleshooting_turn_on_reader_description">Varmista, että laitteen %1$s%2$s virta on päällä, ja että laite on lähistöllä.</string>
+    <string name="sumup_troubleshooting_turn_on_reader_title">Kytke %1$s päälle</string>
+    <string name="sumup_tts_activation">Laite on helppokäyttöisyystilassa. Saat ohjeita maksutapahtuman suorittamiseen.</string>
+    <string name="sumup_tts_reader_payment_instructions">Maksettava summa on %1$s %2$s. Maksa maksu valitsemalla jommallakummalla seuraavista maksutavoista. Jos haluat tehdä lähimaksun, aseta korttisi kortinlukijan päälle. Laitteesta kuuluu yksi äänimerkki, kun korttisi on tunnistettu. Tai maksa asettamalla korttisi siru edellä ja kuvapuoli ylöspäin lukijan päällä olevaan aukkoon ja seuraamalla ääniohjeita.</string>
+    <string name="sumup_tts_solo_pin_entry_instructions">Sinun on annettava PIN-koodisi. Lukijan etupuolella on kansi, jossa on aukkoja. Numeroille on kymmenen aukkoa ja toiminnoille kolme. Syötä PIN-koodisi painamalla näitä aukkoja. Jokaista syöttämääsi numeroa seuraa äänimerkki. Oikeassa yläkulmassa oleva painike peruuttaa maksun. Sen alapuolella ovat numerot 1–9 puhelimen näppäimistöä vastaavassa järjestyksessä jaettuina kolmelle riville. Ensimmäisinä ylhäällä ovat 1, 2 ja 3 vasemmalta oikealle tässä järjestyksessä. Neljännellä rivillä vasemmassa alakulmassa on poistopainike, joka poistaa viimeisimmän syöttämäsi merkin. Numero nolla on keskellä tätä riviä, ja vahvistuspainike on oikealla. Anna PIN-koodisi nyt ja paina sitten vahvistuspainiketta.</string>
+    <string name="sumup_tts_solo_ul_pin_entry_instructions">Sinun on annettava PIN-koodisi. Lukijan etupuolella on kansi, jossa on aukkoja. Numeroille on kymmenen aukkoa ja toiminnoille kolme. Syötä PIN-koodisi painamalla näitä aukkoja. Jokaista syöttämääsi numeroa seuraa äänimerkki. Toimintopainikkeiden kolme pyöreää aukkoa ovat oikeassa reunassa. Ylimpänä on painike, jolla maksu peruutetaan. Sen alapuolella on poistopainike, joka poistaa viimeisimmän syöttämäsi merkin. Ja sen alapuolella on vahvistuspainike. Näppäimistön numerot ovat kolmessa vasemmanpuoleisessa sarakkeessa, joissa on neliönmuotoiset aukot. Numeronäppäimistön asettelu vastaa puhelimen näppäimistöä. Yläreunassa ovat numerot 1, 2 ja 3 vasemmalta oikealle tässä järjestyksessä. Anna PIN-koodisi nyt ja paina sitten vahvistuspainiketta.</string>
+    <string name="sumup_tts_transaction_failure">Maksutapahtuma ei onnistunut, eikä korttia veloitettu. Yritä uudelleen.</string>
+    <string name="sumup_tts_transaction_success">Maksutapahtuma onnistui. Poista kortti.</string>
+    <string name="sumup_turn_bluetooth_off_on">Kytke Bluetooth pois päältä ja päälle</string>
+    <string name="sumup_turn_bluetooth_off_on_on_reader">Bluetoothin kytkeminen pois päältä ja päälle %1$s-lukijassa</string>
+    <string name="sumup_tx_cancel_on_solo">Jos haluat peruuttaa maksun, paina kortinlukijan peruutuspainiketta.</string>
+    <string name="sumup_tx_cancel_please_wait">Maksutapahtuma peruttu, odota hetki</string>
+    <string name="sumup_tx_cancel_power_off">Peruuttaaksesi maksutapahtuman paina kortinlukijan virtanäppäintä</string>
+    <string name="sumup_tx_successful_receipts_qr_code_tab_title">QR-koodi</string>
+    <string name="sumup_txresult_cash_result_info">Maksettu %1$s käteisellä · Vaihtoraha %2$s</string>
+    <string name="sumup_txresult_dismiss">Ohita</string>
+    <string name="sumup_txresult_print_missing_transaction_data_message">Maksutapahtuman tiedot puuttuvat.</string>
+    <string name="sumup_txresult_print_receipt">Tulosta kuitti</string>
+    <string name="sumup_txresult_print_receipt_download_failed_message">Kuitin lataus epäonnistui.</string>
+    <string name="sumup_txresult_print_timed_out_message">Tulostus kesti liian pitkään.</string>
+    <string name="sumup_txresult_tip_result_info">Sisältää %1$s tippiä</string>
+    <string name="sumup_update_software">Päivitä ohjelmisto.</string>
+    <string name="sumup_update_solo_message">1. Avaa Solon valikko napauttamalla lukijan näytön yläosaa\n\n2. Napauta ”Yhteydet” ja muodosta Wi-Fi-yhteys\n\n3. Tarvittaessa kirjaudu sisään\n\n4. Napauta ”Asetukset”, ”Ohjelmistopäivitykset” ja sitten ”Lataa ja asenna”\n\n5. Kun päivitys on valmis, napauta ”Yhteydet” ja ota Bluetooth® takaisin käyttöön</string>
+    <string name="sumup_update_solo_title">Päivitä Solo-kortinlukijasi</string>
+    <string name="sumup_verification_camera_permission_request_title">Kamera</string>
+    <string name="sumup_verify_phone_number">Vahvista puhelinnumero</string>
+    <string name="sumup_waiting_reader_action">Odotetaan asiakasta</string>
+    <string msgid="2561197295334830845" name="switch_role">"Vaihda"</string>
+    <string msgid="1672349317127674378" name="tab">"Välilehti"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> prosenttia"</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"vihjeteksti"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"näytä vihjeteksti"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"POIS KÄYTÖSTÄ"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"KÄYTÖSSÄ"</string>
+</resources>

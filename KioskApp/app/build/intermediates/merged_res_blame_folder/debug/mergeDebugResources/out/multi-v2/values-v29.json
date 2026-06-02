@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kiosk.donation.app-mergeDebugResources-105:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\0ddf1b2c954dbcdd988569b68702aee3\\transformed\\base-common-6.0.0\\res\\values-v29\\values-v29.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "344"
+                    }
+                }
+            ]
+        }
+    ]
+}

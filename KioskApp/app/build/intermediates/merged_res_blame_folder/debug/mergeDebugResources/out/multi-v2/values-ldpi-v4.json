@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kiosk.donation.app-mergeDebugResources-105:/values-ldpi-v4/values-ldpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\70defadadcb879caf0609ec60583fa97\\transformed\\reader-6.0.0\\res\\values-ldpi-v4\\values-ldpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\80143b8feb5db499873769e03142965a\\transformed\\designbase-6.0.0\\res\\values-ldpi-v4\\values-ldpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "59",
+                        "endOffsets": "110"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "127",
+                        "endColumns": "59",
+                        "endOffsets": "182"
+                    }
+                }
+            ]
+        }
+    ]
+}

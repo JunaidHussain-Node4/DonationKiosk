@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This XML declares the Device Administration policies this app uses.
+    Required for LockTaskMode / kiosk operation.
+
+    After installing the app, run this ADB command ONCE to make it Device Owner:
+        adb shell dpm set-device-owner com.kiosk.donation/.kiosk.KioskDeviceAdminReceiver
+
+    The device must have NO accounts added (Google accounts must be removed first).
+    Factory-reset devices are ideal. After running the command, reboot.
+-->
+<device-admin>
+    <uses-policies>
+        <limit-password />
+        <watch-login />
+        <reset-password />
+        <lock-task />
+    </uses-policies>
+</device-admin>

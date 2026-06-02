@@ -1,0 +1,53 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kiosk.donation.app-mergeDebugResources-105:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\80143b8feb5db499873769e03142965a\\transformed\\designbase-6.0.0\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,121,200",
+                        "endColumns": "65,78,72",
+                        "endOffsets": "116,195,268"
+                    },
+                    "to": {
+                        "startLines": "4,5,6",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "171,237,316",
+                        "endColumns": "65,78,72",
+                        "endOffsets": "232,311,384"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\c0866eecf04901babddc8e8a3d1c3f8b\\transformed\\circuit-ui-2.23.4\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "43",
+                        "endOffsets": "94"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "127",
+                        "endColumns": "43",
+                        "endOffsets": "166"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\be12daca5d74d1ff46b6075334001182\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                }
+            ]
+        }
+    ]
+}

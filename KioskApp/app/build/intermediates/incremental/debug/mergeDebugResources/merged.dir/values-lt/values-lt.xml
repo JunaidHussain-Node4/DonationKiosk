@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="exo_controls_playback_speeds">
+    <item>0,25 k.</item>
+    <item>0,5 k.</item>
+    <item>0,75 k.</item>
+    <item>Įprasta</item>
+    <item>1,25 k.</item>
+    <item>1,5 k.</item>
+    <item>2 k.</item>
+  </string-array>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Prasukti pirmyn %d sekundę</item>
+    <item quantity="few">Prasukti pirmyn %d sekundes</item>
+    <item quantity="many">Prasukti pirmyn %d sekundės</item>
+    <item quantity="other">Prasukti pirmyn %d sekundžių</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Atsukti atgal %d sekundę</item>
+    <item quantity="few">Atsukti atgal %d sekundes</item>
+    <item quantity="many">Atsukti atgal %d sekundės</item>
+    <item quantity="other">Atsukti atgal %d sekundžių</item>
+  </plurals>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d naujas pranešimas</item>
+    <item quantity="few">%d nauji pranešimai</item>
+    <item quantity="many">%d naujo pranešimo</item>
+    <item quantity="other">%d naujų pranešimų</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Eiti į pagrindinį puslapį"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Naršyti aukštyn"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Daugiau parinkčių"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Atlikta"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Žr. viską"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Pasirinkite programą"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"IŠJUNGTI"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ĮJUNGTI"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"„Alt“ +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"„Ctrl“ +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"„delete“"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"„enter“"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"„Function“ +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"„Meta“ +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"„Shift“ +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"„space“"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"„Sym“ +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"„Menu“ +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Ieškoti…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Išvalyti užklausą"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Paieškos užklausa"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Ieškoti"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Pateikti užklausą"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Paieška balsu"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Bendrinti su"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Bendrinti naudojant programą „<ns1:g id="APPLICATION_NAME">%s</ns1:g>“"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Sutraukti"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Slaptažodis"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Passkey"</string>
+    <string name="bottomsheet_action_collapse">Sutraukti apatinį lapą</string>
+    <string name="bottomsheet_action_expand">Išskleisti apatinį lapą</string>
+    <string name="bottomsheet_action_expand_halfway">Išskleisti iki pusės</string>
+    <string name="bottomsheet_drag_handle_clicked">Vilkimo rankenėlė dukart paliesta</string>
+    <string name="bottomsheet_drag_handle_content_description">Vilkimo rankenėlė</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Atsakyti"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Vaizdo įrašas"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Atmesti"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Baigti pok."</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Gaunamasis skambutis"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Vykstantis skambutis"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Gaunamojo skambučio tikrinimas"</string>
+    <string name="character_counter_content_description">Įvesta simbolių: %1$d iš %2$d</string>
+    <string name="character_counter_overflowed_content_description">Viršytas simbolių skaičius: %1$d iš %2$d</string>
+    <string name="circuit_navigationHeader_addButton_title">Add</string>
+    <string name="circuit_navigationHeader_backButton_title">Back</string>
+    <string name="circuit_navigationHeader_cancelButton_title">Cancel</string>
+    <string name="circuit_navigationHeader_chatButton_title">Chat</string>
+    <string name="circuit_navigationHeader_closeButton_title">Close</string>
+    <string name="circuit_navigationHeader_deleteButton_title">Delete</string>
+    <string name="circuit_navigationHeader_discountButton_title">Apply discount</string>
+    <string name="circuit_navigationHeader_filterButton_title">Filter</string>
+    <string name="circuit_navigationHeader_helpButton_title">Help</string>
+    <string name="circuit_navigationHeader_hideButton_title">Hide</string>
+    <string name="circuit_navigationHeader_inboxButton_title">Inbox</string>
+    <string name="circuit_navigationHeader_minimizeButton_title">Minimize</string>
+    <string name="circuit_navigationHeader_moreButton_title">More</string>
+    <string name="circuit_navigationHeader_printButton_title">Print</string>
+    <string name="circuit_navigationHeader_refreshButton_title">Refresh</string>
+    <string name="circuit_navigationHeader_reportButton_title">Report</string>
+    <string name="circuit_navigationHeader_saveButton_title">Save</string>
+    <string name="circuit_navigationHeader_searchButton_title">Search</string>
+    <string name="circuit_navigationHeader_settingsButton_title">Settings</string>
+    <string name="circuit_navigationHeader_shareButton_title">Share</string>
+    <string name="circuit_navigationHeader_showButton_title">Show</string>
+    <string name="circuit_tierIndicator_plusTier_accessibilityLabel">Plus Tier</string>
+    <string name="clear_text_end_icon_content_description">Išvalyti tekstą</string>
+    <string msgid="406453423630273620" name="close_drawer">"Uždaryti naršymo meniu"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Uždaryti lapą"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Įgalinti</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">„%1$s“ neveiks, jei neįgalinsite „Google Play“ paslaugų.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Įgalinkite „Google Play“ paslaugas</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Įdiegti</string>
+    <string name="common_google_play_services_install_text">Programa „%1$s“ nebus paleidžiama be „Google Play“ paslaugų, kurių nėra įrenginyje.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Gaukite „Google Play“ paslaugas</string>
+    <string name="common_google_play_services_notification_channel_name">„Google Play“ paslaugų pasiekiamumas</string>
+    <string name="common_google_play_services_notification_ticker">„Google Play“ paslaugų klaida</string>
+    <string name="common_google_play_services_unknown_issue">Naudojant programą „%1$s“ kilo problemų dėl „Google Play“ paslaugų. Bandykite dar kartą.</string>
+    <string name="common_google_play_services_unsupported_text">Programa „%1$s“ nebus paleidžiama be „Google Play“ paslaugų, kurių jūsų įrenginys nepalaiko.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Atnaujinti</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">„%1$s“ nebus paleidžiama, jei neatnaujinsite „Google Play“ paslaugų.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Atnaujinkite „Google Play“ paslaugas</string>
+    <string name="common_google_play_services_updating_text">„%1$s“ nebus paleidžiama be „Google Play“ paslaugų, kurios šiuo metu atnaujinamos.</string>
+    <string name="common_google_play_services_wear_update_text">Reikia naujos versijos „Google Play“ paslaugų. Jos netrukus bus atnaujintos.</string>
+    <string name="common_open_on_phone">Atidaryti telefone</string>
+    <string name="common_signin_button_text">Prisijungti</string>
+    <string name="common_signin_button_text_long">Prisijungti naudojant „Google“</string>
+    <string msgid="6083905920877235314" name="copy">"Kopijuoti"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Nuoroda nukopijuota į iškarpinę"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Netinkama įvestis"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Iššokantysis langas"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Išskleidžiamasis meniu"</string>
+    <string name="error_a11y_label">Klaida: netinkama</string>
+    <string name="error_icon_content_description">Klaida</string>
+    <string name="exo_controls_cc_disabled_description">Įgalinti subtitrus</string>
+    <string name="exo_controls_cc_enabled_description">Išjungti subtitrus</string>
+    <string name="exo_controls_fastforward_description">Sukti pirmyn</string>
+    <string name="exo_controls_fullscreen_enter_description">Įjungti viso ekrano režimą</string>
+    <string name="exo_controls_fullscreen_exit_description">Išjungti viso ekrano režimą</string>
+    <string name="exo_controls_hide">Slėpti leistuvės valdiklius</string>
+    <string name="exo_controls_next_description">Kitas</string>
+    <string name="exo_controls_overflow_hide_description">Slėpti papildomus nustatymus</string>
+    <string name="exo_controls_overflow_show_description">Rodyti papildomus nustatymus</string>
+    <string name="exo_controls_pause_description">Pristabdyti</string>
+    <string name="exo_controls_play_description">Leisti</string>
+    <string name="exo_controls_playback_speed">Sparta</string>
+    <string name="exo_controls_previous_description">Ankstesnės</string>
+    <string name="exo_controls_repeat_all_description">Dabart. rež.: kart. viską. Perj. pakart. r.</string>
+    <string name="exo_controls_repeat_off_description">Dabart. rež.: nekart. nieko. Perj. pakart. r.</string>
+    <string name="exo_controls_repeat_one_description">Dabart. rež.: kart. vieną. Perj. pakart. r.</string>
+    <string name="exo_controls_rewind_description">Sukti atgal</string>
+    <string name="exo_controls_seek_bar_description">Atkūrimo eiga</string>
+    <string name="exo_controls_settings_description">Nustatymai</string>
+    <string name="exo_controls_show">Rodyti leistuvės valdiklius</string>
+    <string name="exo_controls_shuffle_off_description">Įgalinti maišymo režimą</string>
+    <string name="exo_controls_shuffle_on_description">Išjungti maišymo režimą</string>
+    <string name="exo_controls_stop_description">Sustabdyti</string>
+    <string name="exo_controls_vr_description">VR režimas</string>
+    <string name="exo_download_completed">Atsisiuntimo procesas baigtas</string>
+    <string name="exo_download_description">Atsisiųsti</string>
+    <string name="exo_download_downloading">Atsisiunčiama</string>
+    <string name="exo_download_failed">Nepavyko atsisiųsti</string>
+    <string name="exo_download_notification_channel_name">Atsisiuntimai</string>
+    <string name="exo_download_paused">Atsisiuntimai pristabdyti</string>
+    <string name="exo_download_paused_for_network">Norint tęsti atsis., laukiama tinklo</string>
+    <string name="exo_download_paused_for_wifi">Norint tęsti atsis., laukiama „Wi-Fi“</string>
+    <string name="exo_download_removing">Pašalinami atsisiuntimai</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mb/s</string>
+    <string name="exo_track_mono">Monofoninis</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternatyvus</string>
+    <string name="exo_track_role_closed_captions">Subtitrai</string>
+    <string name="exo_track_role_commentary">Komentaras</string>
+    <string name="exo_track_role_supplementary">Papildomas</string>
+    <string name="exo_track_selection_auto">Automatinė</string>
+    <string name="exo_track_selection_none">Nėra</string>
+    <string name="exo_track_selection_title_audio">Garso įrašas</string>
+    <string name="exo_track_selection_title_text">Tekstas</string>
+    <string name="exo_track_selection_title_video">Vaizdo įrašas</string>
+    <string name="exo_track_stereo">Stereofoninis</string>
+    <string name="exo_track_surround">Erdvinis garsas</string>
+    <string name="exo_track_surround_5_point_1">5.1 erdvinis garsas</string>
+    <string name="exo_track_surround_7_point_1">7.1 erdvinis garsas</string>
+    <string name="exo_track_unknown">Nežinomas</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Išplėstiniai"</string>
+    <string name="exposed_dropdown_menu_content_description">Rodyti išskleidžiamąjį meniu</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopijuoti nuorodą"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Atidaryti naršyklėje"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Bendrinti nuorodą"</string>
+    <string name="icon_content_description">Dialogo lango piktograma</string>
+    <string msgid="6827826412747255547" name="in_progress">"Vyksta"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Iš dalies pažymėta"</string>
+    <string name="item_view_role_description">Skirtukas</string>
+    <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Sutraukti apatinį lapą"</string>
+    <string msgid="1555567894577437024" name="m3c_bottom_sheet_dismiss_description">"Atsisakyti apatinio lapo"</string>
+    <string msgid="8403354765404029791" name="m3c_bottom_sheet_drag_handle_description">"Vilkimo rankenėlė"</string>
+    <string msgid="6670819569745899763" name="m3c_bottom_sheet_expand_description">"Išskleisti apatinį lapą"</string>
+    <string msgid="3010635850035863127" name="m3c_bottom_sheet_pane_title">"Apatinis lapas"</string>
+    <string msgid="8166741421776570875" name="m3c_date_input_headline">"Įvesta data"</string>
+    <string msgid="229313757840775812" name="m3c_date_input_headline_description">"Įvesta data: %1$s"</string>
+    <string msgid="6116910750161463197" name="m3c_date_input_invalid_for_pattern">"Data neatitinka numatyto šablono: %1$s"</string>
+    <string msgid="2521768508935305279" name="m3c_date_input_invalid_not_allowed">"Data neleidžiama: %1$s"</string>
+    <string msgid="7052898923934555305" name="m3c_date_input_invalid_year_range">"Data nepatenka į numatytų metų diapazoną: %1$s–%2$s"</string>
+    <string msgid="2895559812010326913" name="m3c_date_input_label">"Data"</string>
+    <string msgid="1237013946323089826" name="m3c_date_input_no_input_description">"Nėra"</string>
+    <string msgid="7306227249789210568" name="m3c_date_input_title">"Pasirinkite datą"</string>
+    <string msgid="7605002211875882969" name="m3c_date_picker_headline">"Pasirinkta data"</string>
+    <string msgid="3664277305226978227" name="m3c_date_picker_headline_description">"Dabartinis pasirinkimas: %1$s"</string>
+    <string msgid="8436650776581492840" name="m3c_date_picker_navigate_to_year_description">"Eiti į %1$s m."</string>
+    <string msgid="5811000998184572395" name="m3c_date_picker_no_selection_description">"Nėra"</string>
+    <string msgid="7813882352367152251" name="m3c_date_picker_scroll_to_earlier_years">"Slinkite, kol bus rodomi ankstesni metai"</string>
+    <string msgid="5727367015496556177" name="m3c_date_picker_scroll_to_later_years">"Slinkite, kol bus rodomi vėlesni metai"</string>
+    <string msgid="1804346892470238807" name="m3c_date_picker_switch_to_calendar_mode">"Perjungti į kalendoriaus įvesties režimą"</string>
+    <string msgid="395627960681594326" name="m3c_date_picker_switch_to_day_selection">"Perbraukite, kad pasirinktumėte metus, arba palieskite, kad grįžtumėte ir vėl pasirinktumėte dieną"</string>
+    <string msgid="2219746470065162704" name="m3c_date_picker_switch_to_input_mode">"Perjungti į teksto įvesties režimą"</string>
+    <string msgid="7142101321095356500" name="m3c_date_picker_switch_to_next_month">"Pakeisti į kitą mėnesį"</string>
+    <string msgid="228438865139394590" name="m3c_date_picker_switch_to_previous_month">"Pakeisti į ankstesnį mėnesį"</string>
+    <string msgid="791651718641787594" name="m3c_date_picker_switch_to_year_selection">"Perjungti į metų pasirinkimą"</string>
+    <string msgid="7430790972741451689" name="m3c_date_picker_title">"Pasirinkite datą"</string>
+    <string msgid="3199387177749801575" name="m3c_date_picker_today_description">"Šiandien"</string>
+    <string msgid="2068382232816991922" name="m3c_date_picker_year_picker_pane_title">"Rodomas metų parinkiklis"</string>
+    <string msgid="3190049423327661366" name="m3c_date_range_input_invalid_range_input">"Netinkama dienų sekos įvestis"</string>
+    <string msgid="3148384720560189467" name="m3c_date_range_input_title">"Įvesti datas"</string>
+    <string msgid="2138321128465719402" name="m3c_date_range_picker_day_in_range">"Diapazone"</string>
+    <string msgid="4947636797751277713" name="m3c_date_range_picker_end_headline">"Pabaigos data"</string>
+    <string msgid="602077859540990149" name="m3c_date_range_picker_scroll_to_next_month">"Slinkite, kol bus rodomas kitas mėnuo"</string>
+    <string msgid="4592174524846109496" name="m3c_date_range_picker_scroll_to_previous_month">"Slinkite, kol bus rodomas ankstesnis mėnuo"</string>
+    <string msgid="4665981448952749820" name="m3c_date_range_picker_start_headline">"Pradžios data"</string>
+    <string msgid="3134165431120340385" name="m3c_date_range_picker_title">"Pasirinkite datas"</string>
+    <string msgid="7617233117134790350" name="m3c_dialog">"Dialogo langas"</string>
+    <string msgid="3177828188723359358" name="m3c_dropdown_menu_collapsed">"Sutraukta"</string>
+    <string msgid="2360841780724299882" name="m3c_dropdown_menu_expanded">"Išskleista"</string>
+    <string msgid="8687821690726149911" name="m3c_dropdown_menu_toggle">"Perjungti išskleidžiamąjį meniu"</string>
+    <string msgid="6152806324422087846" name="m3c_search_bar_search">"Paieška"</string>
+    <string msgid="6152755701819882931" name="m3c_snackbar_dismiss">"Atsisakyti"</string>
+    <string msgid="7655536806087401899" name="m3c_suggestions_available">"Pasiūlymai pateikti toliau"</string>
+    <string msgid="2786685010796619560" name="m3c_time_picker_am">"AM"</string>
+    <string msgid="2349193472625211372" name="m3c_time_picker_hour">"Valanda"</string>
+    <string msgid="9179527532316922345" name="m3c_time_picker_hour_24h_suffix">"%1$d val."</string>
+    <string msgid="8876759303332837035" name="m3c_time_picker_hour_selection">"Pasirinkite valandą"</string>
+    <string msgid="3458167507790628988" name="m3c_time_picker_hour_suffix">"%1$d val."</string>
+    <string msgid="6973808109666874069" name="m3c_time_picker_hour_text_field">"valandos"</string>
+    <string msgid="4313071914266462005" name="m3c_time_picker_minute">"Minutė"</string>
+    <string msgid="4699133535056739733" name="m3c_time_picker_minute_selection">"Pasirinkite minutes"</string>
+    <string msgid="5064177921781937179" name="m3c_time_picker_minute_suffix">"%d min."</string>
+    <string msgid="7661234488295443182" name="m3c_time_picker_minute_text_field">"minutės"</string>
+    <string msgid="5865171949528594571" name="m3c_time_picker_period_toggle_description">"Pasirinkite „priešpiet“ arba „popiet“"</string>
+    <string msgid="6616362054113087709" name="m3c_time_picker_pm">"popiet"</string>
+    <string msgid="1805687647081129904" name="m3c_tooltip_long_press_label">"Rodyti patarimą"</string>
+    <string msgid="5460405025248574620" name="m3c_tooltip_pane_description">"Patarimas"</string>
+    <string name="material_clock_toggle_content_description">Pasirinkite „iki pietų“ arba „po pietų“</string>
+    <string name="material_hour_24h_suffix">%1$s val.</string>
+    <string name="material_hour_selection">Pasirinkite valandą</string>
+    <string name="material_hour_suffix">%1$s val.</string>
+    <string name="material_minute_selection">Pasirinkite minutes</string>
+    <string name="material_minute_suffix">%1$s min.</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Laiko įvestį pateikti perjungus į laikrodžio režimą.</string>
+    <string name="material_timepicker_hour">Valanda</string>
+    <string name="material_timepicker_minute">Minutė</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Pasirinkite laiką</string>
+    <string name="material_timepicker_text_input_mode_description">Laiko įvestį pateikti perjungus į teksto įvesties režimą.</string>
+    <string name="mtrl_badge_numberless_content_description">Naujas pranešimas</string>
+    <string name="mtrl_checkbox_state_description_checked">Pažymėta</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">Iš dalies pažymėta</string>
+    <string name="mtrl_checkbox_state_description_unchecked">Nepažymėta</string>
+    <string name="mtrl_chip_close_icon_content_description">Pašalinti %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Naujų pranešimų: daugiau nei %1$d</string>
+    <string name="mtrl_picker_a11y_next_month">Pakeisti į kitą mėnesį</string>
+    <string name="mtrl_picker_a11y_prev_month">Pakeisti į ankstesnį mėnesį</string>
+    <string name="mtrl_picker_announce_current_range_selection">Pradžios datos pasirinkimas: %1$s – Pabaigos datos pasirinkimas: %2$s</string>
+    <string name="mtrl_picker_announce_current_selection">Dabartinis pasirinkimas: %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">nėra</string>
+    <string name="mtrl_picker_cancel">Atšaukti</string>
+    <string name="mtrl_picker_confirm">Gerai</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Pasirinkite datą</string>
+    <string name="mtrl_picker_date_header_unselected">Pasirinkta data</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_end_date_description">Pabaigos data %1$s</string>
+    <string name="mtrl_picker_invalid_format">Netinkamas formatas.</string>
+    <string name="mtrl_picker_invalid_format_example">Pavyzdys: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Naudoti: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Netinkamas diapazonas.</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">Eiti į dabartinius metus %1$d</string>
+    <string name="mtrl_picker_navigate_to_year_description">Eiti į %1$d metus</string>
+    <string name="mtrl_picker_out_of_range">Nepatenka į diapazoną: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Pradžios data–%1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s–pabaigos data</string>
+    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
+    <string name="mtrl_picker_range_header_title">Pasirinkite diapazoną</string>
+    <string name="mtrl_picker_range_header_unselected">Pradžios data–pabaigos data</string>
+    <string name="mtrl_picker_save">Išsaugoti</string>
+    <string name="mtrl_picker_start_date_description">Pradžios data %1$s</string>
+    <string name="mtrl_picker_text_input_date_hint">Data</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Pabaigos data</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Pradžios data</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">y</string>
+    <string name="mtrl_picker_today_description">Šiandien %1$s</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Perjungti į kalendoriaus įvesties režimą</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Palieskite, kad perjungtumėte į Kalendoriaus rodinį</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Perjungti į teksto įvesties režimą</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Palieskite, kad perjungtumėte į metų rodinį</string>
+    <string name="mtrl_timepicker_cancel">Atšaukti</string>
+    <string name="mtrl_timepicker_confirm">Gerai</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Naršymo meniu"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Nepasirinkta"</string>
+    <string msgid="6573031135582639649" name="not_set">"Nenustatyta"</string>
+    <string name="password_toggle_content_description">Rodyti slaptažodį</string>
+    <string msgid="6685851473431805375" name="preference_copied">"Suvestinė „<ns1:g id="SUMMARY">%1$s</ns1:g>“ nukopijuota į iškarpinę."</string>
+    <string msgid="5941395253238309765" name="range_end">"Diapazono pabaiga"</string>
+    <string msgid="7097486360902471446" name="range_start">"Diapazono pradžia"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Ieškoti"</string>
+    <string name="searchview_clear_text_content_description">Išvalyti tekstą</string>
+    <string name="searchview_navigation_content_description">Atgal</string>
+    <string msgid="6043586758067023" name="selected">"Pasirinkta"</string>
+    <string name="side_sheet_accessibility_pane_title">Šoninis lapas</string>
+    <string msgid="4139871816613051306" name="state_empty">"Tuščia"</string>
+    <string msgid="5834637030682409883" name="state_off">"Išjungta"</string>
+    <string msgid="1490883874751719580" name="state_on">"Įjungta"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="sumup_app_certificate_error">Nepavyko patikrinti tinklo sertifikato. Patikrinkite, ar įrenginys prijungtas prie saugaus interneto ryšio.</string>
+    <string name="sumup_app_outdated">Ši programėlės versija yra pasenusi, atnaujinkite į naujausią versiją.</string>
+    <string name="sumup_app_update_required_title">Update Required</string>
+    <string name="sumup_autoreceipt_btn_stop">Automatiškai kvitų nesiųsti</string>
+    <string name="sumup_autoreceipt_customer_credentials_error">Įveskite tik kliento duomenis</string>
+    <string name="sumup_autoreceipt_keypoint_customers">Atsiskaitymo lange nurodykite tik kliento el. pašto adresą arba telefono numerį.</string>
+    <string name="sumup_autoreceipt_keypoint_email_phone">Nenaudokite savo el. pašto adreso ar telefono numerio, nes tada visi klientų kvitai bus siunčiami ne jiems, o jums.</string>
+    <string name="sumup_autoreceipt_keypoint_merchants">Atsiskaitymo kvitus gaus visų „SumUp“ pardavėjų klientai.</string>
+    <string name="sumup_autoreceipt_keypoint_share">Klientų duomenų niekada niekam neperduodame ir neparduodame.</string>
+    <string name="sumup_autoreceipt_label_sent">Kvitas automatiškai išsiųstas adresu %1$s</string>
+    <string name="sumup_autoreceipt_label_subscribe_toggle">Nuo šiol „SumUp“ pardavėjų kvitus siųsti automatiškai</string>
+    <string name="sumup_autoreceipt_off_text">Išjung.</string>
+    <string name="sumup_autoreceipt_on_text">Įjungti</string>
+    <string name="sumup_autoreceipt_privacy_policy_link">Privatumo politikoje</string>
+    <string name="sumup_autoreceipt_privacy_policy_text">Daugiau informacijos rasite mūsų %1$s.</string>
+    <string name="sumup_autoreceipt_rules_link">taisyklės</string>
+    <string name="sumup_autoreceipt_rules_text">Atkreipkite dėmesį, kad kvitus klientams siunčiant automatiškai taikomos mūsų %1$s.</string>
+    <string name="sumup_autoreceipt_see_privacy_policy">Daugiau informacijos rasite puslapyje „%1$s“</string>
+    <string name="sumup_autoreceipt_send_text">Kvitus siųsti automatiškai</string>
+    <string name="sumup_autoreceipt_stop_alert_body">Prieš atšaukdami, būtinai pasitikslinkite, ar klientas tikrai nebenori gauti kvitų.</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_cancel">Atšaukti</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_destructive">Nesiųsti kvitų</string>
+    <string name="sumup_autoreceipt_stop_alert_title">Nebesiųsti kvitų automatiškai?</string>
+    <string name="sumup_autoreceipt_stop_toast_error_subtitle">Pabandykite vėliau išjungti automatinį kvitų siuntimą.</string>
+    <string name="sumup_autoreceipt_stop_toast_error_title">Nepavyko įvykdyti prašymo</string>
+    <string name="sumup_autoreceipt_stop_toast_success_subtitle">Automatinis kvitų siuntimas sustabdytas</string>
+    <string name="sumup_autoreceipt_subtitle_label_sent">Kvitas išsiųstas: %1$s</string>
+    <string name="sumup_autoreceipt_text">Automatinis kvitų siuntimas</string>
+    <string name="sumup_autoreceipt_title_label_sent">Išsiųsta!</string>
+    <string name="sumup_bt_connection_failure_description">Nustatykite iš naujo savo telefoną ar planšetinį kompiuterį bei kortelių skaitytuvą ir pabandykite dar kartą.</string>
+    <string name="sumup_bt_connection_failure_title">Nepavyko aptikti jūsų „%1$s“.</string>
+    <string name="sumup_bt_reset_air_message">Paspauskite ir palaikykite nuspaustą įjungimo mygtuką, kol ekrane bus parodyta %1$s. Tai gali užtrukti. Pasirodžius %2$s, iškart atleiskite mygtuką.</string>
+    <string name="sumup_bt_reset_instruction_air_1_description">Atjunkite skaitytuvą nuo elektros energijos šaltinio. Tada paspauskite išjungimo mygtuką.</string>
+    <string name="sumup_bt_reset_instruction_air_1_title">Atjunkite ir išjunkite skaitytuvą „Air“</string>
+    <string name="sumup_bt_reset_instruction_air_2_description">Kelias sekundes palaikykite nuspaustą įjungimo / išjungimo mygtuką, kol ekrane pamatysite tekstą „Release…“ (atleiskite).</string>
+    <string name="sumup_bt_reset_instruction_air_2_title">Paspauskite ir palaikykite nuspaustą įjungimo / išjungimo mygtuką.</string>
+    <string name="sumup_bt_reset_instruction_air_3_description">Atleidus įjungimo / išjungimo mygtuką, turėtų pasigirsti pyptelėjimas. Jis reiškia, kad funkcija „Bluetooth“ buvo nustatyta iš naujo.</string>
+    <string name="sumup_bt_reset_instruction_air_3_title">Atleiskite mygtuką ir laukite pyptelėjimo.</string>
+    <string name="sumup_bt_reset_instruction_solo_1_description">Bakstelėkite skaitytuvo „Solo“ ekrano viršuje esančią rodyklę, kad atidarytumėte skiltį „Ryšys“.</string>
+    <string name="sumup_bt_reset_instruction_solo_1_title">Skaitytuve „Solo“ eikite į ryšio meniu.</string>
+    <string name="sumup_bt_reset_instruction_solo_2_description">Eikite į „Bluetooth“ ir perjungikliu išjunkite ir vėl įjunkite šią funkciją.</string>
+    <string name="sumup_bt_reset_instruction_solo_2_title">Skaitytuve „Solo“ vėl įjunkite funkciją „Bluetooth“.</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_description">Kortelių skaitytuve bakstelėkite rodyklę aukštyn arba žemyn.</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_title">Eikite į „Įrenginio nustatymai“.</string>
+    <string name="sumup_bt_reset_instruction_three_g_2_title">Pasirinkite „Ryšio tipas“.</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_description">Bakstelėkite „Išjungti“, o paskui – žalią varnelę, kad patvirtintumėte pasirinkimą.</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_title">Išjunkite funkciją „Bluetooth“.</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_description">Bakstelėkite „Įjungti“, o paskui – žalią varnelę, kad patvirtintumėte pasirinkimą.</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_title">Vėl įjunkite funkciją „Bluetooth“.</string>
+    <string name="sumup_bt_reset_instructions_message">Atlikdami toliau nurodytus du veiksmus, išspręskite ryšio problemą ir prijunkite šį įrenginį prie kortelių skaitytuvo.</string>
+    <string name="sumup_bt_reset_instructions_title">„Bluetooth“ nustatymas iš naujo</string>
+    <string name="sumup_bt_reset_mobile_description">Bakstelėkite toliau esantį mygtuką ir iš naujo nustatykite šio įrenginio „Bluetooth“ funkciją.</string>
+    <string name="sumup_bt_reset_on_device_description_done">Atlikta</string>
+    <string name="sumup_bt_reset_on_device_description_from_settings">Išjunkite ir vėl įjunkite funkciją „Bluetooth“.</string>
+    <string name="sumup_bt_reset_on_device_description_not_done">Užtruksite vos kelias sekundes.</string>
+    <string name="sumup_bt_reset_on_device_title">Šiame įrenginyje</string>
+    <string name="sumup_bt_reset_on_reader_description">Sužinokite, kaip tai padaryti.</string>
+    <string name="sumup_bt_reset_on_reader_title">Skaitytuve „%1$s“</string>
+    <string name="sumup_bt_reset_option_phone">Telefone</string>
+    <string name="sumup_bt_reset_option_reader">Kortelių skaitytuve</string>
+    <string name="sumup_bt_reset_option_tablet">Planšetiniame kompiuteryje</string>
+    <string name="sumup_bt_setup_instruction_solo_1_description">Paspauskite „Solo“ įjungimo mygtuką.</string>
+    <string name="sumup_bt_setup_instruction_solo_1_title">Patikrinkite, ar skaitytuvas „Solo“ įjungtas.</string>
+    <string name="sumup_bt_setup_instruction_solo_2_description">Bakstelėkite skaitytuvo „Solo“ ekrano viršuje esančią rodyklę, o paskui – „Ryšys“.</string>
+    <string name="sumup_bt_setup_instruction_solo_2_title">Meniu susiraskite parinktį „Ryšys“.</string>
+    <string name="sumup_bt_setup_instruction_solo_3_description">Susiraskite parinktį „Bluetooth“ ir aktyvuokite ją šalia esančiu perjungikliu.</string>
+    <string name="sumup_bt_setup_instruction_solo_3_title">Įjunkite skaitytuvo „Solo“ funkciją „Bluetooth“.</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_description">Jie įjungiami kortelių skaitytuve bakstelėjus rodyklę aukštyn arba žemyn.</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_title">Eikite į „Įrenginio nustatymai“.</string>
+    <string name="sumup_bt_setup_instruction_three_g_2_title">Pasirinkite „Ryšio tipas“.</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_description">Bakstelėkite „Įjungti“ ir įjunkite funkciją „Bluetooth“.</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_title">Bakstelėkite „Bluetooth“.</string>
+    <string name="sumup_bt_setup_instruction_three_g_4_title">Paspauskite žalią varnelę ir patvirtinkite.</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_description">Pasirinkite savo kortelių skaitytuvą</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_onboarding_title">Nustatykite kortelių skaitytuvą</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_title">Ką norite nustatyti?</string>
+    <string name="sumup_btn_call_support">Skambinti dabar</string>
+    <string name="sumup_btn_cancel">Atšaukti</string>
+    <string name="sumup_btn_connect">Prisijungti</string>
+    <string name="sumup_btn_dismiss">Atmesti</string>
+    <string name="sumup_btn_done">Atlikta</string>
+    <string name="sumup_btn_edit">Redaguoti</string>
+    <string name="sumup_btn_go_to_support">Eiti į pagalbos tinklalapį</string>
+    <string name="sumup_btn_later">Vėliau</string>
+    <string name="sumup_btn_new_set_up">Nustatyti iš naujo</string>
+    <string name="sumup_btn_next">Toliau</string>
+    <string name="sumup_btn_no">Ne</string>
+    <string name="sumup_btn_not_my_reader">Ne mano skaitytuvas</string>
+    <string name="sumup_btn_ok">Gerai</string>
+    <string name="sumup_btn_previous">Ankstesnis</string>
+    <string name="sumup_btn_proceed">Tęsti</string>
+    <string name="sumup_btn_rescan">Nuskaityti iš naujo</string>
+    <string name="sumup_btn_retry">Bandyti dar kartą</string>
+    <string name="sumup_btn_scan">Skenuoti</string>
+    <string name="sumup_btn_send">Siųsti</string>
+    <string name="sumup_btn_send_to_mobile">Siųsti į mobilųjį</string>
+    <string name="sumup_btn_skip">Praleisti</string>
+    <string name="sumup_btn_update">Update</string>
+    <string name="sumup_btn_yes">Taip</string>
+    <string name="sumup_btn_yes_connect">Taip, prijungti</string>
+    <string name="sumup_btn_yes_scan">Taip, skenuoti</string>
+    <string name="sumup_button_retry">Bandyti dar kartą</string>
+    <string name="sumup_camera_permission_request_text">Kad galėtumėte nufotografuoti savo prekę, „SumUp“ turi naudoti jūsų kamerą.</string>
+    <string name="sumup_cancel_pending_payment_message">Ar tikrai norite atšaukti apmokėjimą?</string>
+    <string name="sumup_cancel_pending_payment_title">Laukia apmokėjimo</string>
+    <string name="sumup_card_checkout_cvv_hint">CVV</string>
+    <string name="sumup_card_checkout_expiry_date_label">Galioja iki</string>
+    <string name="sumup_card_checkout_expiry_month_hint">MM</string>
+    <string name="sumup_card_checkout_expiry_year_hint">MM</string>
+    <string name="sumup_card_checkout_insert_and_turn_on_card_reader">Prisijunkite ir įjunkite kortelės terminalą</string>
+    <string name="sumup_card_checkout_security_code">Saugos kodas</string>
+    <string name="sumup_card_reader_battery_level">%1$d%% baterijos</string>
+    <string name="sumup_card_reader_battery_level_label">Battery level</string>
+    <string name="sumup_card_reader_battery_level_percentage">%1$d%%</string>
+    <string name="sumup_card_reader_battery_text">Baterija</string>
+    <string name="sumup_card_reader_bluetooth_software_version_text">„Bluetooth“ programinė įranga</string>
+    <string name="sumup_card_reader_connect_button_text">Prisijungti</string>
+    <string name="sumup_card_reader_error_dialog_header">Nepacyko prijungti</string>
+    <string name="sumup_card_reader_error_dialog_positive">Pabandyti dar kartą</string>
+    <string name="sumup_card_reader_error_dialog_title">Nepavyko prisijungti prie korte lių skaitytuvo. Pabandykite dar kartą.</string>
+    <string name="sumup_card_reader_hardware_version_text">Aparatinė įranga</string>
+    <string name="sumup_card_reader_last_digits_text">Paskutiniai skaičiai</string>
+    <string name="sumup_card_reader_low_battery">Low battery, please charge device</string>
+    <string name="sumup_card_reader_not_saved_body">Prijungti kortelių skaitytuvą</string>
+    <string name="sumup_card_reader_not_saved_title">Priimkite mokėjimus kortele</string>
+    <string name="sumup_card_reader_not_saved_title_br">Aktyvuokite „Top“ / „Solo“</string>
+    <string name="sumup_card_reader_serial_number_text">Serijos numeris</string>
+    <string name="sumup_card_reader_setting_enable_generic">Priimti mokėjimus skaitytuvu</string>
+    <string name="sumup_card_reader_setting_enable_generic_br">Pariimti mokėjimus „Top“ / „Solo“ skaitytuvu</string>
+    <string name="sumup_card_reader_setting_enable_subtitle">Atsiskaitymo metu rodyti šį mokėjimo būdą.</string>
+    <string name="sumup_card_reader_setting_switch_card_readers">Naudoti kitą kortelių skaitytuvą</string>
+    <string name="sumup_card_reader_software_version_text">Programinė įranga</string>
+    <string name="sumup_checking_firmware_info">Ieškoma programinės įrangos atnaujinimų</string>
+    <string name="sumup_checkout_connecting_bt">Jungiamasi…</string>
+    <string name="sumup_checkout_power_on_reader">Įjunkite kortelių terminalą</string>
+    <string name="sumup_confirm_pairing_air">Prašome patvirtinti sujungimo prašymą Jūsų %1$s IR kortelių skaitytuve.</string>
+    <string name="sumup_confirm_pairing_air_ios">Prašome patvirtinti užklausą dėl susijungimo Jūsų %1$s IR kortelių skaitytuve.</string>
+    <string name="sumup_connection_lost">Ryšys prarastas</string>
+    <string name="sumup_contacts_permission_request_title">Contacts</string>
+    <string name="sumup_could_not_find_your_reader">Nepavyko aptikti jūsų skaitytuvo.</string>
+    <string name="sumup_downloading_firmware">Siunčiamas programinės įrangos atnaujinimas</string>
+    <string name="sumup_elv_legal_text">Ich ermächtige %1$s, %2$s, %3$s, %4$s, und von diesem hierzu beauftragten Dritte („die Unternehmen“) den heute fälligen, oben genannten Betrag von meinem Bankkonto durch Lastschrift einzuziehen. Ich weise mein Kreditinstitut unwiderruflich an bei Nichteinlösung der Lastschrift den Unternehmen und/oder der HIT GmbH, Eiffestraße 76, 20537 Hamburg auf Anforderung meinen Namen und meine Anschrift zur Geltendmachung der Forderung mitzuteilen. Datenschutzrechtliche Information: Meine Zahlungsdaten (Kontonummer, Bankleitzahl, Kartenverfallsdatum, Kartenfolgenummer, Datum, Uhrzeit, Zahlungsbetrag, Terminalkennung, Ort, Unternehmen und Filiale) werden zur Kartenprüfung und Zahlungsabwicklung an SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland weitergegeben. Sollte im Rahmen der Zahlungsabwicklung die Lastschrift von meiner Bank nicht eingelöst werden (Rücklastschrift) oder sollte ich der Lastschrift widersprechen, stimme ich zu, dass diese Tatsachen in eine Sperrdatei aufgenommen werden außer wenn ich im Zusammenhang mit dem Widerruf erklärtermaßen Rechte aus dem zu Grunde liegenden Geschäft (z.B. Gewährleistungsrechte) geltend gemacht habe. Die Sperrung wird nach vollständigem Forderungsausgleich wieder aufgehoben und die gespeicherten Daten gelöscht. Dritte, die eine vertragliche Vereinbarung mit den Unternehmen zur Nutzung der Sperrdatei haben, können für Zwecke der Missbrauchsbekämpfung und zur Risikominimierung von Zahlungsausfällen ihre elektronischen Zahlungsvorgänge gegen die Sperrdatei abgleichen. Speichernde Stelle für die Zwecke der Kartenprüfung und Zahlungsabwicklung sind die HIT GmbH, Eiffestr. 76, 20537 Hamburg und die SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland, die auch die Sperrdatei für teilnehmende Händler führen. Diese Unternehmen erteilen insoweit auch an anderen Händler, die auf die Sperrdatei zugreifen eine Empfehlung, ob eine Zahlung im Wege des Lastschrifteinzugs akzeptiert werden sollte.</string>
+    <string name="sumup_elv_legal_text_short">Hiermit erteile ich die Ermächtigung zum Lastschrifteinzug.</string>
+    <string name="sumup_err_no_recent_geo_location_received">Nerasta Jūsų vietovė. Įsitikinkite, kad jūsų GPS arba vietovės paslaugos yra įjungtos ir veikia.  </string>
+    <string name="sumup_error">Klaida</string>
+    <string name="sumup_error_cannot_send_email">Nepavyko išsiųsti el. laiško. Nerasta jokios konfigūruotos el. pašto programėlės.</string>
+    <string name="sumup_error_cash_payment_cannot_save_message">Nepavyko išsaugoti pakeitimų. Pabandykite dar kartą arba kreipkitės į klientų aptarnavimo skyrių.</string>
+    <string name="sumup_error_cash_payment_cannot_save_title">Mokėjimas grynaisiais pinigais</string>
+    <string name="sumup_error_io">Nepavyko prisijungti prie serverio. Prašome patikrinti ryšį ir bandyti dar kartą.</string>
+    <string name="sumup_error_payment_method_required">Reikalingas mokėjimo būdas</string>
+    <string name="sumup_error_payment_method_required_desc">Norint naudotis SumUp, turi būti pasirinktas bent vienas mokėjimo būdas.</string>
+    <string name="sumup_error_system_webview_exception">Kažkas negerai su „Android“ sistemos „WebView“ (žiniatinklio rodiniu). Atnaujinkite arba skambinkite į klientų aptarnavimo skyrių.</string>
+    <string name="sumup_error_unexpected_response">Įvyko netikėta serverio klaida. Prašome bandyti dar kartą.</string>
+    <string name="sumup_external_storage_permission_request_text">Kad galėtumėte atsisiųsti išmokų ataskaitas, „SumUp“ turi prisijungti prie išorinės įrenginio atmintinės.</string>
+    <string name="sumup_failed_transaction">Operacija nepavyko</string>
+    <string name="sumup_firmware_update_canceled">Atnaujinimas atšauktas</string>
+    <string name="sumup_fragment_send_receipt">Siųsti kvitą</string>
+    <string name="sumup_geolocation_unavailable_title">Reikalinga vietovė</string>
+    <string name="sumup_grant_usb_permission">Kad galėtumėte tęsti, turite suteikti leidimą prisijungti per USB.</string>
+    <string name="sumup_help">Pagalba</string>
+    <string name="sumup_home_card_acceptance_cta_button_title">Nustatyti dabar</string>
+    <string name="sumup_home_card_acceptance_subtitle">Nustatykite savo kortelių skaitytuvą ir galėsite pradėti priimti mokėjimus.</string>
+    <string name="sumup_home_card_acceptance_title">Pasiruoškite ir priimkite mokėjimus!</string>
+    <string name="sumup_identity_login_error_generic_message">Kažkas ne taip.\nDar kartą pabandykite prisijungti.</string>
+    <string name="sumup_identity_login_error_session_expired_message">Jūsų sesija baigėsi. Prašome prisijungti dar kartą.</string>
+    <string name="sumup_identity_login_location_permission_denied_message">Kad galėtumėte prisijungti, būtina suteikti leidimą nustatyti buvimo vietą.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_content">Prisijunkite dar kartą.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_title">Atnaujinome programėlę</string>
+    <string name="sumup_installment_cancelled">Atšaukta</string>
+    <string name="sumup_items_many">%1$s prekės</string>
+    <string name="sumup_items_none">Tuščia</string>
+    <string name="sumup_items_one">Viena prekė</string>
+    <string name="sumup_l10n_app_processing">Apdorojama…</string>
+    <string name="sumup_l10n_card_checkout_card_number">Kortelės numeris</string>
+    <string name="sumup_l10n_card_checkout_checking_device">Tikrinamas kortelių skaitytuvas…</string>
+    <string name="sumup_l10n_err_card_payment_expired">Jūsų kortelė baigė galioti. Prašome naudotis kita kortele.</string>
+    <string name="sumup_l10n_order_hint_custom_item">prekė</string>
+    <string name="sumup_l10n_payment_failure">Operacija nepavyko</string>
+    <string name="sumup_l10n_phone_number_confirmation_invalid_for_country">%1$s nėra teisingas %2$s mobiliojo telefono numeris.\n\nPrašome redaguoti numerį, kurį įvedėte, arba įterpti galiojantį tarptautinį šalies telefono kodą, jei tai nėra %2$s mobiliojo telefono numeris.</string>
+    <string name="sumup_l10n_phone_number_confirmation_outside_of_country">Panašu, kad %1$s nėra %2$s mobiliojo telefono numeris.\n\nPrašome patvirtinti, kad įvestas kliento telefono numeris yra teisingas.</string>
+    <string name="sumup_l10n_print_failed_cover_open">Spausdintuvo dangtelis atidarytas. Uždarykite dangtelį ir bandykite dar kartą.</string>
+    <string name="sumup_l10n_print_failed_generic">Nepavyko atspausdinti. Patikrinkite spausdintuvą ir bandykite dar kartą.</string>
+    <string name="sumup_l10n_print_failed_image_unavailable">Nepavyko atsisiųsti kvito informacijos. Bandykite dar kartą.</string>
+    <string name="sumup_l10n_print_failed_paper_empty">Spausdintuve baigėsi popierius</string>
+    <string name="sumup_l10n_print_failed_printer_offline">Nepavyko prisijungti prie kvitų spausdintuvo.</string>
+    <string name="sumup_l10n_solo_printer_communication_error_description">Nepavyko prijungti. Pabandykite dar kartą.</string>
+    <string name="sumup_l10n_solo_printer_escpos_receipt_download_failed_description">Nepavyko atsiųsti kvito spausdintuvui „Solo“.</string>
+    <string name="sumup_l10n_solo_printer_not_attached_description">Patikrinkite, ar skaitytuvas „Solo“ įstatytas į spausdintuvą ir ar įkrauta spausdintuvo baterija.</string>
+    <string name="sumup_l10n_solo_printer_not_found_title">Spausdintuvas neaptiktas.</string>
+    <string name="sumup_l10n_solo_printer_offline_description">Nepavyko prijungti prie „Solo“.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_action">Atnaujinti</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_description">Atnaujinkite programinę įrangą, kad galėtumėte spausdinti.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_title">Reikia atnaujinti „Solo“.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_generic_description">Patikrinkite spausdintuvo dangtelį, popieriaus ritinėlį ir pabandykite dar kartą.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_title">Atspausdinti nepavyko.</string>
+    <string name="sumup_label_external_storage">Išorinė atmintinė</string>
+    <string name="sumup_learn_how">Bakstelėkite ir sužinokite, kaip tą padaryti.</string>
+    <string name="sumup_location_permission_request_text">Siekiant užtikrinti saugią paslaugą, „SumUp“ turi žinoti, kur vyksta operacijos. Todėl, naudodamas programą, „SumUp“ turi pasiekti jūsų vietovę.</string>
+    <string name="sumup_location_permission_request_title">Vietos nustatymo paslauga</string>
+    <string name="sumup_login_btn_forgot_password">Pamiršote slaptažodį</string>
+    <string name="sumup_login_btn_log_in">Prisijungti</string>
+    <string name="sumup_login_btn_title">Prisijungti</string>
+    <string name="sumup_login_error_email_invalid">Patikrinkite, ar įvestas el. pašto adresas yra teisingas</string>
+    <string name="sumup_login_error_email_missing">Įveskite su jūsų „SumUp“ profiliu susieto el. pašto adresą.</string>
+    <string name="sumup_login_error_password_missing">Įveskite savo prisijungimo prie „SumUp“ slaptažodį</string>
+    <string name="sumup_login_error_shelves_not_loaded">Apgailestaujame, tačiau jūsų profilio informacijos nuskaityti nepavyko. Dar kartą pabandykite prisijungti.</string>
+    <string name="sumup_login_failed_message">Konfigūruojant jūsų profilį įvyko klaida. Pabandykite vėliau arba susisiekite su „SumUp“ klientų aptarnavimo skyriumi.</string>
+    <string name="sumup_login_failed_title">Nepavyko prisijungti</string>
+    <string name="sumup_login_hint_email">El. pašto adresas</string>
+    <string name="sumup_login_hint_password">Slaptažodis</string>
+    <string name="sumup_login_session_expired">Atjungėme nuo profilio. Tai padarėme, nes tikriausiai prie to pačio profilio prisijungėte kitame įrenginyje.</string>
+    <string name="sumup_merchant_activation_code">Aktyvinimo kodas</string>
+    <string name="sumup_merchant_activation_code_title">Aktyvuokite „Total“ / „Super“ / „On“</string>
+    <string name="sumup_navigation_payment_methods">Mokėjimo būdai</string>
+    <string name="sumup_navigation_payment_methods_multiple_options">Mokėjimo būdai</string>
+    <string name="sumup_nearby_devices_permission_request_text">Kad galėtumėte tęsti, turite „SumUp“ suteikti leidimą prisijungti prie netoliese esančių įrenginių.</string>
+    <string name="sumup_nearby_devices_permission_request_title">Netoliese esantys įrenginiai</string>
+    <string name="sumup_no_account_question">Dar neturite profilio?</string>
+    <string name="sumup_no_air_usb_device">Šis įrenginys nežinomas. Prijunkite „SumUp“ kortelių skaitytuvą „Air“.</string>
+    <string name="sumup_no_bluetooth_on_solo">Skaitytuve „Solo“ nėra funkcijos „Bluetooth“?</string>
+    <string name="sumup_no_usb_device">Prijunkite kortelių skaitytuvą „Air“ naudodami USB kabelį ir suteikite prieigą įrenginio nustatymuose.</string>
+    <string name="sumup_no_web_browser">Kad galėtumėte tęsti, prašome įdiegti ir sukonfigūruoti naršyklės programą.</string>
+    <string name="sumup_offline_failure_reason_batch_not_uploaded">Ankstesnės mokėjimo operacijos vis dar apdorojamos. Neatsijunkite nuo interneto ir šiek tiek palaukę pabandykite dar kartą.</string>
+    <string name="sumup_offline_failure_reason_invalid_security_patch">Nepavyko apdoroti operacijų neprisijungus prie interneto. Iš naujo prijunkite įrenginį prie interneto. Jei naudojate kito paslaugų teikėjo POS sistemą, pagalbos kreipkitės į jį.</string>
+    <string name="sumup_offline_failure_reason_max_amount_per_tx_limit">Pasirinkta suma viršija ne internetu apdorojamoms mokėjimo operacijoms taikomą limitą. Kad galėtumėte tęsti, sumažinkite sumą.</string>
+    <string name="sumup_offline_failure_reason_max_tx_limit">Pasiekėte ne internetu apdorotų mokėjimo operacijų sumos limitą. Kad galėtumėte jas apdoroti, vėl prisijunkite prie interneto.</string>
+    <string name="sumup_offline_failure_reason_time_window_limit">Neprisijungėte prie interneto ilgiau kaip 24 valandas. Prisijunkite dabar, kad galėtumėte apdoroti inicijuotas operacijas ir daugiau mokėjimų.</string>
+    <string name="sumup_offline_payment_flow_indicator_message">Neprisijungta prie interneto</string>
+    <string name="sumup_offline_payment_terminal_connection_prompt">Kad galėtumėte toliau apdoroti operacijas neprisijungę prie interneto, vėl prisijunkite prie paskutinio naudoto kortelių skaitytuvo.</string>
+    <string name="sumup_order_charge">Nuskaityti</string>
+    <string name="sumup_pairing_in_notification_bar">Prašome patikrinti pranešimų juostą dėl susijungimo prašymo</string>
+    <string name="sumup_pax_setup_add_terminal">Naujas terminalas</string>
+    <string name="sumup_payment_setting_card_reader">Kortelių skaitytuvas</string>
+    <string name="sumup_payment_to_title">Sumokėta (kam):</string>
+    <string name="sumup_permission_explanation_continue">Tęsti</string>
+    <string name="sumup_phone">telefonas</string>
+    <string name="sumup_please_wait">Prašome palaukti…</string>
+    <string name="sumup_please_wait_connecting">Prašome palaukti. Jungiamasi…</string>
+    <string name="sumup_pos_lite">POS Lite</string>
+    <string name="sumup_pp_btn_fw_abort">Atšaukti atnaujinimą</string>
+    <string name="sumup_pp_setup_air_no_btle">Jūsų įrenginys nepalaiko Bluetooth 4.0. Patikrinkite, ar Jūsų įrenginiui galimas programinės įrangos atnaujinimas.</string>
+    <string name="sumup_pp_setup_charge_batteries">Įsitikinkite, kad kortelių skaitytuvo baterijos yra įkrautos</string>
+    <string name="sumup_pp_setup_check_power">Įsitikinkite, kad kortelių skaitytuvas įjungtas</string>
+    <string name="sumup_pp_setup_connected">Prisijungta!</string>
+    <string name="sumup_pp_setup_connection_failed">Nepavyko prisijungti. Prašome bandyti vėliau arba paskambinti SumUp pagalbai numeriu %1$s</string>
+    <string name="sumup_pp_setup_connection_failed_no_support">Nepavyko prisijungti prie kortelių terminalo. Pabandykite dar kartą.</string>
+    <string name="sumup_pp_setup_do_firmware_update_now_mandatory">Nepamirškite atnaujinti iki %1$s</string>
+    <string name="sumup_pp_setup_firmware_cancel_sure">Ar tikrai norite atšaukti šį atnaujinimą?</string>
+    <string name="sumup_pp_setup_firmware_update_do_now">Jūsų kortelių skaitytuvui galima atnaujinti programinę įrangą. Atnaujinimas užtruks keletą minučių. \n\nMes rekomenduojame įdiegti atnaujinimą, kad būtų užtikrintas geriausias Jūsų įrenginio našumas.</string>
+    <string name="sumup_pp_setup_firmware_update_installing">Įdiegiama, prašome palaukti…</string>
+    <string name="sumup_pp_setup_firmware_update_minutes_remaining">Liko %1$s min</string>
+    <string name="sumup_pp_setup_firmware_update_one_minute_remaining">Liko 1 minutė</string>
+    <string name="sumup_pp_setup_help_additional_steps">Panašu, kad Jums vis dar nepavyksta prijungti kortelių terminalo. Galite išbandyti šiuos papildomus žingsnius:</string>
+    <string name="sumup_pp_setup_help_air_reset">Perkraukite kortelių skaitytuvą, 20s palaikydami nuspaustą įjungimo mygtuką. Prašome įsitikinti, kad skaitytuvas išjungtas ir nėra įkraunamas.</string>
+    <string name="sumup_pp_setup_help_bt_toggle_button">Perkrauti Bluetooth</string>
+    <string name="sumup_pp_setup_help_bt_toggle_header">Nepavyksta prisijungti prie skaitytuvo per Bluetooth.\nPrašome bandyti perkrauti Jūsų Bluetooth ryšį prieš bandant prisijungti iš naujo.</string>
+    <string name="sumup_pp_setup_help_give_up">Arba susisiekite su mūsų pagalbos skyriumi telefonu %1$s</string>
+    <string name="sumup_pp_setup_help_optional_support">Jeigu Jums reikia daugiau pagalbos, susisiekite su mūsų pagalbos skyriumi %1$s</string>
+    <string name="sumup_pp_setup_help_pin_plus_replace_batteries">Replace the batteries of the card terminal</string>
+    <string name="sumup_pp_setup_help_reboot_device">Perkraukite Jūsų %1$s</string>
+    <string name="sumup_pp_setup_multiple_devices">Aptikta keletas kortelių terminalų.</string>
+    <string name="sumup_pp_setup_searching">Ieškoma kortelių skaitytuvų</string>
+    <string name="sumup_pp_setup_select_bt_device">Palyginkite paskutinius serijos numerio skaitmenis ant kortelių terminalo nugarėlės.</string>
+    <string name="sumup_pp_setup_text_firmware_update_failed">Atnaujinimas nepavyko. Išjunkite ir vėl įjunkite kortelių terminalą, tuomet bandykite dar kartą.</string>
+    <string name="sumup_pp_setup_text_firmware_update_ongoing">Nesinaudokite šiuo įrenginiu, kol nebaigtas atnaujinimo procesas.</string>
+    <string name="sumup_print">Spausdinti</string>
+    <string name="sumup_print_autoprint_receipts">Visada spausdinti kvitus</string>
+    <string name="sumup_print_failed_bluetooth_disabled">Bluetooth atjungtas. Įjunkite Bluetooth ir bandykite dar kartą.</string>
+    <string name="sumup_print_failed_no_cash_drawer">Pasirinktas spausdintuvas nesuderinamas su kasos aparatu.</string>
+    <string name="sumup_print_no_printers_found">Nerasti jokie spausdintuvai</string>
+    <string name="sumup_print_open_cash_drawer">Atidaryti kasos aparatą</string>
+    <string name="sumup_print_open_drawer_automatically">Atidaryti kasos aparatą automatiškai</string>
+    <string name="sumup_print_searching_printers">Ieškoma spausdintuvų</string>
+    <string name="sumup_print_select_printer">Pasirinkite spausdintuvą</string>
+    <string name="sumup_print_test_page">Spausdinti bandomąjį puslapį</string>
+    <string name="sumup_printer_available">Pasiekiamas</string>
+    <string name="sumup_printer_settings_copies_label">Kopijų skaičius</string>
+    <string name="sumup_printer_settings_disabled">Išjungta</string>
+    <string name="sumup_printer_settings_none_paired">Nesusieta</string>
+    <string name="sumup_printer_settings_toggle_label">Įjungti kvitų sausdinimą</string>
+    <string name="sumup_printer_unavailable">Nepasiekiamas</string>
+    <string name="sumup_processing_payment">Mokėjimas apdorojamas…</string>
+    <string name="sumup_reader_attribute_unknown">Nežinomas įkrovimo šaltinis</string>
+    <string name="sumup_reader_connecting_text">Jungiamasi prie kortelių skaitytuvo</string>
+    <string name="sumup_reader_connecting_title">Jungiamasi</string>
+    <string name="sumup_reader_home_item_status_update">Atnaujinti įrenginį</string>
+    <string name="sumup_reader_not_found_message">Kortelių skaitytuvas, kurio numeris baigiasi skaičiais %1$s, neaptiktas. Patikrinkite, ar skaitytuvas yra įjungtas ir nėra per toli.</string>
+    <string name="sumup_reader_off_and_unplugged_message">Būtinai įrenginį išjunkite ir ištraukite laido kištuką iš elektros lizdo.</string>
+    <string name="sumup_reader_off_and_unplugged_title">Ištraukite laido kištuką ir išjunkite</string>
+    <string name="sumup_reader_payment">Mokėjimas</string>
+    <string name="sumup_reader_payment_cancelled">Mokėjimas atšauktas</string>
+    <string name="sumup_receipt_contacts_permission_request_text">Kad galėtumėte pasirinkti adresatą, „SumUp“ turi pasiekti jūsų adresatus.</string>
+    <string name="sumup_receipt_email_text">El. paštu</string>
+    <string name="sumup_receipt_field_customer_email">Kliento el. pašto adresas</string>
+    <string name="sumup_receipt_field_customer_phone">Kliento telefono numeris</string>
+    <string name="sumup_receipt_field_email_address">El. pašto adresas</string>
+    <string name="sumup_receipt_field_mobile_number">Mobiliojo telefono numeris</string>
+    <string name="sumup_receipt_request_failed">Nepavyko išsiųsti kvito. Patikrinkite savo ryšį ir bandykite dar kartą.\n \nArba galite nusiųsti šios operacijos kvitą bet kuriuo kitu metu iš „Pardavimų istorijos“ sekcijos.</string>
+    <string name="sumup_receipt_sms_text">SMS žinute</string>
+    <string name="sumup_receipt_title_send_receipt">Siųsti kvitą</string>
+    <string name="sumup_receipt_title_send_to_mobile">Siųsti į mobilųjį</string>
+    <string name="sumup_reset_bluetooth">Iš naujo nustatyti „Bluetooth“</string>
+    <string name="sumup_reset_bluetooth_on_reader">Funkcijos „Bluetooth“ nustatymas iš naujo skaitytuve „%1$s“</string>
+    <string name="sumup_reset_reader_confirmation_message">Atleidę įjungimo / išjungimo mygtuką, išgirsite pyptelėjimą – tai reiškia, kad „Bluetooth“ funkcija nustatyta iš naujo.</string>
+    <string name="sumup_reset_reader_confirmation_title">Nustatyta iš naujo</string>
+    <string name="sumup_reset_reader_title">Nustatykite iš naujo</string>
+    <string name="sumup_saved_reader_home_item_status_is_inactive">Neaktyvus</string>
+    <string name="sumup_saved_reader_home_item_status_is_ready">Paruoštas</string>
+    <string name="sumup_select_an_option">Select an option</string>
+    <string name="sumup_send_receipt_email_field_label">El. pašto adresas</string>
+    <string name="sumup_send_receipt_phone_number_label">Mobiliojo telefono numeris</string>
+    <string name="sumup_service_unavailable_message">Mes stengiamės išspręsti problemą. Pabandykite dar kartą.</string>
+    <string name="sumup_service_unavailable_title">Paslauga nepasiekiama</string>
+    <string name="sumup_sign_up">Prisijungti</string>
+    <string name="sumup_signature_btn_close_legal_page">Uždaryti sąlygas</string>
+    <string name="sumup_signature_in_parcelados">in %1$d parcelados</string>
+    <string name="sumup_signature_sign_here">Prašome pasirašyti čia</string>
+    <string name="sumup_signature_try_again_button_title">Bandyti dar kartą</string>
+    <string name="sumup_solo_app_update_message">Please update your SumUp App to continue using Solo</string>
+    <string name="sumup_solo_plug_and_play_connection_disconnected_message">„Solo“ atjungtas.</string>
+    <string name="sumup_solo_plug_and_play_connection_failure_message">„Solo“ nepavyko prijungti.</string>
+    <string name="sumup_solo_plug_and_play_connection_success_message">„Solo“ prijungtas – galima apdoroti operacijas.</string>
+    <string name="sumup_successful_transaction">Operacija sėkminga</string>
+    <string name="sumup_tablet">planšetė</string>
+    <string name="sumup_tap_or_insert_card">Pridėkite arba įkiškite kortelę</string>
+    <string name="sumup_tipping">Arbatpinigiai</string>
+    <string name="sumup_tipping_signature_including_tip_hint">(Įskaitant %1$s arbatpinigius)</string>
+    <string name="sumup_transaction_cancelled_card_not_charged">Pinigai nuo kortelės nebuvo nuskaityti.</string>
+    <string name="sumup_transaction_cancelled_generic">Operacija atšaukta</string>
+    <string name="sumup_transaction_cancelled_reader_error">Įrenginys tinkamai nesureagavo </string>
+    <string name="sumup_transaction_cancelled_reader_error_detail">Prašome įsitikinti, kad įrenginys yra įkrautas ir Jūsų telefono garsas yra maksimaliai nustatytas.</string>
+    <string name="sumup_transaction_connection_lost">Ryšys su SumUp serveriu buvo prarastas.</string>
+    <string name="sumup_transaction_failed_generic">Operacija nepavyko</string>
+    <string name="sumup_transaction_message_checking_status">Prašome palaukti - mes tikriname operacijos būseną</string>
+    <string name="sumup_transaction_not_processed_desc">Neįmanoma apdoroti operacijos dėl tinklo problemų</string>
+    <string name="sumup_transaction_not_processed_details">Pinigai nuo kortelės nebuvo nurašyti. Galite saugiai išbandyti operaciją dar kartą.</string>
+    <string name="sumup_transaction_unexpected_response">Įvyko klaida, bandant prisijungti prie serverio</string>
+    <string name="sumup_troubleshooting_how_to_turn_on_bluetooth">Kaip įjungti funkciją „Bluetooth“</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_description">Tada jį įjunkite ir laikykite šalia, kad būtų galima prijungti.</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_title">Skaitytuvas turi būti įkrautas</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_generic">Skaitytuvas „%1$s%2$s“ turi būti netoli jūsų ir įjungtas, jame taip pat turi būti įjungta funkcija „Bluetooth“.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_solo">Patikrinkite, ar viršutiniame dešiniajame skaitytuvo „Solo“ ekrano kampe yra „Bluetooth“ piktograma.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_title">Ar skaitytuve „%1$s“ įjungta funkcija „Bluetooth“?</string>
+    <string name="sumup_troubleshooting_turn_on_reader_description">Skaitytuvas „%1$s%2$s“ turi būti netoli jūsų ir įjungtas.</string>
+    <string name="sumup_troubleshooting_turn_on_reader_title">Įjunkite skaitytuvą „%1$s“.</string>
+    <string name="sumup_tts_activation">Įrenginys veikia pritaikymo režimu. Girdėsite nuoseklias instrukcijas mokėjimo operacijai atlikti.</string>
+    <string name="sumup_tts_reader_payment_instructions">Mokėtina suma yra %1$s %2$s. Mokėjimui atlikti, pasirinkite vieną iš dviejų būdų. Jei norite sumokėti bekontakčiu būdu, pridėkite kortelę ant kortelių skaitytuvo. Atpažinęs kortelę, įrenginys vieną kartą pyptelės. Arba atsiskaitykite įkišdami kortelę lustu žemyn į skaitytuvo viršuje esančią angą ir vykdykite žodinius nurodymus.</string>
+    <string name="sumup_tts_solo_pin_entry_instructions">Turėsite įvesti kortelės PIN kodą. Priekinėje skaitytuvo dalyje yra dangtelis su įdubimais. 10 įdubimų skirti skaičiams įvesti, o trys – norimoms funkcijomis pasirinkti. Spausdami skaičių įdubimus, įveskite PIN kodą. Kaskart įvedę skaičių, girdėsite pyptelėjimą. Jei norite atšaukti mokėjimą, paspauskite dešinėje esantį viršutinį mygtuką. Po juo, kaip ir telefono klaviatūroje, trimis eilutėmis išdėstyti skaičiai nuo 1 iki 9. Viršutinė eilutė iš kairės į dešinę prasideda skaičiais 1, 2 ir 3. Ketvirtoje eilutėje, apatiniame kairiajame kampe, yra išvalymo mygtukas, kuriuo galite ištrinti paskutinę įvestį. Šios eilutės centre yra nulis, o patvirtinimo mygtukas –dešinėje. Įveskite PIN kodą, o paskui paspauskite patvirtinimo mygtuką.</string>
+    <string name="sumup_tts_solo_ul_pin_entry_instructions">Turėsite įvesti kortelės PIN kodą. Priekinėje skaitytuvo dalyje yra dangtelis su įdubimais. 10 įdubimų skirti skaičiams įvesti, o trys – norimoms funkcijomis pasirinkti. Spausdami skaičių įdubimus, įveskite PIN kodą. Kaskart įvedę skaičių, girdėsite pyptelėjimą. Trys dešinėje vertikaliai išdėstyti apskriti įdubimai yra funkcijų mygtukai. Paspaudę viršutinį mygtuką, mokėjimą atšauksite. Po juo esančiu išvalymo mygtuku ištrinsite paskutinę įvestį. Apatinis įdubimas yra patvirtinimo mygtukas. Skaičius atitinkantys kampuoti įdubimai išdėstyti trimis stulpeliais kairėje pusėje. Skaičiai išdėstyti taip pat, kaip telefono klaviatūroje: viršutinė eilutė iš kairės į dešinę prasideda skaičiais 1, 2 ir 3. Įveskite PIN kodą, o paskui paspauskite patvirtinimo mygtuką.</string>
+    <string name="sumup_tts_transaction_failure">Nepavyko apdoroti operacijos ir pinigai iš kortelės nenuskaityti. Pabandykite dar kartą.</string>
+    <string name="sumup_tts_transaction_success">Operacija sėkmingai apdorota. Išimkite kortelę.</string>
+    <string name="sumup_turn_bluetooth_off_on">Išjunkite ir vėl įjunkite funkciją „Bluetooth“.</string>
+    <string name="sumup_turn_bluetooth_off_on_on_reader">Funkcijos „Bluetooth“ išjungimas ir įjungimas skaitytuve „%1$s“</string>
+    <string name="sumup_tx_cancel_on_solo">Jei norite mokėjimą atšaukti, kortelių skaitytuve paspauskite atšaukimo mygtuką.</string>
+    <string name="sumup_tx_cancel_please_wait">Operacija atšaukiama, prašome palaukti.</string>
+    <string name="sumup_tx_cancel_power_off">Norėdami atšaukti operaciją, paspauskite maitinimo mygtuką ant kortelių terminalo</string>
+    <string name="sumup_tx_successful_receipts_qr_code_tab_title">QR kodas</string>
+    <string name="sumup_txresult_cash_result_info">Gauti grynieji pinigai: %1$s · Grąža: %2$s</string>
+    <string name="sumup_txresult_dismiss">Atmesti</string>
+    <string name="sumup_txresult_print_missing_transaction_data_message">Trūksta operacijos duomenų.</string>
+    <string name="sumup_txresult_print_receipt">Spausdinti kvitą</string>
+    <string name="sumup_txresult_print_receipt_download_failed_message">Nepavyko atsisiųsti kvito.</string>
+    <string name="sumup_txresult_print_timed_out_message">Spausdinimas užtruko per ilgai.</string>
+    <string name="sumup_txresult_tip_result_info">Įskaitant %1$s arbatpinigių.</string>
+    <string name="sumup_update_software">Atnaujinkite jo programinę įrangą.</string>
+    <string name="sumup_update_solo_message">1. Bakstelėdami „Solo“ skaitytuvo ekrano viršuje, atidarykite meniu.\n\n2. Bakstelėkite „Ryšys“ ir prisijunkite prie „Wi-Fi“.\n\n3. Jei reikia, prisijunkite.\n\n4. Bakstelėkite „Nustatymai“, „Programinės įrangos naujiniai“, o paskui – „Atsisiųsti ir įdiegti“.\'\n\n5. Atnaujinę, bakstelėkite „Ryšys“ ir vėl įjunkite „Bluetooth®“ funkciją.</string>
+    <string name="sumup_update_solo_title">Atnaujinkite savo „Solo“ skaitytuvą</string>
+    <string name="sumup_verification_camera_permission_request_title">Kamera</string>
+    <string name="sumup_verify_phone_number">Patvirtinkite mobiliojo telefono numerį</string>
+    <string name="sumup_waiting_reader_action">Laukiama kliento</string>
+    <string msgid="2561197295334830845" name="switch_role">"Jungiklis"</string>
+    <string msgid="1672349317127674378" name="tab">"Tabuliavimo klavišas"</string>
+    <string msgid="5946805113151406391" name="template_percent">"Procentų: <ns1:g id="PERCENTAGE">%1$d</ns1:g>."</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"patarimas"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"rodyti patarimą"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"IŠJUNGTA"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"ĮJUNGTA"</string>
+</resources>

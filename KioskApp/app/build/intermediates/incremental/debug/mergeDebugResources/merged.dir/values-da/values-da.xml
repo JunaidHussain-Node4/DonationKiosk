@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="exo_controls_playback_speeds">
+    <item>0,25x</item>
+    <item>0,5x</item>
+    <item>0,75x</item>
+    <item>Normal</item>
+    <item>1,25x</item>
+    <item>1,5x</item>
+    <item>2x</item>
+  </string-array>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Spol %d sekund frem</item>
+    <item quantity="other">Spol %d sekunder frem</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Spol %d sekund tilbage</item>
+    <item quantity="other">Spol %d sekunder tilbage</item>
+  </plurals>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d ny notifikation</item>
+    <item quantity="other">%d nye notifikationer</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Find hjem"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Gå op"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Flere valgmuligheder"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Udfør"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Se alle"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Vælg en app"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"FRA"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"TIL"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"slet"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Fn+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"mellemrum"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Søg…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Ryd forespørgsel"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Søgeforespørgsel"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Søg"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Indsend forespørgsel"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Talesøgning"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Del med"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Del med <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Skjul"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Adgangskode"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Adgangsnøgle"</string>
+    <string name="bottomsheet_action_collapse">Skjul feltet i bunden</string>
+    <string name="bottomsheet_action_expand">Udvid feltet i bunden</string>
+    <string name="bottomsheet_action_expand_halfway">Udvid halvdelen</string>
+    <string name="bottomsheet_drag_handle_clicked">Du har trykket to gange på håndtaget</string>
+    <string name="bottomsheet_drag_handle_content_description">Håndtag</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Besvar"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Afvis"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Læg på"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Indgående opkald"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Igangværende opkald"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Et indgående opkald screenes"</string>
+    <string name="character_counter_content_description">Du har brugt %1$d ud af %2$d tegn</string>
+    <string name="character_counter_overflowed_content_description">Du har brugt %1$d tegn og dermed overskredet tegnbegrænsningen på %2$d.</string>
+    <string name="circuit_navigationHeader_addButton_title">Add</string>
+    <string name="circuit_navigationHeader_backButton_title">Back</string>
+    <string name="circuit_navigationHeader_cancelButton_title">Cancel</string>
+    <string name="circuit_navigationHeader_chatButton_title">Chat</string>
+    <string name="circuit_navigationHeader_closeButton_title">Close</string>
+    <string name="circuit_navigationHeader_deleteButton_title">Delete</string>
+    <string name="circuit_navigationHeader_discountButton_title">Apply discount</string>
+    <string name="circuit_navigationHeader_filterButton_title">Filter</string>
+    <string name="circuit_navigationHeader_helpButton_title">Help</string>
+    <string name="circuit_navigationHeader_hideButton_title">Hide</string>
+    <string name="circuit_navigationHeader_inboxButton_title">Inbox</string>
+    <string name="circuit_navigationHeader_minimizeButton_title">Minimize</string>
+    <string name="circuit_navigationHeader_moreButton_title">More</string>
+    <string name="circuit_navigationHeader_printButton_title">Print</string>
+    <string name="circuit_navigationHeader_refreshButton_title">Refresh</string>
+    <string name="circuit_navigationHeader_reportButton_title">Report</string>
+    <string name="circuit_navigationHeader_saveButton_title">Save</string>
+    <string name="circuit_navigationHeader_searchButton_title">Search</string>
+    <string name="circuit_navigationHeader_settingsButton_title">Settings</string>
+    <string name="circuit_navigationHeader_shareButton_title">Share</string>
+    <string name="circuit_navigationHeader_showButton_title">Show</string>
+    <string name="circuit_tierIndicator_plusTier_accessibilityLabel">Plus Tier</string>
+    <string name="clear_text_end_icon_content_description">Ryd tekst</string>
+    <string msgid="406453423630273620" name="close_drawer">"Luk navigationsmenuen"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Luk arket"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktivér</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Du skal aktivere Google Play-tjenester, for at %1$s kan fungere.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Aktivér Google Play-tjenester</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Installer</string>
+    <string name="common_google_play_services_install_text">Du skal installere Google Play-tjenester, før %1$s kan køre på din enhed.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Hent Google Play-tjenester</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play-tjenesters tilgængelighed</string>
+    <string name="common_google_play_services_notification_ticker">Fejl i Google Play-tjenester</string>
+    <string name="common_google_play_services_unknown_issue">%1$s har problemer med Google Play-tjenester. Prøv igen.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s fungerer ikke uden Google Play-tjenester, som ikke understøttes på din enhed.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Opdater</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s kan ikke køre, medmindre du opdaterer Google Play-tjenester.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Opdater Google Play-tjenester</string>
+    <string name="common_google_play_services_updating_text">%1$s kan ikke køre uden Google Play-tjenester, som i øjeblikket opdateres.</string>
+    <string name="common_google_play_services_wear_update_text">Du skal bruge en ny version af Google Play-tjenester. Opdateringen gennemføres automatisk om et øjeblik.</string>
+    <string name="common_open_on_phone">Åbn på telefonen</string>
+    <string name="common_signin_button_text">Log ind</string>
+    <string name="common_signin_button_text_long">Log ind med Google</string>
+    <string msgid="6083905920877235314" name="copy">"Kopiér"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Linket er kopieret til udklipsholderen"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ugyldigt input"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Pop op-vindue"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Rullemenu"</string>
+    <string name="error_a11y_label">Fejl: ugyldig</string>
+    <string name="error_icon_content_description">Fejl</string>
+    <string name="exo_controls_cc_disabled_description">Aktivér undertekster</string>
+    <string name="exo_controls_cc_enabled_description">Deaktiver undertekster</string>
+    <string name="exo_controls_fastforward_description">Spol frem</string>
+    <string name="exo_controls_fullscreen_enter_description">Åbn fuld skærm</string>
+    <string name="exo_controls_fullscreen_exit_description">Afslut fuld skærm</string>
+    <string name="exo_controls_hide">Skjul afspilningsknapper</string>
+    <string name="exo_controls_next_description">Næste</string>
+    <string name="exo_controls_overflow_hide_description">Skjul yderligere indstillinger</string>
+    <string name="exo_controls_overflow_show_description">Vis yderligere indstillinger</string>
+    <string name="exo_controls_pause_description">Sæt på pause</string>
+    <string name="exo_controls_play_description">Afspil</string>
+    <string name="exo_controls_playback_speed">Hastighed</string>
+    <string name="exo_controls_previous_description">Forrige</string>
+    <string name="exo_controls_repeat_all_description">Tilstand: Gentag alle. Slå Gentag til/fra.</string>
+    <string name="exo_controls_repeat_off_description">Tilstand: Gentag ikke. Slå Gentag til/fra.</string>
+    <string name="exo_controls_repeat_one_description">Tilstand: Gentag én. Slå Gentag til/fra.</string>
+    <string name="exo_controls_rewind_description">Spol tilbage</string>
+    <string name="exo_controls_seek_bar_description">Afspilningsstatus</string>
+    <string name="exo_controls_settings_description">Indstillinger</string>
+    <string name="exo_controls_show">Vis afspilningsknapper</string>
+    <string name="exo_controls_shuffle_off_description">Aktivér Bland</string>
+    <string name="exo_controls_shuffle_on_description">Deaktiver Bland</string>
+    <string name="exo_controls_stop_description">Stop</string>
+    <string name="exo_controls_vr_description">VR-tilstand</string>
+    <string name="exo_download_completed">Downloaden er udført</string>
+    <string name="exo_download_description">Download</string>
+    <string name="exo_download_downloading">Downloader</string>
+    <string name="exo_download_failed">Download mislykkedes</string>
+    <string name="exo_download_notification_channel_name">Downloads</string>
+    <string name="exo_download_paused">Downloads er sat på pause</string>
+    <string name="exo_download_paused_for_network">Downloads venter på netværksforbindelse</string>
+    <string name="exo_download_paused_for_wifi">Downloads venter på Wi-Fi-netværk</string>
+    <string name="exo_download_removing">Fjerner downloads</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternativt spor</string>
+    <string name="exo_track_role_closed_captions">Undertekster</string>
+    <string name="exo_track_role_commentary">Kommentarspor</string>
+    <string name="exo_track_role_supplementary">Supplerende spor</string>
+    <string name="exo_track_selection_auto">Automatisk</string>
+    <string name="exo_track_selection_none">Ingen</string>
+    <string name="exo_track_selection_title_audio">Lyd</string>
+    <string name="exo_track_selection_title_text">Undertekst</string>
+    <string name="exo_track_selection_title_video">Video</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Surroundsound</string>
+    <string name="exo_track_surround_5_point_1">5.1 surround sound</string>
+    <string name="exo_track_surround_7_point_1">7.1 surroundsound</string>
+    <string name="exo_track_unknown">Ukendt</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Avanceret"</string>
+    <string name="exposed_dropdown_menu_content_description">Vis rullemenuen</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopiér link"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Åbn i browser"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Del link"</string>
+    <string name="icon_content_description">Ikon for dialogboks</string>
+    <string msgid="6827826412747255547" name="in_progress">"I gang"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Delvist markeret"</string>
+    <string name="item_view_role_description">Fane</string>
+    <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Skjul felt i bunden"</string>
+    <string msgid="1555567894577437024" name="m3c_bottom_sheet_dismiss_description">"Luk felt i bunden"</string>
+    <string msgid="8403354765404029791" name="m3c_bottom_sheet_drag_handle_description">"Håndtag"</string>
+    <string msgid="6670819569745899763" name="m3c_bottom_sheet_expand_description">"Udvid felt i bunden"</string>
+    <string msgid="3010635850035863127" name="m3c_bottom_sheet_pane_title">"Felt i bunden"</string>
+    <string msgid="8166741421776570875" name="m3c_date_input_headline">"Angivet dato"</string>
+    <string msgid="229313757840775812" name="m3c_date_input_headline_description">"Angivet dato: %1$s"</string>
+    <string msgid="6116910750161463197" name="m3c_date_input_invalid_for_pattern">"Datoen svarer ikke til det forventede format: %1$s"</string>
+    <string msgid="2521768508935305279" name="m3c_date_input_invalid_not_allowed">"Datoen er ikke tilladt: %1$s"</string>
+    <string msgid="7052898923934555305" name="m3c_date_input_invalid_year_range">"Datoen er uden for det forventede årsinterval: %1$s-%2$s"</string>
+    <string msgid="2895559812010326913" name="m3c_date_input_label">"Dato"</string>
+    <string msgid="1237013946323089826" name="m3c_date_input_no_input_description">"Ingen"</string>
+    <string msgid="7306227249789210568" name="m3c_date_input_title">"Vælg dato"</string>
+    <string msgid="7605002211875882969" name="m3c_date_picker_headline">"Valgt dato"</string>
+    <string msgid="3664277305226978227" name="m3c_date_picker_headline_description">"Aktuelt valg: %1$s"</string>
+    <string msgid="8436650776581492840" name="m3c_date_picker_navigate_to_year_description">"Gå til år %1$s"</string>
+    <string msgid="5811000998184572395" name="m3c_date_picker_no_selection_description">"Ingen"</string>
+    <string msgid="7813882352367152251" name="m3c_date_picker_scroll_to_earlier_years">"Rul for at se tidligere år"</string>
+    <string msgid="5727367015496556177" name="m3c_date_picker_scroll_to_later_years">"Rul for at se senere år"</string>
+    <string msgid="1804346892470238807" name="m3c_date_picker_switch_to_calendar_mode">"Skift til input-tilstand for kalender"</string>
+    <string msgid="395627960681594326" name="m3c_date_picker_switch_to_day_selection">"Stryg for at vælge et år, eller tryk for at skifte tilbage til datovælgeren"</string>
+    <string msgid="2219746470065162704" name="m3c_date_picker_switch_to_input_mode">"Skift til input-tilstand for tekst"</string>
+    <string msgid="7142101321095356500" name="m3c_date_picker_switch_to_next_month">"Skift til næste måned"</string>
+    <string msgid="228438865139394590" name="m3c_date_picker_switch_to_previous_month">"Skift til forrige måned"</string>
+    <string msgid="791651718641787594" name="m3c_date_picker_switch_to_year_selection">"Skift til valg af år"</string>
+    <string msgid="7430790972741451689" name="m3c_date_picker_title">"Vælg dato"</string>
+    <string msgid="3199387177749801575" name="m3c_date_picker_today_description">"I dag"</string>
+    <string msgid="2068382232816991922" name="m3c_date_picker_year_picker_pane_title">"Årsvælgeren er synlig"</string>
+    <string msgid="3190049423327661366" name="m3c_date_range_input_invalid_range_input">"Det angivne datointerval er ugyldigt"</string>
+    <string msgid="3148384720560189467" name="m3c_date_range_input_title">"Angiv datoer"</string>
+    <string msgid="2138321128465719402" name="m3c_date_range_picker_day_in_range">"Inden for de valgte dage"</string>
+    <string msgid="4947636797751277713" name="m3c_date_range_picker_end_headline">"Slutdato"</string>
+    <string msgid="602077859540990149" name="m3c_date_range_picker_scroll_to_next_month">"Rul for at se næste måned"</string>
+    <string msgid="4592174524846109496" name="m3c_date_range_picker_scroll_to_previous_month">"Rul for at se forrige måned"</string>
+    <string msgid="4665981448952749820" name="m3c_date_range_picker_start_headline">"Startdato"</string>
+    <string msgid="3134165431120340385" name="m3c_date_range_picker_title">"Vælg datoer"</string>
+    <string msgid="7617233117134790350" name="m3c_dialog">"Dialogboks"</string>
+    <string msgid="3177828188723359358" name="m3c_dropdown_menu_collapsed">"Skjult"</string>
+    <string msgid="2360841780724299882" name="m3c_dropdown_menu_expanded">"Udvidet"</string>
+    <string msgid="8687821690726149911" name="m3c_dropdown_menu_toggle">"Skift visningen af rullemenuen"</string>
+    <string msgid="6152806324422087846" name="m3c_search_bar_search">"Søg"</string>
+    <string msgid="6152755701819882931" name="m3c_snackbar_dismiss">"Afvis"</string>
+    <string msgid="7655536806087401899" name="m3c_suggestions_available">"Forslag nedenfor"</string>
+    <string msgid="2786685010796619560" name="m3c_time_picker_am">"AM"</string>
+    <string msgid="2349193472625211372" name="m3c_time_picker_hour">"Time"</string>
+    <string msgid="9179527532316922345" name="m3c_time_picker_hour_24h_suffix">"%1$d timer"</string>
+    <string msgid="8876759303332837035" name="m3c_time_picker_hour_selection">"Vælg time"</string>
+    <string msgid="3458167507790628988" name="m3c_time_picker_hour_suffix">"kl. %1$d"</string>
+    <string msgid="6973808109666874069" name="m3c_time_picker_hour_text_field">"til timer"</string>
+    <string msgid="4313071914266462005" name="m3c_time_picker_minute">"Minut"</string>
+    <string msgid="4699133535056739733" name="m3c_time_picker_minute_selection">"Vælg minutter"</string>
+    <string msgid="5064177921781937179" name="m3c_time_picker_minute_suffix">"%1$d minutter"</string>
+    <string msgid="7661234488295443182" name="m3c_time_picker_minute_text_field">"til minutter"</string>
+    <string msgid="5865171949528594571" name="m3c_time_picker_period_toggle_description">"Vælg AM eller PM"</string>
+    <string msgid="6616362054113087709" name="m3c_time_picker_pm">"PM"</string>
+    <string msgid="1805687647081129904" name="m3c_tooltip_long_press_label">"Se værktøjstip"</string>
+    <string msgid="5460405025248574620" name="m3c_tooltip_pane_description">"Værktøjstip"</string>
+    <string name="material_clock_toggle_content_description">Vælg AM eller PM</string>
+    <string name="material_hour_24h_suffix">%1$s timer</string>
+    <string name="material_hour_selection">Vælg time</string>
+    <string name="material_hour_suffix">klokken %1$s</string>
+    <string name="material_minute_selection">Vælg minutter</string>
+    <string name="material_minute_suffix">%1$s minutter</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Skift til urtilstand for at angive klokkeslæt.</string>
+    <string name="material_timepicker_hour">Time</string>
+    <string name="material_timepicker_minute">Minut</string>
+    <string name="material_timepicker_pm">e.m.</string>
+    <string name="material_timepicker_select_time">Vælg tidspunkt</string>
+    <string name="material_timepicker_text_input_mode_description">Skift til teksttilstand for at angive klokkeslæt.</string>
+    <string name="mtrl_badge_numberless_content_description">Ny notifikation</string>
+    <string name="mtrl_checkbox_state_description_checked">Markeret</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">Delvist markeret</string>
+    <string name="mtrl_checkbox_state_description_unchecked">Ikke markeret</string>
+    <string name="mtrl_chip_close_icon_content_description">Fjern %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Flere end %1$d nye notifikationer</string>
+    <string name="mtrl_picker_a11y_next_month">Skift til næste måned</string>
+    <string name="mtrl_picker_a11y_prev_month">Skift til forrige måned</string>
+    <string name="mtrl_picker_announce_current_range_selection">Valg af startdato: %1$s – Valg af slutdato: %2$s</string>
+    <string name="mtrl_picker_announce_current_selection">Aktuelt valg: %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">ingen</string>
+    <string name="mtrl_picker_cancel">Annuller</string>
+    <string name="mtrl_picker_confirm">OK</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Vælg dato</string>
+    <string name="mtrl_picker_date_header_unselected">Valgt dato</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_end_date_description">Slutdato %1$s</string>
+    <string name="mtrl_picker_invalid_format">Ugyldigt format.</string>
+    <string name="mtrl_picker_invalid_format_example">Eksempel: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Brug: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Ugyldigt interval.</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">Gå til indeværende år %1$d</string>
+    <string name="mtrl_picker_navigate_to_year_description">Gå til år %1$d</string>
+    <string name="mtrl_picker_out_of_range">Uden for interval: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Startdato – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – slutdato</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Vælg interval</string>
+    <string name="mtrl_picker_range_header_unselected">Startdato – slutdato</string>
+    <string name="mtrl_picker_save">Gem</string>
+    <string name="mtrl_picker_start_date_description">Startdato %1$s</string>
+    <string name="mtrl_picker_text_input_date_hint">Dato</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Slutdato</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Startdato</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">å</string>
+    <string name="mtrl_picker_today_description">I dag %1$s</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Skift til input-tilstand for kalender</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Tryk for at skifte til kalendervisning</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Skift til input-tilstand for tekst</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Tryk for at skifte til årsvisning</string>
+    <string name="mtrl_timepicker_cancel">Annuller</string>
+    <string name="mtrl_timepicker_confirm">OK</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigationsmenu"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Ikke valgt"</string>
+    <string msgid="6573031135582639649" name="not_set">"Ikke angivet"</string>
+    <string name="password_toggle_content_description">Vis adgangskode</string>
+    <string msgid="6685851473431805375" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" blev kopieret til udklipsholderen."</string>
+    <string msgid="5941395253238309765" name="range_end">"Slutinterval"</string>
+    <string msgid="7097486360902471446" name="range_start">"Startinterval"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Søg"</string>
+    <string name="searchview_clear_text_content_description">Ryd tekst</string>
+    <string name="searchview_navigation_content_description">Tilbage</string>
+    <string msgid="6043586758067023" name="selected">"Valgt"</string>
+    <string name="side_sheet_accessibility_pane_title">Felt i siden</string>
+    <string msgid="4139871816613051306" name="state_empty">"Tom"</string>
+    <string msgid="5834637030682409883" name="state_off">"Fra"</string>
+    <string msgid="1490883874751719580" name="state_on">"Til"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="sumup_app_certificate_error">Godkendelse af netværkscertifikat mislykkedes! Sørg for, at din enhed er tilsluttet en sikker internetforbindelse.</string>
+    <string name="sumup_app_outdated">Denne app version er forældet, opdater til den nyeste version.</string>
+    <string name="sumup_app_update_required_title">Update Required</string>
+    <string name="sumup_autoreceipt_btn_stop">Stop automatiske kvitteringer</string>
+    <string name="sumup_autoreceipt_customer_credentials_error">Indtast kun kundeoplysninger</string>
+    <string name="sumup_autoreceipt_keypoint_customers">Ved kassen skal du kun angive kundens e-mailadresse eller telefonnummer.</string>
+    <string name="sumup_autoreceipt_keypoint_email_phone">Lad være med at angive dine egne kontaktoplysninger – ellers bliver alle din kundes kvitteringer sendt til dig i stedet.</string>
+    <string name="sumup_autoreceipt_keypoint_merchants">Kunderne vil modtage kvitteringer for køb foretaget hos alle SumUp-forhandlere.</string>
+    <string name="sumup_autoreceipt_keypoint_share">Vi deler eller sælger aldrig vores kundedata.</string>
+    <string name="sumup_autoreceipt_label_sent">En kvittering blev automatisk sendt til %1$s</string>
+    <string name="sumup_autoreceipt_label_subscribe_toggle">Send automatisk kvitteringer fra SumUp-forhandlere fra nu af</string>
+    <string name="sumup_autoreceipt_off_text">Fra</string>
+    <string name="sumup_autoreceipt_on_text">Til</string>
+    <string name="sumup_autoreceipt_privacy_policy_link">fortrolighedspolitik</string>
+    <string name="sumup_autoreceipt_privacy_policy_text">Læs mere i vores %1$s.</string>
+    <string name="sumup_autoreceipt_rules_link">regelsæt</string>
+    <string name="sumup_autoreceipt_rules_text">Bemærk, at vores %1$s gælder, når du tilbyder automatiserede kvitteringer til dine kunder.</string>
+    <string name="sumup_autoreceipt_see_privacy_policy">Du kan finde flere oplysninger i vores %1$s</string>
+    <string name="sumup_autoreceipt_send_text">Send automatiske kvitteringer</string>
+    <string name="sumup_autoreceipt_stop_alert_body">Sørg for at bekræfte, at kunden ikke længere ønsker at modtage kvitteringer, før du gør dette.</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_cancel">Afbryd</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_destructive">Stop kvitteringer</string>
+    <string name="sumup_autoreceipt_stop_alert_title">Stop automatiske kvitteringer?</string>
+    <string name="sumup_autoreceipt_stop_toast_error_subtitle">Prøv igen senere, hvis du vil deaktivere automatiske kvitteringer.</string>
+    <string name="sumup_autoreceipt_stop_toast_error_title">Anmodningen kunne ikke gennemføres</string>
+    <string name="sumup_autoreceipt_stop_toast_success_subtitle">Automatiske kvitteringer stoppet</string>
+    <string name="sumup_autoreceipt_subtitle_label_sent">Kvitteringen blev sendt til %1$s</string>
+    <string name="sumup_autoreceipt_text">Automatiske kvitteringer</string>
+    <string name="sumup_autoreceipt_title_label_sent">Sendt!</string>
+    <string name="sumup_bt_connection_failure_description">Genstart din %1$s og kortlæseren, og prøv igen.</string>
+    <string name="sumup_bt_connection_failure_title">Kunne ikke finde din %1$s</string>
+    <string name="sumup_bt_reset_air_message">Tryk på tænd/sluk-knappen, og hold den nede, indtil skærmen viser %1$s. Dette kan tage et øjeblik. Slip tænd/sluk-knappen med det samme, når %2$s vises.</string>
+    <string name="sumup_bt_reset_instruction_air_1_description">Tjek, at den ikke er tilsluttet en stikkontakt, og tryk på tænd/sluk-knappen for at slukke for den.</string>
+    <string name="sumup_bt_reset_instruction_air_1_title">Tag stikket ud af din Air kortlæser, og sluk den</string>
+    <string name="sumup_bt_reset_instruction_air_2_description">Hold tænd/sluk-knappen nede i et par sekunder, indtil du ser “Release”.</string>
+    <string name="sumup_bt_reset_instruction_air_2_title">Hold tænd/sluk-knappen nede</string>
+    <string name="sumup_bt_reset_instruction_air_3_description">Når du har sluppet tænd/sluk-knappen, bør du høre et bip, der bekræfter, at Bluetooth er blevet nulstillet.</string>
+    <string name="sumup_bt_reset_instruction_air_3_title">Slip knappen, og lyt efter et bip</string>
+    <string name="sumup_bt_reset_instruction_solo_1_description">Tryk på pilen øverst på din Solo, og gå til “Forbindelser”.</string>
+    <string name="sumup_bt_reset_instruction_solo_1_title">Gå til menuen med forbindelser på Solo</string>
+    <string name="sumup_bt_reset_instruction_solo_2_description">Gå til “Bluetooth”, og slå skifteknappen fra og til igen.</string>
+    <string name="sumup_bt_reset_instruction_solo_2_title">Slå Bluetooth på din Solo til igen</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_description">Tryk på pil op eller ned på kortlæseren.</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_title">Gå til “Enhedsindstillinger”</string>
+    <string name="sumup_bt_reset_instruction_three_g_2_title">Vælg “Tilslutningstype”</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_description">Vælg “Fra”, og tryk på det grønne flueben for at bekræfte.</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_title">Slå Bluetooth fra</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_description">Vælg “Til”, og tryk på det grønne flueben for at bekræfte.</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_title">Slå Bluetooth til igen</string>
+    <string name="sumup_bt_reset_instructions_message">Følg disse to trin for at løse problemet med forbindelsen mellem denne enhed og din kortlæser.</string>
+    <string name="sumup_bt_reset_instructions_title">Nulstilling af Bluetooth</string>
+    <string name="sumup_bt_reset_mobile_description">Tryk på knappen nedenfor for at nulstille Bluetooth på denne enhed.</string>
+    <string name="sumup_bt_reset_on_device_description_done">Færdig</string>
+    <string name="sumup_bt_reset_on_device_description_from_settings">Slå Bluetooth fra og til igen</string>
+    <string name="sumup_bt_reset_on_device_description_not_done">Det tager kun et øjeblik</string>
+    <string name="sumup_bt_reset_on_device_title">På denne enhed</string>
+    <string name="sumup_bt_reset_on_reader_description">Se, hvordan man gør</string>
+    <string name="sumup_bt_reset_on_reader_title">På din %1$s</string>
+    <string name="sumup_bt_reset_option_phone">På din telefon</string>
+    <string name="sumup_bt_reset_option_reader">På din kortlæser</string>
+    <string name="sumup_bt_reset_option_tablet">På din tablet</string>
+    <string name="sumup_bt_setup_instruction_solo_1_description">Tryk på tænd/sluk-knappen for at tænde din Solo.</string>
+    <string name="sumup_bt_setup_instruction_solo_1_title">Sørg for, at din Solo er tændt</string>
+    <string name="sumup_bt_setup_instruction_solo_2_description">Tryk på pilen øverst på skærmen på Solo, og gå til “Forbindelser”.</string>
+    <string name="sumup_bt_setup_instruction_solo_2_title">Gå til “Forbindelser” i menuen</string>
+    <string name="sumup_bt_setup_instruction_solo_3_description">Gå til “Bluetooth”, og slå skifteknappen til.</string>
+    <string name="sumup_bt_setup_instruction_solo_3_title">Slå Bluetooth på din Solo til</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_description">Tryk på pil op eller ned på kortlæseren for at få adgang.</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_title">Gå til “Enhedsindstillinger”</string>
+    <string name="sumup_bt_setup_instruction_three_g_2_title">Vælg \"Tilslutningstype\"</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_description">Vælg “Til” for at slå Bluetooth til.</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_title">Vælg “Bluetooth”</string>
+    <string name="sumup_bt_setup_instruction_three_g_4_title">Tryk på det grønne flueben for at bekræfte</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_description">Vælg din kortlæser</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_onboarding_title">Konfigurer din kortlæser</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_title">Hvad vil du indstille?</string>
+    <string name="sumup_btn_call_support">Ring nu</string>
+    <string name="sumup_btn_cancel">Afbryd</string>
+    <string name="sumup_btn_connect">Tilslut</string>
+    <string name="sumup_btn_dismiss">Afvis</string>
+    <string name="sumup_btn_done">Færdig</string>
+    <string name="sumup_btn_edit">Ændre</string>
+    <string name="sumup_btn_go_to_support">Gå til support</string>
+    <string name="sumup_btn_later">Senere</string>
+    <string name="sumup_btn_new_set_up">Ny indstilling</string>
+    <string name="sumup_btn_next">Næste</string>
+    <string name="sumup_btn_no">Nej</string>
+    <string name="sumup_btn_not_my_reader">Ikke min kortlæser</string>
+    <string name="sumup_btn_ok">OK</string>
+    <string name="sumup_btn_previous">Forrige</string>
+    <string name="sumup_btn_proceed">Fortsæt</string>
+    <string name="sumup_btn_rescan">Scan igen</string>
+    <string name="sumup_btn_retry">Prøv igen</string>
+    <string name="sumup_btn_scan">Scan</string>
+    <string name="sumup_btn_send">Send</string>
+    <string name="sumup_btn_send_to_mobile">Send til mobil</string>
+    <string name="sumup_btn_skip">Spring over</string>
+    <string name="sumup_btn_update">Update</string>
+    <string name="sumup_btn_yes">Ja</string>
+    <string name="sumup_btn_yes_connect">Ja, tilslut</string>
+    <string name="sumup_btn_yes_scan">Ja, scan</string>
+    <string name="sumup_button_retry">Forsøg igen</string>
+    <string name="sumup_camera_permission_request_text">For at tage et billede af dit produkt skal SumUp have adgang til dit kamera</string>
+    <string name="sumup_cancel_pending_payment_message">Er du sikker på, at du vil annullere denne betaling?</string>
+    <string name="sumup_cancel_pending_payment_title">Afventer betaling</string>
+    <string name="sumup_card_checkout_cvv_hint">CVV</string>
+    <string name="sumup_card_checkout_expiry_date_label">Udløbsdato</string>
+    <string name="sumup_card_checkout_expiry_month_hint">MM</string>
+    <string name="sumup_card_checkout_expiry_year_hint">ÅÅ</string>
+    <string name="sumup_card_checkout_insert_and_turn_on_card_reader">Forbind og tænd kortterminalen</string>
+    <string name="sumup_card_checkout_security_code">Sikkerhedskode</string>
+    <string name="sumup_card_reader_battery_level">%1$d%% Batteri</string>
+    <string name="sumup_card_reader_battery_level_label">Battery level</string>
+    <string name="sumup_card_reader_battery_level_percentage">%1$d%%</string>
+    <string name="sumup_card_reader_battery_text">Batteri</string>
+    <string name="sumup_card_reader_bluetooth_software_version_text">Bluetooth-software</string>
+    <string name="sumup_card_reader_connect_button_text">Tilslut</string>
+    <string name="sumup_card_reader_error_dialog_header">Kunne ikke oprette forbindelse</string>
+    <string name="sumup_card_reader_error_dialog_positive">Åh nej!</string>
+    <string name="sumup_card_reader_error_dialog_title">Kunne ikke oprette forbindelse til kortlæseren. Prøv igen.</string>
+    <string name="sumup_card_reader_hardware_version_text">Hardware</string>
+    <string name="sumup_card_reader_last_digits_text">Sidste cifre</string>
+    <string name="sumup_card_reader_low_battery">Low battery, please charge device</string>
+    <string name="sumup_card_reader_not_saved_body">Tilslut kortlæseren</string>
+    <string name="sumup_card_reader_not_saved_title">Kom i gang med kortbetalinger</string>
+    <string name="sumup_card_reader_not_saved_title_br">Kom i gang med Top/Solo</string>
+    <string name="sumup_card_reader_serial_number_text">Serienummer</string>
+    <string name="sumup_card_reader_setting_enable_generic">Modtag betalinger med kortlæser</string>
+    <string name="sumup_card_reader_setting_enable_generic_br">Modtag betalinger med Top/Solo</string>
+    <string name="sumup_card_reader_setting_enable_subtitle">Vis som betalingsmetode under betalingsprocessen.</string>
+    <string name="sumup_card_reader_setting_switch_card_readers">Skift til en anden kortlæser</string>
+    <string name="sumup_card_reader_software_version_text">Software</string>
+    <string name="sumup_checking_firmware_info">Søger efter firmwareopdateringer</string>
+    <string name="sumup_checkout_connecting_bt">Forbinder…</string>
+    <string name="sumup_checkout_power_on_reader">Tænd kortlæseren</string>
+    <string name="sumup_confirm_pairing_air">Bekræft parringsanmodningen på din %1$s OG på kortlæseren.</string>
+    <string name="sumup_confirm_pairing_air_ios">Hvis du bliver bedt om det, bekræft da venligst parringsanmodningen på din %1$s OG på kortlæseren.</string>
+    <string name="sumup_connection_lost">Forbindelsen blev afbrudt</string>
+    <string name="sumup_contacts_permission_request_title">Contacts</string>
+    <string name="sumup_could_not_find_your_reader">Kunne ikke finde din kortlæser</string>
+    <string name="sumup_downloading_firmware">Downloader firmwareopdatering</string>
+    <string name="sumup_elv_legal_text">Ich ermächtige %1$s, %2$s, %3$s, %4$s, und von diesem hierzu beauftragten Dritte („die Unternehmen“) den heute fälligen, oben genannten Betrag von meinem Bankkonto durch Lastschrift einzuziehen. Ich weise mein Kreditinstitut unwiderruflich an bei Nichteinlösung der Lastschrift den Unternehmen und/oder der HIT GmbH, Eiffestraße 76, 20537 Hamburg auf Anforderung meinen Namen und meine Anschrift zur Geltendmachung der Forderung mitzuteilen. Datenschutzrechtliche Information: Meine Zahlungsdaten (Kontonummer, Bankleitzahl, Kartenverfallsdatum, Kartenfolgenummer, Datum, Uhrzeit, Zahlungsbetrag, Terminalkennung, Ort, Unternehmen und Filiale) werden zur Kartenprüfung und Zahlungsabwicklung an SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland weitergegeben. Sollte im Rahmen der Zahlungsabwicklung die Lastschrift von meiner Bank nicht eingelöst werden (Rücklastschrift) oder sollte ich der Lastschrift widersprechen, stimme ich zu, dass diese Tatsachen in eine Sperrdatei aufgenommen werden außer wenn ich im Zusammenhang mit dem Widerruf erklärtermaßen Rechte aus dem zu Grunde liegenden Geschäft (z.B. Gewährleistungsrechte) geltend gemacht habe. Die Sperrung wird nach vollständigem Forderungsausgleich wieder aufgehoben und die gespeicherten Daten gelöscht. Dritte, die eine vertragliche Vereinbarung mit den Unternehmen zur Nutzung der Sperrdatei haben, können für Zwecke der Missbrauchsbekämpfung und zur Risikominimierung von Zahlungsausfällen ihre elektronischen Zahlungsvorgänge gegen die Sperrdatei abgleichen. Speichernde Stelle für die Zwecke der Kartenprüfung und Zahlungsabwicklung sind die HIT GmbH, Eiffestr. 76, 20537 Hamburg und die SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland, die auch die Sperrdatei für teilnehmende Händler führen. Diese Unternehmen erteilen insoweit auch an anderen Händler, die auf die Sperrdatei zugreifen eine Empfehlung, ob eine Zahlung im Wege des Lastschrifteinzugs akzeptiert werden sollte.</string>
+    <string name="sumup_elv_legal_text_short">Hiermit erteile ich die Ermächtigung zum Lastschrifteinzug.</string>
+    <string name="sumup_err_no_recent_geo_location_received">Ingen lokation fundet. Kontroller at din GPS eller lokationstjenester er slået til og fungerer.  </string>
+    <string name="sumup_error">Fejl</string>
+    <string name="sumup_error_cannot_send_email">Kan ikke sende e-mail; ingen konfigureret e-mail app fundet.</string>
+    <string name="sumup_error_cash_payment_cannot_save_message">Kunne ikke gemme ændringer. Prøv igen, eller kontakt support.</string>
+    <string name="sumup_error_cash_payment_cannot_save_title">Kontant betaling</string>
+    <string name="sumup_error_io">Kunne ikke forbinde til server. Kontroller din netværksforbindelse og prøv igen.</string>
+    <string name="sumup_error_payment_method_required">Betalingsmetode påkrævet</string>
+    <string name="sumup_error_payment_method_required_desc">For at bruge SumUp, skal mindst én betalingsmetode aktiveres.</string>
+    <string name="sumup_error_system_webview_exception">Noget gik galt med Android System WebView. Opdater appen, eller ring til support.</string>
+    <string name="sumup_error_unexpected_response">Vi har oplevet et uventet svar fra serveren. Prøv igen.</string>
+    <string name="sumup_external_storage_permission_request_text">For at downloade udbetalingsrapporter har SumUp brug for adgang til den eksterne lagring på din enhed</string>
+    <string name="sumup_failed_transaction">Mislykket transaktion</string>
+    <string name="sumup_firmware_update_canceled">Opdatering afbrudt</string>
+    <string name="sumup_fragment_send_receipt">Send kvittering</string>
+    <string name="sumup_geolocation_unavailable_title">Geo-lokation kræves</string>
+    <string name="sumup_grant_usb_permission">For at fortsætte skal du give tilladelse til adgang via USB.</string>
+    <string name="sumup_help">Hjælp</string>
+    <string name="sumup_home_card_acceptance_cta_button_title">Indstil den nu</string>
+    <string name="sumup_home_card_acceptance_subtitle">Indstil din kortlæser, og begynd at modtage betalinger.</string>
+    <string name="sumup_home_card_acceptance_title">Klar, parat, modtag betaling!</string>
+    <string name="sumup_identity_login_error_generic_message">Noget gik galt!\nPrøv at logge ind igen.</string>
+    <string name="sumup_identity_login_error_session_expired_message">Din session er udløbet. Log ind igen.</string>
+    <string name="sumup_identity_login_location_permission_denied_message">Login kræver placeringstilladelse.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_content">Log ind igen.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_title">Vi har opdateret appen</string>
+    <string name="sumup_installment_cancelled">Afbrudt</string>
+    <string name="sumup_items_many">%1$s varer</string>
+    <string name="sumup_items_none">Ingen varer</string>
+    <string name="sumup_items_one">Én vare</string>
+    <string name="sumup_l10n_app_processing">Behandler…</string>
+    <string name="sumup_l10n_card_checkout_card_number">Kortnummer</string>
+    <string name="sumup_l10n_card_checkout_checking_device">Kontrollerer kortlæser…</string>
+    <string name="sumup_l10n_err_card_payment_expired">Dit kort er udløbet. Brug et andet kort.</string>
+    <string name="sumup_l10n_order_hint_custom_item">emne</string>
+    <string name="sumup_l10n_payment_failure">Transaction mislykkedes</string>
+    <string name="sumup_l10n_phone_number_confirmation_invalid_for_country">%1$s ligner ikke et gyldigt mobilnummer fra %2$s. \n\nRediger det indtastede nummer, eller indtast en gyldig international opkaldskode, hvis nummeret ikke er fra %2$s.</string>
+    <string name="sumup_l10n_phone_number_confirmation_outside_of_country">%1$s ligner et mobilnummer, der ikke er fra %2$s. \n\nBekræft med kunden, at nummeret er korrekt før du fortsætter.</string>
+    <string name="sumup_l10n_print_failed_cover_open">Printerlåge åben. Luk og prøv igen.</string>
+    <string name="sumup_l10n_print_failed_generic">Kunne ikke printe. Kontroller printer og prøv igen.</string>
+    <string name="sumup_l10n_print_failed_image_unavailable">Download af kvitteringsinfo mislykkedes. Prøv igen.</string>
+    <string name="sumup_l10n_print_failed_paper_empty">Papirstop</string>
+    <string name="sumup_l10n_print_failed_printer_offline">Kunne ikke forbinde til kvitteringsprinter.</string>
+    <string name="sumup_l10n_solo_printer_communication_error_description">Forbindelsen mislykkedes. Prøv igen.</string>
+    <string name="sumup_l10n_solo_printer_escpos_receipt_download_failed_description">Kunne ikke downloade kvittering til Solo-printeren.</string>
+    <string name="sumup_l10n_solo_printer_not_attached_description">Sørg for, at Solo er tilsluttet printeren, og at printerens batteri er opladet.</string>
+    <string name="sumup_l10n_solo_printer_not_found_title">Printeren blev ikke fundet.</string>
+    <string name="sumup_l10n_solo_printer_offline_description">Kunne ikke oprette forbindelse til Solo.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_action">Opdater</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_description">Opdater softwaren for at udskrive.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_title">Solo skal opdateres.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_generic_description">Tjek printerlåget og papirrullen, og prøv igen.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_title">Udskrivning mislykkedes.</string>
+    <string name="sumup_label_external_storage">Ekstern lagring</string>
+    <string name="sumup_learn_how">Se hvordan her.</string>
+    <string name="sumup_location_permission_request_text">For at sikre en sikker service skal SumUp vide, hvor transaktioner finder sted. Derfor har SumUp adgang til din placering, mens du bruger appen.</string>
+    <string name="sumup_location_permission_request_title">Lokalitetstjenester</string>
+    <string name="sumup_login_btn_forgot_password">Glemt adgangskode</string>
+    <string name="sumup_login_btn_log_in">Log ind</string>
+    <string name="sumup_login_btn_title">Log ind</string>
+    <string name="sumup_login_error_email_invalid">Kontroller at e-mail adresse er indtastet korrekt</string>
+    <string name="sumup_login_error_email_missing">Indtast den e-mailadresse, som er tilknyttet din SumUp-profil.</string>
+    <string name="sumup_login_error_password_missing">Indtast din adgangskode til at logge på SumUp</string>
+    <string name="sumup_login_error_shelves_not_loaded">Dine profiloplysninger kunne desværre ikke hentes.\nPrøv at logge ind igen.</string>
+    <string name="sumup_login_failed_message">Der opstod en problem under konfigurationen af din profil. Prøv igen senere, eller kontakt vores Support Team.</string>
+    <string name="sumup_login_failed_title">Login mislykkedes</string>
+    <string name="sumup_login_hint_email">E-mail adresse</string>
+    <string name="sumup_login_hint_password">Kodeord</string>
+    <string name="sumup_login_session_expired">Du er logget ud. Det skyldes sandsynligvis, at du er logget ind med den samme profil på en anden enhed.</string>
+    <string name="sumup_merchant_activation_code">Aktiveringskode</string>
+    <string name="sumup_merchant_activation_code_title">Aktivér Total/Super/On</string>
+    <string name="sumup_navigation_payment_methods">Betalingsmetoder</string>
+    <string name="sumup_navigation_payment_methods_multiple_options">Betalingsmetoder</string>
+    <string name="sumup_nearby_devices_permission_request_text">For at fortsætte skal SumUp have din tilladelse til at få adgang til enheder i den umiddelbare nærhed.</string>
+    <string name="sumup_nearby_devices_permission_request_title">Enheder i nærheden</string>
+    <string name="sumup_no_account_question">Har du ikke en profil endnu?</string>
+    <string name="sumup_no_air_usb_device">Denne enhed er ukendt. Tilslut venligst en SumUp Air Kortlæser.</string>
+    <string name="sumup_no_bluetooth_on_solo">Ingen Bluetooth-forbindelse på Solo?</string>
+    <string name="sumup_no_usb_device">Tilslut din Air kortlæser via et USB-kabel og tillad forbindelsen i din enheds indstillinger.</string>
+    <string name="sumup_no_web_browser">For at fortsætte, skal du installere og konfigurere en webbrowser.</string>
+    <string name="sumup_offline_failure_reason_batch_not_uploaded">Dine tidligere offline-transaktioner er stadig under behandling. Bevar forbindelsen, og prøv snart igen.</string>
+    <string name="sumup_offline_failure_reason_invalid_security_patch">Kan ikke foretage offline transaktioner. Tilslut din enhed til internettet igen. Hvis du bruger et kassesystem fra en anden udbyder, bedes du kontakte dem for at få hjælp.</string>
+    <string name="sumup_offline_failure_reason_max_amount_per_tx_limit">Det valgte beløb overstiger grænsen for offline-transaktioner. Reducer beløbet for at fortsætte.</string>
+    <string name="sumup_offline_failure_reason_max_tx_limit">Du har nået grænsen for det behandlede offline transaktionsbeløb. For at fortsætte med at foretage transaktioner, skal du oprette forbindelse igen.</string>
+    <string name="sumup_offline_failure_reason_time_window_limit">Du har været offline i over 24 timer. Genopret forbindelsen nu for at behandle dine registrerede transaktioner og øge din succesrate.</string>
+    <string name="sumup_offline_payment_flow_indicator_message">Du er offline</string>
+    <string name="sumup_offline_payment_terminal_connection_prompt">For at fortsætte med offline transaktioner, skal du oprette forbindelse til den sidst brugte kortlæser igen.</string>
+    <string name="sumup_order_charge">Betal</string>
+    <string name="sumup_pairing_in_notification_bar">Kontroller meddelelseslinjen for parringsanmodningen.</string>
+    <string name="sumup_pax_setup_add_terminal">Ny kortlæser</string>
+    <string name="sumup_payment_setting_card_reader">Kortlæser</string>
+    <string name="sumup_payment_to_title">Betalt til</string>
+    <string name="sumup_permission_explanation_continue">Fortsæt</string>
+    <string name="sumup_phone">Telefon</string>
+    <string name="sumup_please_wait">Afvent…</string>
+    <string name="sumup_please_wait_connecting">Afvent. Forbinder…</string>
+    <string name="sumup_pos_lite">POS Lite</string>
+    <string name="sumup_pp_btn_fw_abort">Afbryd opdatering</string>
+    <string name="sumup_pp_setup_air_no_btle">Din enhed understøtter ikke Bluetooth 4.0. Kontrollér, om en softwareopdatering er tilgængelig for din enhed.</string>
+    <string name="sumup_pp_setup_charge_batteries">Sørg for, at batterierne i kortlæseren er opladet</string>
+    <string name="sumup_pp_setup_check_power">Kontroller at kortterminalen er tændt.</string>
+    <string name="sumup_pp_setup_connected">Tilsluttet!</string>
+    <string name="sumup_pp_setup_connection_failed">Kunne ikke oprette forbindelse. Prøv igen eller ring til SumUp Support på %1$s</string>
+    <string name="sumup_pp_setup_connection_failed_no_support">Vi kunne ikke oprette forbindelse til kortterminalen. Prøv igen.</string>
+    <string name="sumup_pp_setup_do_firmware_update_now_mandatory">Sørg for at opdatere inden %1$s.</string>
+    <string name="sumup_pp_setup_firmware_cancel_sure">Er du sikker på, at du vil annullere opdateringen?</string>
+    <string name="sumup_pp_setup_firmware_update_do_now">En firmwareopdatering er tilgængelig for din kortlæser. Opdateringen vil tage et par minutter.\n\nVi anbefaler, at du installerer opdateringen for at sikre optimal ydeevne på din enhed.</string>
+    <string name="sumup_pp_setup_firmware_update_installing">Installerer, vent venligst..</string>
+    <string name="sumup_pp_setup_firmware_update_minutes_remaining">%1$s minutter tilbage</string>
+    <string name="sumup_pp_setup_firmware_update_one_minute_remaining">Et minut tilbage</string>
+    <string name="sumup_pp_setup_help_additional_steps">Det ser ud til, at du stadig har problemer med at oprette forbindelse til terminalen. Du kan prøve et af disse yderligere trin:</string>
+    <string name="sumup_pp_setup_help_air_reset">Nulstill kortterminalen ved at holde tænd/sluk knappen inde i 20 sek. Kontroller at terminalen er slukket og ikke sat til oplader.</string>
+    <string name="sumup_pp_setup_help_bt_toggle_button">Nulstil Bluetooth</string>
+    <string name="sumup_pp_setup_help_bt_toggle_header">Vi kan ikke forbinde til terminalen via Bluetooth.\nPrøv at nulstille din bluetooth forbindelse før du prøver igen.</string>
+    <string name="sumup_pp_setup_help_give_up">Alternativt kontakt vores Supportteam på %1$s</string>
+    <string name="sumup_pp_setup_help_optional_support">Hvis du har brug for yderligere hjælp, kontakt da vores supportteam på %1$s</string>
+    <string name="sumup_pp_setup_help_pin_plus_replace_batteries">Udskift kortterminalens batteri.</string>
+    <string name="sumup_pp_setup_help_reboot_device">Genstart din %1$s</string>
+    <string name="sumup_pp_setup_multiple_devices">Flere terminaler opdaget.</string>
+    <string name="sumup_pp_setup_searching">Scanner efter kortlæsere</string>
+    <string name="sumup_pp_setup_select_bt_device">Sammenlign de sidste cifre af serienummeret på terminalens bagside.</string>
+    <string name="sumup_pp_setup_text_firmware_update_failed">Opdateringen mislykkedes. Genstart kortterminalen og prøv igen.</string>
+    <string name="sumup_pp_setup_text_firmware_update_ongoing">Undlad at benytte denne enhed, før opdateringen er gennemført.</string>
+    <string name="sumup_print">Print</string>
+    <string name="sumup_print_autoprint_receipts">Udskriv altid kvitteringer</string>
+    <string name="sumup_print_failed_bluetooth_disabled">Bluetooth er slået fra. Slå bluetooth til og prøv igen.</string>
+    <string name="sumup_print_failed_no_cash_drawer">Den valgte printer understøtter ikke kasseaparat.</string>
+    <string name="sumup_print_no_printers_found">Fandt ikke nogen printere</string>
+    <string name="sumup_print_open_cash_drawer">Åbn kasseapparat</string>
+    <string name="sumup_print_open_drawer_automatically">Åbn kasseapparat automatisk</string>
+    <string name="sumup_print_searching_printers">Søger efter printere…</string>
+    <string name="sumup_print_select_printer">Vælg printer</string>
+    <string name="sumup_print_test_page">Udskriv testside</string>
+    <string name="sumup_printer_available">Available</string>
+    <string name="sumup_printer_settings_copies_label">Antal kopier</string>
+    <string name="sumup_printer_settings_disabled">Deaktiveret</string>
+    <string name="sumup_printer_settings_none_paired">Ikke parret</string>
+    <string name="sumup_printer_settings_toggle_label">Aktiver kvitteringsudskrift</string>
+    <string name="sumup_printer_unavailable">Ikke tilgængeligt</string>
+    <string name="sumup_processing_payment">Behandler betaling…</string>
+    <string name="sumup_reader_attribute_unknown">ukendt</string>
+    <string name="sumup_reader_connecting_text">Tilslutter til kortlæser</string>
+    <string name="sumup_reader_connecting_title">Tilslutter</string>
+    <string name="sumup_reader_home_item_status_update">Opdater enhed</string>
+    <string name="sumup_reader_not_found_message">Din kortlæser, der slutter på %1$s, blev ikke fundet. Sørg for, at læseren er tændt og inden for rækkevidde.</string>
+    <string name="sumup_reader_off_and_unplugged_message">Sørg for, at enheden er slukket, og at stikket er trukket ud.</string>
+    <string name="sumup_reader_off_and_unplugged_title">Træk stikket ud, og sluk</string>
+    <string name="sumup_reader_payment">Betaling</string>
+    <string name="sumup_reader_payment_cancelled">Betalingen blev annulleret</string>
+    <string name="sumup_receipt_contacts_permission_request_text">For at du kan vælge en kontakt, skal SumUp have adgang til dine kontakter.</string>
+    <string name="sumup_receipt_email_text">E-mailadresse</string>
+    <string name="sumup_receipt_field_customer_email">Kundens e-mail</string>
+    <string name="sumup_receipt_field_customer_phone">Kundens telefonnummer</string>
+    <string name="sumup_receipt_field_email_address">E-mailadresse</string>
+    <string name="sumup_receipt_field_mobile_number">Mobilnummer</string>
+    <string name="sumup_receipt_request_failed">Afsendelse af kvittering mislykkedes. Kontroller din forbindelse og prøv igen. \n\nAlternativt kan du til hver en tid sende kvitteringen fra \'salgshistorik\'.</string>
+    <string name="sumup_receipt_sms_text">SMS</string>
+    <string name="sumup_receipt_title_send_receipt">Send kvittering</string>
+    <string name="sumup_receipt_title_send_to_mobile">Send til mobil</string>
+    <string name="sumup_reset_bluetooth">Nulstil Bluetooth</string>
+    <string name="sumup_reset_bluetooth_on_reader">Nulstil Bluetooth på %1$s</string>
+    <string name="sumup_reset_reader_confirmation_message">Når du slipper tænd/sluk-knappen, vil du høre et bip, der bekræfter, at Bluetooth er nulstillet.</string>
+    <string name="sumup_reset_reader_confirmation_title">Nulstilling fuldført</string>
+    <string name="sumup_reset_reader_title">Start nulstillingen</string>
+    <string name="sumup_saved_reader_home_item_status_is_inactive">Inaktiv</string>
+    <string name="sumup_saved_reader_home_item_status_is_ready">Klar</string>
+    <string name="sumup_select_an_option">Select an option</string>
+    <string name="sumup_send_receipt_email_field_label">E-mailadresse</string>
+    <string name="sumup_send_receipt_phone_number_label">Mobilnummer</string>
+    <string name="sumup_service_unavailable_message">Vi arbejder hårdt på at løse problemet. Prøv igen senere.</string>
+    <string name="sumup_service_unavailable_title">Service utilgængelig</string>
+    <string name="sumup_sign_up">Tilmeld dig</string>
+    <string name="sumup_signature_btn_close_legal_page">Luk betingelser.</string>
+    <string name="sumup_signature_in_parcelados">in %1$d parcelados</string>
+    <string name="sumup_signature_sign_here">Venligst underskriv her</string>
+    <string name="sumup_signature_try_again_button_title">Prøv igen</string>
+    <string name="sumup_solo_app_update_message">Please update your SumUp App to continue using Solo</string>
+    <string name="sumup_solo_plug_and_play_connection_disconnected_message">Solo er frakoblet</string>
+    <string name="sumup_solo_plug_and_play_connection_failure_message">Solo kunne ikke oprette forbindelse</string>
+    <string name="sumup_solo_plug_and_play_connection_success_message">Solo er forbundet og klar til brug</string>
+    <string name="sumup_successful_transaction">Vellykket transaktion</string>
+    <string name="sumup_tablet">tablet</string>
+    <string name="sumup_tap_or_insert_card">Hold kortet hen til kortlæseren, eller indsæt det i kortlæseren</string>
+    <string name="sumup_tipping">Drikkepenge</string>
+    <string name="sumup_tipping_signature_including_tip_hint">(inkl. drikkepenge %1$s)</string>
+    <string name="sumup_transaction_cancelled_card_not_charged">Kort er ikke blevet opkrævet.</string>
+    <string name="sumup_transaction_cancelled_generic">Transaktion annulleret</string>
+    <string name="sumup_transaction_cancelled_reader_error">Enhed svarede ikke som forventet </string>
+    <string name="sumup_transaction_cancelled_reader_error_detail">Kontroller at din enhed er opladet og lydstyrken på din telefon er på maximum.</string>
+    <string name="sumup_transaction_connection_lost">Forbindelse til SumUp server blev afbrudt</string>
+    <string name="sumup_transaction_failed_generic">Transaktion mislykkedes</string>
+    <string name="sumup_transaction_message_checking_status">Afvent - vi kontrollerer transaktionens status</string>
+    <string name="sumup_transaction_not_processed_desc">Transaktionen kunne ikke behandles på grund af netværksproblemer</string>
+    <string name="sumup_transaction_not_processed_details">Der er ikke opkrævet på kortet. Du kan med sikkerhed prøve transaktionen igen.</string>
+    <string name="sumup_transaction_unexpected_response">Der opstod en fejl under kommunikationen med serveren</string>
+    <string name="sumup_troubleshooting_how_to_turn_on_bluetooth">Sådan slår du Bluetooth til</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_description">Tænd derefter for den, og hav den i nærheden for at oprette forbindelse.</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_title">Sørg for, at din kortlæser er opladet</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_generic">Sørg for, at din %1$s%2$s er tændt, at Bluetooth er slået til, og at kortlæseren er i nærheden.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_solo">Tjek, at Bluetooth-symbolet vises i øverste højre hjørne af din Solo.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_title">Er Bluetooth på %1$s slået til?</string>
+    <string name="sumup_troubleshooting_turn_on_reader_description">Tjek, at din %1$s%2$s er tændt og i nærheden.</string>
+    <string name="sumup_troubleshooting_turn_on_reader_title">Tænd for din %1$s</string>
+    <string name="sumup_tts_activation">Enheden er i tilgængelighedstilstand. Du bliver guidet gennem transaktionen.</string>
+    <string name="sumup_tts_reader_payment_instructions">Beløbet til betaling er %1$s %2$s. For at betale skal du vælge en af følgende to muligheder. Hvis du vil betale kontaktløst, skal du placere dit kort på kortlæseren. Kortlæseren bipper én gang, når dit kort registreres. Eller du kan betale ved at indsætte kortet med chippen først. Den skal vende opad i åbningen øverst på læseren. Følg derefter de talte instruktioner.</string>
+    <string name="sumup_tts_solo_pin_entry_instructions">Du skal indtaste din PIN-kode. På forsiden af læseren er der et dæksel med huller, som kan guide dig. Der er ti huller til cifre og tre til funktioner. Tryk på knapperne gennem hullerne for at indtaste din PIN-kode. Der vil lyde et bip efter hvert ciffer, du indtaster. Knappen øverst til højre annullerer betalingen. Under den er tallene 1 til 9 placeret i et telefonlayout med tre rækker, der starter med 1, 2 og 3 fra venstre mod højre øverst. I fjerde række nederst til venstre er der en sletteknap, som sletter din seneste indtastning. Tallet nul står i midten af denne række, og bekræftelsesknappen er placeret til højre. Indtast din PIN-kode nu, og tryk derefter på bekræftelsesknappen.</string>
+    <string name="sumup_tts_solo_ul_pin_entry_instructions">Du skal indtaste din PIN-kode. På forsiden af læseren er der et dæksel med huller, som kan guide dig. Der er ti huller til cifre og tre til funktioner. Tryk på knapperne gennem hullerne for at indtaste din PIN-kode. Der vil lyde et bip efter hvert ciffer, du indtaster. De tre runde huller til funktionsknapperne er placeret i den yderste højre kolonne. Øverst er knappen, der vil annullere betalingen. Derunder er sletteknappen, som sletter din seneste indtastning. Og nederst er bekræftelsesknappen. Tallene på tastaturet er placeret i de tre venstre kolonner, som har firkantede huller. Tastaturet har et telefonlayout, der starter med 1, 2 og 3 fra venstre mod højre øverst. Indtast din PIN-kode nu, og tryk derefter på bekræftelsesknappen.</string>
+    <string name="sumup_tts_transaction_failure">Transaktionen blev ikke gennemført, og kortet blev ikke opkrævet. Prøv igen.</string>
+    <string name="sumup_tts_transaction_success">Transaktionen lykkedes. Fjern venligst kortet.</string>
+    <string name="sumup_turn_bluetooth_off_on">Slå Bluetooth fra og til</string>
+    <string name="sumup_turn_bluetooth_off_on_on_reader">Slå Bluetooth fra og til på din %1$s</string>
+    <string name="sumup_tx_cancel_on_solo">Betalingen kan annulleres ved at trykke på annullerknappen på kortlæseren.</string>
+    <string name="sumup_tx_cancel_please_wait">Transaktionen annulleres. Afvent</string>
+    <string name="sumup_tx_cancel_power_off">For at annullere transaktionen, tryk på tænd/sluk knappen på kortterminalen</string>
+    <string name="sumup_tx_successful_receipts_qr_code_tab_title">QR-kode</string>
+    <string name="sumup_txresult_cash_result_info">Betalt: %1$s · Byttepenge: %2$s</string>
+    <string name="sumup_txresult_dismiss">Afvis</string>
+    <string name="sumup_txresult_print_missing_transaction_data_message">Transaktionsdata mangler.</string>
+    <string name="sumup_txresult_print_receipt">Udskriv kvittering</string>
+    <string name="sumup_txresult_print_receipt_download_failed_message">Download af kvittering mislykkedes.</string>
+    <string name="sumup_txresult_print_timed_out_message">Udskrivningen tog for lang tid.</string>
+    <string name="sumup_txresult_tip_result_info">Inklusive drikkepenge: %1$s</string>
+    <string name="sumup_update_software">Opdatér softwaren.</string>
+    <string name="sumup_update_solo_message">1. Åbn Solo-menuen ved at klikke øverst på læserens skærm\n\n2. Klik på \'Forbindelser\', og opret forbindelse til Wi-Fi\n\n3. Log ind, hvis det er nødvendigt\n\n4. Klik på \'Indstillinger\', \'Software-opdatering\' og derefter \'Download og installér\'\n\n5. Når opdateringen er gennemført, skal du klikke på \'Forbindelser\' og slå Bluetooth® til igen</string>
+    <string name="sumup_update_solo_title">Opdater din Solo kortlæser</string>
+    <string name="sumup_verification_camera_permission_request_title">Kamera</string>
+    <string name="sumup_verify_phone_number">Bekræft mobilnummer</string>
+    <string name="sumup_waiting_reader_action">Venter på kunde</string>
+    <string msgid="2561197295334830845" name="switch_role">"Kontakt"</string>
+    <string msgid="1672349317127674378" name="tab">"Fane"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> procent."</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"værktøjstip"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"se værktøjstip"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"FRA"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"TIL"</string>
+</resources>

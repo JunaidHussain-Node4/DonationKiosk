@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string name="gcm_defaultSenderId" translatable="false">970798231568</string>
+    <string name="google_api_key" translatable="false">AIzaSyDVU0c98i5L0d4dhxAEXk942YbwKtJ2kro</string>
+    <string name="google_app_id" translatable="false">1:970798231568:android:662cd9d0cc9c0d55c09a95</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDVU0c98i5L0d4dhxAEXk942YbwKtJ2kro</string>
+    <string name="google_storage_bucket" translatable="false">karimakioskdonation.firebasestorage.app</string>
+    <string name="project_id" translatable="false">karimakioskdonation</string>
+    <style name="Theme.KioskDonation" parent="android:Theme.Material.Light.NoActionBar">
+        
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" ns1:targetApi="o_mr1">shortEdges</item>
+    </style>
+</resources>

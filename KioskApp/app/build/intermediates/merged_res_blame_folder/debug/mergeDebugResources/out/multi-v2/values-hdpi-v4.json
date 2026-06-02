@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kiosk.donation.app-mergeDebugResources-105:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\80143b8feb5db499873769e03142965a\\transformed\\designbase-6.0.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,111,155,216,275,336,388,447,518,574,623",
+                        "endColumns": "55,43,60,58,60,51,58,70,55,48,59",
+                        "endOffsets": "106,150,211,270,331,383,442,513,569,618,678"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,111,155,216,275,336,388,447,518,574,684",
+                        "endColumns": "55,43,60,58,60,51,58,70,55,48,59",
+                        "endOffsets": "106,150,211,270,331,383,442,513,569,618,739"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\70defadadcb879caf0609ec60583fa97\\transformed\\reader-6.0.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "60",
+                        "endOffsets": "111"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "623",
+                        "endColumns": "60",
+                        "endOffsets": "679"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\c96e0a6cb3f4f64d7116826d30107618\\transformed\\appcompat-1.7.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "14",
+                        "startColumns": "4",
+                        "startOffsets": "744",
+                        "endLines": "18",
+                        "endColumns": "13",
+                        "endOffsets": "1016"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kiosk.donation.app-mergeDebugResources-105:/values-xhdpi-v4/values-xhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\80143b8feb5db499873769e03142965a\\transformed\\designbase-6.0.0\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,99,160,219,268",
+                        "endColumns": "43,60,58,48,60",
+                        "endOffsets": "94,155,214,263,324"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,7",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,99,160,219,329",
+                        "endColumns": "43,60,58,48,60",
+                        "endOffsets": "94,155,214,263,385"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jh\\.gradle\\caches\\9.0.0\\transforms\\70defadadcb879caf0609ec60583fa97\\transformed\\reader-6.0.0\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "60",
+                        "endOffsets": "111"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "268",
+                        "endColumns": "60",
+                        "endOffsets": "324"
+                    }
+                }
+            ]
+        }
+    ]
+}

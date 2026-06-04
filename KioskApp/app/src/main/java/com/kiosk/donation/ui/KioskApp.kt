@@ -1,14 +1,21 @@
 package com.kiosk.donation.ui
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -49,6 +56,7 @@ fun KioskApp(
     val isDonationsEnabled by viewModel.isDonationsEnabled.collectAsState()
     val isProductsEnabled  by viewModel.isProductsEnabled.collectAsState()
     val isLoggedInToSumup by viewModel.isLoggedIn.collectAsState()
+    val isOnline          by viewModel.isOnline.collectAsState()
 
     var lastPayment         by remember { mutableStateOf<PaymentMode?>(null) }
     var showChangePinDialog by remember { mutableStateOf(false) }
@@ -161,6 +169,55 @@ fun KioskApp(
                 onSave    = { newPin -> viewModel.saveAdminPin(newPin); showChangePinDialog = false },
                 onDismiss = { showChangePinDialog = false }
             )
+        }
+
+        if (!isOnline) {
+            NoConnectionOverlay()
+        }
+    }
+}
+
+@Composable
+fun NoConnectionOverlay() {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.Black.copy(alpha = 0.7f))
+            .clickable(enabled = false) {}, // Intercept all touches
+        contentAlignment = Alignment.Center
+    ) {
+        Surface(
+            shape = RoundedCornerShape(24.dp),
+            color = MaterialTheme.colorScheme.surface,
+            tonalElevation = 8.dp,
+            modifier = Modifier.padding(32.dp).widthIn(max = 500.dp)
+        ) {
+            Column(
+                modifier = Modifier.padding(40.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Icon(
+                    imageVector = Icons.Default.WifiOff,
+                    contentDescription = null,
+                    modifier = Modifier.size(80.dp),
+                    tint = ErrorRed
+                )
+                Spacer(Modifier.height(24.dp))
+                Text(
+                    text = "Connection Lost",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = "This kiosk requires an internet connection to process payments. " +
+                           "Please wait while we try to reconnect.",
+                    style = MaterialTheme.typography.bodyLarge,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
         }
     }
 }

@@ -4,6 +4,8 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.kiosk.donation.data.*
+import com.kiosk.donation.util.ConnectivityObserver
+import com.kiosk.donation.util.NetworkConnectivityObserver
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.math.BigDecimal
@@ -12,6 +14,15 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
 
     private val prefs      = AdminPreferences(application)
     private val repository = ProductRepository(application)
+    private val connectivityObserver = NetworkConnectivityObserver(application)
+
+    // ── Connectivity ──────────────────────────────────────────────────────────
+    val connectivityStatus: StateFlow<ConnectivityObserver.Status> = connectivityObserver.observe()
+        .stateIn(viewModelScope, SharingStarted.Eagerly, ConnectivityObserver.Status.Available)
+
+    val isOnline: StateFlow<Boolean> = connectivityStatus
+        .map { it == ConnectivityObserver.Status.Available }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, true)
 
     // ── Settings ──────────────────────────────────────────────────────────────
     val orgName: StateFlow<String> = prefs.orgName

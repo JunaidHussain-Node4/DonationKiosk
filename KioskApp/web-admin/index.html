@@ -87,6 +87,21 @@
   .product-barcode { color: #999; font-size: 12px; font-family: monospace; }
   .card-actions  { display: flex; gap: 8px; margin-top: 12px; }
 
+  /* Sizes */
+  .sizes-section {
+    background: #f9f9f9; border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; margin-bottom: 16px;
+  }
+  .size-row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr auto; gap: 8px;
+    margin-bottom: 8px; align-items: flex-end;
+  }
+  .size-badge {
+    display: inline-block; background: var(--karima-light); color: white;
+    padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px;
+    margin-top: 4px;
+  }
+
   /* Modal */
   .modal-overlay {
     display: none; position: fixed; inset: 0;
@@ -236,6 +251,14 @@
     <div class="form-group">
       <label>Barcode (EAN/UPC — optional)</label>
       <input type="text" id="field-barcode" placeholder="e.g. 5012345678901" />
+    </div>
+
+    <div class="form-group">
+      <label>Product Sizes (Optional — overrides main price/barcode if selected)</label>
+      <div id="sizes-container" class="sizes-section">
+        <!-- Size rows added here -->
+      </div>
+      <button class="btn btn-outline btn-sm" onclick="addSizeRow()">+ Add Size</button>
     </div>
 
     <div class="form-group">
@@ -420,6 +443,9 @@ function renderProducts() {
       <div class="product-name">${esc(p.name)}</div>
       <div class="product-desc">${esc(p.description || '')}</div>
       <div class="product-price">£${parseFloat(p.price || 0).toFixed(2)}</div>
+      ${p.sizes && p.sizes.length > 0
+        ? `<div class="product-sizes">${p.sizes.map(s => `<span class="size-badge">${esc(s.name)} (£${parseFloat(s.price).toFixed(2)})</span>`).join('')}</div>`
+        : ''}
       ${p.barcode ? `<div class="product-barcode">📦 ${esc(p.barcode)}</div>` : ''}
       <div class="card-actions">
         <button class="btn btn-outline btn-sm" onclick="openEditModal('${esc(p.docId)}')">Edit</button>
@@ -438,12 +464,37 @@ window.openAddModal = () => {
   document.getElementById('field-price').value          = '';
   document.getElementById('field-emoji').value          = '🛍️';
   document.getElementById('field-barcode').value        = '';
+  document.getElementById('sizes-container').innerHTML  = '';
   document.getElementById('image-preview').style.display = 'none';
   document.getElementById('image-upload-prompt').style.display = 'block';
   document.getElementById('existing-image-note').style.display = 'none';
   document.getElementById('modal-error').style.display  = 'none';
   pendingImageBase64 = null;
   document.getElementById('product-modal').classList.add('open');
+};
+
+window.addSizeRow = (data = null) => {
+  const container = document.getElementById('sizes-container');
+  const rowId = 'size-' + Date.now() + Math.random().toString(36).substr(2, 5);
+  const div = document.createElement('div');
+  div.className = 'size-row';
+  div.id = rowId;
+  div.innerHTML = `
+    <div class="form-group" style="margin-bottom:0">
+      <label style="font-size:11px">Size Name</label>
+      <input type="text" class="size-name" value="${esc(data?.name || '')}" placeholder="S, M, L..." style="padding:6px" />
+    </div>
+    <div class="form-group" style="margin-bottom:0">
+      <label style="font-size:11px">Price (£)</label>
+      <input type="number" class="size-price" value="${data?.price || ''}" placeholder="25.00" step="0.01" style="padding:6px" />
+    </div>
+    <div class="form-group" style="margin-bottom:0">
+      <label style="font-size:11px">Barcode</label>
+      <input type="text" class="size-barcode" value="${esc(data?.barcode || '')}" placeholder="Optional" style="padding:6px" />
+    </div>
+    <button class="btn btn-danger btn-sm" onclick="document.getElementById('${rowId}').remove()" style="padding:4px 8px; margin-bottom:4px">×</button>
+  `;
+  container.appendChild(div);
 };
 
 window.openEditModal = (docId) => {
@@ -456,6 +507,13 @@ window.openEditModal = (docId) => {
   document.getElementById('field-price').value          = p.price || '';
   document.getElementById('field-emoji').value          = p.emoji || '🛍️';
   document.getElementById('field-barcode').value        = p.barcode || '';
+
+  const sizesContainer = document.getElementById('sizes-container');
+  sizesContainer.innerHTML = '';
+  if (p.sizes && Array.isArray(p.sizes)) {
+    p.sizes.forEach(s => addSizeRow(s));
+  }
+
   document.getElementById('modal-error').style.display  = 'none';
   pendingImageBase64 = null;
 
@@ -470,6 +528,30 @@ window.openEditModal = (docId) => {
     document.getElementById('existing-image-note').style.display = 'none';
   }
   document.getElementById('product-modal').classList.add('open');
+};
+
+window.addSizeRow = (data = null) => {
+  const container = document.getElementById('sizes-container');
+  const rowId = 'size-' + Date.now() + Math.random().toString(36).substr(2, 5);
+  const div = document.createElement('div');
+  div.className = 'size-row';
+  div.id = rowId;
+  div.innerHTML = `
+    <div class="form-group" style="margin-bottom:0">
+      <label style="font-size:11px">Size Name</label>
+      <input type="text" class="size-name" value="${esc(data?.name || '')}" placeholder="S, M, L..." style="padding:6px" />
+    </div>
+    <div class="form-group" style="margin-bottom:0">
+      <label style="font-size:11px">Price (£)</label>
+      <input type="number" class="size-price" value="${data?.price || ''}" placeholder="25.00" step="0.01" style="padding:6px" />
+    </div>
+    <div class="form-group" style="margin-bottom:0">
+      <label style="font-size:11px">Barcode</label>
+      <input type="text" class="size-barcode" value="${esc(data?.barcode || '')}" placeholder="Optional" style="padding:6px" />
+    </div>
+    <button class="btn btn-danger btn-sm" onclick="document.getElementById('${rowId}').remove()" style="padding:4px 8px; margin-bottom:4px">×</button>
+  `;
+  container.appendChild(div);
 };
 
 // ── Mass Import ───────────────────────────────────────────────────────────────
@@ -666,10 +748,28 @@ window.saveProduct = async () => {
 
   try {
     const id   = docId || crypto.randomUUID();
+
+    // Collect sizes
+    const sizes = [];
+    document.querySelectorAll('.size-row').forEach(row => {
+      const sName  = row.querySelector('.size-name').value.trim();
+      const sPrice = row.querySelector('.size-price').value.trim();
+      const sBar   = row.querySelector('.size-barcode').value.trim();
+      if (sName && sPrice) {
+        sizes.push({
+          id: crypto.randomUUID(),
+          name: sName,
+          price: parseFloat(sPrice).toFixed(2),
+          barcode: sBar || null
+        });
+      }
+    });
+
     const data = {
       id, name, description: desc,
       price: parseFloat(price).toFixed(2),
       emoji, barcode: barcode || null,
+      sizes: sizes.length > 0 ? sizes : null,
       updatedAt: serverTimestamp()
     };
 

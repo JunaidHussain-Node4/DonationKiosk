@@ -11,6 +11,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
+import org.json.JSONArray
+import org.json.JSONObject
 import java.io.ByteArrayOutputStream
 import java.io.File
 
@@ -81,6 +83,27 @@ class ProductRepository(private val context: Context) {
                     val barcode     = doc.getString("barcode")
                     val imageBase64 = doc.getString("imageBase64")
 
+                    // Extract sizes list and convert to JSON for local storage
+                    val sizesJson = (doc.get("sizes") as? List<*>)?.let { list ->
+                        val arr = JSONArray()
+                        list.forEach { item ->
+                            (item as? Map<*, *>)?.let { map ->
+                                val sId    = map["id"]?.toString()
+                                val sName  = map["name"]?.toString()
+                                val sPrice = map["price"]?.toString()
+                                if (sId != null && sName != null && sPrice != null) {
+                                    val obj = JSONObject()
+                                    obj.put("id",      sId)
+                                    obj.put("name",    sName)
+                                    obj.put("price",   sPrice)
+                                    obj.put("barcode", map["barcode"]?.toString())
+                                    arr.put(obj)
+                                }
+                            }
+                        }
+                        if (arr.length() > 0) arr.toString() else null
+                    }
+
                     // Save image to app-private storage if present
                     val imagePath = imageBase64?.let {
                         saveBase64Image(it, id)
@@ -94,7 +117,8 @@ class ProductRepository(private val context: Context) {
                             priceGBP    = price,
                             emoji       = emoji,
                             barcode     = barcode,
-                            imagePath   = imagePath
+                            imagePath   = imagePath,
+                            sizesJson   = sizesJson
                         )
                     )
                 } catch (e: Exception) {

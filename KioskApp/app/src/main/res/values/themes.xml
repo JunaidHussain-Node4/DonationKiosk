@@ -4,6 +4,12 @@
     <style name="Theme.KioskDonation" parent="android:Theme.Material.Light.NoActionBar">
         <!-- Full screen, no system chrome -->
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+
+        <!-- Android 12+ (API 31+) Splash Screen API support -->
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/hourglass_spinning</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@drawable/splash_background</item>
+        <item name="android:windowSplashScreenAnimationDuration" tools:targetApi="31">2000</item>
     </style>
 </resources>

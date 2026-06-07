@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group android:name="hourglass_group"
+        android:pivotX="12"
+        android:pivotY="12">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M6,2l0,6l4,4l-4,4l0,6l12,0l0,-6l-4,-4l4,-4l0,-6l-12,0zM16,16.5l0,3.5l-8,0l0,-3.5l3.5,-3.5l1,0l3.5,3.5zM12.5,11l-1,0l-3.5,-3.5l0,-3.5l8,0l0,3.5l-3.5,3.5z"/>
+    </group>
+</vector>

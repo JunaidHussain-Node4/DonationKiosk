@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The background image -->
+    <item>
+        <bitmap
+            android:src="@drawable/background"
+            android:gravity="fill" />
+    </item>
+    <!-- The green overlay (HomeGradientSolid is approximately #1A9A78 at 60% alpha over something,
+         but here we'll use a semi-transparent KarimaDark to match the 'opaque green' look) -->
+    <item>
+        <color android:color="#991A9A78" />
+    </item>
+</layer-list>

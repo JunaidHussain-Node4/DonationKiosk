@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Base64
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.Dispatchers
@@ -15,6 +16,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.io.ByteArrayOutputStream
 import java.io.File
+import java.util.UUID
 
 /**
  * Repository that manages product data.
@@ -175,6 +177,51 @@ class ProductRepository(private val context: Context) {
             file.absolutePath
         } catch (e: Exception) {
             null
+        }
+    }
+
+    /**
+     * Records a successful order in Firestore under "orderHeader" and "orderLines".
+     */
+    suspend fun saveOrder(payment: PaymentMode.ProductPurchase) = withContext(Dispatchers.IO) {
+        try {
+            val firestore = Firebase.firestore
+            val orderId = UUID.randomUUID().toString()
+            val timestamp = Timestamp.now()
+
+            // 1. Create Order Header
+            val header = hashMapOf(
+                "orderId"         to orderId,
+                "timestamp"       to timestamp,
+                "fulfillmentMode" to payment.fulfillmentMode.name,
+                "customerName"    to (payment.customerDetails?.name ?: ""),
+                "customerEmail"   to (payment.customerDetails?.email ?: ""),
+                "totalAmount"     to payment.items.sumOf { item ->
+                    (item.selectedSize?.priceGBP ?: item.product.priceGBP) * item.quantity.toBigDecimal()
+                }.toString(),
+                "status"          to "PAID"
+            )
+
+            firestore.collection("orderHeader").document(orderId).set(header).await()
+
+            // 2. Create Order Lines
+            payment.items.forEach { item ->
+                val lineId = UUID.randomUUID().toString()
+                val line = hashMapOf(
+                    "lineId"    to lineId,
+                    "orderId"   to orderId,
+                    "productId" to item.product.id,
+                    "productName" to item.product.name,
+                    "sizeId"    to (item.selectedSize?.id ?: ""),
+                    "sizeName"  to (item.selectedSize?.name ?: ""),
+                    "quantity"  to item.quantity,
+                    "price"     to (item.selectedSize?.priceGBP ?: item.product.priceGBP).toString()
+                )
+                firestore.collection("orderLines").document(lineId).set(line).await()
+            }
+
+        } catch (e: Exception) {
+            android.util.Log.e("ProductRepository", "Failed to save order: ${e.message}")
         }
     }
 }

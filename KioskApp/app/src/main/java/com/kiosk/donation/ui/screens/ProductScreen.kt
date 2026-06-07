@@ -64,12 +64,13 @@ fun ProductScreen(
     onAddToCart: (Product, ProductSize?) -> Unit,
     onRemoveFromCart: (Product, ProductSize?) -> Unit,
     onClearCart: () -> Unit,
-    onCheckout: () -> Unit,
+    onCheckout: (com.kiosk.donation.data.FulfillmentMode, com.kiosk.donation.data.CustomerDetails?) -> Unit,
     onUserActivity: () -> Unit
 ) {
     var searchQuery by remember { mutableStateOf("") }
     var productForSizeSelection by remember { mutableStateOf<Product?>(null) }
     var showNoConnectionError by remember { mutableStateOf(false) }
+    var showCheckoutOptions by remember { mutableStateOf(false) }
 
     val filteredProducts = remember(products, searchQuery) {
         if (searchQuery.isBlank()) {
@@ -273,7 +274,11 @@ fun ProductScreen(
                     Button(
                         onClick        = {
                             onUserActivity()
-                            if (isOnline) onCheckout() else showNoConnectionError = true
+                            if (isOnline) {
+                                showCheckoutOptions = true
+                            } else {
+                                showNoConnectionError = true
+                            }
                         },
                         enabled        = cartHasItems,
                         colors         = ButtonDefaults.buttonColors(containerColor = Amber, contentColor = TextDark),
@@ -316,6 +321,158 @@ fun ProductScreen(
                     Button(onClick = { showNoConnectionError = false }) { Text("OK") }
                 }
             )
+        }
+
+        if (showCheckoutOptions) {
+            CheckoutOptionsDialog(
+                cartTotal = cartTotal,
+                onDismiss = { showCheckoutOptions = false },
+                onCheckout = { mode, details ->
+                    onCheckout(mode, details)
+                    showCheckoutOptions = false
+                }
+            )
+        }
+    }
+}
+
+@Composable
+fun CheckoutOptionsDialog(
+    cartTotal: BigDecimal,
+    onDismiss: () -> Unit,
+    onCheckout: (com.kiosk.donation.data.FulfillmentMode, com.kiosk.donation.data.CustomerDetails?) -> Unit
+) {
+    var mode by remember { mutableStateOf<com.kiosk.donation.data.FulfillmentMode?>(null) }
+    var name by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+
+    Dialog(onDismissRequest = onDismiss) {
+        Surface(
+            shape = MaterialTheme.shapes.large,
+            color = SurfaceWhite,
+            tonalElevation = 8.dp,
+            modifier = Modifier.fillMaxWidth(0.9f)
+        ) {
+            Column(
+                modifier = Modifier.padding(24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "How would you like your items?",
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = TextDark
+                )
+                Spacer(Modifier.height(24.dp))
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    // Take Now Option
+                    Card(
+                        onClick = { mode = com.kiosk.donation.data.FulfillmentMode.TAKE_NOW },
+                        modifier = Modifier.weight(1f),
+                        colors = CardDefaults.cardColors(
+                            containerColor = if (mode == com.kiosk.donation.data.FulfillmentMode.TAKE_NOW) KarimaGreen.copy(alpha = 0.1f) else OffWhite
+                        ),
+                        border = androidx.compose.foundation.BorderStroke(
+                            2.dp,
+                            if (mode == com.kiosk.donation.data.FulfillmentMode.TAKE_NOW) KarimaGreen else Color.Transparent
+                        )
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text("🛍️", fontSize = 40.sp)
+                            Spacer(Modifier.height(8.dp))
+                            Text("Take Now", fontWeight = FontWeight.Bold, color = TextDark)
+                            Text("I have the items", fontSize = 12.sp, color = TextMedium)
+                        }
+                    }
+
+                    // Place Order Option
+                    Card(
+                        onClick = { mode = com.kiosk.donation.data.FulfillmentMode.PLACE_ORDER },
+                        modifier = Modifier.weight(1f),
+                        colors = CardDefaults.cardColors(
+                            containerColor = if (mode == com.kiosk.donation.data.FulfillmentMode.PLACE_ORDER) KarimaGreen.copy(alpha = 0.1f) else OffWhite
+                        ),
+                        border = androidx.compose.foundation.BorderStroke(
+                            2.dp,
+                            if (mode == com.kiosk.donation.data.FulfillmentMode.PLACE_ORDER) KarimaGreen else Color.Transparent
+                        )
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text("📦", fontSize = 40.sp)
+                            Spacer(Modifier.height(8.dp))
+                            Text("Place Order", fontWeight = FontWeight.Bold, color = TextDark)
+                            Text("Ship it to me", fontSize = 12.sp, color = TextMedium)
+                        }
+                    }
+                }
+
+                if (mode == com.kiosk.donation.data.FulfillmentMode.PLACE_ORDER) {
+                    Spacer(Modifier.height(24.dp))
+                    Text(
+                        "Please enter your details",
+                        fontWeight = FontWeight.Bold,
+                        color = TextDark,
+                        modifier = Modifier.align(Alignment.Start)
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    OutlinedTextField(
+                        value = name,
+                        onValueChange = { name = it },
+                        label = { Text("Full Name") },
+                        modifier = Modifier.fillMaxWidth(),
+                        singleLine = true
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    OutlinedTextField(
+                        value = email,
+                        onValueChange = { email = it },
+                        label = { Text("Email Address") },
+                        modifier = Modifier.fillMaxWidth(),
+                        singleLine = true
+                    )
+                }
+
+                Spacer(Modifier.height(32.dp))
+
+                val isPayEnabled = when (mode) {
+                    com.kiosk.donation.data.FulfillmentMode.TAKE_NOW -> true
+                    com.kiosk.donation.data.FulfillmentMode.PLACE_ORDER -> name.isNotBlank() || email.isNotBlank()
+                    else -> false
+                }
+
+                Button(
+                    onClick = {
+                        val details = if (mode == com.kiosk.donation.data.FulfillmentMode.PLACE_ORDER) {
+                            com.kiosk.donation.data.CustomerDetails(name, email)
+                        } else null
+                        onCheckout(mode!!, details)
+                    },
+                    enabled = isPayEnabled,
+                    modifier = Modifier.fillMaxWidth().height(64.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Amber, contentColor = TextDark),
+                    shape = MaterialTheme.shapes.medium
+                ) {
+                    Text(
+                        "Pay £${"%.2f".format(cartTotal)}",
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+
+                TextButton(onClick = onDismiss, modifier = Modifier.padding(top = 8.dp)) {
+                    Text("Cancel", color = ErrorRed)
+                }
+            }
         }
     }
 }

@@ -88,14 +88,19 @@ class MainActivity : ComponentActivity() {
         when (requestCode) {
             SumUpManager.REQUEST_CODE_PAYMENT -> {
                 val result = SumUpManager.parseActivityResult(requestCode, data)
-                viewModel.clearPayment()
                 when (result) {
-                    is SumUpResult.Success     -> onPaymentSuccess?.invoke()
+                    is SumUpResult.Success     -> {
+                        viewModel.onPaymentSuccess()
+                        onPaymentSuccess?.invoke()
+                    }
                     is SumUpResult.NotLoggedIn -> {
                         // Prompt login then user retries
                         SumUpManager.login(this, viewModel.sumupAffiliateKey.value)
                     }
-                    else -> onPaymentCancelled?.invoke()
+                    else -> {
+                        viewModel.onPaymentCancelled()
+                        onPaymentCancelled?.invoke()
+                    }
                 }
             }
             SumUpManager.REQUEST_CODE_LOGIN -> {

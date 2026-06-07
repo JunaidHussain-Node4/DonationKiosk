@@ -128,9 +128,10 @@ fun KioskApp(
                         onAddToCart      = viewModel::addToCart,
                         onRemoveFromCart = viewModel::removeFromCart,
                         onClearCart      = viewModel::clearCart,
-                        onCheckout       = {
-                            lastPayment = PaymentMode.ProductPurchase(cart)
-                            viewModel.initiateProductPurchase()
+                        onCheckout       = { mode, details ->
+                            val payment = PaymentMode.ProductPurchase(cart, mode, details)
+                            lastPayment = payment
+                            viewModel.initiateProductPurchase(mode, details)
                         },
                         onUserActivity   = viewModel::updateActivity
                     )

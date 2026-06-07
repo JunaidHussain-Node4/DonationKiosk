@@ -144,11 +144,33 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
         _pendingPayment.value = PaymentMode.Donation(amount)
     }
 
-    fun initiateProductPurchase() {
-        _pendingPayment.value = PaymentMode.ProductPurchase(_cart.value)
+    fun initiateProductPurchase(
+        fulfillmentMode: FulfillmentMode = FulfillmentMode.TAKE_NOW,
+        customerDetails: CustomerDetails? = null
+    ) {
+        _pendingPayment.value = PaymentMode.ProductPurchase(
+            items = _cart.value,
+            fulfillmentMode = fulfillmentMode,
+            customerDetails = customerDetails
+        )
     }
 
     fun clearPayment() { _pendingPayment.value = null }
+
+    fun onPaymentSuccess() {
+        val payment = pendingPayment.value
+        if (payment is PaymentMode.ProductPurchase) {
+            viewModelScope.launch {
+                repository.saveOrder(payment)
+            }
+            clearCart()
+        }
+        clearPayment()
+    }
+
+    fun onPaymentCancelled() {
+        clearPayment()
+    }
 
     // ── Admin settings ────────────────────────────────────────────────────────
     fun saveAdminPin(pin: String)    = viewModelScope.launch { prefs.setAdminPin(pin) }

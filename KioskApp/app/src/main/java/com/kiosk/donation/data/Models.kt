@@ -50,7 +50,21 @@ data class CartItem(
     val selectedSize: ProductSize? = null
 )
 
+enum class FulfillmentMode {
+    TAKE_NOW,
+    PLACE_ORDER
+}
+
+data class CustomerDetails(
+    val name: String = "",
+    val email: String = ""
+)
+
 sealed class PaymentMode {
     data class Donation(val amountGBP: BigDecimal) : PaymentMode()
-    data class ProductPurchase(val items: List<CartItem>) : PaymentMode()
+    data class ProductPurchase(
+        val items: List<CartItem>,
+        val fulfillmentMode: FulfillmentMode = FulfillmentMode.TAKE_NOW,
+        val customerDetails: CustomerDetails? = null
+    ) : PaymentMode()
 }

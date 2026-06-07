@@ -1,126 +1,122 @@
 [
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_scoutshoodie.png.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\scoutshoodie.png"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_background.png.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\background.png"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_greybadrhoodie.png.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\greybadrhoodie.png"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_hourglass_spinning.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\hourglass_spinning.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_greybadrtshirt.png.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/greybadrtshirt.png"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_greybadrhoodie.png.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/greybadrhoodie.png"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_hourglass_spinning.xml.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/hourglass_spinning.xml"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_hourglass_vector.xml.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/hourglass_vector.xml"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_greenbadrhoodie.png.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/greenbadrhoodie.png"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_hourglass_vector.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\hourglass_vector.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_scoutshoodie.png.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/scoutshoodie.png"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_maroonbadrhoodiezipped.png.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\maroonbadrhoodiezipped.png"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/xml_device_admin.xml.flat",
+        "source": "com.kiosk.donation.app-main-109:/xml/device_admin.xml"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\xml_device_admin.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\xml\\device_admin.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\anim_rotate_hourglass.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\anim\\rotate_hourglass.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_maroonbadrhoodie.png.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\maroonbadrhoodie.png"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_maroonbadrhoodie.png.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/maroonbadrhoodie.png"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_background.png.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/background.png"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/drawable_maroonbadrhoodiezipped.png.flat",
+        "source": "com.kiosk.donation.app-main-109:/drawable/maroonbadrhoodiezipped.png"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-mdpi/ic_launcher.webp"
     },
     {
         "merged": "com.kiosk.donation.app-debug-107:/drawable_splash_background.xml.flat",
         "source": "com.kiosk.donation.app-main-109:/drawable/splash_background.xml"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.kiosk.donation.app-debug-107:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.kiosk.donation.app-main-109:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_greybadrtshirt.png.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\greybadrtshirt.png"
-    },
-    {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_greenbadrhoodie.png.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\greenbadrhoodie.png"
-    },
-    {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-debug-107:\\drawable_splash_background.xml.flat",
-        "source": "C:\\Users\\jh\\.gradle\\daemon\\9.0.0\\com.kiosk.donation.app-main-109:\\drawable\\splash_background.xml"
+        "merged": "com.kiosk.donation.app-debug-107:/anim_rotate_hourglass.xml.flat",
+        "source": "com.kiosk.donation.app-main-109:/anim/rotate_hourglass.xml"
     }
 ]

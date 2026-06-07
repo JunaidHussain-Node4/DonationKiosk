@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/hourglass_vector">
+    <target
+        android:name="hourglass_group"
+        android:animation="@anim/rotate_hourglass" />
+</animated-vector>

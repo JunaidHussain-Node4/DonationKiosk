@@ -20,6 +20,7 @@ class AdminPreferences(private val context: Context) {
         private val KEY_ORG_NAME        = stringPreferencesKey("org_name")
         private val KEY_DONATIONS_ENABLED = booleanPreferencesKey("donations_enabled")
         private val KEY_PRODUCTS_ENABLED  = booleanPreferencesKey("products_enabled")
+        private val KEY_BASKET_TIMEOUT    = stringPreferencesKey("basket_timeout_minutes")
 
         /** Default PIN — change immediately via the admin screen after first install. */
         const val DEFAULT_PIN = "1234"
@@ -45,6 +46,10 @@ class AdminPreferences(private val context: Context) {
         prefs[KEY_PRODUCTS_ENABLED] ?: true
     }
 
+    val basketTimeoutMinutes: Flow<Int> = context.dataStore.data.map { prefs ->
+        prefs[KEY_BASKET_TIMEOUT]?.toIntOrNull() ?: 10
+    }
+
     suspend fun setAdminPin(pin: String) {
         context.dataStore.edit { it[KEY_ADMIN_PIN] = pin }
     }
@@ -63,5 +68,9 @@ class AdminPreferences(private val context: Context) {
 
     suspend fun setProductsEnabled(enabled: Boolean) {
         context.dataStore.edit { it[KEY_PRODUCTS_ENABLED] = enabled }
+    }
+
+    suspend fun setBasketTimeout(minutes: Int) {
+        context.dataStore.edit { it[KEY_BASKET_TIMEOUT] = minutes.toString() }
     }
 }

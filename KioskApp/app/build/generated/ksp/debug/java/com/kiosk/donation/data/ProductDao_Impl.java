@@ -43,7 +43,7 @@ public final class ProductDao_Impl implements ProductDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `products` (`id`,`name`,`description`,`priceGBP`,`emoji`,`barcode`,`imagePath`) VALUES (?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `products` (`id`,`name`,`description`,`priceGBP`,`emoji`,`barcode`,`imagePath`,`sizesJson`) VALUES (?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -63,6 +63,11 @@ public final class ProductDao_Impl implements ProductDao {
           statement.bindNull(7);
         } else {
           statement.bindString(7, entity.getImagePath());
+        }
+        if (entity.getSizesJson() == null) {
+          statement.bindNull(8);
+        } else {
+          statement.bindString(8, entity.getSizesJson());
         }
       }
     };
@@ -135,6 +140,7 @@ public final class ProductDao_Impl implements ProductDao {
           final int _cursorIndexOfEmoji = CursorUtil.getColumnIndexOrThrow(_cursor, "emoji");
           final int _cursorIndexOfBarcode = CursorUtil.getColumnIndexOrThrow(_cursor, "barcode");
           final int _cursorIndexOfImagePath = CursorUtil.getColumnIndexOrThrow(_cursor, "imagePath");
+          final int _cursorIndexOfSizesJson = CursorUtil.getColumnIndexOrThrow(_cursor, "sizesJson");
           final List<ProductEntity> _result = new ArrayList<ProductEntity>(_cursor.getCount());
           while (_cursor.moveToNext()) {
             final ProductEntity _item;
@@ -160,7 +166,13 @@ public final class ProductDao_Impl implements ProductDao {
             } else {
               _tmpImagePath = _cursor.getString(_cursorIndexOfImagePath);
             }
-            _item = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpBarcode,_tmpImagePath);
+            final String _tmpSizesJson;
+            if (_cursor.isNull(_cursorIndexOfSizesJson)) {
+              _tmpSizesJson = null;
+            } else {
+              _tmpSizesJson = _cursor.getString(_cursorIndexOfSizesJson);
+            }
+            _item = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpBarcode,_tmpImagePath,_tmpSizesJson);
             _result.add(_item);
           }
           return _result;
@@ -225,6 +237,7 @@ public final class ProductDao_Impl implements ProductDao {
           final int _cursorIndexOfEmoji = CursorUtil.getColumnIndexOrThrow(_cursor, "emoji");
           final int _cursorIndexOfBarcode = CursorUtil.getColumnIndexOrThrow(_cursor, "barcode");
           final int _cursorIndexOfImagePath = CursorUtil.getColumnIndexOrThrow(_cursor, "imagePath");
+          final int _cursorIndexOfSizesJson = CursorUtil.getColumnIndexOrThrow(_cursor, "sizesJson");
           final ProductEntity _result;
           if (_cursor.moveToFirst()) {
             final String _tmpId;
@@ -249,7 +262,13 @@ public final class ProductDao_Impl implements ProductDao {
             } else {
               _tmpImagePath = _cursor.getString(_cursorIndexOfImagePath);
             }
-            _result = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpBarcode,_tmpImagePath);
+            final String _tmpSizesJson;
+            if (_cursor.isNull(_cursorIndexOfSizesJson)) {
+              _tmpSizesJson = null;
+            } else {
+              _tmpSizesJson = _cursor.getString(_cursorIndexOfSizesJson);
+            }
+            _result = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpBarcode,_tmpImagePath,_tmpSizesJson);
           } else {
             _result = null;
           }

@@ -2,6 +2,13 @@ package com.kiosk.donation.data
 
 import java.math.BigDecimal
 
+data class ProductSize(
+    val id: String,
+    val name: String,
+    val priceGBP: BigDecimal,
+    val barcode: String? = null
+)
+
 data class Product(
     val id: String,
     val name: String,
@@ -10,7 +17,8 @@ data class Product(
     val emoji: String,
     val imageRes: String?  = null,  // Drawable resource name (built-in images)
     val imagePath: String? = null,  // Absolute path to image synced from Firebase
-    val barcode: String?   = null   // EAN/UPC barcode for future scanner integration
+    val barcode: String?   = null,  // EAN/UPC barcode for future scanner integration
+    val sizes: List<ProductSize>? = null
 )
 
 /** Preset donation amounts shown on the donation screen. */
@@ -38,7 +46,8 @@ val defaultProducts = listOf(
 
 data class CartItem(
     val product: Product,
-    val quantity: Int
+    val quantity: Int,
+    val selectedSize: ProductSize? = null
 )
 
 sealed class PaymentMode {

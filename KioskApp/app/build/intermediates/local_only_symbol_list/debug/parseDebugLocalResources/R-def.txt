@@ -1,13 +1,19 @@
 R_DEF: Internal format may change without notice
 local
+anim rotate_hourglass
+color karima_dark
+color off_white
 drawable background
 drawable greenbadrhoodie
 drawable greybadrhoodie
 drawable greybadrtshirt
+drawable hourglass_spinning
+drawable hourglass_vector
 drawable ic_launcher_background
 drawable maroonbadrhoodie
 drawable maroonbadrhoodiezipped
 drawable scoutshoodie
+drawable splash_background
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

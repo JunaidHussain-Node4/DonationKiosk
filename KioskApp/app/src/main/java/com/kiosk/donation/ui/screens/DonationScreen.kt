@@ -27,12 +27,14 @@ import java.math.BigDecimal
 @SuppressLint("UnusedBoxWithConstraintsScope")
 @Composable
 fun DonationScreen(
+    isOnline: Boolean,
     onBack: () -> Unit,
     onProceedToPayment: (BigDecimal) -> Unit
 ) {
     var selectedAmount by remember { mutableStateOf<BigDecimal?>(null) }
     var customInput    by remember { mutableStateOf("") }
     var showCustom     by remember { mutableStateOf(false) }
+    var showNoConnectionError by remember { mutableStateOf(false) }
 
     val effectiveAmount: BigDecimal? = when {
         showCustom -> {
@@ -192,7 +194,7 @@ fun DonationScreen(
                     )
 
                     // Numeric keypad
-                    val keys = listOf("1","2","3","4","5","6","7","8","9","","0","⌫")
+                    val keys = listOf("1","2","3","4","5","6","7","8","9","00","0","⌫")
                     keys.chunked(3).forEach { row ->
                         Row(
                             modifier              = Modifier.fillMaxWidth(),
@@ -219,7 +221,7 @@ fun DonationScreen(
                                             contentColor   = TextDark
                                         )
                                     ) {
-                                        Text(key, fontSize = keyFontSize, fontWeight = FontWeight.Bold)
+                                        Text(key, fontSize = if (key == "00") (keyFontSize.value * 0.8f).sp else keyFontSize, fontWeight = FontWeight.Bold)
                                     }
                                 }
                             }
@@ -230,7 +232,13 @@ fun DonationScreen(
 
             // ── Donate button ─────────────────────────────────────────────────
             Button(
-                onClick        = { effectiveAmount?.let { onProceedToPayment(it) } },
+                onClick        = { 
+                    if (isOnline) {
+                        effectiveAmount?.let { onProceedToPayment(it) } 
+                    } else {
+                        showNoConnectionError = true
+                    }
+                },
                 enabled        = effectiveAmount != null,
                 colors         = ButtonDefaults.buttonColors(
                     containerColor = Amber,
@@ -254,6 +262,17 @@ fun DonationScreen(
                     fontWeight = FontWeight.Bold
                 )
             }
+        }
+
+        if (showNoConnectionError) {
+            AlertDialog(
+                onDismissRequest = { showNoConnectionError = false },
+                title = { Text("No Internet Connection") },
+                text  = { Text("A connection is required to process donations. Please check your Wi-Fi and try again.") },
+                confirmButton = {
+                    Button(onClick = { showNoConnectionError = false }) { Text("OK") }
+                }
+            )
         }
     }
 }

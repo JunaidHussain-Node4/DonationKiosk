@@ -77,10 +77,12 @@ fun AdminScreen(
     productCount: Int,
     isDonationsEnabled: Boolean,
     isProductsEnabled: Boolean,
+    basketTimeout: Int,
     onSaveOrgName: (String) -> Unit,
     onSaveSumupKey: (String) -> Unit,
     onSetDonationsEnabled: (Boolean) -> Unit,
     onSetProductsEnabled: (Boolean) -> Unit,
+    onSetBasketTimeout: (Int) -> Unit,
     onChangePinClick: () -> Unit,
     onSumupLogin: () -> Unit,
     onSumupLogout: () -> Unit,
@@ -154,6 +156,18 @@ fun AdminScreen(
                     colors = SwitchDefaults.colors(checkedThumbColor = KarimaGreen, checkedTrackColor = KarimaGreen.copy(alpha = 0.5f))
                 )
             }
+            Spacer(Modifier.height(16.dp))
+            OutlinedTextField(
+                value = basketTimeout.toString(),
+                onValueChange = { newValue ->
+                    newValue.toIntOrNull()?.let { onSetBasketTimeout(it) }
+                },
+                label = { Text("Cart Timeout (Minutes)") },
+                modifier = Modifier.fillMaxWidth(),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                singleLine = true,
+                supportingText = { Text("Clears the cart after this many minutes of inactivity") }
+            )
         }
 
         Spacer(Modifier.height(24.dp))

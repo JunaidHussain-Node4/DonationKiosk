@@ -40,6 +40,9 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
     val isProductsEnabled: StateFlow<Boolean> = prefs.isProductsEnabled
         .stateIn(viewModelScope, SharingStarted.Eagerly, true)
 
+    val basketTimeoutMinutes: StateFlow<Int> = prefs.basketTimeoutMinutes
+        .stateIn(viewModelScope, SharingStarted.Eagerly, 10)
+
     // ── Products — from Room database (synced from Firebase) ──────────────────
     // Falls back to defaultProducts if database is empty (before first sync)
     val products: StateFlow<List<Product>> = repository.products
@@ -77,33 +80,65 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
 
     val cartTotal: StateFlow<BigDecimal> = _cart.map { items ->
         items.fold(BigDecimal.ZERO) { acc, item ->
-            acc + item.product.priceGBP * BigDecimal(item.quantity)
+            val price = item.selectedSize?.priceGBP ?: item.product.priceGBP
+            acc + price * BigDecimal(item.quantity)
         }
     }.stateIn(viewModelScope, SharingStarted.Eagerly, BigDecimal.ZERO)
 
-    fun addToCart(product: Product) {
+    private var lastActivityTime = System.currentTimeMillis()
+
+    init {
+        // Inactivity timer to clear cart
+        viewModelScope.launch {
+            while (true) {
+                kotlinx.coroutines.delay(30000) // Check every 30 seconds
+                val timeoutMs = basketTimeoutMinutes.value * 60 * 1000L
+                if (_cart.value.isNotEmpty() && System.currentTimeMillis() - lastActivityTime > timeoutMs) {
+                    clearCart()
+                }
+            }
+        }
+    }
+
+    fun updateActivity() {
+        lastActivityTime = System.currentTimeMillis()
+    }
+
+    fun addToCart(product: Product, size: ProductSize? = null) {
+        updateActivity()
         _cart.update { current ->
-            val existing = current.find { it.product.id == product.id }
+            val existing = current.find { it.product.id == product.id && it.selectedSize?.id == size?.id }
             if (existing != null) {
-                current.map { if (it.product.id == product.id) it.copy(quantity = it.quantity + 1) else it }
+                current.map { 
+                    if (it.product.id == product.id && it.selectedSize?.id == size?.id) 
+                        it.copy(quantity = it.quantity + 1) 
+                    else it 
+                }
             } else {
-                current + CartItem(product, 1)
+                current + CartItem(product, 1, size)
             }
         }
     }
 
-    fun removeFromCart(product: Product) {
+    fun removeFromCart(product: Product, size: ProductSize? = null) {
+        updateActivity()
         _cart.update { current ->
-            val existing = current.find { it.product.id == product.id }
+            val existing = current.find { it.product.id == product.id && it.selectedSize?.id == size?.id }
             if (existing != null && existing.quantity > 1) {
-                current.map { if (it.product.id == product.id) it.copy(quantity = it.quantity - 1) else it }
+                current.map { 
+                    if (it.product.id == product.id && it.selectedSize?.id == size?.id) 
+                        it.copy(quantity = it.quantity - 1) 
+                    else it 
+                }
             } else {
-                current.filter { it.product.id != product.id }
+                current.filter { it.product.id != product.id || it.selectedSize?.id != size?.id }
             }
         }
     }
 
-    fun clearCart() { _cart.value = emptyList() }
+    fun clearCart() { 
+        _cart.value = emptyList() 
+    }
 
     fun initiateDonation(amount: BigDecimal) {
         _pendingPayment.value = PaymentMode.Donation(amount)
@@ -121,6 +156,7 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
     fun saveOrgName(name: String)    = viewModelScope.launch { prefs.setOrgName(name) }
     fun setDonationsEnabled(enabled: Boolean) = viewModelScope.launch { prefs.setDonationsEnabled(enabled) }
     fun setProductsEnabled(enabled: Boolean)  = viewModelScope.launch { prefs.setProductsEnabled(enabled) }
+    fun setBasketTimeout(minutes: Int)       = viewModelScope.launch { prefs.setBasketTimeout(minutes) }
 
     private val _loginRequested = MutableStateFlow(false)
     val loginRequested: StateFlow<Boolean> = _loginRequested

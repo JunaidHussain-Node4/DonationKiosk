@@ -43,6 +43,28 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
     val basketTimeoutMinutes: StateFlow<Int> = prefs.basketTimeoutMinutes
         .stateIn(viewModelScope, SharingStarted.Eagerly, 10)
 
+    // ── Date & Time ───────────────────────────────────────────────────────────
+    private val _currentDateTime = MutableStateFlow(formatDateTime())
+    val currentDateTime: StateFlow<String> = _currentDateTime.asStateFlow()
+
+    private fun formatDateTime(): String {
+        val now = java.util.Calendar.getInstance()
+        val dayName = java.text.SimpleDateFormat("EEEE", java.util.Locale.ENGLISH).format(now.time)
+        val dayOfMonth = now.get(java.util.Calendar.DAY_OF_MONTH)
+        val monthName = java.text.SimpleDateFormat("MMMM", java.util.Locale.ENGLISH).format(now.time)
+        val time = java.text.SimpleDateFormat("HH:mm", java.util.Locale.ENGLISH).format(now.time)
+
+        val suffix = when {
+            dayOfMonth in 11..13 -> "th"
+            dayOfMonth % 10 == 1 -> "st"
+            dayOfMonth % 10 == 2 -> "nd"
+            dayOfMonth % 10 == 3 -> "rd"
+            else -> "th"
+        }
+
+        return "$dayName $dayOfMonth$suffix $monthName - $time"
+    }
+
     // ── Products — from Room database (synced from Firebase) ──────────────────
     // Falls back to defaultProducts if database is empty (before first sync)
     val products: StateFlow<List<Product>> = repository.products
@@ -96,6 +118,14 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
                 if (_cart.value.isNotEmpty() && System.currentTimeMillis() - lastActivityTime > timeoutMs) {
                     clearCart()
                 }
+            }
+        }
+
+        // Clock updater
+        viewModelScope.launch {
+            while (true) {
+                _currentDateTime.value = formatDateTime()
+                kotlinx.coroutines.delay(10000) // Update every 10 seconds
             }
         }
     }

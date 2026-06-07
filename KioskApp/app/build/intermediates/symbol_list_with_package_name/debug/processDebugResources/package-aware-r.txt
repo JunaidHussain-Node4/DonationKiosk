@@ -4045,6 +4045,7 @@ drawable air_reader
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable background2
 drawable balloon_arrow_drawable
 drawable btn_accessibility_start_background
 drawable btn_checkbox_checked_mtrl

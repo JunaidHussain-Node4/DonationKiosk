@@ -88,7 +88,7 @@ fun DonationScreen(
                         )
                     }
                     Spacer(Modifier.width(8.dp))
-                    Column(verticalArrangement = Arrangement.Center) {
+                    Column(verticalArrangement = Arrangement.Center, modifier = Modifier.weight(1f)) {
                         Text(
                             "Choose Your Donation",
                             fontSize   = (screenWidth.value * 0.038f).sp,
@@ -96,13 +96,19 @@ fun DonationScreen(
                             color      = TextDark
                         )
                         if (!keypadVisible) {
+                            Spacer(Modifier.height(32.dp)) // Increased from 12.dp to 32.dp
                             Text(
                                 "Every donation makes a difference — Jazakum Allahu Khayran",
-                                fontSize = (screenWidth.value * 0.022f).sp,
-                                color    = TextMedium
+                                fontSize = (screenWidth.value * 0.026f).sp,
+                                color    = TextMedium,
+                                lineHeight = (screenWidth.value * 0.032f).sp
                             )
                         }
                     }
+                }
+
+                if (!showCustom) {
+                    Spacer(Modifier.height(sectionGap * 2))
                 }
 
                 // "Back to preset amounts" button — only shows when keypad is visible
@@ -132,7 +138,10 @@ fun DonationScreen(
             // ── Main Content Section ──────────────────────────────────────────
             if (!showCustom) {
                 // Preset Amounts Mode
-                Column(verticalArrangement = Arrangement.spacedBy(sectionGap)) {
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(sectionGap),
+                    modifier = Modifier.weight(1f)
+                ) {
                     DONATION_PRESETS.chunked(2).forEach { row ->
                         Row(
                             modifier              = Modifier.fillMaxWidth(),

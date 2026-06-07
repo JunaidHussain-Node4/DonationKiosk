@@ -1,10 +1,14 @@
 package com.kiosk.donation.ui.screens
 
 import android.annotation.SuppressLint
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.foundation.rememberScrollState
@@ -22,7 +26,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -40,6 +46,7 @@ import com.kiosk.donation.data.ProductSize
 import com.kiosk.donation.ui.theme.*
 import java.io.File
 import java.math.BigDecimal
+import kotlinx.coroutines.launch
 
 /**
  * Maps drawable resource name strings to their R.drawable integer IDs.
@@ -199,6 +206,7 @@ fun ProductScreen(
                     .fillMaxWidth()
                     .weight(0.9f)
             ) {
+                val gridState = rememberLazyGridState()
                 val cardHeight: Dp = maxHeight * 0.47f
 
                 if (filteredProducts.isEmpty() && products.isNotEmpty()) {
@@ -211,37 +219,51 @@ fun ProductScreen(
                     }
                 }
 
-                LazyVerticalGrid(
-                    columns = GridCells.Fixed(2),
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 12.dp, vertical = 8.dp),
-                    verticalArrangement   = Arrangement.spacedBy(10.dp),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
-                ) {
-                    items(filteredProducts) { product ->
-                        val itemsInCart = cart.filter { it.product.id == product.id }
-                        val totalInCart = itemsInCart.sumOf { it.quantity }
-                        
-                        ProductCard(
-                            product        = product,
-                            quantityInCart = totalInCart,
-                            screenWidth    = screenWidth.value,
-                            cardHeight     = cardHeight,
-                            onAdd          = { 
-                                onUserActivity()
-                                if (product.sizes.isNullOrEmpty()) {
-                                    onAddToCart(product, null)
-                                } else {
-                                    productForSizeSelection = product
+                Row(modifier = Modifier.fillMaxSize()) {
+                    LazyVerticalGrid(
+                        state = gridState,
+                        columns = GridCells.Fixed(2),
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(horizontal = 12.dp, vertical = 8.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        items(filteredProducts) { product ->
+                            val itemsInCart = cart.filter { it.product.id == product.id }
+                            val totalInCart = itemsInCart.sumOf { it.quantity }
+
+                            ProductCard(
+                                product = product,
+                                quantityInCart = totalInCart,
+                                screenWidth = screenWidth.value,
+                                cardHeight = cardHeight,
+                                onAdd = {
+                                    onUserActivity()
+                                    if (product.sizes.isNullOrEmpty()) {
+                                        onAddToCart(product, null)
+                                    } else {
+                                        productForSizeSelection = product
+                                    }
+                                },
+                                onRemove = {
+                                    onUserActivity()
+                                    if (product.sizes.isNullOrEmpty()) {
+                                        onRemoveFromCart(product, null)
+                                    }
                                 }
-                            },
-                            onRemove       = { 
-                                onUserActivity()
-                                if (product.sizes.isNullOrEmpty()) {
-                                    onRemoveFromCart(product, null)
-                                }
-                            }
+                            )
+                        }
+                    }
+
+                    // ── Custom Scrollbar ──────────────────────────────────────────
+                    if (filteredProducts.size > 4) {
+                        VerticalScrollbar(
+                            gridState = gridState,
+                            modifier = Modifier
+                                .fillMaxHeight()
+                                .width(12.dp)
+                                .padding(vertical = 8.dp, horizontal = 2.dp)
                         )
                     }
                 }
@@ -317,6 +339,76 @@ fun ProductScreen(
                 }
             )
         }
+    }
+}
+
+@Composable
+fun VerticalScrollbar(
+    gridState: LazyGridState,
+    modifier: Modifier = Modifier
+) {
+    val coroutineScope = rememberCoroutineScope()
+
+    BoxWithConstraints(modifier = modifier) {
+        val maxHeightPx = constraints.maxHeight.toFloat()
+        val layoutInfo = gridState.layoutInfo
+        val totalItems = layoutInfo.totalItemsCount
+        val visibleItems = layoutInfo.visibleItemsInfo
+        
+        if (visibleItems.isEmpty() || totalItems == 0) return@BoxWithConstraints
+
+        // Total rows in our 2-column grid
+        val totalRows = (totalItems + 1) / 2
+        
+        // Get the height of a single item and the spacing (10dp)
+        val firstItem = visibleItems.first()
+        val itemHeight = firstItem.size.height.toFloat()
+        val spacingPx = with(androidx.compose.ui.platform.LocalDensity.current) { 10.dp.toPx() }
+        val rowHeight = itemHeight + spacingPx
+        
+        val viewportHeight = layoutInfo.viewportSize.height.toFloat()
+        val totalContentHeight = (totalRows * rowHeight) - spacingPx
+        
+        // Only show scrollbar if content is actually scrollable
+        if (totalContentHeight <= viewportHeight) return@BoxWithConstraints
+
+        // Current scroll offset: (Number of rows scrolled away * rowHeight) + pixels of current row scrolled
+        val firstVisibleRow = firstItem.index / 2
+        val currentScrollOffset = (firstVisibleRow * rowHeight) - firstItem.offset.y
+        
+        val maxScrollOffset = (totalContentHeight - viewportHeight).coerceAtLeast(1f)
+        val scrollFraction = (currentScrollOffset / maxScrollOffset).coerceIn(0f, 1f)
+
+        // Calculate thumb height and offset
+        val thumbHeightFraction = (viewportHeight / totalContentHeight).coerceIn(0.1f, 1f)
+        val thumbHeight = maxHeightPx * thumbHeightFraction
+        val thumbOffset = (maxHeightPx - thumbHeight) * scrollFraction
+
+        // Track Background
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.LightGray.copy(alpha = 0.2f), RoundedCornerShape(6.dp))
+        )
+
+        // Thumb
+        Box(
+            modifier = Modifier
+                .offset(y = (thumbOffset / (maxHeightPx / constraints.maxHeight)).dp)
+                .height((thumbHeight / (maxHeightPx / constraints.maxHeight)).dp)
+                .fillMaxWidth()
+                .background(KarimaGreen.copy(alpha = 0.8f), RoundedCornerShape(6.dp))
+                .pointerInput(maxScrollOffset) {
+                    detectDragGestures { change, dragAmount ->
+                        change.consume()
+                        // Convert drag pixels to scroll pixels
+                        val scrollDelta = (dragAmount.y / (maxHeightPx - thumbHeight)) * maxScrollOffset
+                        coroutineScope.launch {
+                            gridState.scrollBy(scrollDelta)
+                        }
+                    }
+                }
+        )
     }
 }
 

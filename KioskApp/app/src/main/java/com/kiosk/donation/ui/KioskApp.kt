@@ -62,6 +62,7 @@ fun KioskApp(
     val sumupKey     by viewModel.sumupAffiliateKey.collectAsState()
     val products     by viewModel.products.collectAsState()
     val syncState    by viewModel.syncState.collectAsState()
+    val currentDateTime by viewModel.currentDateTime.collectAsState()
     val isDonationsEnabled by viewModel.isDonationsEnabled.collectAsState()
     val isProductsEnabled  by viewModel.isProductsEnabled.collectAsState()
     val isLoggedInToSumup by viewModel.isLoggedIn.collectAsState()
@@ -87,6 +88,7 @@ fun KioskApp(
                 composable(Routes.HOME) {
                     HomeScreen(
                         orgName            = orgName,
+                        currentDateTime    = currentDateTime,
                         isDonationsEnabled = isDonationsEnabled,
                         isProductsEnabled  = isProductsEnabled,
                         onDonateClick      = { navController.navigate(Routes.DONATE) },

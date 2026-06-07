@@ -27,6 +27,7 @@ import com.kiosk.donation.ui.theme.*
 @Composable
 fun HomeScreen(
     orgName: String,
+    currentDateTime: String,
     isDonationsEnabled: Boolean,
     isProductsEnabled: Boolean,
     onDonateClick: () -> Unit,
@@ -77,11 +78,27 @@ fun HomeScreen(
         }
 
         // ── Layer 2: UI content ───────────────────────────────────────────────
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp)
+        ) {
+            Text(
+                text = currentDateTime,
+                color = SoftWhite,
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.align(Alignment.TopEnd)
+            )
+        }
+
         Column(
             modifier            = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Top
         ) {
+            Spacer(modifier = Modifier.weight(2f)) // 2/3 space above
+
             PulsingHeart()
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -137,6 +154,8 @@ fun HomeScreen(
                 style = MaterialTheme.typography.bodyMedium,
                 color = FaintWhite
             )
+
+            Spacer(modifier = Modifier.weight(1f)) // 1/3 space below
         }
 
         // ── Layer 3: hidden admin trigger (bottom-right corner, tap 5×) ───────

@@ -83,7 +83,6 @@
         android:label="Karima Donations"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.KioskDonation" >
         <activity
             android:name="com.kiosk.donation.MainActivity"

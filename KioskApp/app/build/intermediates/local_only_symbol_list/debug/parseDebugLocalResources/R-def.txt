@@ -4,6 +4,7 @@ anim rotate_hourglass
 color karima_dark
 color off_white
 drawable background
+drawable background2
 drawable greenbadrhoodie
 drawable greybadrhoodie
 drawable greybadrtshirt

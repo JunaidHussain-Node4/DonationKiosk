@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="exo_controls_playback_speeds">
+    <item>0,25-kratna</item>
+    <item>0,5-kratna</item>
+    <item>0,75-kratna</item>
+    <item>Običajna</item>
+    <item>1,25-kratna</item>
+    <item>1,5-kratna</item>
+    <item>2-kratna</item>
+  </string-array>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Premik naprej za %d sekundo</item>
+    <item quantity="two">Premik naprej za %d sekundi</item>
+    <item quantity="few">Premik naprej za %d sekunde</item>
+    <item quantity="other">Premik naprej za %d sekund</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Premik nazaj za %d sekundo</item>
+    <item quantity="two">Premik nazaj za %d sekundi</item>
+    <item quantity="few">Premik nazaj za %d sekunde</item>
+    <item quantity="other">Premik nazaj za %d sekund</item>
+  </plurals>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d novo obvestilo</item>
+    <item quantity="two">%d novi obvestili</item>
+    <item quantity="few">%d nova obvestila</item>
+    <item quantity="other">%d novih obvestil</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Krmarjenje na začetek"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Pomik navzgor"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Več možnosti"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Končano"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Pokaži vse"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Izbira aplikacije"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"IZKLOP"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"VKLOP"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Fn +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"preslednica"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Meni +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Iskanje …"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Izbris poizvedbe"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Iskalna poizvedba"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Iskanje"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Pošiljanje poizvedbe"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Glasovno iskanje"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Deljenje z:"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Deljenje z drugimi prek aplikacije <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Strnitev"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Geslo"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Ključ za dostop"</string>
+    <string name="bottomsheet_action_collapse">Strnitev razdelka na dnu zaslona</string>
+    <string name="bottomsheet_action_expand">Razširitev razdelka na dnu zaslona</string>
+    <string name="bottomsheet_action_expand_halfway">Razširjanje na pol višine</string>
+    <string name="bottomsheet_drag_handle_clicked">Dvakrat dotaknjena ročica za vlečenje</string>
+    <string name="bottomsheet_drag_handle_content_description">Ročica za vlečenje</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Sprejmi"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Video"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Zavrni"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Prekini klic"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Dohodni klic"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Aktivni klic"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Preverjanje dohodnega klica"</string>
+    <string name="character_counter_content_description">Število vnesenih znakov je %1$d od %2$d</string>
+    <string name="character_counter_overflowed_content_description">Omejitev števila znakov je presegla %1$d od %2$d</string>
+    <string name="circuit_navigationHeader_addButton_title">Add</string>
+    <string name="circuit_navigationHeader_backButton_title">Back</string>
+    <string name="circuit_navigationHeader_cancelButton_title">Cancel</string>
+    <string name="circuit_navigationHeader_chatButton_title">Chat</string>
+    <string name="circuit_navigationHeader_closeButton_title">Close</string>
+    <string name="circuit_navigationHeader_deleteButton_title">Delete</string>
+    <string name="circuit_navigationHeader_discountButton_title">Apply discount</string>
+    <string name="circuit_navigationHeader_filterButton_title">Filter</string>
+    <string name="circuit_navigationHeader_helpButton_title">Help</string>
+    <string name="circuit_navigationHeader_hideButton_title">Hide</string>
+    <string name="circuit_navigationHeader_inboxButton_title">Inbox</string>
+    <string name="circuit_navigationHeader_minimizeButton_title">Minimize</string>
+    <string name="circuit_navigationHeader_moreButton_title">More</string>
+    <string name="circuit_navigationHeader_printButton_title">Print</string>
+    <string name="circuit_navigationHeader_refreshButton_title">Refresh</string>
+    <string name="circuit_navigationHeader_reportButton_title">Report</string>
+    <string name="circuit_navigationHeader_saveButton_title">Save</string>
+    <string name="circuit_navigationHeader_searchButton_title">Search</string>
+    <string name="circuit_navigationHeader_settingsButton_title">Settings</string>
+    <string name="circuit_navigationHeader_shareButton_title">Share</string>
+    <string name="circuit_navigationHeader_showButton_title">Show</string>
+    <string name="circuit_tierIndicator_plusTier_accessibilityLabel">Plus Tier</string>
+    <string name="clear_text_end_icon_content_description">Izbris besedila</string>
+    <string msgid="406453423630273620" name="close_drawer">"Zapri meni za krmarjenje"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Zapri list"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Omogoči</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Aplikacija %1$s ne bo delovala, če ne omogočite storitev Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Omogočanje storitev Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Namesti</string>
+    <string name="common_google_play_services_install_text">Aplikacija %1$s ne deluje brez storitev Google Play, vendar teh ni v napravi.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Namestitev storitev Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Dostopnost storitev Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Napaka storitev Google Play</string>
+    <string name="common_google_play_services_unknown_issue">Aplikacija %1$s ima težave s storitvami Google Play. Poskusite znova.</string>
+    <string name="common_google_play_services_unsupported_text">Aplikacija %1$s ne deluje brez storitev Google Play, ki jih vaša naprava ne podpira.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Posodobi</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Aplikacija %1$s ne bo delovala, če ne posodobite storitev Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Posodobitev storitev Google Play</string>
+    <string name="common_google_play_services_updating_text">Aplikacija %1$s ne deluje brez storitev Google Play, ki se trenutno posodabljajo.</string>
+    <string name="common_google_play_services_wear_update_text">Potrebujete novo različico storitev Google Play. V kratkem se bodo posodobile.</string>
+    <string name="common_open_on_phone">Odpiranje v telefonu</string>
+    <string name="common_signin_button_text">Prijava</string>
+    <string name="common_signin_button_text_long">Prijava z računom Google</string>
+    <string msgid="6083905920877235314" name="copy">"Kopiraj"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Povezava je kopirana v odložišče"</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Neveljaven vnos"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Pojavno okno"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Spustni meni"</string>
+    <string name="error_a11y_label">Napaka: Neveljavno</string>
+    <string name="error_icon_content_description">Napaka</string>
+    <string name="exo_controls_cc_disabled_description">Omogočanje podnapisov</string>
+    <string name="exo_controls_cc_enabled_description">Onemogočanje podnapisov</string>
+    <string name="exo_controls_fastforward_description">Previjanje naprej</string>
+    <string name="exo_controls_fullscreen_enter_description">Vstop v celozaslonski način</string>
+    <string name="exo_controls_fullscreen_exit_description">Izhod iz celozaslonskega načina</string>
+    <string name="exo_controls_hide">Skrivanje kontrolnikov predvajalnika</string>
+    <string name="exo_controls_next_description">Naprej</string>
+    <string name="exo_controls_overflow_hide_description">Skrivanje dodatnih nastavitev</string>
+    <string name="exo_controls_overflow_show_description">Prikaz dodatnih nastavitev</string>
+    <string name="exo_controls_pause_description">Zaustavitev</string>
+    <string name="exo_controls_play_description">Predvajanje</string>
+    <string name="exo_controls_playback_speed">Hitrost</string>
+    <string name="exo_controls_previous_description">Nazaj</string>
+    <string name="exo_controls_repeat_all_description">Trenutni način: Ponovi vse. Preklopite način ponavljanja.</string>
+    <string name="exo_controls_repeat_off_description">Trenutni način: Brez ponavljanja. Preklopite način ponavljanja.</string>
+    <string name="exo_controls_repeat_one_description">Trenutni način: Ponovi eno. Preklopite način ponavljanja.</string>
+    <string name="exo_controls_rewind_description">Previjanje nazaj</string>
+    <string name="exo_controls_seek_bar_description">Potek predvajanja</string>
+    <string name="exo_controls_settings_description">Nastavitve</string>
+    <string name="exo_controls_show">Prikaz kontrolnikov predvajalnika</string>
+    <string name="exo_controls_shuffle_off_description">Omogočanje načina naključnega predvajanja</string>
+    <string name="exo_controls_shuffle_on_description">Onemogočanje načina naključnega predvajanja</string>
+    <string name="exo_controls_stop_description">Ustavitev</string>
+    <string name="exo_controls_vr_description">Način VR</string>
+    <string name="exo_download_completed">Prenos je končan</string>
+    <string name="exo_download_description">Prenos</string>
+    <string name="exo_download_downloading">Prenašanje</string>
+    <string name="exo_download_failed">Prenos ni uspel</string>
+    <string name="exo_download_notification_channel_name">Prenosi</string>
+    <string name="exo_download_paused">Prenosi so začasno zaustavljeni.</string>
+    <string name="exo_download_paused_for_network">Prenosi čakajo na povezavo z omrežjem.</string>
+    <string name="exo_download_paused_for_wifi">Prenosi čakajo na povezavo Wi-Fi.</string>
+    <string name="exo_download_removing">Odstranjevanje prenosov</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mb/s</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Dodatni posnetek</string>
+    <string name="exo_track_role_closed_captions">Podnapisi</string>
+    <string name="exo_track_role_commentary">Komentar</string>
+    <string name="exo_track_role_supplementary">Dodatek</string>
+    <string name="exo_track_selection_auto">Samodejno</string>
+    <string name="exo_track_selection_none">Nič</string>
+    <string name="exo_track_selection_title_audio">Zvočni posnetki</string>
+    <string name="exo_track_selection_title_text">Podnapisi</string>
+    <string name="exo_track_selection_title_video">Videoposnetki</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Prostorski zvok</string>
+    <string name="exo_track_surround_5_point_1">Prostorski zvok 5.1</string>
+    <string name="exo_track_surround_7_point_1">Prostorski zvok 7.1</string>
+    <string name="exo_track_unknown">Neznano</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Dodatno"</string>
+    <string name="exposed_dropdown_menu_content_description">Prikaz spustnega menija</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopiraj povezavo"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Odpri v brskalniku"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Deli povezavo"</string>
+    <string name="icon_content_description">Ikona pogovornega okna</string>
+    <string msgid="6827826412747255547" name="in_progress">"Poteka"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Delno potrjeno"</string>
+    <string name="item_view_role_description">Zavihek</string>
+    <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Strnitev razdelka na dnu zaslona"</string>
+    <string msgid="1555567894577437024" name="m3c_bottom_sheet_dismiss_description">"Opustitev razdelka na dnu zaslona"</string>
+    <string msgid="8403354765404029791" name="m3c_bottom_sheet_drag_handle_description">"Ročica za vlečenje"</string>
+    <string msgid="6670819569745899763" name="m3c_bottom_sheet_expand_description">"Razširitev razdelka na dnu zaslona"</string>
+    <string msgid="3010635850035863127" name="m3c_bottom_sheet_pane_title">"Razdelek na dnu zaslona"</string>
+    <string msgid="8166741421776570875" name="m3c_date_input_headline">"Vneseni datum"</string>
+    <string msgid="229313757840775812" name="m3c_date_input_headline_description">"Vneseni datum: %1$s"</string>
+    <string msgid="6116910750161463197" name="m3c_date_input_invalid_for_pattern">"Datum se ne ujema s pričakovanim vzorcem: %1$s"</string>
+    <string msgid="2521768508935305279" name="m3c_date_input_invalid_not_allowed">"Oblika datuma ni dovoljena: %1$s"</string>
+    <string msgid="7052898923934555305" name="m3c_date_input_invalid_year_range">"Datum je zunaj pričakovanega razpona let %1$s–%2$s"</string>
+    <string msgid="2895559812010326913" name="m3c_date_input_label">"Datum"</string>
+    <string msgid="1237013946323089826" name="m3c_date_input_no_input_description">"Brez"</string>
+    <string msgid="7306227249789210568" name="m3c_date_input_title">"Izbira datuma"</string>
+    <string msgid="7605002211875882969" name="m3c_date_picker_headline">"Izbrani datum"</string>
+    <string msgid="3664277305226978227" name="m3c_date_picker_headline_description">"Trenutna izbira: %1$s"</string>
+    <string msgid="8436650776581492840" name="m3c_date_picker_navigate_to_year_description">"Pomik na leto %1$s"</string>
+    <string msgid="5811000998184572395" name="m3c_date_picker_no_selection_description">"Brez"</string>
+    <string msgid="7813882352367152251" name="m3c_date_picker_scroll_to_earlier_years">"Pomaknite se za prikaz zgodnejših let."</string>
+    <string msgid="5727367015496556177" name="m3c_date_picker_scroll_to_later_years">"Pomaknite se za prikaz poznejših let."</string>
+    <string msgid="1804346892470238807" name="m3c_date_picker_switch_to_calendar_mode">"Preklop na način vnosa v koledar"</string>
+    <string msgid="395627960681594326" name="m3c_date_picker_switch_to_day_selection">"Povlecite, da izberete leto, ali se dotaknite, da preklopite nazaj na izbiranje dneva."</string>
+    <string msgid="2219746470065162704" name="m3c_date_picker_switch_to_input_mode">"Preklop na način vnosa besedila"</string>
+    <string msgid="7142101321095356500" name="m3c_date_picker_switch_to_next_month">"Spremeni na naslednji mesec"</string>
+    <string msgid="228438865139394590" name="m3c_date_picker_switch_to_previous_month">"Spremeni na prejšnji mesec"</string>
+    <string msgid="791651718641787594" name="m3c_date_picker_switch_to_year_selection">"Preklopi na izbiro leta"</string>
+    <string msgid="7430790972741451689" name="m3c_date_picker_title">"Izbira datuma"</string>
+    <string msgid="3199387177749801575" name="m3c_date_picker_today_description">"Danes"</string>
+    <string msgid="2068382232816991922" name="m3c_date_picker_year_picker_pane_title">"Izbirnik leta je viden"</string>
+    <string msgid="3190049423327661366" name="m3c_date_range_input_invalid_range_input">"Neveljaven vnos obdobja."</string>
+    <string msgid="3148384720560189467" name="m3c_date_range_input_title">"Vnesite datume"</string>
+    <string msgid="2138321128465719402" name="m3c_date_range_picker_day_in_range">"Znotraj obdobja"</string>
+    <string msgid="4947636797751277713" name="m3c_date_range_picker_end_headline">"Končni datum"</string>
+    <string msgid="602077859540990149" name="m3c_date_range_picker_scroll_to_next_month">"Pomaknite se za prikaz naslednjega meseca."</string>
+    <string msgid="4592174524846109496" name="m3c_date_range_picker_scroll_to_previous_month">"Pomaknite se za prikaz prejšnjega meseca."</string>
+    <string msgid="4665981448952749820" name="m3c_date_range_picker_start_headline">"Začetni datum"</string>
+    <string msgid="3134165431120340385" name="m3c_date_range_picker_title">"Izberite datume"</string>
+    <string msgid="7617233117134790350" name="m3c_dialog">"Pogovorno okno"</string>
+    <string msgid="3177828188723359358" name="m3c_dropdown_menu_collapsed">"Strnjeno"</string>
+    <string msgid="2360841780724299882" name="m3c_dropdown_menu_expanded">"Razširjeno"</string>
+    <string msgid="8687821690726149911" name="m3c_dropdown_menu_toggle">"Preklop spustnega menija"</string>
+    <string msgid="6152806324422087846" name="m3c_search_bar_search">"Iskanje"</string>
+    <string msgid="6152755701819882931" name="m3c_snackbar_dismiss">"Opusti"</string>
+    <string msgid="7655536806087401899" name="m3c_suggestions_available">"Predlogi so spodaj"</string>
+    <string msgid="2786685010796619560" name="m3c_time_picker_am">"dop."</string>
+    <string msgid="2349193472625211372" name="m3c_time_picker_hour">"Ura"</string>
+    <string msgid="9179527532316922345" name="m3c_time_picker_hour_24h_suffix">"%1$d"</string>
+    <string msgid="8876759303332837035" name="m3c_time_picker_hour_selection">"Izbira ure"</string>
+    <string msgid="3458167507790628988" name="m3c_time_picker_hour_suffix">"%1$d"</string>
+    <string msgid="6973808109666874069" name="m3c_time_picker_hour_text_field">"za uro"</string>
+    <string msgid="4313071914266462005" name="m3c_time_picker_minute">"Minuta"</string>
+    <string msgid="4699133535056739733" name="m3c_time_picker_minute_selection">"Izbira minut"</string>
+    <string msgid="5064177921781937179" name="m3c_time_picker_minute_suffix">"%1$d min"</string>
+    <string msgid="7661234488295443182" name="m3c_time_picker_minute_text_field">"za minute"</string>
+    <string msgid="5865171949528594571" name="m3c_time_picker_period_toggle_description">"Izberite dopoldanski ali popoldanski čas."</string>
+    <string msgid="6616362054113087709" name="m3c_time_picker_pm">"pop."</string>
+    <string msgid="1805687647081129904" name="m3c_tooltip_long_press_label">"Pokaži opis orodja"</string>
+    <string msgid="5460405025248574620" name="m3c_tooltip_pane_description">"Opis orodja"</string>
+    <string name="material_clock_toggle_content_description">Izberite dopoldanski ali popoldanski čas.</string>
+    <string name="material_hour_24h_suffix">%1$s h</string>
+    <string name="material_hour_selection">Izberite uro</string>
+    <string name="material_hour_suffix">%1$s</string>
+    <string name="material_minute_selection">Izberite minute</string>
+    <string name="material_minute_suffix">%1$s min</string>
+    <string name="material_timepicker_am">dop.</string>
+    <string name="material_timepicker_clock_mode_description">Preklopite na način ure, da vnesete čas.</string>
+    <string name="material_timepicker_hour">Ura</string>
+    <string name="material_timepicker_minute">Minuta</string>
+    <string name="material_timepicker_pm">pop.</string>
+    <string name="material_timepicker_select_time">Izberite uro</string>
+    <string name="material_timepicker_text_input_mode_description">Preklopite na način za vnašanje besedila, da vnesete čas.</string>
+    <string name="mtrl_badge_numberless_content_description">Novo obvestilo</string>
+    <string name="mtrl_checkbox_state_description_checked">Potrjeno</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">Delno potrjeno</string>
+    <string name="mtrl_checkbox_state_description_unchecked">Nepotrjeno</string>
+    <string name="mtrl_chip_close_icon_content_description">Odstranite %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Več kot toliko novih obvestil: %1$d</string>
+    <string name="mtrl_picker_a11y_next_month">Spremeni na naslednji mesec</string>
+    <string name="mtrl_picker_a11y_prev_month">Spremeni na prejšnji mesec</string>
+    <string name="mtrl_picker_announce_current_range_selection">Izbira začetnega datuma: %1$s – Izbira končnega datuma: %2$s</string>
+    <string name="mtrl_picker_announce_current_selection">Trenutna izbira: %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">brez</string>
+    <string name="mtrl_picker_cancel">Prekliči</string>
+    <string name="mtrl_picker_confirm">V redu</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Izberite datum</string>
+    <string name="mtrl_picker_date_header_unselected">Izbrani datum</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_end_date_description">Končni datum %1$s</string>
+    <string name="mtrl_picker_invalid_format">Neveljavna oblika.</string>
+    <string name="mtrl_picker_invalid_format_example">Primer: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Uporabite: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Neveljaven razpon.</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">Pomik na trenutno leto %1$d</string>
+    <string name="mtrl_picker_navigate_to_year_description">Pomik na leto %1$d</string>
+    <string name="mtrl_picker_out_of_range">Zunaj razpona: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Začetni datum–%1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s–končni datum</string>
+    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
+    <string name="mtrl_picker_range_header_title">Izberite obseg</string>
+    <string name="mtrl_picker_range_header_unselected">Začetni datum–končni datum</string>
+    <string name="mtrl_picker_save">Shrani</string>
+    <string name="mtrl_picker_start_date_description">Začetni datum %1$s</string>
+    <string name="mtrl_picker_text_input_date_hint">Datum</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Končni datum</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Začetni datum</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">l</string>
+    <string name="mtrl_picker_today_description">Danes %1$s</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Preklop na način vnosa v koledar</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Dotaknite se za preklop na pogled koledarja</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Preklop na način vnosa besedila</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Dotaknite se za preklop na pogled leta</string>
+    <string name="mtrl_timepicker_cancel">Prekliči</string>
+    <string name="mtrl_timepicker_confirm">V redu</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Meni za krmarjenje"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Ni izbrano"</string>
+    <string msgid="6573031135582639649" name="not_set">"Ni nastavljeno"</string>
+    <string name="password_toggle_content_description">Prikaz gesla</string>
+    <string msgid="6685851473431805375" name="preference_copied">"»<ns1:g id="SUMMARY">%1$s</ns1:g>« je bilo kopirano v odložišče."</string>
+    <string msgid="5941395253238309765" name="range_end">"Konec razpona"</string>
+    <string msgid="7097486360902471446" name="range_start">"Začetek razpona"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Iskanje"</string>
+    <string name="searchview_clear_text_content_description">Počisti besedilo</string>
+    <string name="searchview_navigation_content_description">Nazaj</string>
+    <string msgid="6043586758067023" name="selected">"Izbrano"</string>
+    <string name="side_sheet_accessibility_pane_title">Stranski list</string>
+    <string msgid="4139871816613051306" name="state_empty">"Prazno"</string>
+    <string msgid="5834637030682409883" name="state_off">"Izklopljeno"</string>
+    <string msgid="1490883874751719580" name="state_on">"Vklopljeno"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="sumup_app_certificate_error">Preverjanje omrežnega potrdila ni bilo uspešno. Prepričajte se, da ima naprava vzpostavljeno varno internetno povezavo.</string>
+    <string name="sumup_app_outdated">Različica aplikacije je zastarela, prosimo posodobite aplikacijo na zadnjo različico.</string>
+    <string name="sumup_app_update_required_title">Update Required</string>
+    <string name="sumup_autoreceipt_btn_stop">Ustavi samodejna potrdila</string>
+    <string name="sumup_autoreceipt_customer_credentials_error">Vnesite samo poverilnice stranke</string>
+    <string name="sumup_autoreceipt_keypoint_customers">Ob zaključku nakupa navedite samo strankin e-poštni naslov ali telefonsko številko.</string>
+    <string name="sumup_autoreceipt_keypoint_email_phone">Ne vnašajte svojega e-naslova ali telefonske številke saj bodo v tem primeru vsa potrdila o nakupu strank poslana vam.</string>
+    <string name="sumup_autoreceipt_keypoint_merchants">Stranke bodo prejele potrdila o plačilu za nakupe, opravljene pri vseh trgovcih SumUp.</string>
+    <string name="sumup_autoreceipt_keypoint_share">Podatkov o naših strankah nikoli ne bomo delili ali prodali.</string>
+    <string name="sumup_autoreceipt_label_sent">Potrdilo o plačilu je bilo samodejno poslano na e-naslov %1$s</string>
+    <string name="sumup_autoreceipt_label_subscribe_toggle">Odslej samodejno pošiljaj potrdila o plačilu od trgovcev SumUp</string>
+    <string name="sumup_autoreceipt_off_text">Izklop.</string>
+    <string name="sumup_autoreceipt_on_text">Vklop.</string>
+    <string name="sumup_autoreceipt_privacy_policy_link">pravilniku o zasebnosti</string>
+    <string name="sumup_autoreceipt_privacy_policy_text">Preberite več o tem v našem %1$s.</string>
+    <string name="sumup_autoreceipt_rules_link">sklop pravil</string>
+    <string name="sumup_autoreceipt_rules_text">Upoštevajte, da kadar strankam ponudite samodejna potrdila o plačilu, velja naš %1$s.</string>
+    <string name="sumup_autoreceipt_see_privacy_policy">Za več informacij si oglejte naš %1$s</string>
+    <string name="sumup_autoreceipt_send_text">Pošlji samodejna potrdila</string>
+    <string name="sumup_autoreceipt_stop_alert_body">Preden to storite, se prepričajte, da stranka ne želi več prejemati potrdil o plačilu.</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_cancel">Prekliči</string>
+    <string name="sumup_autoreceipt_stop_alert_btn_destructive">Ustavi potrdila</string>
+    <string name="sumup_autoreceipt_stop_alert_title">Želite ustaviti samodejna potrdila?</string>
+    <string name="sumup_autoreceipt_stop_toast_error_subtitle">Poskusite znova pozneje izklopiti samodejna potrdila.</string>
+    <string name="sumup_autoreceipt_stop_toast_error_title">Zahteve ni bilo mogoče dokončati</string>
+    <string name="sumup_autoreceipt_stop_toast_success_subtitle">Samodejna potrdila so ustavljena.</string>
+    <string name="sumup_autoreceipt_subtitle_label_sent">Potrdilo je bilo poslano na %1$s.</string>
+    <string name="sumup_autoreceipt_text">Samodejna potrdila</string>
+    <string name="sumup_autoreceipt_title_label_sent">Poslano!</string>
+    <string name="sumup_bt_connection_failure_description">Ponastavite %1$s in kartični čitalec ter poskusite znova.</string>
+    <string name="sumup_bt_connection_failure_title">Ni bilo mogoče najti %1$s</string>
+    <string name="sumup_bt_reset_air_message">Pritisnite in pridržite gumb za vklop, dokler na zaslonu ne bo prikazano %1$s. To lahko traja trenutek. Ko se na zaslonu pojavi %2$s, takoj spustite gumb.</string>
+    <string name="sumup_bt_reset_instruction_air_1_description">Prepričajte se, da je odklopljen iz električnega napajanja in nato ga izklopite s pritiskom gumba za vklop.</string>
+    <string name="sumup_bt_reset_instruction_air_1_title">Odklopite in izklopite kartični čitalec Air</string>
+    <string name="sumup_bt_reset_instruction_air_2_description">Pridržite gumb za vklop za nekaj sekund, dokler se na zaslonu ne prikaže \"Release\" (Spustite).</string>
+    <string name="sumup_bt_reset_instruction_air_2_title">Pritisnite in pridržite gumb za vklop</string>
+    <string name="sumup_bt_reset_instruction_air_3_description">Ko spustite gumb za vklop, boste zaslišali pisk, ki potrjuje, da je bil Bluetooth ponastavljen.</string>
+    <string name="sumup_bt_reset_instruction_air_3_title">Spustite gumb in počakajte na pisk</string>
+    <string name="sumup_bt_reset_instruction_solo_1_description">Dotaknite se puščice na vrhu čitalca Solo in odprite \"Povezave\".</string>
+    <string name="sumup_bt_reset_instruction_solo_1_title">V čitalcu Solo odprite meni za povezave</string>
+    <string name="sumup_bt_reset_instruction_solo_2_description">Izberite \"Bluetooth\" in izklopite stikalo ter ga nato znova vklopite.</string>
+    <string name="sumup_bt_reset_instruction_solo_2_title">Znova vklopite Bluetooth v čitalcu Solo</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_description">Na kartičnem čitalcu se dotaknite puščice navzgor ali navzdol.</string>
+    <string name="sumup_bt_reset_instruction_three_g_1_title">Odprite \"Nastavitve naprave\"</string>
+    <string name="sumup_bt_reset_instruction_three_g_2_title">Izberite \"Vrsta povezave\"</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_description">Izberite \"Izklopljeno\" in se za potrditev dotaknite zelene kljukice.</string>
+    <string name="sumup_bt_reset_instruction_three_g_3_title">Izklopite Bluetooth</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_description">Izberite \"Vklopljeno\" in se za potrditev dotaknite zelene kljukice.</string>
+    <string name="sumup_bt_reset_instruction_three_g_4_title">Znova vklopite Bluetooth</string>
+    <string name="sumup_bt_reset_instructions_message">Za rešitev težave glede povezljivosti med vašo napravo in kartičnim čitalcem upoštevajte naslednja dva koraka.</string>
+    <string name="sumup_bt_reset_instructions_title">Ponastavitev Bluetootha</string>
+    <string name="sumup_bt_reset_mobile_description">Za ponastavitev Bluetootha v tej napravi tapnite spodnji gumb.</string>
+    <string name="sumup_bt_reset_on_device_description_done">Končano</string>
+    <string name="sumup_bt_reset_on_device_description_from_settings">Izklopite Bluetooth in ga znova vklopite</string>
+    <string name="sumup_bt_reset_on_device_description_not_done">To bo trajalo samo sekundo</string>
+    <string name="sumup_bt_reset_on_device_title">V tej napravi</string>
+    <string name="sumup_bt_reset_on_reader_description">Oglejte si, kako to naredite</string>
+    <string name="sumup_bt_reset_on_reader_title">V vaši napravi %1$s</string>
+    <string name="sumup_bt_reset_option_phone">V vašem telefonu</string>
+    <string name="sumup_bt_reset_option_reader">V vašem kartičnem čitalcu</string>
+    <string name="sumup_bt_reset_option_tablet">V vaši tablici</string>
+    <string name="sumup_bt_setup_instruction_solo_1_description">Pritisnite gumb za vklop, da se bo Solo vklopil.</string>
+    <string name="sumup_bt_setup_instruction_solo_1_title">Prepričajte se, da je Solo vklopljen</string>
+    <string name="sumup_bt_setup_instruction_solo_2_description">Dotaknite se puščice na vrhu zaslona čitalca Solo in odprite \"Povezave\".</string>
+    <string name="sumup_bt_setup_instruction_solo_2_title">V meniju odprite \"Povezave\".</string>
+    <string name="sumup_bt_setup_instruction_solo_3_description">Odprite \"Bluetooth\" in vklopite stikalo.</string>
+    <string name="sumup_bt_setup_instruction_solo_3_title">Vklopite Bluetooth v čitalcu Solo</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_description">Za dostop se na kartičnem čitalcu dotaknite puščice navzgor ali navzdol.</string>
+    <string name="sumup_bt_setup_instruction_three_g_1_title">Odprite \"Nastavitve naprave\"</string>
+    <string name="sumup_bt_setup_instruction_three_g_2_title">Izberite \"Vrsta povezave\"</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_description">Za vklop Bluetootha izberite \"Vklopljeno\".</string>
+    <string name="sumup_bt_setup_instruction_three_g_3_title">Izberite \"Bluetooth\".</string>
+    <string name="sumup_bt_setup_instruction_three_g_4_title">Za potrditev pritisnite zeleno kljukico</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_description">Izberite svoj kartični čitalec.</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_onboarding_title">Nastavite svoj kartični čitalec</string>
+    <string name="sumup_bt_troubleshooting_reader_selection_title">Kaj nastavljate?</string>
+    <string name="sumup_btn_call_support">Pokliči zdaj</string>
+    <string name="sumup_btn_cancel">Prekliči</string>
+    <string name="sumup_btn_connect">Poveži</string>
+    <string name="sumup_btn_dismiss">Nazaj</string>
+    <string name="sumup_btn_done">Končano</string>
+    <string name="sumup_btn_edit">Uredi</string>
+    <string name="sumup_btn_go_to_support">Obiščite podporo</string>
+    <string name="sumup_btn_later">Pozneje</string>
+    <string name="sumup_btn_new_set_up">Nova nastavitev</string>
+    <string name="sumup_btn_next">Naprej</string>
+    <string name="sumup_btn_no">Ne</string>
+    <string name="sumup_btn_not_my_reader">Ni moj čitalec</string>
+    <string name="sumup_btn_ok">OK</string>
+    <string name="sumup_btn_previous">Nazaj</string>
+    <string name="sumup_btn_proceed">Nadaljuj</string>
+    <string name="sumup_btn_rescan">Novo iskanje</string>
+    <string name="sumup_btn_retry">Poskusi znova</string>
+    <string name="sumup_btn_scan">Poišči</string>
+    <string name="sumup_btn_send">Pošlji</string>
+    <string name="sumup_btn_send_to_mobile">Pošlji v mobilni telefon</string>
+    <string name="sumup_btn_skip">Preskoči</string>
+    <string name="sumup_btn_update">Update</string>
+    <string name="sumup_btn_yes">Ja</string>
+    <string name="sumup_btn_yes_connect">Da, poveži</string>
+    <string name="sumup_btn_yes_scan">Da, poišči</string>
+    <string name="sumup_button_retry">Poskusi znova</string>
+    <string name="sumup_camera_permission_request_text">Za fotografiranje artikla potrebujemo dostop do vaše kamere</string>
+    <string name="sumup_cancel_pending_payment_message">Ali ste prepričani, da želite preklicati to plačilo?</string>
+    <string name="sumup_cancel_pending_payment_title">Plačilo v pripravljenosti</string>
+    <string name="sumup_card_checkout_cvv_hint">CVV</string>
+    <string name="sumup_card_checkout_expiry_date_label">Datum poteka</string>
+    <string name="sumup_card_checkout_expiry_month_hint">MM</string>
+    <string name="sumup_card_checkout_expiry_year_hint">LL</string>
+    <string name="sumup_card_checkout_insert_and_turn_on_card_reader">Prosim prižgite in povežite kartični čitalec</string>
+    <string name="sumup_card_checkout_security_code">Varnostna koda</string>
+    <string name="sumup_card_reader_battery_level">%1$d%% baterije</string>
+    <string name="sumup_card_reader_battery_level_label">Battery level</string>
+    <string name="sumup_card_reader_battery_level_percentage">%1$d%%</string>
+    <string name="sumup_card_reader_battery_text">Baterija</string>
+    <string name="sumup_card_reader_bluetooth_software_version_text">Programska oprema Bluetooth</string>
+    <string name="sumup_card_reader_connect_button_text">Poveži</string>
+    <string name="sumup_card_reader_error_dialog_header">Povezave ni mogoče vzpostaviti</string>
+    <string name="sumup_card_reader_error_dialog_positive">Poskusite znova</string>
+    <string name="sumup_card_reader_error_dialog_title">Povezave s kartičnim čitalcem ni bilo mogoče vzpostaviti. Poskusite znova.</string>
+    <string name="sumup_card_reader_hardware_version_text">Strojna oprema</string>
+    <string name="sumup_card_reader_last_digits_text">Zadnje številke</string>
+    <string name="sumup_card_reader_low_battery">Low battery, please charge device</string>
+    <string name="sumup_card_reader_not_saved_body">Poveži kartični čitalec</string>
+    <string name="sumup_card_reader_not_saved_title">Začnite sprejemati kartična plačila</string>
+    <string name="sumup_card_reader_not_saved_title_br">Začnite uporabljati Top / Solo</string>
+    <string name="sumup_card_reader_serial_number_text">Serijska številka</string>
+    <string name="sumup_card_reader_setting_enable_generic">Sprejemaj plačila s čitalcem</string>
+    <string name="sumup_card_reader_setting_enable_generic_br">Sprejemajte plačila s Top / Solo</string>
+    <string name="sumup_card_reader_setting_enable_subtitle">Prikažite kot način plačila pri zaključku nakupa.</string>
+    <string name="sumup_card_reader_setting_switch_card_readers">Preklopi na drug kartični čitalec</string>
+    <string name="sumup_card_reader_software_version_text">Programska oprema</string>
+    <string name="sumup_checking_firmware_info">Iskanje posodobitev programske opreme</string>
+    <string name="sumup_checkout_connecting_bt">Povezovanje…</string>
+    <string name="sumup_checkout_power_on_reader">Prižgite kartični čitalec</string>
+    <string name="sumup_confirm_pairing_air">Potrdite prošnjo za povezavo na %1$s IN na kartičnem čitalcu.</string>
+    <string name="sumup_confirm_pairing_air_ios">Če lahko, potrdite prošnjo o povezavi na %1$s in vašem kartičnem čitalcu.</string>
+    <string name="sumup_connection_lost">Povezava izgubljena</string>
+    <string name="sumup_contacts_permission_request_title">Contacts</string>
+    <string name="sumup_could_not_find_your_reader">Vašega čitalca ni bilo mogoče najti</string>
+    <string name="sumup_downloading_firmware">Naložite posodobitev programske opreme</string>
+    <string name="sumup_elv_legal_text">Ich ermächtige %1$s, %2$s, %3$s, %4$s, und von diesem hierzu beauftragten Dritte („die Unternehmen“) den heute fälligen, oben genannten Betrag von meinem Bankkonto durch Lastschrift einzuziehen. Ich weise mein Kreditinstitut unwiderruflich an bei Nichteinlösung der Lastschrift den Unternehmen und/oder der HIT GmbH, Eiffestraße 76, 20537 Hamburg auf Anforderung meinen Namen und meine Anschrift zur Geltendmachung der Forderung mitzuteilen. Datenschutzrechtliche Information: Meine Zahlungsdaten (Kontonummer, Bankleitzahl, Kartenverfallsdatum, Kartenfolgenummer, Datum, Uhrzeit, Zahlungsbetrag, Terminalkennung, Ort, Unternehmen und Filiale) werden zur Kartenprüfung und Zahlungsabwicklung an SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland weitergegeben. Sollte im Rahmen der Zahlungsabwicklung die Lastschrift von meiner Bank nicht eingelöst werden (Rücklastschrift) oder sollte ich der Lastschrift widersprechen, stimme ich zu, dass diese Tatsachen in eine Sperrdatei aufgenommen werden außer wenn ich im Zusammenhang mit dem Widerruf erklärtermaßen Rechte aus dem zu Grunde liegenden Geschäft (z.B. Gewährleistungsrechte) geltend gemacht habe. Die Sperrung wird nach vollständigem Forderungsausgleich wieder aufgehoben und die gespeicherten Daten gelöscht. Dritte, die eine vertragliche Vereinbarung mit den Unternehmen zur Nutzung der Sperrdatei haben, können für Zwecke der Missbrauchsbekämpfung und zur Risikominimierung von Zahlungsausfällen ihre elektronischen Zahlungsvorgänge gegen die Sperrdatei abgleichen. Speichernde Stelle für die Zwecke der Kartenprüfung und Zahlungsabwicklung sind die HIT GmbH, Eiffestr. 76, 20537 Hamburg und die SumUp Ltd, Hospitality House, 16–20 South Cumberland Street, Dublin 2, Irland, die auch die Sperrdatei für teilnehmende Händler führen. Diese Unternehmen erteilen insoweit auch an anderen Händler, die auf die Sperrdatei zugreifen eine Empfehlung, ob eine Zahlung im Wege des Lastschrifteinzugs akzeptiert werden sollte.</string>
+    <string name="sumup_elv_legal_text_short">Hiermit erteile ich die Ermächtigung zum Lastschrifteinzug.</string>
+    <string name="sumup_err_no_recent_geo_location_received">Lokacije ni bilo mogoče najti. Prepričajte se, da so vaše lokacijske nastavitve omogočene in delujoče.  </string>
+    <string name="sumup_error">Napaka</string>
+    <string name="sumup_error_cannot_send_email">Sporočila ni bilo mogoče poslati, aplikacije povezane z e-naslovom ni bilo mogoče najti.</string>
+    <string name="sumup_error_cash_payment_cannot_save_message">Sprememb ni mogoče shraniti. Poskusite znova ali se obrnite na podporo.</string>
+    <string name="sumup_error_cash_payment_cannot_save_title">Gotovinsko plačilo</string>
+    <string name="sumup_error_io">Povezava s strežnikom ni bila vzpostavljena. Preverite internetno povezavo in poskusite ponovno.</string>
+    <string name="sumup_error_payment_method_required">Potreben je način plačila</string>
+    <string name="sumup_error_payment_method_required_desc">Za uporabo SumUp mora biti aktiven vsaj en način plačila.</string>
+    <string name="sumup_error_system_webview_exception">Prišlo je do napake pri spletnemu pogledu za sistem Android. Posodobite aplikacijo ali pokličite podporo.</string>
+    <string name="sumup_error_unexpected_response">Prišlo je do nepričakovane napake strežnika. Prosimo poskusite ponovno.</string>
+    <string name="sumup_external_storage_permission_request_text">Če želite prenesti poročilo o izplačilih, SumUp potrebuje dostop do zunanje shrambe vaše naprave.</string>
+    <string name="sumup_failed_transaction">Neuspešna transakcija</string>
+    <string name="sumup_firmware_update_canceled">Posodobitev preklicana</string>
+    <string name="sumup_fragment_send_receipt">Pošlji potrdilo</string>
+    <string name="sumup_geolocation_unavailable_title">Potrebujemo lokacijo</string>
+    <string name="sumup_grant_usb_permission">Če želite nadaljevati, morate napravi dovoliti dostop prek USB-ja.</string>
+    <string name="sumup_help">Pomoč</string>
+    <string name="sumup_home_card_acceptance_cta_button_title">Opravite to zdaj</string>
+    <string name="sumup_home_card_acceptance_subtitle">Nastavite kartični čitalec in začnite sprejemati plačila.</string>
+    <string name="sumup_home_card_acceptance_title">Pripravite se na sprejemanje plačil</string>
+    <string name="sumup_identity_login_error_generic_message">Prišlo je do napake.\nPoskusite se prijaviti znova.</string>
+    <string name="sumup_identity_login_error_session_expired_message">Vaša seja je potekla. Vpišite se ponovno.</string>
+    <string name="sumup_identity_login_location_permission_denied_message">Za prijavo je zahtevano dovoljenje za lokacijo.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_content">Znova se prijavite.</string>
+    <string name="sumup_identity_migration_to_auth_login_message_title">Posodobili smo aplikacijo</string>
+    <string name="sumup_installment_cancelled">Preklicano</string>
+    <string name="sumup_items_many">%1$s artikla/i/ov</string>
+    <string name="sumup_items_none">Ni artiklov</string>
+    <string name="sumup_items_one">En artikel</string>
+    <string name="sumup_l10n_app_processing">Posodabljanje…</string>
+    <string name="sumup_l10n_card_checkout_card_number">Številka kartice</string>
+    <string name="sumup_l10n_card_checkout_checking_device">Preverjanje čitalca…</string>
+    <string name="sumup_l10n_err_card_payment_expired">Vaša kartica je potekla. Prosimo uporabite drugo kartico.</string>
+    <string name="sumup_l10n_order_hint_custom_item">artikel</string>
+    <string name="sumup_l10n_payment_failure">Transakcija neuspešna</string>
+    <string name="sumup_l10n_phone_number_confirmation_invalid_for_country">%1$s ne deluje kot veljavna mobilna številka za %2$s.\n\nProsim popravite številko ali napišite veljavno mednarodno klicno kodo, če je vaša mobilna izven države %2$s.</string>
+    <string name="sumup_l10n_phone_number_confirmation_outside_of_country">%1$s deluje kot mobilna številka registrirana izven države %2$s.\n\nPred nadaljevanjem preverite, če je številka prava.</string>
+    <string name="sumup_l10n_print_failed_cover_open">Pokrov tiskalnika je odprt. Zaprite pokrov in poskusite ponovno.</string>
+    <string name="sumup_l10n_print_failed_generic">Tiskanje ni mogoče. Preverite tiskalnik in poskusite ponovno.</string>
+    <string name="sumup_l10n_print_failed_image_unavailable">Prenos podatkov o potrdilih ni uspel. Poskusite ponovno.</string>
+    <string name="sumup_l10n_print_failed_paper_empty">Tiskalniku je zmanjkalo papirja.</string>
+    <string name="sumup_l10n_print_failed_printer_offline">Povezava s tiskalnikom potrdil trenutno ni mogoča.</string>
+    <string name="sumup_l10n_solo_printer_communication_error_description">Povezava ni bila vzpostavljena, poskusite znova.</string>
+    <string name="sumup_l10n_solo_printer_escpos_receipt_download_failed_description">Potrdila za tiskalnik Solo ni bilo mogoče prenesti.</string>
+    <string name="sumup_l10n_solo_printer_not_attached_description">Prepričajte se, da je Solo v tiskalniku in da je baterija tiskalnika napolnjena.</string>
+    <string name="sumup_l10n_solo_printer_not_found_title">Tiskalnika ni bilo mogoče najti.</string>
+    <string name="sumup_l10n_solo_printer_offline_description">Povezave s čitalcem Solo ni bilo mogoče vzpostaviti.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_action">Posodobi</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_description">Če želite tiskati, posodobite programsko opremo.</string>
+    <string name="sumup_l10n_solo_printer_outdated_firmware_title">Čitalec Solo je treba posodobiti.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_generic_description">Preverite pokrov tiskalnika in zvitek papirja ter poskusite znova.</string>
+    <string name="sumup_l10n_solo_printer_print_failed_title">Tiskanje ni uspelo.</string>
+    <string name="sumup_label_external_storage">Zunanja shramba</string>
+    <string name="sumup_learn_how">Preberite, kako.</string>
+    <string name="sumup_location_permission_request_text">Za zagotavljanje najvišjih varnostnih standardov moramo vedeti, kje potekajo vaše transakcije. SumUp mora dostopati do vaše lokacije med uporabo aplikacije.</string>
+    <string name="sumup_location_permission_request_title">Lokacijske storitve</string>
+    <string name="sumup_login_btn_forgot_password">Pozabljeno geslo</string>
+    <string name="sumup_login_btn_log_in">Prijava</string>
+    <string name="sumup_login_btn_title">Prijava</string>
+    <string name="sumup_login_error_email_invalid">Preverite, če je bil e-poštni naslov vpisan pravilno</string>
+    <string name="sumup_login_error_email_missing">Vnesite e-poštni naslov, ki je povezan z vašim profilom SumUp</string>
+    <string name="sumup_login_error_password_missing">Vnesite geslo za prijavo v SumUp</string>
+    <string name="sumup_login_error_shelves_not_loaded">Žal ni bilo mogoče pridobiti podatkov o vašem profilu.\nPoskusite se znova prijaviti.</string>
+    <string name="sumup_login_failed_message">Prišlo je do napake pri konfiguriranju vašega profila. Poskusite znova pozneje ali se obrnite na našo ekipo za podporo.</string>
+    <string name="sumup_login_failed_title">Prijava ni bila uspešna</string>
+    <string name="sumup_login_hint_email">E-naslov</string>
+    <string name="sumup_login_hint_password">Geslo</string>
+    <string name="sumup_login_session_expired">Bili ste izpisani. Do tega je najbrž prišlo, ker ste se v drugi napravi prijavili v isti profil.</string>
+    <string name="sumup_merchant_activation_code">Aktivacijska koda</string>
+    <string name="sumup_merchant_activation_code_title">Aktivirajte Total / Super / On</string>
+    <string name="sumup_navigation_payment_methods">Načini plačila</string>
+    <string name="sumup_navigation_payment_methods_multiple_options">Načini plačila</string>
+    <string name="sumup_nearby_devices_permission_request_text">Če želite nadaljevati, SumUp potrebuje vaše dovoljenje za dostop do naprav v bližini.</string>
+    <string name="sumup_nearby_devices_permission_request_title">Naprave v bližini</string>
+    <string name="sumup_no_account_question">Še nimate profila?</string>
+    <string name="sumup_no_air_usb_device">Neznana naprava. Prosimo priklopite kartični čitalec SumUp Air.</string>
+    <string name="sumup_no_bluetooth_on_solo">Nimate Bluetootha v čitalcu Solo?</string>
+    <string name="sumup_no_usb_device">Priklopite kartični čitalec Air z USB kablom in omogočite dostop do nastavitev naprave.</string>
+    <string name="sumup_no_web_browser">Da bi lahko izvedli to dejanje, vas prosimo da naložite in konfigurirate aplikacijo za spletni brskalnik.</string>
+    <string name="sumup_offline_failure_reason_batch_not_uploaded">Vaše pretekle nespletne transakcije so še vedno v obdelavi. Poskrbite, da ostanete povezani in poskusite znova kmalu.</string>
+    <string name="sumup_offline_failure_reason_invalid_security_patch">Nespletnih transakcij ni mogoče opravljati. Napravo znova povežite z internetom. Če uporabljate sistem prodajnih mest drugega ponudnika, se za pomoč obrnite nanj.</string>
+    <string name="sumup_offline_failure_reason_max_amount_per_tx_limit">Izbran znesek presega limit za nespletne transakcije. Če želite nadaljevati, znižajte znesek.</string>
+    <string name="sumup_offline_failure_reason_max_tx_limit">Dosegli ste limit obdelanega zneska nespletnih transakcij. Če želite še naprej opravljati transakcije, znova vzpostavite povezavo.</string>
+    <string name="sumup_offline_failure_reason_time_window_limit">Brez povezave ste bili več kot 24 ur. Znova vzpostavite povezavo zdaj, če želite obdelati zajete transakcije in povečati svojo stopnjo uspešnosti.</string>
+    <string name="sumup_offline_payment_flow_indicator_message">Nimate povezave</string>
+    <string name="sumup_offline_payment_terminal_connection_prompt">Če želite nadaljevati z nespletnimi transakcijami, se znova povežite z nazadnje uporabljenim kartičnim čitalcem.</string>
+    <string name="sumup_order_charge">Računaj</string>
+    <string name="sumup_pairing_in_notification_bar">Preverite polje z obvestili za prošnjo o povezavi</string>
+    <string name="sumup_pax_setup_add_terminal">Nov čitalec</string>
+    <string name="sumup_payment_setting_card_reader">Kartični čitalec</string>
+    <string name="sumup_payment_to_title">Prejemnik plačila:</string>
+    <string name="sumup_permission_explanation_continue">Nadaljuj</string>
+    <string name="sumup_phone">telefon</string>
+    <string name="sumup_please_wait">Prosimo počakajte…</string>
+    <string name="sumup_please_wait_connecting">Prosimo počakajte. Povezovanje…</string>
+    <string name="sumup_pos_lite">POS Lite</string>
+    <string name="sumup_pp_btn_fw_abort">Prekinite posodabljanje</string>
+    <string name="sumup_pp_setup_air_no_btle">Vaša naprava ne podpira Bluetooth 4.0. Prosimo preverite, če je na voljo posodobitev za vašo napravo.</string>
+    <string name="sumup_pp_setup_charge_batteries">Prepričajte se, da je čitalec napolnjen</string>
+    <string name="sumup_pp_setup_check_power">Prepričajte se, da je vaš čitalec prižgan</string>
+    <string name="sumup_pp_setup_connected">Povezano!</string>
+    <string name="sumup_pp_setup_connection_failed">Povezava ni bila mogoča. Poskusite ponovno ali pokličite podporni center na %1$s</string>
+    <string name="sumup_pp_setup_connection_failed_no_support">Povezave s kartičnim terminalom ni bilo mogoče vzpostaviti. Poskusite znova.</string>
+    <string name="sumup_pp_setup_do_firmware_update_now_mandatory">Prepričajte se, da posodobitev namestite pred %1$s.</string>
+    <string name="sumup_pp_setup_firmware_cancel_sure">Ste prepričani, da želite preklicate posodobitev?</string>
+    <string name="sumup_pp_setup_firmware_update_do_now">Posodobitev programske opreme je na voljo za vaš kartični čitalec. Posodobitev bo trajala nekaj minut..\n\nMočno priporočamo, da namestite posodobitev in zagotovite optimalno delovanje vaše naprave.</string>
+    <string name="sumup_pp_setup_firmware_update_installing">Nameščanje, prosimo počakajte…</string>
+    <string name="sumup_pp_setup_firmware_update_minutes_remaining">Še %1$s minut</string>
+    <string name="sumup_pp_setup_firmware_update_one_minute_remaining">Še 1 minuta</string>
+    <string name="sumup_pp_setup_help_additional_steps">Povezava s čitalcem še vedno ni mogoča. Poskusite naslednje korake:</string>
+    <string name="sumup_pp_setup_help_air_reset">Ponovno zaženite čitalec, tako da držite tipko za prižig 20 sekund. Prepričajte se, da je čitalec ugasnjen in se ne polni.</string>
+    <string name="sumup_pp_setup_help_bt_toggle_button">Ponovni zagon Bluetootha</string>
+    <string name="sumup_pp_setup_help_bt_toggle_header">Povezava s čitalcem preko Bluetooth tehnologije ni uspela. Prosimo še enkrat zaženite Bluetooth povezavo in poskusite ponovno.</string>
+    <string name="sumup_pp_setup_help_give_up">Lahko tudi kontaktirate podporni center na %1$s</string>
+    <string name="sumup_pp_setup_help_optional_support">Če potrebujete dodatno pomoč, kontaktirajte naš podporni center na %1$s</string>
+    <string name="sumup_pp_setup_help_pin_plus_replace_batteries">Zamenjajte baterije kartičnega terminala</string>
+    <string name="sumup_pp_setup_help_reboot_device">Ponovno prižgite %1$s</string>
+    <string name="sumup_pp_setup_multiple_devices">Najdenih je bilo več čitalcev</string>
+    <string name="sumup_pp_setup_searching">Iskanje kartičnih čitalcev</string>
+    <string name="sumup_pp_setup_select_bt_device">Primerjajte zadnje številke serijske številke na hrbtni strani čitalca z zgornjo sliko</string>
+    <string name="sumup_pp_setup_text_firmware_update_failed">Posodobitev ni uspela. Prižgite in ugasnite vaš čitalec in poskusite ponovno.</string>
+    <string name="sumup_pp_setup_text_firmware_update_ongoing">Te naprave ne uporabljajte, dokler posodobitev ni zaključena.</string>
+    <string name="sumup_print">Natisni</string>
+    <string name="sumup_print_autoprint_receipts">Vedno natisni potrdila</string>
+    <string name="sumup_print_failed_bluetooth_disabled">Bluetooth je onemogočen. Omogočite bluetooth in poskusite ponovno.</string>
+    <string name="sumup_print_failed_no_cash_drawer">Izbran tiskalnik ne podpira gotovinske blagajne.</string>
+    <string name="sumup_print_no_printers_found">Tiskalnika ni bilo mogoče najti</string>
+    <string name="sumup_print_open_cash_drawer">Odpri blagajno</string>
+    <string name="sumup_print_open_drawer_automatically">Odpri blagajno avtomatsko</string>
+    <string name="sumup_print_searching_printers">Iskanje tiskalnikov</string>
+    <string name="sumup_print_select_printer">Izberi tiskalnik</string>
+    <string name="sumup_print_test_page">Natisni poskusno stran</string>
+    <string name="sumup_printer_available">Na voljo</string>
+    <string name="sumup_printer_settings_copies_label">Število kopij</string>
+    <string name="sumup_printer_settings_disabled">Onemogočeno</string>
+    <string name="sumup_printer_settings_none_paired">Ni združeno</string>
+    <string name="sumup_printer_settings_toggle_label">Omogoči tiskanje potrdil</string>
+    <string name="sumup_printer_unavailable">Ni na voljo</string>
+    <string name="sumup_processing_payment">Obdelava plačila …</string>
+    <string name="sumup_reader_attribute_unknown">Neznano</string>
+    <string name="sumup_reader_connecting_text">Povezovanje s kartičnim čitalcem</string>
+    <string name="sumup_reader_connecting_title">Povezovanje</string>
+    <string name="sumup_reader_home_item_status_update">Posodobitev naprave</string>
+    <string name="sumup_reader_not_found_message">Vaš kartični čitalec, ki se končuje s številkami %1$s, ni bil najden. Prepričajte se, da je čitalec vklopljen in v dosegu.</string>
+    <string name="sumup_reader_off_and_unplugged_message">Prepričajte se, da je naprava izklopljena in odklopljena iz električnega napajanja.</string>
+    <string name="sumup_reader_off_and_unplugged_title">Odklopite in izklopite</string>
+    <string name="sumup_reader_payment">Plačilo</string>
+    <string name="sumup_reader_payment_cancelled">Plačilo je bilo preklicano.</string>
+    <string name="sumup_receipt_contacts_permission_request_text">Če želite izbrati stik, SumUp potrebuje dostop do vaših stikov.</string>
+    <string name="sumup_receipt_email_text">E-pošta</string>
+    <string name="sumup_receipt_field_customer_email">E-naslov kupca</string>
+    <string name="sumup_receipt_field_customer_phone">Telefonska št. kupca</string>
+    <string name="sumup_receipt_field_email_address">E-pošta</string>
+    <string name="sumup_receipt_field_mobile_number">Številka mobilnega telefona</string>
+    <string name="sumup_receipt_request_failed">Pošiljanje potrdila ni bilo uspešno. Preverite vašo povezavo in poskusite ponovno.\n\nPotrdilo za to transakcijo lahko sicer pošljete kadarkoli iz zavihka \"zgodovina prodaje\".</string>
+    <string name="sumup_receipt_sms_text">SMS</string>
+    <string name="sumup_receipt_title_send_receipt">Pošlji potrdilo</string>
+    <string name="sumup_receipt_title_send_to_mobile">Pošlji v mobilni telefon</string>
+    <string name="sumup_reset_bluetooth">Ponovni zagon Bluetootha</string>
+    <string name="sumup_reset_bluetooth_on_reader">Ponastavitev Bluetootha v čitalcu %1$s</string>
+    <string name="sumup_reset_reader_confirmation_message">Ko boste spustili gumb za vklop, boste zaslišali pisk, ki potrjuje, da je bil Bluetooth ponastavljen.</string>
+    <string name="sumup_reset_reader_confirmation_title">Ponastavitev je dokončana</string>
+    <string name="sumup_reset_reader_title">Začnite ponastavitev</string>
+    <string name="sumup_saved_reader_home_item_status_is_inactive">Neaktiven</string>
+    <string name="sumup_saved_reader_home_item_status_is_ready">Pripravljen</string>
+    <string name="sumup_select_an_option">Izberite možnost</string>
+    <string name="sumup_send_receipt_email_field_label">E-pošta</string>
+    <string name="sumup_send_receipt_phone_number_label">Mobilna telefonska številka</string>
+    <string name="sumup_service_unavailable_message">Trudimo se, da napako čimprej odpravimo. Prosimo poskusite ponovno pozneje.</string>
+    <string name="sumup_service_unavailable_title">Storitev ni na voljo</string>
+    <string name="sumup_sign_up">Prijava</string>
+    <string name="sumup_signature_btn_close_legal_page">Zapri pogoje</string>
+    <string name="sumup_signature_in_parcelados">in %1$d parcelados</string>
+    <string name="sumup_signature_sign_here">Prosimo podpišite tukaj</string>
+    <string name="sumup_signature_try_again_button_title">Poskusi znova</string>
+    <string name="sumup_solo_app_update_message">Please update your SumUp App to continue using Solo</string>
+    <string name="sumup_solo_plug_and_play_connection_disconnected_message">Solo ni povezan</string>
+    <string name="sumup_solo_plug_and_play_connection_failure_message">Solo ni mogel vzpostaviti povezave</string>
+    <string name="sumup_solo_plug_and_play_connection_success_message">Solo je povezan in pripravljen za transakcije</string>
+    <string name="sumup_successful_transaction">Uspešna transakcija</string>
+    <string name="sumup_tablet">tablica</string>
+    <string name="sumup_tap_or_insert_card">Prislonite ali vstavite kartico</string>
+    <string name="sumup_tipping">Napitnina</string>
+    <string name="sumup_tipping_signature_including_tip_hint">(vklj. napitnina %1$s)</string>
+    <string name="sumup_transaction_cancelled_card_not_charged">Kartica ni bila bremenjena.</string>
+    <string name="sumup_transaction_cancelled_generic">Transakcija preklicana</string>
+    <string name="sumup_transaction_cancelled_reader_error">Naprava ni odgovorila kot pričakovano </string>
+    <string name="sumup_transaction_cancelled_reader_error_detail">Prepričajte se, da je vaša naprava napolnjena in da je glasnost nastavljena na maksimum.</string>
+    <string name="sumup_transaction_connection_lost">Povezava s SumUp strežnikom je bila izgubljena.</string>
+    <string name="sumup_transaction_failed_generic">Neuspešna transakcija</string>
+    <string name="sumup_transaction_message_checking_status">Prosimo počakajte - preverjamo status transakcije</string>
+    <string name="sumup_transaction_not_processed_desc">Plačila ni bilo mogoče izvesti zaradi težav s povezavo</string>
+    <string name="sumup_transaction_not_processed_details">Kartica ni bila bremenjena. Z izvedbo plačila lahko varno poskusite še enkrat.</string>
+    <string name="sumup_transaction_unexpected_response">Prišlo je do napake pri komunikaciji s strežnikom</string>
+    <string name="sumup_troubleshooting_how_to_turn_on_bluetooth">Kako vklopiti Bluetooth</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_description">Nato ga vklopite in imejte v bližini, da se lahko vzpostavi povezava.</string>
+    <string name="sumup_troubleshooting_reader_not_found_default_case_title">Prepričajte se, da je vaš kartični čitalec napolnjen</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_generic">Prepričajte se, da je %1$s%2$s vklopljen, da ima vključen Bluetooth in da je v bližini.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_description_solo">Prepričajte se, da je ikona za Bluetooth prikazana v zgornjem desnem kotu čitalca Solo.</string>
+    <string name="sumup_troubleshooting_turn_on_bluetooth_on_reader_title">Je Bluetooth v čitalcu %1$s vklopljen?</string>
+    <string name="sumup_troubleshooting_turn_on_reader_description">Prepričajte se, da je %1$s%2$s vklopljen in v bližini.</string>
+    <string name="sumup_troubleshooting_turn_on_reader_title">Vklopite čitalec %1$s</string>
+    <string name="sumup_tts_activation">Naprava je v dostopnem načinu. Vodili vas bodo skozi transakcijo.</string>
+    <string name="sumup_tts_reader_payment_instructions">Dolgovani znesek znaša %1$s %2$s. Če želite plačati, izberite eno od naslednjih dveh možnosti. Če želite opraviti brezstično plačilo, položite svojo kartico na kartični čitalec. Naprava bo enkrat zapiskala, ko bo vaša kartica prepoznana. Plačate lahko tudi tako, da kartico s čipom obrnjeno navzgor najprej vstavite v režo na vrhu čitalca nato pa upoštevajte ustna navodila.</string>
+    <string name="sumup_tts_solo_pin_entry_instructions">Vnesti boste morali svojo kodo PIN. Sprednja stran čitalca ima pokrov z luknjami, ki vas usmerjajo. Ima deset lukenj za številke in tri luknje za funkcije. Pritisnite te luknje, da vnesete svojo kodo PIN. Pisk bo spremljal vsako vneseno številko. Z izbiro zgornjega desnega gumba prekličite plačilo. Spodaj so številke od 1 do 9 v telefonski postavitvi s tremi vrsticami, ki se začnejo s številkami 1, 2 in 3 od leve proti desni na vrhu. V četrti vrstici spodaj levo je gumb za brisanje, ki izbriše vaš najnovejši vnos. Številka nič je v sredini te vrstice, gumb za potrditev pa je na desni strani. Vnesite svoj PIN zdaj in pritisnite gumb za potrditev.</string>
+    <string name="sumup_tts_solo_ul_pin_entry_instructions">Vnesti boste morali svojo kodo PIN. Sprednja stran čitalca ima pokrov z luknjami, ki vas usmerjajo. Ima deset lukenj za številke in tri luknje za funkcije. Pritisnite te luknje, da vnesete svojo kodo PIN. Pisk bo spremljal vsako vneseno številko. Tri okrogle luknje za funkcijske gumbe so v skrajnem desnem stolpcu. Na vrhu je gumb, ki prekliče plačilo. Spodaj je gumb za brisanje, s katerim bo izbrisan vaš zadnji vnos. Pod njim pa je gumb za potrditev. Številke na tipkovnici so v treh skrajno levo skrajnih stolpcih, ki imajo kvadratne luknje. Tipkovnica ima telefonsko postavitev, ki se začne s številkami 1, 2 in 3 od leve proti desni zgoraj. Vnesite svoj PIN zdaj in pritisnite gumb za potrditev.</string>
+    <string name="sumup_tts_transaction_failure">Transakcija ni bila izvedena in kartica ni bila bremenjena. Poskusite znova.</string>
+    <string name="sumup_tts_transaction_success">Transakcija je bila uspešna. Odstranite kartico.</string>
+    <string name="sumup_turn_bluetooth_off_on">Izklopite Bluetooth in ga znova vklopite</string>
+    <string name="sumup_turn_bluetooth_off_on_on_reader">V čitalcu %1$s izklopite Bluetooth in ga znova vklopite</string>
+    <string name="sumup_tx_cancel_on_solo">Če želite preklicati plačilo, pritisnite tipko za preklic na kartičnem čitalcu.</string>
+    <string name="sumup_tx_cancel_please_wait">Transakcija je v poteku preklica, prosimo počakajte.</string>
+    <string name="sumup_tx_cancel_power_off">Za preklic transakcije pritisnite tipko za prižig na kartičnem čitalcu</string>
+    <string name="sumup_tx_successful_receipts_qr_code_tab_title">Koda QR</string>
+    <string name="sumup_txresult_cash_result_info">Prejeta gotovina: %1$s · Vračilo: %2$s</string>
+    <string name="sumup_txresult_dismiss">Opusti</string>
+    <string name="sumup_txresult_print_missing_transaction_data_message">Podatki o transakciji manjkajo.</string>
+    <string name="sumup_txresult_print_receipt">Natisni potrdilo</string>
+    <string name="sumup_txresult_print_receipt_download_failed_message">Prenos potrdila ni bil uspešen.</string>
+    <string name="sumup_txresult_print_timed_out_message">Tiskanje je trajalo predolgo.</string>
+    <string name="sumup_txresult_tip_result_info">Vključuje %1$s napitnine</string>
+    <string name="sumup_update_software">Posodobite programsko opremo.</string>
+    <string name="sumup_update_solo_message">1. Odprite meni čitalca Solo tako, da tapnete na vrhu njegovega zaslona.\n\n2. Tapnite »Povezave« in vzpostavite povezavo z omrežjem Wi-Fi\n\n3. Po potrebi se prijavite.\n\n4. Tapnite »Nastavitve« > »Posodobitev prog. opreme« in nato »Prenesi in namesti«.\n\n5. Ko je posodobitev končana, tapnite »Povezave« in znova vklopite Bluetooth®.</string>
+    <string name="sumup_update_solo_title">Posodobite kartični čitalec Solo</string>
+    <string name="sumup_verification_camera_permission_request_title">Kamera</string>
+    <string name="sumup_verify_phone_number">Potrdi mobilno številko</string>
+    <string name="sumup_waiting_reader_action">Čakanje na stranko</string>
+    <string msgid="2561197295334830845" name="switch_role">"Stikalo"</string>
+    <string msgid="1672349317127674378" name="tab">"Zavihek"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> odstotkov"</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"opis orodja"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"pokaži opis orodja"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"IZKLOPLJENO"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"VKLOPLJENO"</string>
+</resources>

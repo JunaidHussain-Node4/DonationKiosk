@@ -75,6 +75,10 @@ class MainActivity : ComponentActivity() {
                     SumUpManager.login(this, viewModel.sumupAffiliateKey.value)
                 },
                 onExitKiosk      = { KioskManager.stopKioskMode(this) },
+                onCloseApp       = { 
+                    KioskManager.stopKioskMode(this)
+                    finishAndRemoveTask() 
+                },
                 onPaymentSuccess = { callback -> onPaymentSuccess = callback },
                 onPaymentCancelled = { callback -> onPaymentCancelled = callback }
             )

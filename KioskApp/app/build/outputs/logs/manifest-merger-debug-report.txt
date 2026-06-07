@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:2:1-62:12
 MERGED from [com.sumup:merchant-sdk:6.0.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\600252dbee695780d262c7a9bb89808f\transformed\merchant-sdk-6.0.0\AndroidManifest.xml:2:1-36:12
 MERGED from [com.sumup:reader:6.0.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\70defadadcb879caf0609ec60583fa97\transformed\reader-6.0.0\AndroidManifest.xml:2:1-98:12
 MERGED from [com.sumup:base-network:6.0.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\a34aa3c2e813155da4c6d00b262cebf7\transformed\base-network-6.0.0\AndroidManifest.xml:2:1-7:12
@@ -282,8 +282,8 @@ ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:19:
 	android:name
 		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:19:22-72
 application
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:21:5-63:19
-INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:21:5-63:19
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:21:5-61:19
+INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:21:5-61:19
 MERGED from [com.sumup:reader:6.0.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\70defadadcb879caf0609ec60583fa97\transformed\reader-6.0.0\AndroidManifest.xml:33:5-96:19
 MERGED from [com.sumup:reader:6.0.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\70defadadcb879caf0609ec60583fa97\transformed\reader-6.0.0\AndroidManifest.xml:33:5-96:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\fc3f595a17e2483a02592f2dc09b99cd\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
@@ -369,7 +369,7 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\jh\.gradle\cach
 	android:name
 		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:22:9-41
 activity#com.kiosk.donation.MainActivity
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:32:9-48:20
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:32:9-46:20
 	android:screenOrientation
 		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:36:13-52
 	android:turnScreenOn
@@ -384,8 +384,8 @@ ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:32:
 		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:37:13-44
 	android:name
 		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:33:13-41
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME+category:name:android.intent.category.LAUNCHER
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:42:13-47:29
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:42:13-45:29
 action#android.intent.action.MAIN
 ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
@@ -394,34 +394,26 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:44:17-77
 	android:name
 		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:44:27-74
-category#android.intent.category.HOME
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:45:17-73
-	android:name
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:45:27-70
-category#android.intent.category.DEFAULT
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:46:17-76
-	android:name
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:46:27-73
 receiver#com.kiosk.donation.kiosk.KioskDeviceAdminReceiver
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:51:9-61:20
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:49:9-59:20
 	android:exported
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:53:13-36
+		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:51:13-36
 	android:permission
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:54:13-70
+		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:52:13-70
 	android:name
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:52:13-59
+		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:50:13-59
 meta-data#android.app.device_admin
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:55:13-57:56
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:53:13-55:56
 	android:resource
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:57:17-53
+		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:55:17-53
 	android:name
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:56:17-56
+		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:54:17-56
 intent-filter#action:name:android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:58:13-60:29
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:56:13-58:29
 action#android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:59:17-82
+ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:57:17-82
 	android:name
-		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:59:25-79
+		ADDED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml:57:25-79
 uses-sdk
 INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\github\DonationKiosk\KioskApp\app\src\main\AndroidManifest.xml
@@ -1020,6 +1012,10 @@ ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\jh\.gradle\caches
 		ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\7c0da995e549638f971906fd4d388cbb\transformed\firebase-auth-23.1.0\AndroidManifest.xml:30:13-80
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
 ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\7c0da995e549638f971906fd4d388cbb\transformed\firebase-auth-23.1.0\AndroidManifest.xml:35:13-45:29
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\7c0da995e549638f971906fd4d388cbb\transformed\firebase-auth-23.1.0\AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\7c0da995e549638f971906fd4d388cbb\transformed\firebase-auth-23.1.0\AndroidManifest.xml:38:27-73
 activity#com.google.firebase.auth.internal.RecaptchaActivity
 ADDED from [com.google.firebase:firebase-auth:23.1.0] C:\Users\jh\.gradle\caches\9.0.0\transforms\7c0da995e549638f971906fd4d388cbb\transformed\firebase-auth-23.1.0\AndroidManifest.xml:47:9-64:20
 	android:excludeFromRecents

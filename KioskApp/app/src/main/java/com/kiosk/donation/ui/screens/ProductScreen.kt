@@ -332,7 +332,7 @@ fun ProductScreen(
         if (showNoConnectionError) {
             AlertDialog(
                 onDismissRequest = { showNoConnectionError = false },
-                title = { Text("No Internet Connection") },
+                title = { Text("Connection Lost") },
                 text  = { Text("A connection is required to process payments. Please check your Wi-Fi and try again.") },
                 confirmButton = {
                     Button(onClick = { showNoConnectionError = false }) { Text("OK") }

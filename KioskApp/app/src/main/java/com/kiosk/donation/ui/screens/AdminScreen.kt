@@ -88,12 +88,14 @@ fun AdminScreen(
     onSumupLogout: () -> Unit,
     onSyncProducts: () -> Unit,
     onExitKiosk: () -> Unit,
+    onCloseApp: () -> Unit,
     onBack: () -> Unit
 ) {
     var orgName        by remember(currentOrgName)  { mutableStateOf(currentOrgName) }
     var sumupKey       by remember(currentSumupKey) { mutableStateOf(currentSumupKey) }
     var showSumupKey   by remember { mutableStateOf(false) }
     var showExitConfirm by remember { mutableStateOf(false) }
+    var showCloseConfirm by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
@@ -285,6 +287,18 @@ fun AdminScreen(
         ) {
             Text("Exit Kiosk Mode", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
         }
+
+        Spacer(Modifier.height(16.dp))
+
+        // ── Close App ─────────────────────────────────────────────────────────
+        OutlinedButton(
+            onClick  = { showCloseConfirm = true },
+            modifier = Modifier.fillMaxWidth(),
+            colors   = ButtonDefaults.outlinedButtonColors(contentColor = ErrorRed),
+            border   = androidx.compose.foundation.BorderStroke(1.dp, ErrorRed)
+        ) {
+            Text("Close App", style = MaterialTheme.typography.titleMedium)
+        }
     }
 
     if (showExitConfirm) {
@@ -299,6 +313,21 @@ fun AdminScreen(
                 ) { Text("Exit") }
             },
             dismissButton = { TextButton(onClick = { showExitConfirm = false }) { Text("Cancel") } }
+        )
+    }
+
+    if (showCloseConfirm) {
+        AlertDialog(
+            onDismissRequest = { showCloseConfirm = false },
+            title = { Text("Close App?") },
+            text  = { Text("This will shut down the Kiosk application completely. Continue?") },
+            confirmButton = {
+                Button(
+                    onClick = { showCloseConfirm = false; onCloseApp() },
+                    colors  = ButtonDefaults.buttonColors(containerColor = ErrorRed)
+                ) { Text("Close App") }
+            },
+            dismissButton = { TextButton(onClick = { showCloseConfirm = false }) { Text("Cancel") } }
         )
     }
 }

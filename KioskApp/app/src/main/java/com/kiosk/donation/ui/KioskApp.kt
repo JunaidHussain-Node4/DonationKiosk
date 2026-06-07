@@ -50,6 +50,7 @@ fun KioskApp(
     isDeviceOwner: Boolean,
     onSumupLogin: () -> Unit,
     onExitKiosk: () -> Unit,
+    onCloseApp: () -> Unit,
     onPaymentSuccess: (() -> Unit) -> Unit,
     onPaymentCancelled: (() -> Unit) -> Unit
 ) {
@@ -178,6 +179,7 @@ fun KioskApp(
                         onSumupLogout     = viewModel::sumupLogout,
                         onSyncProducts    = viewModel::syncProducts,
                         onExitKiosk       = onExitKiosk,
+                        onCloseApp        = onCloseApp,
                         onBack            = {
                             viewModel.clearSyncState()
                             navController.navigate(Routes.HOME) { popUpTo(0) { inclusive = true } }
@@ -191,10 +193,6 @@ fun KioskApp(
                     onSave    = { newPin -> viewModel.saveAdminPin(newPin); showChangePinDialog = false },
                     onDismiss = { showChangePinDialog = false }
                 )
-            }
-
-            if (!isOnline) {
-                NoConnectionOverlay()
             }
 
             AnimatedVisibility(
@@ -257,51 +255,6 @@ fun SplashScreenOverlay() {
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold
             )
-        }
-    }
-}
-
-@Composable
-fun NoConnectionOverlay() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Black.copy(alpha = 0.7f))
-            .clickable(enabled = false) {}, 
-        contentAlignment = Alignment.Center
-    ) {
-        Surface(
-            shape = RoundedCornerShape(24.dp),
-            color = MaterialTheme.colorScheme.surface,
-            tonalElevation = 8.dp,
-            modifier = Modifier.padding(32.dp).widthIn(max = 500.dp)
-        ) {
-            Column(
-                modifier = Modifier.padding(40.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Icon(
-                    imageVector = Icons.Default.WifiOff,
-                    contentDescription = null,
-                    modifier = Modifier.size(80.dp),
-                    tint = ErrorRed
-                )
-                Spacer(Modifier.height(24.dp))
-                Text(
-                    text = "Connection Lost",
-                    style = MaterialTheme.typography.headlineMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Spacer(Modifier.height(12.dp))
-                Text(
-                    text = "This kiosk requires an internet connection to process payments. " +
-                           "Please wait while we try to reconnect.",
-                    style = MaterialTheme.typography.bodyLarge,
-                    textAlign = TextAlign.Center,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
         }
     }
 }

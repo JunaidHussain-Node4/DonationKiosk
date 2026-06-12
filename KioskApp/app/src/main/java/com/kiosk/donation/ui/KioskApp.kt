@@ -25,6 +25,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -83,6 +84,16 @@ fun KioskApp(
     }
 
     KioskTheme {
+        val context = LocalContext.current
+        val appVersion = remember {
+            try {
+                val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+                "Version ${packageInfo.versionName}"
+            } catch (e: Exception) {
+                "Version 1.0"
+            }
+        }
+
         Box(modifier = Modifier.fillMaxSize()) {
             NavHost(navController = navController, startDestination = Routes.HOME) {
 
@@ -92,6 +103,7 @@ fun KioskApp(
                         currentDateTime    = currentDateTime,
                         isDonationsEnabled = isDonationsEnabled,
                         isProductsEnabled  = isProductsEnabled,
+                        appVersion         = appVersion,
                         onDonateClick      = { navController.navigate(Routes.DONATE) },
                         onShopClick        = { navController.navigate(Routes.SHOP) },
                         onAdminLongPress   = { navController.navigate(Routes.PIN_ENTRY) }

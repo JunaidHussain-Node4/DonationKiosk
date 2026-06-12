@@ -199,6 +199,9 @@
   <header>
     <h1>🛍️ Kiosk Product Admin</h1>
     <div class="header-right">
+      <a href="KarimaDonations-latest.apk" class="btn btn-amber btn-sm" style="text-decoration: none; display: flex; align-items: center; gap: 6px;">
+        <span>📲</span> Download App <span id="apk-version-tag" style="font-weight: bold; margin-left: 2px;"></span>
+      </a>
       <span id="user-email" style="font-size:14px;opacity:0.8;"></span>
       <button class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);padding:6px 14px;font-size:14px" onclick="signOut()">Sign Out</button>
     </div>
@@ -847,6 +850,16 @@ document.getElementById('delete-modal').addEventListener('click', e => {
 document.getElementById('import-modal').addEventListener('click', e => {
   if (e.target === e.currentTarget) closeImportModal();
 });
+
+// Load APK version
+fetch('version.json')
+  .then(response => response.json())
+  .then(data => {
+    if (data.version) {
+      document.getElementById('apk-version-tag').textContent = `(v${data.version})`;
+    }
+  })
+  .catch(err => console.log('Could not load version info'));
 </script>
 </body>
 </html>

@@ -30,6 +30,7 @@ fun HomeScreen(
     currentDateTime: String,
     isDonationsEnabled: Boolean,
     isProductsEnabled: Boolean,
+    appVersion: String,
     onDonateClick: () -> Unit,
     onShopClick: () -> Unit,
     onAdminLongPress: () -> Unit
@@ -89,6 +90,14 @@ fun HomeScreen(
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.align(Alignment.TopEnd)
+            )
+
+            // Version number at bottom left
+            Text(
+                text = appVersion,
+                color = SoftWhite,
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.align(Alignment.BottomStart)
             )
         }
 

@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -10,17 +12,88 @@ android {
     namespace = "com.kiosk.donation"
     compileSdk = 35
 
+    val versionPropsFile = File(project.rootDir, "version.properties")
+    val versionProps = Properties()
+    if (versionPropsFile.exists()) {
+        versionProps.load(versionPropsFile.inputStream())
+    }
+    
+    val currentVersionCode = versionProps.getProperty("VERSION_CODE", "1").toInt()
+    val currentVersionName = versionProps.getProperty("VERSION_NAME", "1.0.0")
+
     defaultConfig {
         applicationId = "com.kiosk.donation"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = currentVersionCode
+        versionName = currentVersionName
+    }
+
+    // Increment version for the NEXT build
+    project.gradle.buildFinished {
+        if (versionPropsFile.exists()) {
+            val nextVersionCode = currentVersionCode + 1
+            val parts = currentVersionName.split(".")
+            val nextVersionName = if (parts.size >= 3) {
+                try {
+                    val patch = parts[2].toInt() + 1
+                    "${parts[0]}.${parts[1]}.$patch"
+                } catch (e: Exception) {
+                    "$currentVersionName.1"
+                }
+            } else {
+                "$currentVersionName.1"
+            }
+            versionProps.setProperty("VERSION_CODE", nextVersionCode.toString())
+            versionProps.setProperty("VERSION_NAME", nextVersionName.toString())
+            versionPropsFile.outputStream().use { 
+                versionProps.store(it, null)
+            }
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
+        }
+    }
+
+    applicationVariants.all {
+        val variant = this
+        variant.outputs.all {
+            val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+            val baseName = "KarimaDonations"
+            val version = variant.versionName
+            val type = variant.buildType.name
+            val fileName = "${baseName}-v${version}-${type}.apk"
+            output.outputFileName = fileName
+
+            // Copy to web-admin folder after build
+            variant.assembleProvider.configure {
+                doLast {
+                    val apkFile = output.outputFile
+                    val destinationDir = File(project.rootDir, "web-admin")
+                    if (apkFile.exists() && destinationDir.exists()) {
+                        // Copy with version name
+                        copy {
+                            from(apkFile)
+                            into(destinationDir)
+                        }
+                        // Also copy as "latest" for the web portal link
+                        copy {
+                            from(apkFile)
+                            into(destinationDir)
+                            rename { "KarimaDonations-latest.apk" }
+                        }
+
+                        // Generate version.json for the web portal
+                        val versionFile = File(destinationDir, "version.json")
+                        versionFile.writeText("{\"version\": \"$version\"}")
+                        
+                        println("Successfully updated APKs and version.json in web-admin folder")
+                    }
+                }
+            }
         }
     }
 

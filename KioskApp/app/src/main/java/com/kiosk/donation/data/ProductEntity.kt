@@ -13,9 +13,18 @@ data class ProductEntity(
     val description: String,
     val priceGBP: String,       // String to avoid floating point precision issues
     val emoji: String,
+    val categoryId: String?,
     val barcode: String?,       // Ready for future barcode scanner integration
     val imagePath: String?,     // Absolute path to image in app-private storage
     val sizesJson: String? = null
+)
+
+@Entity(tableName = "categories")
+data class CategoryEntity(
+    @PrimaryKey val id: String,
+    val name: String,
+    val emoji: String,
+    val imagePath: String?
 )
 
 fun ProductEntity.toProduct(): Product {
@@ -42,9 +51,19 @@ fun ProductEntity.toProduct(): Product {
         description = description,
         priceGBP    = priceGBP.toBigDecimal(),
         emoji       = emoji,
+        categoryId  = categoryId,
         imageRes    = null,
         imagePath   = imagePath,
         barcode     = barcode,
         sizes       = sizes
+    )
+}
+
+fun CategoryEntity.toCategory(): Category {
+    return Category(
+        id = id,
+        name = name,
+        emoji = emoji,
+        imagePath = imagePath
     )
 }

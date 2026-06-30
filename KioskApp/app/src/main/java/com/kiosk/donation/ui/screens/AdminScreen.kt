@@ -6,6 +6,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.Sync
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
@@ -22,6 +24,11 @@ import androidx.compose.ui.unit.dp
 import com.kiosk.donation.data.SumUpManager
 import com.kiosk.donation.ui.SyncState
 import com.kiosk.donation.ui.theme.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.OkHttpClient
+import okhttp3.Request
 
 @Composable
 fun AdminPinDialog(
@@ -71,6 +78,7 @@ fun AdminPinDialog(
 fun AdminScreen(
     currentOrgName: String,
     currentSumupKey: String,
+    currentMerchantCode: String,
     isDeviceOwner: Boolean,
     isLoggedInToSumup: Boolean,
     syncState: SyncState,
@@ -78,11 +86,14 @@ fun AdminScreen(
     isDonationsEnabled: Boolean,
     isProductsEnabled: Boolean,
     basketTimeout: Int,
+    thankYouTimeout: Int,
     onSaveOrgName: (String) -> Unit,
     onSaveSumupKey: (String) -> Unit,
     onSetDonationsEnabled: (Boolean) -> Unit,
     onSetProductsEnabled: (Boolean) -> Unit,
     onSetBasketTimeout: (Int) -> Unit,
+    onSetThankYouTimeout: (Int) -> Unit,
+    onSaveSumupMerchantCode: (String) -> Unit,
     onChangePinClick: () -> Unit,
     onSumupLogin: () -> Unit,
     onSumupLogout: () -> Unit,
@@ -93,6 +104,7 @@ fun AdminScreen(
 ) {
     var orgName        by remember(currentOrgName)  { mutableStateOf(currentOrgName) }
     var sumupKey       by remember(currentSumupKey) { mutableStateOf(currentSumupKey) }
+    var merchantCode   by remember(currentMerchantCode) { mutableStateOf(currentMerchantCode) }
     var showSumupKey   by remember { mutableStateOf(false) }
     var showExitConfirm by remember { mutableStateOf(false) }
     var showCloseConfirm by remember { mutableStateOf(false) }
@@ -160,69 +172,93 @@ fun AdminScreen(
             }
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
-                value = basketTimeout.toString(),
+                value = thankYouTimeout.toString(),
                 onValueChange = { newValue ->
-                    newValue.toIntOrNull()?.let { onSetBasketTimeout(it) }
+                    newValue.toIntOrNull()?.let { onSetThankYouTimeout(it) }
                 },
-                label = { Text("Cart Timeout (Minutes)") },
+                label = { Text("Thank You Screen Timeout (Seconds)") },
                 modifier = Modifier.fillMaxWidth(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 singleLine = true,
-                supportingText = { Text("Clears the cart after this many minutes of inactivity") }
+                supportingText = { Text("Auto-returns to home after this many seconds") }
             )
         }
 
-        Spacer(Modifier.height(24.dp))
+        if (isProductsEnabled) {
+            Spacer(Modifier.height(24.dp))
 
-        // ── Products ──────────────────────────────────────────────────────────
-        AdminSection("Products") {
-            Text(
-                text  = if (productCount > 0) "✅ $productCount products loaded" else "⚠️ No products — sync from Firebase to load",
-                style = MaterialTheme.typography.bodyMedium,
-                color = if (productCount > 0) SuccessGreen else ErrorRed
-            )
-            Spacer(Modifier.height(8.dp))
+            // ── Product Shop ──────────────────────────────────────────────────────
+            AdminSection("Product Shop") {
+                OutlinedTextField(
+                    value = basketTimeout.toString(),
+                    onValueChange = { newValue ->
+                        newValue.toIntOrNull()?.let { onSetBasketTimeout(it) }
+                    },
+                    label = { Text("Cart Timeout (Minutes)") },
+                    modifier = Modifier.fillMaxWidth(),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    singleLine = true,
+                    supportingText = { Text("Clears the cart after this many minutes of inactivity") }
+                )
 
-            Button(
-                onClick  = onSyncProducts,
-                enabled  = syncState !is SyncState.Syncing,
-                colors   = ButtonDefaults.buttonColors(containerColor = KarimaDark),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                if (syncState is SyncState.Syncing) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(18.dp),
-                        color    = SurfaceWhite,
-                        strokeWidth = 2.dp
-                    )
-                    Spacer(Modifier.width(8.dp))
-                    Text("Syncing…")
-                } else {
-                    Icon(Icons.Filled.Sync, null, modifier = Modifier.size(18.dp))
-                    Spacer(Modifier.width(8.dp))
-                    Text("Sync Products from Firebase")
+                Spacer(Modifier.height(16.dp))
+
+                Text(
+                    text = if (productCount > 0) "✅ $productCount products loaded" else "⚠️ No products — sync from Firebase to load",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (productCount > 0) SuccessGreen else ErrorRed
+                )
+                Spacer(Modifier.height(8.dp))
+
+                Button(
+                    onClick = onSyncProducts,
+                    enabled = syncState !is SyncState.Syncing,
+                    colors = ButtonDefaults.buttonColors(containerColor = KarimaDark),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    if (syncState is SyncState.Syncing) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(18.dp),
+                            color = SurfaceWhite,
+                            strokeWidth = 2.dp
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Text("Syncing…")
+                    } else {
+                        Icon(Icons.Filled.Sync, null, modifier = Modifier.size(18.dp))
+                        Spacer(Modifier.width(8.dp))
+                        Text("Sync Products from Firebase")
+                    }
                 }
+
+                // Show sync result
+                when (syncState) {
+                    is SyncState.Success -> {
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            syncState.message,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = SuccessGreen
+                        )
+                    }
+                    is SyncState.Failed -> {
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            syncState.message,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = ErrorRed
+                        )
+                    }
+                    else -> {}
+                }
+
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    "Manage products at: karimakioskdonation.web.app",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = TextMedium
+                )
             }
-
-            // Show sync result
-            when (syncState) {
-                is SyncState.Success -> {
-                    Spacer(Modifier.height(6.dp))
-                    Text(syncState.message, style = MaterialTheme.typography.bodyMedium, color = SuccessGreen)
-                }
-                is SyncState.Failed -> {
-                    Spacer(Modifier.height(6.dp))
-                    Text(syncState.message, style = MaterialTheme.typography.bodyMedium, color = ErrorRed)
-                }
-                else -> {}
-            }
-
-            Spacer(Modifier.height(4.dp))
-            Text(
-                "Manage products at: karimakioskdonation.web.app",
-                style = MaterialTheme.typography.bodySmall,
-                color = TextMedium
-            )
         }
 
         Spacer(Modifier.height(24.dp))
@@ -260,6 +296,29 @@ fun AdminScreen(
                 style = MaterialTheme.typography.bodyMedium,
                 color = if (isLoggedInToSumup) SuccessGreen else ErrorRed
             )
+            
+            Spacer(Modifier.height(16.dp))
+            HorizontalDivider()
+            Spacer(Modifier.height(16.dp))
+
+            Text("Merchant Receipt Settings", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+            Spacer(Modifier.height(8.dp))
+            
+            OutlinedTextField(
+                value         = merchantCode,
+                onValueChange = { merchantCode = it },
+                label         = { Text("SumUp Merchant Code") },
+                modifier      = Modifier.fillMaxWidth(),
+                singleLine    = true,
+                supportingText = { Text("Required for the receipt QR code. Find this in your SumUp Dashboard (Profile -> Settings).") }
+            )
+            Spacer(Modifier.height(8.dp))
+            Button(
+                onClick = { onSaveSumupMerchantCode(merchantCode) },
+                colors  = ButtonDefaults.buttonColors(containerColor = KarimaGreen)
+            ) {
+                Text("Save Merchant Code")
+            }
         }
 
         Spacer(Modifier.height(24.dp))
@@ -291,13 +350,12 @@ fun AdminScreen(
         Spacer(Modifier.height(16.dp))
 
         // ── Close App ─────────────────────────────────────────────────────────
-        OutlinedButton(
+        Button(
             onClick  = { showCloseConfirm = true },
-            modifier = Modifier.fillMaxWidth(),
-            colors   = ButtonDefaults.outlinedButtonColors(contentColor = ErrorRed),
-            border   = androidx.compose.foundation.BorderStroke(1.dp, ErrorRed)
+            colors   = ButtonDefaults.buttonColors(containerColor = ErrorRed),
+            modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Close App", style = MaterialTheme.typography.titleMedium)
+            Text("Close App", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
         }
     }
 

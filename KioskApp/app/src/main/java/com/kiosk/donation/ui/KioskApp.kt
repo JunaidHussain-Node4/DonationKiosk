@@ -30,6 +30,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.kiosk.donation.R
+import com.kiosk.donation.data.Category
 import com.kiosk.donation.data.PaymentMode
 import com.kiosk.donation.data.SumUpManager
 import com.kiosk.donation.ui.screens.*
@@ -40,6 +41,7 @@ object Routes {
     const val HOME      = "home"
     const val DONATE    = "donate"
     const val SHOP      = "shop"
+    const val CATEGORIES = "categories"
     const val THANK_YOU = "thankyou"
     const val PIN_ENTRY = "pin_entry"
     const val ADMIN     = "admin"
@@ -52,7 +54,7 @@ fun KioskApp(
     onSumupLogin: () -> Unit,
     onExitKiosk: () -> Unit,
     onCloseApp: () -> Unit,
-    onPaymentSuccess: (() -> Unit) -> Unit,
+    onPaymentSuccess: ((String?, String?) -> Unit) -> Unit,
     onPaymentCancelled: (() -> Unit) -> Unit
 ) {
     val navController = rememberNavController()
@@ -63,20 +65,31 @@ fun KioskApp(
     val adminPin     by viewModel.adminPin.collectAsState()
     val sumupKey     by viewModel.sumupAffiliateKey.collectAsState()
     val products     by viewModel.products.collectAsState()
+    val categories   by viewModel.categories.collectAsState()
     val syncState    by viewModel.syncState.collectAsState()
     val currentDateTime by viewModel.currentDateTime.collectAsState()
     val isDonationsEnabled by viewModel.isDonationsEnabled.collectAsState()
     val isProductsEnabled  by viewModel.isProductsEnabled.collectAsState()
     val isLoggedInToSumup by viewModel.isLoggedIn.collectAsState()
     val isOnline          by viewModel.isOnline.collectAsState()
+    val sumupAccessToken  by viewModel.sumupAccessToken.collectAsState()
+    val sumupMerchantCode by viewModel.sumupMerchantCode.collectAsState()
     val basketTimeout     by viewModel.basketTimeoutMinutes.collectAsState()
+    val thankYouTimeout   by viewModel.thankYouTimeoutSeconds.collectAsState()
 
     var showSplash          by remember { mutableStateOf(true) }
     var lastPayment         by remember { mutableStateOf<PaymentMode?>(null) }
     var showChangePinDialog by remember { mutableStateOf(false) }
+    var currentTxCode       by remember { mutableStateOf<String?>(null) }
+    var currentTxId         by remember { mutableStateOf<String?>(null) }
+    var selectedCategory    by remember { mutableStateOf<com.kiosk.donation.data.Category?>(null) }
 
     LaunchedEffect(Unit) {
-        onPaymentSuccess  { navController.navigate(Routes.THANK_YOU) }
+        onPaymentSuccess { txCode, txId -> 
+            currentTxCode = txCode
+            currentTxId = txId
+            navController.navigate(Routes.THANK_YOU) 
+        }
         onPaymentCancelled { }
         
         delay(2000)
@@ -105,7 +118,7 @@ fun KioskApp(
                         isProductsEnabled  = isProductsEnabled,
                         appVersion         = appVersion,
                         onDonateClick      = { navController.navigate(Routes.DONATE) },
-                        onShopClick        = { navController.navigate(Routes.SHOP) },
+                        onShopClick        = { navController.navigate(Routes.CATEGORIES) },
                         onAdminLongPress   = { navController.navigate(Routes.PIN_ENTRY) }
                     )
                 }
@@ -126,6 +139,7 @@ fun KioskApp(
                     DonationScreen(
                         isOnline = isOnline,
                         onBack   = { navController.popBackStack() },
+                        timeoutSeconds = thankYouTimeout,
                         onProceedToPayment = { amount ->
                             lastPayment = PaymentMode.Donation(amount)
                             viewModel.initiateDonation(amount)
@@ -134,8 +148,14 @@ fun KioskApp(
                 }
 
                 composable(Routes.SHOP) {
+                    val filteredList = if (selectedCategory == null || selectedCategory?.id == "all") {
+                        products
+                    } else {
+                        products.filter { it.categoryId == selectedCategory?.id }
+                    }
                     ProductScreen(
-                        products         = products,
+                        products         = filteredList,
+                        categoryName     = selectedCategory?.name ?: "All Products",
                         cart             = cart,
                         cartTotal        = cartTotal,
                         isOnline         = isOnline,
@@ -151,6 +171,22 @@ fun KioskApp(
                     )
                 }
 
+                composable(Routes.CATEGORIES) {
+                    CategoryScreen(
+                        categories = categories,
+                        cartCount = cart.sumOf { it.quantity },
+                        onCategoryClick = { category ->
+                            selectedCategory = category
+                            navController.navigate(Routes.SHOP)
+                        },
+                        onSearchClick = {
+                            selectedCategory = null // "All" or similar
+                            navController.navigate(Routes.SHOP)
+                        },
+                        onBack = { navController.popBackStack() }
+                    )
+                }
+
                 composable(Routes.THANK_YOU) {
                     val payment = lastPayment
                     val amount = when (payment) {
@@ -162,9 +198,15 @@ fun KioskApp(
                         amountGBP  = amount,
                         isDonation = payment is PaymentMode.Donation,
                         orgName    = orgName,
+                        timeoutSeconds = thankYouTimeout,
+                        txCode     = currentTxCode,
+                        txId       = currentTxId,
+                        merchantCode = sumupMerchantCode,
                         onDone     = {
                             viewModel.clearCart()
                             viewModel.clearPayment()
+                            currentTxCode = null
+                            currentTxId = null
                             navController.navigate(Routes.HOME) { popUpTo(0) { inclusive = true } }
                         }
                     )
@@ -174,6 +216,7 @@ fun KioskApp(
                     AdminScreen(
                         currentOrgName    = orgName,
                         currentSumupKey   = sumupKey,
+                        currentMerchantCode = sumupMerchantCode,
                         isDeviceOwner     = isDeviceOwner,
                         isLoggedInToSumup = isLoggedInToSumup,
                         syncState         = syncState,
@@ -181,11 +224,14 @@ fun KioskApp(
                         isDonationsEnabled = isDonationsEnabled,
                         isProductsEnabled  = isProductsEnabled,
                         basketTimeout      = basketTimeout,
+                        thankYouTimeout    = thankYouTimeout,
                         onSaveOrgName     = viewModel::saveOrgName,
                         onSaveSumupKey    = viewModel::saveSumupKey,
+                        onSaveSumupMerchantCode = viewModel::saveSumupMerchantCode,
                         onSetDonationsEnabled = viewModel::setDonationsEnabled,
                         onSetProductsEnabled  = viewModel::setProductsEnabled,
                         onSetBasketTimeout    = viewModel::setBasketTimeout,
+                        onSetThankYouTimeout  = viewModel::setThankYouTimeout,
                         onChangePinClick  = { showChangePinDialog = true },
                         onSumupLogin      = onSumupLogin,
                         onSumupLogout     = viewModel::sumupLogout,

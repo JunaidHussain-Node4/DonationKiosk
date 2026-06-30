@@ -26,9 +26,15 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
 
     // ── Settings ──────────────────────────────────────────────────────────────
     val orgName: StateFlow<String> = prefs.orgName
-        .stateIn(viewModelScope, SharingStarted.Eagerly, "Our Charity")
+        .stateIn(viewModelScope, SharingStarted.Eagerly, "Karima Foundation")
 
     val sumupAffiliateKey: StateFlow<String> = prefs.sumupAffiliateKey
+        .stateIn(viewModelScope, SharingStarted.Eagerly, "")
+
+    val sumupAccessToken: StateFlow<String> = prefs.sumupAccessToken
+        .stateIn(viewModelScope, SharingStarted.Eagerly, "")
+
+    val sumupMerchantCode: StateFlow<String> = prefs.sumupMerchantCode
         .stateIn(viewModelScope, SharingStarted.Eagerly, "")
 
     val adminPin: StateFlow<String> = prefs.adminPin
@@ -42,6 +48,9 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
 
     val basketTimeoutMinutes: StateFlow<Int> = prefs.basketTimeoutMinutes
         .stateIn(viewModelScope, SharingStarted.Eagerly, 10)
+
+    val thankYouTimeoutSeconds: StateFlow<Int> = prefs.thankYouTimeoutSeconds
+        .stateIn(viewModelScope, SharingStarted.Eagerly, 20)
 
     // ── Date & Time ───────────────────────────────────────────────────────────
     private val _currentDateTime = MutableStateFlow(formatDateTime())
@@ -70,6 +79,9 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
     val products: StateFlow<List<Product>> = repository.products
         .map { dbProducts -> dbProducts.ifEmpty { defaultProducts } }
         .stateIn(viewModelScope, SharingStarted.Eagerly, defaultProducts)
+
+    val categories: StateFlow<List<Category>> = repository.categories
+        .stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
 
     // ── Sync state ────────────────────────────────────────────────────────────
     private val _syncState = MutableStateFlow<SyncState>(SyncState.Idle)
@@ -183,10 +195,13 @@ class KioskViewModel(application: Application) : AndroidViewModel(application) {
     // ── Admin settings ────────────────────────────────────────────────────────
     fun saveAdminPin(pin: String)    = viewModelScope.launch { prefs.setAdminPin(pin) }
     fun saveSumupKey(key: String)    = viewModelScope.launch { prefs.setSumupAffiliateKey(key) }
+    fun saveSumupAccessToken(token: String) = viewModelScope.launch { prefs.setSumupAccessToken(token) }
+    fun saveSumupMerchantCode(code: String) = viewModelScope.launch { prefs.setSumupMerchantCode(code) }
     fun saveOrgName(name: String)    = viewModelScope.launch { prefs.setOrgName(name) }
     fun setDonationsEnabled(enabled: Boolean) = viewModelScope.launch { prefs.setDonationsEnabled(enabled) }
     fun setProductsEnabled(enabled: Boolean)  = viewModelScope.launch { prefs.setProductsEnabled(enabled) }
     fun setBasketTimeout(minutes: Int)       = viewModelScope.launch { prefs.setBasketTimeout(minutes) }
+    fun setThankYouTimeout(seconds: Int)     = viewModelScope.launch { prefs.setThankYouTimeout(seconds) }
 
     private val _loginRequested = MutableStateFlow(false)
     val loginRequested: StateFlow<Boolean> = _loginRequested

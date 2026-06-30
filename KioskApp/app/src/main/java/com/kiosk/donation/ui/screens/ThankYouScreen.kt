@@ -1,21 +1,28 @@
 package com.kiosk.donation.ui.screens
 
+import android.graphics.Bitmap
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.qrcode.QRCodeWriter
 import com.kiosk.donation.ui.theme.*
 import kotlinx.coroutines.delay
 import java.math.BigDecimal
@@ -25,11 +32,15 @@ fun ThankYouScreen(
     amountGBP: BigDecimal?,
     isDonation: Boolean,
     orgName: String,
-    onDone: () -> Unit         // Called automatically after 5 seconds
+    timeoutSeconds: Int,
+    txCode: String?,
+    txId: String?,
+    merchantCode: String?,
+    onDone: () -> Unit
 ) {
-    // Auto-return to home after 6 seconds
+    // Auto-return to home after the configured timeout
     LaunchedEffect(Unit) {
-        delay(6_000)
+        delay(timeoutSeconds * 1000L)
         onDone()
     }
 
@@ -43,6 +54,14 @@ fun ThankYouScreen(
         ),
         label = "pulse"
     )
+
+    // Generate QR code for the receipt URL using the verified format
+    val qrBitmap = remember(txCode, merchantCode) {
+        if (txCode != null && !merchantCode.isNullOrBlank()) {
+            val url = "https://hi.sumup.com/merchants/$merchantCode/sales/transaction:$txCode?utm_source=email_generic"
+            generateQrCode(url, 400)
+        } else null
+    }
 
     Box(
         modifier = Modifier
@@ -59,7 +78,7 @@ fun ThankYouScreen(
         ) {
             Box(
                 modifier = Modifier
-                    .size(120.dp)
+                    .size(100.dp)
                     .scale(scale)
                     .background(TransparentWhite, CircleShape),
                 contentAlignment = Alignment.Center
@@ -68,11 +87,11 @@ fun ThankYouScreen(
                     imageVector = Icons.Filled.CheckCircle,
                     contentDescription = null,
                     tint = SurfaceWhite,
-                    modifier = Modifier.size(80.dp)
+                    modifier = Modifier.size(64.dp)
                 )
             }
 
-            Spacer(Modifier.height(32.dp))
+            Spacer(Modifier.height(16.dp))
 
             Text(
                 text = if (isDonation) "Thank You!" else "Payment Complete!",
@@ -82,33 +101,58 @@ fun ThankYouScreen(
                 textAlign = TextAlign.Center
             )
 
-            Spacer(Modifier.height(16.dp))
-
             if (amountGBP != null) {
+                Spacer(Modifier.height(8.dp))
                 Text(
                     text = "£${"%.2f".format(amountGBP)}",
                     style = MaterialTheme.typography.displayLarge,
                     color = Amber,
                     fontWeight = FontWeight.Bold
                 )
-                Spacer(Modifier.height(8.dp))
             }
 
-            Text(
-                text = if (isDonation)
-                    "Your generosity helps $orgName make a real difference."
-                else
-                    "Thank you for your purchase and support.",
-                style = MaterialTheme.typography.titleLarge,
-                color = SoftWhite,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(horizontal = 32.dp)
-            )
+            Spacer(Modifier.height(24.dp))
 
-            Spacer(Modifier.height(48.dp))
+            if (qrBitmap != null) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text(
+                        text = "Scan for your receipt",
+                        style = MaterialTheme.typography.titleLarge,
+                        color = SurfaceWhite,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Spacer(Modifier.height(16.dp))
+                    Box(
+                        modifier = Modifier
+                            .size(200.dp)
+                            .clip(RoundedCornerShape(16.dp))
+                            .background(Color.White)
+                            .padding(12.dp)
+                    ) {
+                        Image(
+                            bitmap = qrBitmap.asImageBitmap(),
+                            contentDescription = "Receipt QR Code",
+                            modifier = Modifier.fillMaxSize()
+                        )
+                    }
+                }
+            } else {
+                Text(
+                    text = if (isDonation)
+                        "Your generosity helps $orgName make a real difference."
+                    else
+                        "Thank you for your purchase and support.",
+                    style = MaterialTheme.typography.titleLarge,
+                    color = SoftWhite,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(horizontal = 32.dp)
+                )
+            }
+
+            Spacer(Modifier.height(32.dp))
 
             // Countdown indicator
-            CountdownDots(totalSeconds = 6)
+            CountdownDots(totalSeconds = timeoutSeconds)
 
             Spacer(Modifier.height(16.dp))
 
@@ -117,7 +161,35 @@ fun ThankYouScreen(
                 style = MaterialTheme.typography.bodyMedium,
                 color = FaintWhite
             )
+
+            Spacer(Modifier.height(24.dp))
+
+            Button(
+                onClick = onDone,
+                colors = ButtonDefaults.buttonColors(containerColor = SurfaceWhite.copy(alpha = 0.2f), contentColor = SurfaceWhite),
+                shape = MaterialTheme.shapes.medium
+            ) {
+                Text("Finish", fontWeight = FontWeight.Bold)
+            }
         }
+    }
+}
+
+private fun generateQrCode(text: String, size: Int): Bitmap? {
+    return try {
+        val writer = QRCodeWriter()
+        val bitMatrix = writer.encode(text, BarcodeFormat.QR_CODE, size, size)
+        val width = bitMatrix.width
+        val height = bitMatrix.height
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)
+        for (x in 0 until width) {
+            for (y in 0 until height) {
+                bitmap.setPixel(x, y, if (bitMatrix.get(x, y)) android.graphics.Color.BLACK else android.graphics.Color.WHITE)
+            }
+        }
+        bitmap
+    } catch (e: Exception) {
+        null
     }
 }
 

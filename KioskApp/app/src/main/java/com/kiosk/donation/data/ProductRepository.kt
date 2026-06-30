@@ -48,6 +48,11 @@ class ProductRepository(private val context: Context) {
         entities.map { it.toProduct() }
     }
 
+    /** Live stream of categories from local Room database */
+    val categories: Flow<List<Category>> = dao.getAllCategories().map { entities ->
+        entities.map { it.toCategory() }
+    }
+
     /** Returns true if there are any products in the local database */
     suspend fun hasProducts(): Boolean = dao.count() > 0
 
@@ -58,6 +63,23 @@ class ProductRepository(private val context: Context) {
      */
     suspend fun syncFromFirestore(): SyncResult = withContext(Dispatchers.IO) {
         try {
+            // 1. Sync Categories
+            val catSnapshot = Firebase.firestore
+                .collection("categories")
+                .get()
+                .await()
+
+            val catEntities = mutableListOf<CategoryEntity>()
+            catSnapshot.documents.forEach { doc ->
+                val id = doc.getString("id") ?: doc.id
+                val name = doc.getString("name") ?: return@forEach
+                val emoji = doc.getString("emoji") ?: "📂"
+                val imageBase64 = doc.getString("imageBase64")
+                val imagePath = imageBase64?.let { saveBase64Image(it, "cat_$id") }
+                catEntities.add(CategoryEntity(id, name, emoji, imagePath))
+            }
+
+            // 2. Sync Products
             val snapshot = Firebase.firestore
                 .collection("products")
                 .get()
@@ -80,6 +102,7 @@ class ProductRepository(private val context: Context) {
                     val description = doc.getString("description") ?: ""
                     val price       = doc.getString("price") ?: "0.00"
                     val emoji       = doc.getString("emoji") ?: "🛍️"
+                    val categoryId  = doc.getString("categoryId")
                     val barcode     = doc.getString("barcode")
                     val imageBase64 = doc.getString("imageBase64")
 
@@ -116,6 +139,7 @@ class ProductRepository(private val context: Context) {
                             description = description,
                             priceGBP    = price,
                             emoji       = emoji,
+                            categoryId  = categoryId,
                             barcode     = barcode,
                             imagePath   = imagePath,
                             sizesJson   = sizesJson
@@ -126,9 +150,11 @@ class ProductRepository(private val context: Context) {
                 }
             }
 
-            // Replace all local products with synced data
+            // Replace all local products and categories with synced data
             dao.deleteAll()
             dao.insertAll(entities)
+            dao.deleteAllCategories()
+            dao.insertCategories(catEntities)
 
             SyncResult.Success(
                 count  = entities.size,

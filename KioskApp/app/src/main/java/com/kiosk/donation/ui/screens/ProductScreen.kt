@@ -64,6 +64,7 @@ private val drawableMap = mapOf(
 @Composable
 fun ProductScreen(
     products: List<Product>,
+    categoryName: String,
     cart: List<CartItem>,
     cartTotal: BigDecimal,
     isOnline: Boolean,
@@ -122,7 +123,7 @@ fun ProductScreen(
                     }
                     Spacer(Modifier.width(8.dp))
                     Text(
-                        text       = "Shop",
+                        text       = categoryName,
                         fontSize   = (screenWidth.value * 0.038f).sp,
                         color      = Color.White,
                         fontWeight = FontWeight.Bold,

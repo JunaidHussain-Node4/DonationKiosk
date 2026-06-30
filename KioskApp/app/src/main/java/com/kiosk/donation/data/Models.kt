@@ -9,12 +9,20 @@ data class ProductSize(
     val barcode: String? = null
 )
 
+data class Category(
+    val id: String,
+    val name: String,
+    val emoji: String,
+    val imagePath: String? = null
+)
+
 data class Product(
     val id: String,
     val name: String,
     val description: String,
     val priceGBP: BigDecimal,
     val emoji: String,
+    val categoryId: String? = null,
     val imageRes: String?  = null,  // Drawable resource name (built-in images)
     val imagePath: String? = null,  // Absolute path to image synced from Firebase
     val barcode: String?   = null,  // EAN/UPC barcode for future scanner integration

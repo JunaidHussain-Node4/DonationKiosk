@@ -11,9 +11,9 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-debug.apk"
+      "versionCode": 49,
+      "versionName": "1.0.48",
+      "outputFile": "KarimaDonations-v1.0.48-debug.apk"
     }
   ],
   "elementType": "File",

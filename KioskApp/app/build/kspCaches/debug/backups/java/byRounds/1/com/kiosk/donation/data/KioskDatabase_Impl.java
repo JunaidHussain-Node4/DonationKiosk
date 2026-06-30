@@ -31,17 +31,19 @@ public final class KioskDatabase_Impl extends KioskDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS `products` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `priceGBP` TEXT NOT NULL, `emoji` TEXT NOT NULL, `barcode` TEXT, `imagePath` TEXT, `sizesJson` TEXT, PRIMARY KEY(`id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `products` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `priceGBP` TEXT NOT NULL, `emoji` TEXT NOT NULL, `categoryId` TEXT, `barcode` TEXT, `imagePath` TEXT, `sizesJson` TEXT, PRIMARY KEY(`id`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `categories` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `emoji` TEXT NOT NULL, `imagePath` TEXT, PRIMARY KEY(`id`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a259d519a822cd52c82e776ffcac97c8')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0a822a32ac441b780f1c6e3a677d4bfc')");
       }
 
       @Override
       public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS `products`");
+        db.execSQL("DROP TABLE IF EXISTS `categories`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
           for (RoomDatabase.Callback _callback : _callbacks) {
@@ -85,12 +87,13 @@ public final class KioskDatabase_Impl extends KioskDatabase {
       @NonNull
       public RoomOpenHelper.ValidationResult onValidateSchema(
           @NonNull final SupportSQLiteDatabase db) {
-        final HashMap<String, TableInfo.Column> _columnsProducts = new HashMap<String, TableInfo.Column>(8);
+        final HashMap<String, TableInfo.Column> _columnsProducts = new HashMap<String, TableInfo.Column>(9);
         _columnsProducts.put("id", new TableInfo.Column("id", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProducts.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProducts.put("description", new TableInfo.Column("description", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProducts.put("priceGBP", new TableInfo.Column("priceGBP", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProducts.put("emoji", new TableInfo.Column("emoji", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsProducts.put("categoryId", new TableInfo.Column("categoryId", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProducts.put("barcode", new TableInfo.Column("barcode", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProducts.put("imagePath", new TableInfo.Column("imagePath", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProducts.put("sizesJson", new TableInfo.Column("sizesJson", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -103,9 +106,23 @@ public final class KioskDatabase_Impl extends KioskDatabase {
                   + " Expected:\n" + _infoProducts + "\n"
                   + " Found:\n" + _existingProducts);
         }
+        final HashMap<String, TableInfo.Column> _columnsCategories = new HashMap<String, TableInfo.Column>(4);
+        _columnsCategories.put("id", new TableInfo.Column("id", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCategories.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCategories.put("emoji", new TableInfo.Column("emoji", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCategories.put("imagePath", new TableInfo.Column("imagePath", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysCategories = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesCategories = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoCategories = new TableInfo("categories", _columnsCategories, _foreignKeysCategories, _indicesCategories);
+        final TableInfo _existingCategories = TableInfo.read(db, "categories");
+        if (!_infoCategories.equals(_existingCategories)) {
+          return new RoomOpenHelper.ValidationResult(false, "categories(com.kiosk.donation.data.CategoryEntity).\n"
+                  + " Expected:\n" + _infoCategories + "\n"
+                  + " Found:\n" + _existingCategories);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "a259d519a822cd52c82e776ffcac97c8", "c1d115f26de816c1133b9e75774dacbc");
+    }, "0a822a32ac441b780f1c6e3a677d4bfc", "0c0ed752d5cdfd033212ca4e4f0c73f5");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -116,7 +133,7 @@ public final class KioskDatabase_Impl extends KioskDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "products");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "products","categories");
   }
 
   @Override
@@ -126,6 +143,7 @@ public final class KioskDatabase_Impl extends KioskDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `products`");
+      _db.execSQL("DELETE FROM `categories`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

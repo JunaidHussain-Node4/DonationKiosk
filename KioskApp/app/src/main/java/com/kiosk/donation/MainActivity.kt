@@ -5,6 +5,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.lifecycleScope
 import com.kiosk.donation.data.SumUpManager
 import com.kiosk.donation.data.SumUpResult
@@ -19,11 +22,19 @@ class MainActivity : ComponentActivity() {
     private val viewModel: KioskViewModel by viewModels()
 
     // Callback set by KioskApp so we can drive navigation after payment completes
-    var onPaymentSuccess: (() -> Unit)? = null
+    var onPaymentSuccess: ((String?, String?) -> Unit)? = null
     var onPaymentCancelled: (() -> Unit)? = null
+
+    private var isDeviceOwner by mutableStateOf(false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        isDeviceOwner = KioskManager.isDeviceOwner(this)
+        if (isDeviceOwner) {
+            KioskManager.configureKioskPolicies(this)
+            KioskManager.startKioskMode(this)
+        }
 
         // Observe pending payments — launch SumUp checkout when one is set
         lifecycleScope.launch {
@@ -51,7 +62,8 @@ class MainActivity : ComponentActivity() {
                         activity    = this@MainActivity,
                         amount      = amount,
                         title       = title,
-                        foreignTxId = "kiosk-${System.currentTimeMillis()}"
+                        foreignTxId = "kiosk-${System.currentTimeMillis()}",
+                        skipSuccessScreen = true
                     )
                 }
             }
@@ -70,7 +82,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             KioskApp(
                 viewModel        = viewModel,
-                isDeviceOwner    = KioskManager.isDeviceOwner(this),
+                isDeviceOwner    = isDeviceOwner,
                 onSumupLogin     = {
                     SumUpManager.login(this, viewModel.sumupAffiliateKey.value)
                 },
@@ -79,8 +91,8 @@ class MainActivity : ComponentActivity() {
                     KioskManager.stopKioskMode(this)
                     finishAndRemoveTask() 
                 },
-                onPaymentSuccess = { callback -> onPaymentSuccess = callback },
-                onPaymentCancelled = { callback -> onPaymentCancelled = callback }
+                onPaymentSuccess = { callback -> this@MainActivity.onPaymentSuccess = callback },
+                onPaymentCancelled = { callback -> this@MainActivity.onPaymentCancelled = callback }
             )
         }
     }
@@ -94,7 +106,7 @@ class MainActivity : ComponentActivity() {
                 val result = SumUpManager.parseActivityResult(requestCode, data)
                 viewModel.clearPayment()
                 when (result) {
-                    is SumUpResult.Success     -> onPaymentSuccess?.invoke()
+                    is SumUpResult.Success     -> onPaymentSuccess?.invoke(result.txCode, result.txId)
                     is SumUpResult.NotLoggedIn -> {
                         // Prompt login then user retries
                         SumUpManager.login(this, viewModel.sumupAffiliateKey.value)
@@ -114,7 +126,8 @@ class MainActivity : ComponentActivity() {
         // Only engage lock task on the dedicated kiosk tablet once Device Owner is configured.
         // On personal/test devices, startLockTask() causes Huawei/MIUI/etc. aggressive memory
         // managers to kill and restart the process, which breaks in-app navigation entirely.
-        if (KioskManager.isDeviceOwner(this)) {
+        isDeviceOwner = KioskManager.isDeviceOwner(this)
+        if (isDeviceOwner) {
             KioskManager.startKioskMode(this)
         }
     }

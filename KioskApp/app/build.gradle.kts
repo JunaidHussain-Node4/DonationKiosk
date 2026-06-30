@@ -29,29 +29,6 @@ android {
         versionName = currentVersionName
     }
 
-    // Increment version for the NEXT build
-    project.gradle.buildFinished {
-        if (versionPropsFile.exists()) {
-            val nextVersionCode = currentVersionCode + 1
-            val parts = currentVersionName.split(".")
-            val nextVersionName = if (parts.size >= 3) {
-                try {
-                    val patch = parts[2].toInt() + 1
-                    "${parts[0]}.${parts[1]}.$patch"
-                } catch (e: Exception) {
-                    "$currentVersionName.1"
-                }
-            } else {
-                "$currentVersionName.1"
-            }
-            versionProps.setProperty("VERSION_CODE", nextVersionCode.toString())
-            versionProps.setProperty("VERSION_NAME", nextVersionName.toString())
-            versionPropsFile.outputStream().use { 
-                versionProps.store(it, null)
-            }
-        }
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -154,6 +131,12 @@ dependencies {
 
     // Coil — loads product images from file paths
     implementation("io.coil-kt:coil-compose:2.6.0")
+
+    // OkHttp for SumUp Receipts API
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // QR Code Generation
+    implementation("com.google.zxing:core:3.5.3")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
 }

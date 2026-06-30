@@ -35,7 +35,11 @@ public final class ProductDao_Impl implements ProductDao {
 
   private final EntityInsertionAdapter<ProductEntity> __insertionAdapterOfProductEntity;
 
+  private final EntityInsertionAdapter<CategoryEntity> __insertionAdapterOfCategoryEntity;
+
   private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteAllCategories;
 
   public ProductDao_Impl(@NonNull final RoomDatabase __db) {
     this.__db = __db;
@@ -43,7 +47,7 @@ public final class ProductDao_Impl implements ProductDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `products` (`id`,`name`,`description`,`priceGBP`,`emoji`,`barcode`,`imagePath`,`sizesJson`) VALUES (?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `products` (`id`,`name`,`description`,`priceGBP`,`emoji`,`categoryId`,`barcode`,`imagePath`,`sizesJson`) VALUES (?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -54,20 +58,45 @@ public final class ProductDao_Impl implements ProductDao {
         statement.bindString(3, entity.getDescription());
         statement.bindString(4, entity.getPriceGBP());
         statement.bindString(5, entity.getEmoji());
-        if (entity.getBarcode() == null) {
+        if (entity.getCategoryId() == null) {
           statement.bindNull(6);
         } else {
-          statement.bindString(6, entity.getBarcode());
+          statement.bindString(6, entity.getCategoryId());
         }
-        if (entity.getImagePath() == null) {
+        if (entity.getBarcode() == null) {
           statement.bindNull(7);
         } else {
-          statement.bindString(7, entity.getImagePath());
+          statement.bindString(7, entity.getBarcode());
         }
-        if (entity.getSizesJson() == null) {
+        if (entity.getImagePath() == null) {
           statement.bindNull(8);
         } else {
-          statement.bindString(8, entity.getSizesJson());
+          statement.bindString(8, entity.getImagePath());
+        }
+        if (entity.getSizesJson() == null) {
+          statement.bindNull(9);
+        } else {
+          statement.bindString(9, entity.getSizesJson());
+        }
+      }
+    };
+    this.__insertionAdapterOfCategoryEntity = new EntityInsertionAdapter<CategoryEntity>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "INSERT OR REPLACE INTO `categories` (`id`,`name`,`emoji`,`imagePath`) VALUES (?,?,?,?)";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          @NonNull final CategoryEntity entity) {
+        statement.bindString(1, entity.getId());
+        statement.bindString(2, entity.getName());
+        statement.bindString(3, entity.getEmoji());
+        if (entity.getImagePath() == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.getImagePath());
         }
       }
     };
@@ -76,6 +105,14 @@ public final class ProductDao_Impl implements ProductDao {
       @NonNull
       public String createQuery() {
         final String _query = "DELETE FROM products";
+        return _query;
+      }
+    };
+    this.__preparedStmtOfDeleteAllCategories = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "DELETE FROM categories";
         return _query;
       }
     };
@@ -91,6 +128,25 @@ public final class ProductDao_Impl implements ProductDao {
         __db.beginTransaction();
         try {
           __insertionAdapterOfProductEntity.insert(products);
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
+  public Object insertCategories(final List<CategoryEntity> categories,
+      final Continuation<? super Unit> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      @NonNull
+      public Unit call() throws Exception {
+        __db.beginTransaction();
+        try {
+          __insertionAdapterOfCategoryEntity.insert(categories);
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
@@ -124,6 +180,29 @@ public final class ProductDao_Impl implements ProductDao {
   }
 
   @Override
+  public Object deleteAllCategories(final Continuation<? super Unit> $completion) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      @NonNull
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteAllCategories.acquire();
+        try {
+          __db.beginTransaction();
+          try {
+            _stmt.executeUpdateDelete();
+            __db.setTransactionSuccessful();
+            return Unit.INSTANCE;
+          } finally {
+            __db.endTransaction();
+          }
+        } finally {
+          __preparedStmtOfDeleteAllCategories.release(_stmt);
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
   public Flow<List<ProductEntity>> getAllProducts() {
     final String _sql = "SELECT * FROM products ORDER BY name ASC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
@@ -138,6 +217,7 @@ public final class ProductDao_Impl implements ProductDao {
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
           final int _cursorIndexOfPriceGBP = CursorUtil.getColumnIndexOrThrow(_cursor, "priceGBP");
           final int _cursorIndexOfEmoji = CursorUtil.getColumnIndexOrThrow(_cursor, "emoji");
+          final int _cursorIndexOfCategoryId = CursorUtil.getColumnIndexOrThrow(_cursor, "categoryId");
           final int _cursorIndexOfBarcode = CursorUtil.getColumnIndexOrThrow(_cursor, "barcode");
           final int _cursorIndexOfImagePath = CursorUtil.getColumnIndexOrThrow(_cursor, "imagePath");
           final int _cursorIndexOfSizesJson = CursorUtil.getColumnIndexOrThrow(_cursor, "sizesJson");
@@ -154,6 +234,12 @@ public final class ProductDao_Impl implements ProductDao {
             _tmpPriceGBP = _cursor.getString(_cursorIndexOfPriceGBP);
             final String _tmpEmoji;
             _tmpEmoji = _cursor.getString(_cursorIndexOfEmoji);
+            final String _tmpCategoryId;
+            if (_cursor.isNull(_cursorIndexOfCategoryId)) {
+              _tmpCategoryId = null;
+            } else {
+              _tmpCategoryId = _cursor.getString(_cursorIndexOfCategoryId);
+            }
             final String _tmpBarcode;
             if (_cursor.isNull(_cursorIndexOfBarcode)) {
               _tmpBarcode = null;
@@ -172,7 +258,7 @@ public final class ProductDao_Impl implements ProductDao {
             } else {
               _tmpSizesJson = _cursor.getString(_cursorIndexOfSizesJson);
             }
-            _item = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpBarcode,_tmpImagePath,_tmpSizesJson);
+            _item = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpCategoryId,_tmpBarcode,_tmpImagePath,_tmpSizesJson);
             _result.add(_item);
           }
           return _result;
@@ -235,6 +321,7 @@ public final class ProductDao_Impl implements ProductDao {
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
           final int _cursorIndexOfPriceGBP = CursorUtil.getColumnIndexOrThrow(_cursor, "priceGBP");
           final int _cursorIndexOfEmoji = CursorUtil.getColumnIndexOrThrow(_cursor, "emoji");
+          final int _cursorIndexOfCategoryId = CursorUtil.getColumnIndexOrThrow(_cursor, "categoryId");
           final int _cursorIndexOfBarcode = CursorUtil.getColumnIndexOrThrow(_cursor, "barcode");
           final int _cursorIndexOfImagePath = CursorUtil.getColumnIndexOrThrow(_cursor, "imagePath");
           final int _cursorIndexOfSizesJson = CursorUtil.getColumnIndexOrThrow(_cursor, "sizesJson");
@@ -250,6 +337,12 @@ public final class ProductDao_Impl implements ProductDao {
             _tmpPriceGBP = _cursor.getString(_cursorIndexOfPriceGBP);
             final String _tmpEmoji;
             _tmpEmoji = _cursor.getString(_cursorIndexOfEmoji);
+            final String _tmpCategoryId;
+            if (_cursor.isNull(_cursorIndexOfCategoryId)) {
+              _tmpCategoryId = null;
+            } else {
+              _tmpCategoryId = _cursor.getString(_cursorIndexOfCategoryId);
+            }
             final String _tmpBarcode;
             if (_cursor.isNull(_cursorIndexOfBarcode)) {
               _tmpBarcode = null;
@@ -268,7 +361,7 @@ public final class ProductDao_Impl implements ProductDao {
             } else {
               _tmpSizesJson = _cursor.getString(_cursorIndexOfSizesJson);
             }
-            _result = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpBarcode,_tmpImagePath,_tmpSizesJson);
+            _result = new ProductEntity(_tmpId,_tmpName,_tmpDescription,_tmpPriceGBP,_tmpEmoji,_tmpCategoryId,_tmpBarcode,_tmpImagePath,_tmpSizesJson);
           } else {
             _result = null;
           }
@@ -279,6 +372,51 @@ public final class ProductDao_Impl implements ProductDao {
         }
       }
     }, $completion);
+  }
+
+  @Override
+  public Flow<List<CategoryEntity>> getAllCategories() {
+    final String _sql = "SELECT * FROM categories ORDER BY name ASC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return CoroutinesRoom.createFlow(__db, false, new String[] {"categories"}, new Callable<List<CategoryEntity>>() {
+      @Override
+      @NonNull
+      public List<CategoryEntity> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfEmoji = CursorUtil.getColumnIndexOrThrow(_cursor, "emoji");
+          final int _cursorIndexOfImagePath = CursorUtil.getColumnIndexOrThrow(_cursor, "imagePath");
+          final List<CategoryEntity> _result = new ArrayList<CategoryEntity>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final CategoryEntity _item;
+            final String _tmpId;
+            _tmpId = _cursor.getString(_cursorIndexOfId);
+            final String _tmpName;
+            _tmpName = _cursor.getString(_cursorIndexOfName);
+            final String _tmpEmoji;
+            _tmpEmoji = _cursor.getString(_cursorIndexOfEmoji);
+            final String _tmpImagePath;
+            if (_cursor.isNull(_cursorIndexOfImagePath)) {
+              _tmpImagePath = null;
+            } else {
+              _tmpImagePath = _cursor.getString(_cursorIndexOfImagePath);
+            }
+            _item = new CategoryEntity(_tmpId,_tmpName,_tmpEmoji,_tmpImagePath);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
   }
 
   @NonNull

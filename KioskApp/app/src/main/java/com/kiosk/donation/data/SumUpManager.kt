@@ -60,12 +60,17 @@ object SumUpManager {
         activity: Activity,
         amount: BigDecimal,
         title: String,
-        foreignTxId: String? = null
+        foreignTxId: String? = null,
+        skipSuccessScreen: Boolean = false
     ) {
         val paymentBuilder = SumUpPayment.builder()
             .total(amount)
             .currency(SumUpPayment.Currency.GBP)
             .title(title)
+        
+        if (skipSuccessScreen) {
+            paymentBuilder.skipSuccessScreen()
+        }
 
         if (foreignTxId != null) {
             paymentBuilder.foreignTransactionId(foreignTxId)
@@ -86,9 +91,18 @@ object SumUpManager {
 
         val extras = data.extras ?: return SumUpResult.Cancelled
         val sdkResultCode = extras.getInt(SumUpAPI.Response.RESULT_CODE, -1)
+        
+        // Try multiple keys to ensure we get the best ID for the Receipts API
+        val txCode = extras.getString(SumUpAPI.Response.TX_CODE) 
+            ?: extras.getString("transaction_code")
+        
+        val txId = extras.getString("transaction_id") 
+            ?: extras.getString("id")
+
+        android.util.Log.d("SumUpManager", "Parsed Result: $sdkResultCode, Code: $txCode, ID: $txId")
 
         return when (sdkResultCode) {
-            SumUpAPI.Response.ResultCode.SUCCESSFUL                -> SumUpResult.Success
+            SumUpAPI.Response.ResultCode.SUCCESSFUL                -> SumUpResult.Success(txCode, txId)
             SumUpAPI.Response.ResultCode.ERROR_NOT_LOGGED_IN       -> SumUpResult.NotLoggedIn
             SumUpAPI.Response.ResultCode.ERROR_TRANSACTION_FAILED  -> SumUpResult.Failed("Transaction failed")
             SumUpAPI.Response.ResultCode.ERROR_INVALID_AFFILIATE_KEY -> SumUpResult.Failed("Invalid affiliate key")
@@ -103,7 +117,7 @@ object SumUpManager {
 }
 
 sealed class SumUpResult {
-    object Success     : SumUpResult()
+    data class Success(val txCode: String?, val txId: String? = null) : SumUpResult()
     object Cancelled   : SumUpResult()
     object NotLoggedIn : SumUpResult()
     data class Failed(val reason: String) : SumUpResult()

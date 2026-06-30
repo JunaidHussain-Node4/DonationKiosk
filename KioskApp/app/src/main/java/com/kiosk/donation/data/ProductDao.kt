@@ -20,4 +20,13 @@ interface ProductDao {
 
     @Query("SELECT * FROM products WHERE barcode = :barcode LIMIT 1")
     suspend fun findByBarcode(barcode: String): ProductEntity?
+
+    @Query("SELECT * FROM categories ORDER BY name ASC")
+    fun getAllCategories(): Flow<List<CategoryEntity>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertCategories(categories: List<CategoryEntity>)
+
+    @Query("DELETE FROM categories")
+    suspend fun deleteAllCategories()
 }

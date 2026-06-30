@@ -21,6 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.kiosk.donation.R
 import com.kiosk.donation.ui.theme.*
 
@@ -106,39 +107,42 @@ fun HomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ) {
-            Spacer(modifier = Modifier.weight(2f)) // 2/3 space above
+            Spacer(modifier = Modifier.weight(4f)) // Pushed further down
 
             PulsingHeart()
 
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             Text(
                 text       = orgName,
-                style      = MaterialTheme.typography.displayMedium,
+                style      = MaterialTheme.typography.displayLarge.copy(
+                    fontSize = 72.sp,
+                    lineHeight = 82.sp
+                ),
                 color      = SurfaceWhite,
                 fontWeight = FontWeight.Bold,
                 textAlign  = TextAlign.Center,
                 modifier   = Modifier.padding(horizontal = 32.dp)
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             Text(
-                text      = "Thank you for your support",
-                style     = MaterialTheme.typography.titleLarge,
+                text      = "Jazakallah for your support",
+                style     = MaterialTheme.typography.displaySmall,
                 color     = SoftWhite,
                 textAlign = TextAlign.Center
             )
 
-            Spacer(modifier = Modifier.height(56.dp))
+            Spacer(modifier = Modifier.height(80.dp))
 
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(32.dp),
-                verticalAlignment     = Alignment.CenterVertically
+            Column(
+                verticalArrangement = Arrangement.spacedBy(32.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 if (isDonationsEnabled) {
                     KioskActionButton(
-                        label          = "Make a Donation",
+                        label          = "Donate",
                         icon           = Icons.Filled.Favorite,
                         containerColor = Amber,
                         contentColor   = TextDark,
@@ -147,7 +151,7 @@ fun HomeScreen(
                 }
                 if (isProductsEnabled) {
                     KioskActionButton(
-                        label          = "Buy Something",
+                        label          = "Shop",
                         icon           = Icons.Filled.ShoppingCart,
                         containerColor = SurfaceWhite,
                         contentColor   = KarimaDark,
@@ -156,15 +160,7 @@ fun HomeScreen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(48.dp))
-
-            Text(
-                text  = "Tap to get started",
-                style = MaterialTheme.typography.bodyMedium,
-                color = FaintWhite
-            )
-
-            Spacer(modifier = Modifier.weight(1f)) // 1/3 space below
+            Spacer(modifier = Modifier.weight(1.5f)) // Balance space below
         }
 
         // ── Layer 3: hidden admin trigger (bottom-right corner, tap 5×) ───────
@@ -192,13 +188,13 @@ private fun KioskActionButton(
             contentColor   = contentColor
         ),
         shape          = MaterialTheme.shapes.large,
-        contentPadding = PaddingValues(horizontal = 40.dp, vertical = 24.dp),
-        elevation      = ButtonDefaults.buttonElevation(defaultElevation = 6.dp),
-        modifier       = Modifier.width(280.dp)
+        contentPadding = PaddingValues(horizontal = 56.dp, vertical = 40.dp),
+        elevation      = ButtonDefaults.buttonElevation(defaultElevation = 8.dp),
+        modifier       = Modifier.width(550.dp)
     ) {
-        Icon(imageVector = icon, contentDescription = null, modifier = Modifier.size(32.dp))
-        Spacer(modifier = Modifier.width(12.dp))
-        Text(text = label, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Icon(imageVector = icon, contentDescription = null, modifier = Modifier.size(56.dp))
+        Spacer(modifier = Modifier.width(20.dp))
+        Text(text = label, style = MaterialTheme.typography.displayLarge, fontWeight = FontWeight.Bold)
     }
 }
 
